@@ -47,9 +47,3 @@ video {
 //   @include make-col-ready();
 //   @include make-col(12);
 // }
-.site-blog {
-  &-column {
-    @include make-col-ready();
-    @include make-col(4);
-  }
-}

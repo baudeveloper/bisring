@@ -1,0 +1,79 @@
+// THEME.scss
+.site-footer {
+  color: $white;
+  background-color: $green-AA;
+  .row {
+    &--top {
+      border-bottom: 1px solid $green-AE;
+      .column {
+        margin-top: 3.125rem;
+        margin-bottom: 2.813rem;
+      }
+    }
+    &--bottom {
+      .column {
+        margin-top: 1.563rem;
+        margin-bottom: 1.563rem;
+      }
+    }
+  }
+  &--social,
+  &--creator {
+    text-align: right;
+  }
+  &--navigation-link,
+  &--social-link,
+  &--copyright-link,
+  &--creator-link,
+  &--copyright-year,
+  &--copyright-rights,
+  &--creator-title {
+    line-height: 1;
+    color: inherit;
+    font-family: "Barlow-Medium";
+    @include font-size(12);
+  }
+  &--navigation-link,
+  &--social-link,
+  &--copyright-link,
+  &--creator-link {
+    &:link {
+		text-decoration: none;
+	}
+	&:hover,
+	&:active,
+	&:focus {
+		color: darken($white, 25%);
+	}
+  }
+  &--navigation {
+    &-link {
+      margin-right: 0.9375rem;
+      text-transform: capitalize;
+    }
+  }
+  &--social {
+    &-link {
+      margin-right: 0.625rem;
+      @include font-size(16);
+    }
+  }
+  &--copyright {
+	  &-year,
+	  &-rights,
+	  &-link {
+		  &:after {
+			  content: "|";
+			  margin-right: 0.4375rem;
+			  padding-left: 0.4375rem;
+		  }
+	  }
+	  &-link {
+		  &:last-of-type {
+			  &:after {
+				  content: "";
+			  }
+		  }
+	  }
+  }
+}

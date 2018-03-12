@@ -75,10 +75,10 @@
 }
 
 // BASE STYLES (UNIVERSAL)
-@import "components/base";
+@import "styles/components/base";
 
 // BASE STYLES (CUSTOM BOOTSTRAP ONLY)
-@import "core/custom";
+@import "styles/components/bootstrap";
 
 // ADDON STYLES (FOR BOOTSTRAP ONLY)
 @import "../../node_modules/bootstrap/scss/functions";
@@ -91,29 +91,29 @@
 
 // BOOTSTRAP (ADDITIONAL COMPONENTS)
 // (Import any component e.g. NAVBAR and override their settings in VARIABLES file)
-@import "../../node_modules/bootstrap/scss/buttons";
-@import "../../node_modules/bootstrap/scss/jumbotron";
+// @import "../../node_modules/bootstrap/scss/buttons";
+// @import "../../node_modules/bootstrap/scss/jumbotron";
 
 // VENDOR STYLES
 // 1. FontAwesome
 @import "../../node_modules/font-awesome/scss/font-awesome.scss";
 
 // APP STYLES
-@import "components/layout";
-@import "components/module";
-@import "components/state";
-@import "components/theme";
+@import "styles/components/layout";
+@import "styles/components/module";
+@import "styles/components/state";
+@import "styles/components/theme";
 
 // RESPONSIVE STYLES (MEDIA QUERIES ONLY)
 @media #{$xlarge} {
-  @import "queries/xlarge";
+  @import "styles/queries/xlarge";
 }
 @media #{$large} {
-  @import "queries/large";
+  @import "styles/queries/large";
 }
 @media #{$medium} {
-  @import "queries/medium";
+  @import "styles/queries/medium";
 }
 @media #{$small} {
-  @import "queries/small";
+  @import "styles/queries/small";
 }

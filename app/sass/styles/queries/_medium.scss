@@ -1,0 +1,35 @@
+// MEDIA QUERY (MEDIUM SCREENS ONLY)
+// Check this link for more information: http://v4-alpha.getbootstrap.com/layout/overview/#responsive-breakpoints
+// 48rem = 768px
+.site-footer {
+  .row {
+    .column {
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+    &--top {
+      .column:first-of-type {
+        margin-top: 1rem;
+        margin-bottom: 0;
+      }
+      .column:last-of-type {
+        margin-top: .5rem;
+        margin-bottom: 1rem;
+      }
+    }
+    &--bottom {
+      .column:first-of-type {
+        margin-top: 1rem;
+        margin-bottom: 0;
+      }
+      .column:last-of-type {
+        margin-top: .5rem;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+  &--social,
+  &--creator {
+    text-align: left;
+  }
+}

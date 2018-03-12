@@ -1,32 +1,34 @@
 footer.site-footer(role="contentinfo")
 	.container
-		.row
-			.col
+		.row.row--top
+			.column.col-md-8.col-sm-12
 				nav.site-footer--navigation(role="navigation")
-					a.site-footer--navigation-link(href="#") Home
-					a.site-footer--navigation-link(href="#") Dashboard
-					a.site-footer--navigation-link(href="#") About us
-					a.site-footer--navigation-link(href="#") Why bisRing?
-					a.site-footer--navigation-link(href="#") FAQs
-					a.site-footer--navigation-link(href="#") Careers
-					a.site-footer--navigation-link(href="#") Contact us
-					a.site-footer--navigation-link(href="#") Press
+					a.site-footer--navigation-link(role="link", href="/index.html") Home
+					a.site-footer--navigation-link(role="link", href="/dashboard.html") Dashboard
+					a.site-footer--navigation-link(role="link", href="/about-us.html") About us
+					a.site-footer--navigation-link(role="link", href="/why-bisring.html") Why bisRing?
+					a.site-footer--navigation-link(role="link", href="/faqs.html") FAQs
+					a.site-footer--navigation-link(role="link", href="/careers.html") Careers
+					a.site-footer--navigation-link(role="link", href="/contact-us.html") Contact us
+					a.site-footer--navigation-link(role="link", href="/press.html") Press
+			.column.col-md-4.col-sm-12
 				nav.site-footer--social(role="navigation")
-					a.site-footer--navigation-link(href="#")
+					a.site-footer--social-link(role="link", href="http://www.facebook.com", target="_blank")
 						i.fa.fa-facebook-official(aria-hidden="true")
-					a.site-footer--navigation-link(href="#")
+					a.site-footer--social-link(role="link", href="http://www.twitter.com", target="_blank")
 						i.fa.fa-twitter(aria-hidden="true")
-					a.site-footer--navigation-link(href="#")
+					a.site-footer--social-link(role="link", href="http://www.linkedin.com", target="_blank")
 						i.fa.fa-linkedin(aria-hidden="true")
-		.row
-			.col
+		.row.row--bottom
+			.column.col-md-8.col-sm-12
 				.site-footer--copyright(role="navigation")
 					span.site-footer--copyright-year
 						| &copy; 2018 BisRing.com
 					span.site-footer--copyright-rights
 						| All Rights Reserved
-					a.site-footer--copyright-link(href="#") Privacy Policy
-					a.site-footer--copyright-link(href="#") Terms of Use
-				aside.site-footer--creator(role="navigation")
-					span.site-footer--creator-title Designed by:
-					span.site-footer--creator-content Baustein Design
+					a.site-footer--copyright-link(role="link", href="/privacy-policy.html") Privacy Policy
+					a.site-footer--copyright-link(role="link", href="/terms-of-use.html") Terms of Use
+			.column.col-md-4.col-sm-12
+				aside.site-footer--creator
+					span.site-footer--creator-title Designed by: 
+					a.site-footer--creator-link(role="link", href="http://baustein.ca", target="_blank") Baustein Design
