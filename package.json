@@ -22,7 +22,7 @@
     "m-dirs": "mkdirp dist/js/vendor -p && mkdirp dist/css/vendor -p && mkdirp dist/fonts -p && mkdirp app/sass/free -p && mkdirp app/sass/core -p",
     "v-css": "rimraf dist/css/vendor && copyfiles -f ANY_VENDOR_CSS_LIBRARY_STYLSHEETS_GOES_HERE dist/css/vendor",
     "v-images": "copyfiles -f node_modules/mdbootstrap/img/**/*.* dist/images",
-    "v-mdb": "rimraf app/sass/core && rimraf app/sass/free && rimraf app/sass/mdb.scss && rimraf app/sass/_custom.scss && copyfiles -f node_modules/mdbootstrap/scss/mdb.scss app/sass && copyfiles -f node_modules/mdbootstrap/scss/_custom.scss app/sass && ncp node_modules/mdbootstrap/scss/core app/sass/core && ncp node_modules/mdbootstrap/scss/free app/sass/free",
+    "v-mdb": "rimraf app/sass/core && rimraf app/sass/free && rimraf app/sass/mdb.scss && copyfiles -f node_modules/mdbootstrap/scss/mdb.scss app/sass && ncp node_modules/mdbootstrap/scss/core app/sass/core && ncp node_modules/mdbootstrap/scss/free app/sass/free",
     "v-js": "rimraf dist/js/vendor && copyfiles -f node_modules/jquery/dist/jquery.min.js node_modules/bootstrap/dist/js/bootstrap.min.js node_modules/popper.js/dist/umd/popper.min.js node_modules/mdbootstrap/js/mdb.min.js dist/js/vendor",
     "v-fonts": "rimraf dist/fonts && copyfiles -f node_modules/font-awesome/fonts/**/*.* dist/fonts && copyfiles -f app/assets/fonts/barlow/**/*.* dist/fonts",
     "v-text": "rimraf dist/*.txt && copyfiles -f app/text/*.txt dist/",

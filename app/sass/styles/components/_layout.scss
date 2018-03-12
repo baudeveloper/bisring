@@ -12,6 +12,8 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: "Barlow-Regular", sans-serif;
+  font-weight: normal;
 }
 
 // RESPONSIVE MEDIA
@@ -41,9 +43,3 @@ video {
     max-width: 75rem;
   }
 }
-
-// GRIDS (Feel free to change these)
-// .column {
-//   @include make-col-ready();
-//   @include make-col(12);
-// }
