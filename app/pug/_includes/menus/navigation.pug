@@ -1,25 +1,24 @@
-header
-  nav.navbar.navbar-expand-lg.navbar-dark.indigo
-    a.navbar-brand(href='/') Navbar
-    button.navbar-toggler(type='button', data-toggle='collapse', data-target='#basicExampleNav', aria-controls='basicExampleNav', aria-expanded='false', aria-label='Toggle navigation')
+nav.navbar.navbar-expand-md.navbar-dark.fixed-top.bg-dark
+  .container
+    a.navbar-brand(href='#') Navbar
+    button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarsExampleDefault', aria-controls='navbarsExampleDefault', aria-expanded='false', aria-label='Toggle navigation')
       span.navbar-toggler-icon
-    #basicExampleNav.collapse.navbar-collapse
+    #navbarsExampleDefault.collapse.navbar-collapse
       ul.navbar-nav.mr-auto
         li.nav-item(class=(bodyClass === 'home' ? 'active' : ''))
-          a.nav-link.waves-effect.waves-light(href='/')
+          a.nav-link(href='/index.html')
             | Home
             span.sr-only (current)
         li.nav-item(class=(bodyClass === 'about-us' ? 'active' : ''))
-          a.nav-link.waves-effect.waves-light(href='/about.html') About
+          a.nav-link(href='/about-us.html') About Us
         li.nav-item
-          a.nav-link.waves-effect.waves-light(href='#') Pricing
+          a.nav-link.disabled(href='#') Disabled
         li.nav-item.dropdown
-          a#navbarDropdownMenuLink.nav-link.dropdown-toggle.waves-effect.waves-light(data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Dropdown
-          .dropdown-menu.dropdown-primary(aria-labelledby='navbarDropdownMenuLink')
-            a.dropdown-item.waves-effect.waves-light(href='#') Action
-            a.dropdown-item.waves-effect.waves-light(href='#') Another action
-            a.dropdown-item.waves-effect.waves-light(href='#') Something else here
-      form.form-inline
-        .md-form.mt-0
-          .waves-input-wrapper.waves-effect.waves-light
-            input.form-control.mr-sm-2(placeholder='Search', aria-label='Search', type='text')
+          a#dropdown01.nav-link.dropdown-toggle(href='http://example.com', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Dropdown
+          .dropdown-menu(aria-labelledby='dropdown01')
+            a.dropdown-item(href='#') Action
+            a.dropdown-item(href='#') Another action
+            a.dropdown-item(href='#') Something else here
+      form.form-inline.my-2.my-lg-0
+        input.form-control.mr-sm-2(type='text', placeholder='Search', aria-label='Search')
+        button.btn.btn-outline-success.my-2.my-sm-0(type='submit') Search
