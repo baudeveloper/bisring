@@ -1,10 +1,10 @@
 // THEME.scss
 .site-footer {
-  color: $white;
-  background-color: $green-AA;
+  color: $silver-AA;
+  background-color: $white;
   .row {
     &--top {
-      border-bottom: 1px solid $green-AE;
+      border-bottom: 1px solid $silver-AD;
       .column {
         margin-top: 3.125rem;
         margin-bottom: 2.813rem;
@@ -37,14 +37,15 @@
   &--social-link,
   &--copyright-link,
   &--creator-link {
+    color: $green-AB;
     &:link {
-		text-decoration: none;
-	}
-	&:hover,
-	&:active,
-	&:focus {
-		color: darken($white, 25%);
-	}
+      text-decoration: none;
+    }
+    &:hover,
+    &:active,
+    &:focus {
+      color: darken($green-AB, 15%);
+    }
   }
   &--navigation {
     &-link {
@@ -59,21 +60,44 @@
     }
   }
   &--copyright {
-	  &-year,
-	  &-rights,
-	  &-link {
-		  &:after {
-			  content: "|";
-			  margin-right: 0.4375rem;
-			  padding-left: 0.4375rem;
-		  }
-	  }
-	  &-link {
-		  &:last-of-type {
-			  &:after {
-				  content: "";
-			  }
-		  }
-	  }
+    &-year,
+    &-rights,
+    &-link {
+      &:after {
+        content: "|";
+        margin-right: 0.4375rem;
+        padding-left: 0.4375rem;
+      }
+    }
+    &-link {
+      &:last-of-type {
+        &:after {
+          content: "";
+        }
+      }
+    }
+  }
+}
+
+.dashboard {
+  .site-footer {
+    color: $white;
+    background-color: $green-AA;
+    .row {
+      &--top {
+        border-bottom: 1px solid $green-AE;
+      }
+    }
+    &--navigation-link,
+    &--social-link,
+    &--copyright-link,
+    &--creator-link {
+      color: $white;
+      &:hover,
+      &:active,
+      &:focus {
+        color: darken($white, 25%);
+      }
+    }
   }
 }
