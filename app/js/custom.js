@@ -1,25 +1,13 @@
 //========================
 // Strict Syntax Rendering
 //========================
-// "use strict";
+"use strict";
 
 //==================
 // Application Logic
 //==================
-// var myApp = {};
-// myApp.init = () => {
-// 	// const SLANG = "Eh! ";
-// 	// const SPEAK = "Today, The weather is: ";
-// 	// let weather = 100;
-// 	// document.querySelector(".msg").textContent = SLANG + SPEAK + weather;
-// 	$("a[data-js=\"signup\"]").on("click", function() {
-// 		alert("You clicked me.");
-// 	});
-// };
-
-//===============
-// Initialization
-//===============
-// $(function() {
-// 	myApp.init();
-// });
+$(document).ready(function() {
+	var siteCallout = $("[data-js=\"site-callout\"]");
+	var imgSrc = siteCallout.find(".site-callout--img").attr("src");
+	siteCallout.css("backgroundImage", "url("+imgSrc+")");
+});

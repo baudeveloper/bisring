@@ -1,4 +1,15 @@
 // THEME.scss
+
+// STANDARD
+.site-callout {
+  text-align: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  &--title {
+    color: $white;
+    @include font-size(32);
+  }
+}
 .site-footer {
   color: $silver-AA;
   background-color: $white;
@@ -79,6 +90,7 @@
   }
 }
 
+// DASHBOARD
 .dashboard {
   .site-footer {
     color: $white;
