@@ -9,3 +9,12 @@ body {
   background-color: black;
   border-radius: 0;
 }
+
+.site-footer {
+  background-color: $green-AA;
+  &--navigation {
+    &-link {
+      text-transform: capitalize;
+    }
+  }
+}
