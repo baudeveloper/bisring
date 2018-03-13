@@ -37,7 +37,7 @@
     "b-html": "js-beautify -qrtf ./dist/*.html",
     "images": "imagemin app/images/* -o dist/images",
     "serve": "browser-sync start --server --serveStatic dist --files \"dist/css/*.css, dist/js/*.js, **/*.html, app/pug/pages/*.pug, dist/images/*.*, !node_modules\"",
-    "copy": "run-s m-dirs v-css v-js v-fonts v-text v-images",
+    "copy": "run-s m-dirs v-css v-js v-fonts v-text",
     "pages": "run-s f-inject l-html b-html",
     "styles": "run-s l-scss scss a-scss",
     "scripts": "run-s js l-js u-js",
