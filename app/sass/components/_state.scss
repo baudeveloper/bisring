@@ -64,6 +64,12 @@ Table of Content:
     }
   }
 }
+.offcanvas-wrapper,
+.offcanvas-overlay {
+  @media #{$medium__up} {
+    display: none!important;
+  }
+}
 .offcanvas {
   width: 15.63rem;
   position: fixed;
