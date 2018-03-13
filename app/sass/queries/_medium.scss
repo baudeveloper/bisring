@@ -30,6 +30,10 @@ Table of Content:
   }
   .card {
     margin-bottom: 1.25rem;
+    &-header {
+      padding-top: 1.5rem;
+      min-height: auto;
+    }
   }
   .btn {
     margin-top: 0;

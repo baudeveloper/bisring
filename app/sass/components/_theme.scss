@@ -21,12 +21,9 @@ Table of Content:
     font-weight: normal;
     @include font-size(32);
   }
-  &--thumbnail {
-    margin-bottom: 1.875rem;
-  }
   &--heading {
     margin-top: 0rem;
-    margin-bottom: 1.25rem;
+    margin-bottom: 1rem;
     font-weight: normal;
     @include font-size(24);
   }
@@ -36,7 +33,19 @@ Table of Content:
   }
   .card {
     width: 100%;
-    padding: 1.875rem 2.5rem;
+    &-header {
+      padding-top: 1rem;
+      padding-bottom: 0;
+      min-height: 11rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background: none;
+      border-bottom: none;
+    }
+    &-body {
+      padding: 0 1.75rem 1.5rem;
+    }
   }
   .btn {
     margin-top: 2.5rem;
