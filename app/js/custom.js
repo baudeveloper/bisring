@@ -37,4 +37,5 @@ $(document).ready(function () {
 		offCanvasMenu.removeClass("active");
 		offCanvasOverlay.fadeOut();
 	});
+
 });

@@ -1,0 +1,15 @@
+//- button.btn.btn-primary(type='button', data-toggle='modal', data-target='#modalQuickList')
+//- 	| Quick List modal
+#modalQuickList.modal.fade(tabindex='-1', role='dialog', aria-labelledby='modalQuickList', aria-hidden='true')
+	.modal-dialog.modal-dialog-centered(role='document')
+		.modal-content
+			.modal-header
+				h5#modalQuickList.modal-title Quick List
+				button.close(type='button', data-dismiss='modal', aria-label='Close')
+					span(aria-hidden='true') ×
+			.modal-body
+				span
+					| Don't see any lists, Dang!
+			.modal-footer
+				button.btn.btn-secondary(type='button', data-dismiss='modal') Close
+				button.btn.btn-primary(type='button') Save changes
