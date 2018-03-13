@@ -1,6 +1,14 @@
 // THEME.scss
 
-// STANDARD
+/*
+Table of Content:
+--- Site Feature
+--- Site Callout
+--- Site Footer
+--- DASHBOARD
+    --- Site Footer
+*/
+
 .site-feature {
   padding-top: 4.688rem;
   padding-bottom: 4.688rem;
@@ -147,8 +155,6 @@
     }
   }
 }
-
-// DASHBOARD
 .dashboard {
   .site-footer {
     color: $white;
