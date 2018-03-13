@@ -1,11 +1,13 @@
 // STATE.scss
+
 /*
 Table of Content:
 --- Universal Classes
---- Navigation & Offcanvas
+--- Navigation
+--- Offcanvas
+    --- HOME
 */
 
-// Universal Classes
 .hidden {
   display: none !important;
 }
@@ -19,8 +21,7 @@ Table of Content:
     min-width: 12rem;
   }
 }
-
-// Navigation & Offcanvas for standard pages
+// ---
 .navbar {
   .nav-link {
     font-family: "Barlow-Medium";
@@ -43,7 +44,7 @@ Table of Content:
         color: $white;
       }
     }
-    .fa {
+    .offcanvas-icon {
       color: inherit;
       line-height: 1;
       vertical-align: middle;
@@ -67,6 +68,7 @@ Table of Content:
     }
   }
 }
+// ---
 .offcanvas-wrapper,
 .offcanvas-overlay {
   @media #{$medium__up} {
@@ -171,7 +173,7 @@ Table of Content:
       {
       color: $white;
     }
-    .fa {
+    .offcanvas-icon {
       line-height: 0;
       &:before {
         content: '\00d7';
@@ -179,7 +181,7 @@ Table of Content:
     }
   }
 }
-// Navigation for HOME page
+// ---
 .home {
   .navbar {
     &--large {

@@ -7,8 +7,96 @@ Table of Content:
 --- Site Feature
 --- Site Callout
 --- Site Footer
+    --- HOME
 */
 
+.site-feature {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  &--title {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    @include font-size(24);
+  }
+  &--thumbnail {
+    max-height: 5rem;
+    margin-bottom: 1.25rem;
+  }
+  &--heading {
+    margin-top: 0rem;
+    margin-bottom: .5rem;
+    @include font-size(20);
+  }
+  &--content {
+    margin-bottom: 0;
+  }
+  .card {
+    margin-bottom: 1.25rem;
+    &-header {
+      padding-top: 1.5rem;
+      min-height: auto;
+    }
+  }
+  .btn {
+    margin-top: 0;
+  }
+}
+// ---
+.site-callout {
+  .container {
+    padding-top: 4.5rem;
+    padding-bottom: 5.5rem;
+  }
+  &--title {
+    margin-bottom: 1.25rem;
+    @include font-size(24);
+  }
+  .btn {
+    &--fixed {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin-left: auto;
+      margin-right: auto;
+      width: 12.5rem;
+    }
+  }
+}
+// ---
+.site-footer {
+  .row {
+    .column {
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+    &--top {
+      .column:first-of-type {
+        margin-top: 1rem;
+        margin-bottom: 0;
+      }
+      .column:last-of-type {
+        margin-top: .5rem;
+        margin-bottom: 1rem;
+      }
+    }
+    &--bottom {
+      .column:first-of-type {
+        margin-top: 1rem;
+        margin-bottom: 0;
+      }
+      .column:last-of-type {
+        margin-top: .5rem;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+  &--social,
+  &--creator {
+    text-align: left;
+  }
+}
+// ---
 .home {
   .site-feature,
   .site-callout,
@@ -62,89 +150,5 @@ Table of Content:
         margin-left: .6rem;
       }
     }
-  }
-}
-.site-feature {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  &--title {
-    margin-top: 0;
-    margin-bottom: 1.5rem;
-    @include font-size(24);
-  }
-  &--thumbnail {
-    max-height: 5rem;
-    margin-bottom: 1.25rem;
-  }
-  &--heading {
-    margin-top: 0rem;
-    margin-bottom: .5rem;
-    @include font-size(20);
-  }
-  &--content {
-    margin-bottom: 0;
-  }
-  .card {
-    margin-bottom: 1.25rem;
-    &-header {
-      padding-top: 1.5rem;
-      min-height: auto;
-    }
-  }
-  .btn {
-    margin-top: 0;
-  }
-}
-.site-callout {
-  .container {
-    padding-top: 4.5rem;
-    padding-bottom: 5.5rem;
-  }
-  &--title {
-    margin-bottom: 1.25rem;
-    @include font-size(24);
-  }
-  .btn {
-    &--fixed {
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      margin-left: auto;
-      margin-right: auto;
-      width: 12.5rem;
-    }
-  }
-}
-.site-footer {
-  .row {
-    .column {
-      margin-top: auto;
-      margin-bottom: auto;
-    }
-    &--top {
-      .column:first-of-type {
-        margin-top: 1rem;
-        margin-bottom: 0;
-      }
-      .column:last-of-type {
-        margin-top: .5rem;
-        margin-bottom: 1rem;
-      }
-    }
-    &--bottom {
-      .column:first-of-type {
-        margin-top: 1rem;
-        margin-bottom: 0;
-      }
-      .column:last-of-type {
-        margin-top: .5rem;
-        margin-bottom: 1rem;
-      }
-    }
-  }
-  &--social,
-  &--creator {
-    text-align: left;
   }
 }

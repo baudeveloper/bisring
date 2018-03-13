@@ -1,12 +1,14 @@
 // BASE.scss
 
-// COLOR VARS
-// FONT MIXIN VARS
-// FONT WEIGHTS VARS
-// SELECTION COLOR DECLARATION
-// MEDIA QUERIES VARS
+/*
+Table of Content:
+--- COLOR VARS
+--- FONT MIXIN VARS
+--- FONT WEIGHTS VARS
+--- SELECTION COLOR DECLARATION
+--- MEDIA QUERIES VARS
+*/
 
-// COLOR VARS
 $white: #fff;
 $black: #000;
 $green-AA: #146f81;
@@ -24,14 +26,12 @@ $silver-AC: #c9c9cb;
 $silver-AD: #e0e0e0;
 $silver-AE: #fafafa;
 $silver-AF: #838486;
-
-// FONT MIXIN DECLARATION
+// ---
 @mixin font-size($sizeValue: 16) {
   font-size: ($sizeValue) + px;
   font-size: ($sizeValue / 16) + rem;
 }
-
-// FONT WEIGHTS VARS
+// ---
 $fw-light: 300;
 $fw-regular: 400;
 $fw-medium: 500;
@@ -39,16 +39,14 @@ $fw-medium-x: 600;
 $fw-bold: 700;
 $fw-bold-x: 800;
 $fw-black: 900;
-
-// SELECTION COLOR DECLARATION
+// ---
 // https://css-tricks.com/almanac/selectors/s/selection
 *::-moz-selection,
 *::selection {
   color: $white;
   background-color: $orange-AA;
 }
-
-// MEDIA QUERIES VARS
+// ---
 // Check this link for more information: http://v4-alpha.getbootstrap.com/layout/overview/#responsive-breakpoints
 // 36rem = 576px
 // 48rem = 768px

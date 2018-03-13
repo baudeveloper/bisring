@@ -5,8 +5,8 @@ Table of Content:
 --- Site Feature
 --- Site Callout
 --- Site Footer
---- DASHBOARD
-    --- Site Footer
+    --- HOME
+    --- DASHBOARD
 */
 
 .site-feature {
@@ -54,6 +54,7 @@ Table of Content:
     margin-top: 2.5rem;
   }
 }
+// ---
 .site-callout {
   text-align: center;
   background-size: cover;
@@ -76,18 +77,19 @@ Table of Content:
       text-transform: uppercase;
       border-bottom-left-radius: 0;
       border-bottom-right-radius: 0;
-      .fa {
-        margin-right: .5rem;
-      }
-      .badge {
-        color: $orange-AA;
-        margin-left: 1rem;
-        background-color: $white;
-        font-family: "Barlow-SemiBold", sans-serif;
-      }
     }
   }
+  &--icon {
+    margin-right: .5rem;
+  }
+  &--badge {
+    color: $orange-AA;
+    margin-left: 1rem;
+    background-color: $white;
+    font-family: "Barlow-SemiBold", sans-serif;
+  }
 }
+// ---
 .site-footer {
   color: $silver-AA;
   background-color: $white;
@@ -167,6 +169,7 @@ Table of Content:
     }
   }
 }
+// ---
 .home {
   .site-header {
     overflow: auto;
@@ -191,6 +194,7 @@ Table of Content:
     }
   }
 }
+// ---
 .dashboard {
   .site-footer {
     color: $white;
