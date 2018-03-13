@@ -22,6 +22,9 @@ Table of Content:
 
 // Navigation & Offcanvas
 .navbar {
+  .nav-link {
+    font-family: "Barlow-Medium";
+  }
   &--large {
     background-color: $dark !important;
   }
@@ -117,6 +120,7 @@ Table of Content:
   }
   a {
     color: $white;
+    font-family: "Barlow-Medium";
     &[aria-expanded="true"] {
       color: $white;
       background: darken($green-AA, 5%);
