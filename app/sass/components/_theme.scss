@@ -1,6 +1,39 @@
 // THEME.scss
 
 // STANDARD
+.site-feature {
+  padding-top: 4.688rem;
+  padding-bottom: 4.688rem;
+  text-align: center;
+  color: $green-AB;
+  background-color: $green-AF;
+  &--title {
+    margin-top: 0;
+    margin-bottom: 2.5rem;
+    font-weight: normal;
+    @include font-size(32);
+  }
+  &--thumbnail {
+    margin-bottom: 1.875rem;
+  }
+  &--heading {
+    margin-top: 0rem;
+    margin-bottom: 1.25rem;
+    font-weight: normal;
+    @include font-size(24);
+  }
+  &--content {
+    margin-bottom: 0;
+    @include font-size(14);
+  }
+  .card {
+    width: 100%;
+    padding: 1.875rem 2.5rem;
+  }
+  .btn {
+    margin-top: 2.5rem;
+  }
+}
 .site-callout {
   text-align: center;
   background-size: cover;

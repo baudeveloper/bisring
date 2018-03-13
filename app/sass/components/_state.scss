@@ -10,4 +10,7 @@
 	&-primary {
 		background-color: $orange-AA;
 	}
+	@media #{$large__up} {
+		min-width: 12rem;
+	}
 }

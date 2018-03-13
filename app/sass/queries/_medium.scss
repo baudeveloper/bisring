@@ -1,6 +1,32 @@
 // MEDIA QUERY (MEDIUM SCREENS ONLY)
 // Check this link for more information: http://v4-alpha.getbootstrap.com/layout/overview/#responsive-breakpoints
 // 48rem = 768px
+.site-feature {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  &--title {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    @include font-size(24);
+  }
+  &--thumbnail {
+    margin-bottom: 1.25rem;
+  }
+  &--heading {
+    margin-top: 0rem;
+    margin-bottom: .5rem;
+    @include font-size(20);
+  }
+  &--content {
+    margin-bottom: 0;
+  }
+  .card {
+    margin-bottom: 1.25rem;
+  }
+  .btn {
+    margin-top: 0;
+  }
+}
 .site-callout {
   .container {
     padding-top: 4.5rem;
