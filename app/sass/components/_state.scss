@@ -20,7 +20,7 @@ Table of Content:
   }
 }
 
-// Navigation & Offcanvas
+// Navigation & Offcanvas for standard pages
 .navbar {
   .nav-link {
     font-family: "Barlow-Medium";
@@ -176,6 +176,24 @@ Table of Content:
       &:before {
         content: '\00d7';
       }
+    }
+  }
+}
+// Navigation for HOME page
+.home {
+  .navbar {
+    &--large {
+      background-color: transparent!important;
+      padding-left: 0;
+      padding-right: 0;
+      .container {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+    &--small {
+      padding: 1rem 0;
+      background-color: transparent;
     }
   }
 }

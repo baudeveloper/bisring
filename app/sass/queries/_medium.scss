@@ -9,6 +9,21 @@ Table of Content:
 --- Site Footer
 */
 
+.home {
+  .site-feature,
+  .site-callout,
+  .site-footer {
+    display: none;
+  }
+  .site-header {
+    height: 100vh;
+    &--content-title {
+      margin: 5rem 0 2.5rem;
+      padding: 0;
+      @include font-size(18);
+    }
+  }
+}
 .site-feature {
   padding-top: 3rem;
   padding-bottom: 3rem;

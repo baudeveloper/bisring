@@ -11,6 +11,9 @@ $(document).ready(function () {
 	var siteCallout = $("[data-js=\"site-callout\"]");
 	var imgSrc = siteCallout.find(".site-callout--img").attr("src");
 	siteCallout.css("backgroundImage", "url(" + imgSrc + ")");
+	var siteHeader = $("[data-js=\"site-header\"]");
+	var imgHeaderSrc = siteHeader.find(".site-header--img").attr("src");
+	siteHeader.css("backgroundImage", "url(" + imgHeaderSrc + ")");
 
 	// Source: https://bootstrapious.com/tutorial/sidebar/index3.html
 	var offCanvasMenu = $("[data-js=\"offcanvas\"]");
