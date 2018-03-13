@@ -1,29 +1,41 @@
 nav.offcanvas(data-js="offcanvas")
 	a.offcanvas-dismiss(href="#", role="link", data-js="offcanvas-dismiss")
-		i.fa.fa-times-thin.fa-2x(aria-hidden="true")
+		span.offcanvas-icon.fa.fa-times-thin.fa-2x(aria-hidden="true")
 	.offcanvas-header
-		img(src="images/logo-bisring-icon-white.png", alt="BisRing")
-		h3.sr-only(role="heading") BisRing
-	ul.list-unstyled.components(role="list")
-		li.active(role="listitem")
-			a(href='#', role="link") Home
-		li(role="listitem")
-			a(href='#', role="link") About
-		li(role="listitem")
-			a(href='#homeSubmenu', data-toggle='collapse', aria-expanded='false') Pages
-			ul#homeSubmenu.collapse.list-unstyled(role="list")
-				li(role="listitem")
-					a(href='#', role="link") Page
-				li(role="listitem")
-					a(href='#', role="link") Page
-				li(role="listitem")
-					a(href='#', role="link") Page
-		li(role="listitem")
-			a(href='#', role="link") Portfolio
-		li(role="listitem")
-			a(href='#', role="link") Contact
-	ul.list-unstyled.buttons
-		li
-			a.download(href='#') Download source
-		li
-			a.article(href='#') Back to article
+		//- img(src="images/logo-bisring-icon-white.png", alt="BisRing")
+		h1.offcanvas-title(role="heading")
+			span.offcanvas-icon.fa.fa-home(aria-hidden="true")
+			| Home
+	ul.list-unstyled.components.offcanvas-list(role="list")
+		li.active.offcanvas-listitem(role="listitem")
+			a.offcanvas-link(href='#', role="link")
+				span.offcanvas-icon.fa.fa-home(aria-hidden="true")
+				| Home
+		li.offcanvas-listitem(role="listitem")
+			a.offcanvas-link(href='#', role="link")
+				span.offcanvas-icon.fa.fa-star(aria-hidden="true")
+				| Why BisRing?
+		li.offcanvas-listitem(role="listitem")
+			a.offcanvas-link(href='#', role="link")
+				span.offcanvas-icon.fa.fa-bookmark(aria-hidden="true")
+				| About Us
+		li.offcanvas-listitem(role="listitem")
+			a.offcanvas-link(href='#', role="link")
+				span.offcanvas-icon.fa.fa-question(aria-hidden="true")
+				| FAQs
+		li.offcanvas-listitem(role="listitem")
+			a.offcanvas-link(href='#', role="link")
+				span.offcanvas-icon.fa.fa-tachometer(aria-hidden="true")
+				| Careers
+		li.offcanvas-listitem(role="listitem")
+			a.offcanvas-link(href='#', role="link")
+				span.offcanvas-icon.fa.fa-newspaper-o(aria-hidden="true")
+				| Press
+		li.offcanvas-listitem(role="listitem")
+			a.offcanvas-link(href='#', role="link")
+				span.offcanvas-icon.fa.fa-envelope(aria-hidden="true")
+				| Contact Us
+		li.offcanvas-listitem(role="listitem")
+			a.offcanvas-link(href='#', role="link")
+				span.offcanvas-icon.fa.fa-calendar-check-o(aria-hidden="true")
+				| Become a Bisringer

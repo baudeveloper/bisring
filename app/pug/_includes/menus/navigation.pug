@@ -1,15 +1,15 @@
 nav.navbar.navbar-expand-md.navbar-dark.fixed-top.bg-dark.navbar--large(role="navigation")
   .container
-    a.navbar-brand(href='/index.html', role="link")
+    a.navbar-brand(href='index.html', role="link")
       img(src="images/logo-bisring-white.png", alt="BisRing")
       span.sr-only BisRing
     ul.navbar-nav.ml-auto.navbar-list-large(role="list")
       li.nav-item(role="listitem", class=(bodyClass === 'why-bisring' ? 'active' : ''))
-        a.nav-link(role="link", href='/why-bisring.html') Why BisRing?
+        a.nav-link(role="link", href='why-bisring.html') Why BisRing?
       li.nav-item(role="listitem", class=(bodyClass === 'login' ? 'active' : ''))
-        a.nav-link(role="link", href='/login.html') Login
+        a.nav-link(role="link", href='login.html') Login
       li.nav-item(role="listitem", class=(bodyClass === 'register' ? 'active' : ''))
-        a.nav-link(role="link", href='/register.html') Register
+        a.nav-link(role="link", href='register.html') Register
 .offcanvas-wrapper
   include ../menus/offcanvas
 .offcanvas-overlay(data-js="offcanvas-overlay")
