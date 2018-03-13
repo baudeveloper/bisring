@@ -1,12 +1,14 @@
 // VARIABLES
+$primary: 					  $orange-AA !default;
 $font-family-sans-serif:      "Barlow-Regular" !default;
+$btn-padding-y:               .5rem !default;
+$btn-padding-x:               2rem !default;
 
-// JUMBOTRON
-$jumbotron-padding:           1rem !default;
-
-// BUTTONS
-$btn-font-weight:             $fw-bold !default;
-$btn-box-shadow:              none !default;
-$btn-active-box-shadow:       none !default;
-$btn-border-radius:           0 !default;
-$btn-transition:              none !default;
+// BADGES
+$badge-font-size:             1rem !default;
+$badge-font-weight:           normal !default;
+$badge-padding-y:             .25rem !default;
+$badge-padding-x:             .5rem !default;
+$badge-border-radius:         100% !default;
+$badge-pill-padding-x:        0 !default;
+$badge-pill-border-radius:    1rem !default;
