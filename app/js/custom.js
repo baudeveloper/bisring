@@ -38,4 +38,29 @@ $(document).ready(function () {
 		offCanvasOverlay.fadeOut();
 	});
 
+	// Source: https://stackoverflow.com/questions/24580262/make-bootstrap-popover-work-with-custom-html-template
+	var popoverTemplate = [
+		"<div class=\"popover\" role=\"tooltip\">",
+		"<div class=\"arrow\"></div>",
+		"<h3 class=\"popover-header\">",
+		"</h3>",
+		"<div class=\"popover-body\">",
+		"</div>",
+		"</div>"
+	].join("");
+	var popoverContent = [
+		"Hello World...",
+		"Hello World 2..."
+	].join("");
+	var popoverTitle = "Login";
+	$("body").popover({
+		selector: "[data-js=\"popover-login\"]",
+		trigger: "click",
+		content: popoverContent,
+		title: popoverTitle,
+		template: popoverTemplate,
+		placement: "bottom",
+		html: true
+	});
+
 });
