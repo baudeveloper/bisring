@@ -15,6 +15,9 @@ Table of Content:
   text-align: center;
   color: $green-AB;
   background-color: $green-AF;
+  &--thumbnail {
+    max-height: 7.5rem;
+  }
   &--title {
     margin-top: 0;
     margin-bottom: 2.5rem;
