@@ -1,21 +1,221 @@
 // STATE.scss
-
 /*
 Table of Content:
 --- Universal Classes
+--- Navigation
 */
 
 // Universal Classes
 .hidden {
-	display: none!important;
+  display: none !important;
 }
+
 .btn {
-	font-weight: normal;
-	font-family: "Barlow-SemiBold", sans-serif;
-	&-primary {
-		background-color: $orange-AA;
-	}
-	@media #{$large__up} {
-		min-width: 12rem;
-	}
+  font-weight: normal;
+  font-family: "Barlow-SemiBold", sans-serif;
+  &-primary {
+    background-color: $orange-AA;
+  }
+  @media #{$large__up} {
+    min-width: 12rem;
+  }
+}
+
+// Navigation
+.navbar {
+  &--large {
+    background-color: $dark !important;
+  }
+  &--small {
+    padding: 1rem;
+    background-color: $dark;
+    #sidebarCollapse {
+      @include font-size(20);
+      &:link {
+        color: $white;
+      }
+      &:active,
+      &:focus,
+      &:hover,
+      &:visited {
+        color: $white;
+      }
+    }
+    .fa {
+      color: inherit;
+      line-height: 1;
+      vertical-align: middle;
+      margin-right: 1rem;
+    }
+  }
+  @media #{$medium} {
+    &--small {
+      display: block;
+    }
+    &--large {
+      display: none;
+    }
+  }
+  @media #{$medium__up} {
+    &--small {
+      display: none;
+    }
+    &--large {
+      display: block;
+    }
+  }
+}
+#sidebar {
+  width: 15.63rem;
+  position: fixed;
+  top: 0;
+  left: -15.63rem;
+  height: 100vh;
+  z-index: 999;
+  padding: 1rem;
+  background: $green-AA;
+  color: $white;
+  transition: all 0.3s;
+  overflow-y: scroll;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+  &.active {
+    overflow: visible;
+    left: 0;
+  }
+  .sidebar-header {
+    border-bottom: 1px solid darken($dark, 2%);
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+  }
+  ul {
+    &.components {
+      padding: 1.25rem 0;
+      border-bottom: 1px solid darken($dark, 2%);
+    }
+    p {
+      color: $white;
+      padding: 0.625rem;
+    }
+    li {
+      a {
+        padding: 0.625rem;
+        display: block;
+        @include font-size(16);
+        &:link {
+          text-decoration: none;
+        }
+        &:hover {
+          color: darken($white, 5%);
+          background: darken($green-AA, 5%);
+        }
+      }
+      &.active > a {
+        color: $white;
+        background: darken($green-AA, 10%);
+      }
+    }
+  }
+  a {
+    color: $white;
+    &[aria-expanded="true"] {
+      color: $white;
+      background: darken($green-AA, 5%);
+    }
+    &[data-toggle="collapse"] {
+      position: relative;
+    }
+    &[aria-expanded="false"]::before {
+      content: '\f107';
+      display: block;
+      position: absolute;
+      right: 1.25rem;
+      font-family: 'fontawesome';
+      font-size: 1rem;
+    }
+    &[aria-expanded="true"]::before {
+      content: '\f106';
+      display: block;
+      position: absolute;
+      right: 1.25rem;
+      font-family: 'fontawesome';
+      font-size: 1rem;
+    }
+  }
+  ul {
+    ul a {
+      padding-left: 2rem;
+      background: darken($green-AA, 2%);
+      @include font-size(16);
+    }
+    &.CTAs {
+      padding: 1.25rem 0;
+      a {
+        text-align: center;
+        display: block;
+        border-radius: 0.3125rem;
+        margin-bottom: 0.3125rem;
+        @include font-size(16);
+      }
+    }
+  }
+  a {
+    &.download {
+      background: darken($green-AA, 15%);
+      color: $white;
+    }
+    &.article {
+      background: $white;
+      color: $green-AA;
+      &:hover {
+        background: darken($green-AA, 15%);
+        color: $white;
+      }
+    }
+  }
+}
+.overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 998;
+  display: none;
+}
+#dismiss {
+  // width: 2.188rem;
+  // height: 2.188rem;
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  // top: 0.625rem;
+  // right: 0.625rem;
+  text-align: center;
+  vertical-align: middle;
+  &:link {
+    color: $white;
+  }
+  &:hover,
+  &:visited,
+  &:focus,
+  &:active,
+    {
+    color: $white;
+  }
+  .fa {
+    line-height: 0;
+    &:before {
+      content: '\00d7';
+    }
+  }
+}
+#content {
+  width: 100%;
+  padding: 1.25rem;
+  min-height: 100vh;
+  transition: all 0.3s;
+  position: absolute;
+  top: 0;
+  right: 0;
 }

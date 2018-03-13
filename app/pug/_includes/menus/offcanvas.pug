@@ -1,0 +1,29 @@
+nav#sidebar
+	a#dismiss(href="#", role="link")
+		i.fa.fa-times-thin.fa-2x(aria-hidden="true")
+	.sidebar-header
+		img(src="images/logo-bisring-icon-white.png", alt="BisRing")
+		h3.sr-only(role="heading") BisRing
+	ul.list-unstyled.components(role="list")
+		li.active(role="listitem")
+			a(href='#', role="link") Home
+		li(role="listitem")
+			a(href='#', role="link") About
+		li(role="listitem")
+			a(href='#homeSubmenu', data-toggle='collapse', aria-expanded='false') Pages
+			ul#homeSubmenu.collapse.list-unstyled(role="list")
+				li(role="listitem")
+					a(href='#', role="link") Page
+				li(role="listitem")
+					a(href='#', role="link") Page
+				li(role="listitem")
+					a(href='#', role="link") Page
+		li(role="listitem")
+			a(href='#', role="link") Portfolio
+		li(role="listitem")
+			a(href='#', role="link") Contact
+	ul.list-unstyled.CTAs
+		li
+			a.download(href='https://bootstrapious.com/tutorial/files/sidebar.zip') Download source
+		li
+			a.article(href='https://bootstrapious.com/p/bootstrap-sidebar') Back to article
