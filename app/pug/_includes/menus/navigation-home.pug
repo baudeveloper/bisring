@@ -1,25 +1,44 @@
 header.site-header(role="header", data-js="site-header")
-  img.site-header--img.hidden(src="images/bg-header-home.png", alt="Background for site header section")
-  .container
-    nav.navbar.navbar-expand-md.navbar-dark.fixed-top.bg-dark.navbar--large(role="navigation")
-      .container
-        a.navbar-brand(href='index.html', role="link")
-          img(src="images/logo-bisring-white.png", alt="BisRing")
-          span.sr-only BisRing
-        ul.navbar-nav.ml-auto.navbar-list-large(role="list")
-          li.nav-item(role="listitem", class=(bodyClass === 'why-bisring' ? 'active' : ''))
-            a.nav-link(role="link", href='why-bisring.html') Why BisRing?
-          li.nav-item(role="listitem", class=(bodyClass === 'login' ? 'active' : ''))
-            a.nav-link(role="link", href='login.html') Login
-          li.nav-item(role="listitem", class=(bodyClass === 'register' ? 'active' : ''))
-            a.nav-link(role="link", href='register.html') Register
-    .offcanvas-wrapper
-      include ../menus/offcanvas
-    .offcanvas-overlay(data-js="offcanvas-overlay")
-    nav.navbar--small(role="navigation")
-      a.offcanvas-collapse(href="#", role="link", data-js="offcanvas-collapse")
-        i.fa.fa-bars(aria-hidden="true")
-        img(src="images/logo-bisring-icon-white.png", alt="BisRing")
-        span.sr-only BisRing
-    .site-header--content
-      h1.site-header--content-title Find All Your Real Estate Needs and More in One Location. 
+	img.site-header--img.hidden(src="images/bg-header-home.png", alt="Background for site header section")
+	.container
+		nav.navbar.navbar-expand-md.navbar-dark.fixed-top.bg-dark.navbar--large(role="navigation")
+			.container
+				a.navbar-brand(href='index.html', role="link")
+					img(src="images/logo-bisring-white.png", alt="BisRing")
+					span.sr-only BisRing
+				ul.navbar-nav.ml-auto.navbar-list-large(role="list")
+					li.nav-item(role="listitem", class=(bodyClass === 'why-bisring' ? 'active' : ''))
+						a.nav-link(role="link", href='why-bisring.html') Why BisRing?
+					li.nav-item(role="listitem", class=(bodyClass === 'login' ? 'active' : ''))
+						a.nav-link(role="link", href='login.html') Login
+					li.nav-item(role="listitem", class=(bodyClass === 'register' ? 'active' : ''))
+						a.nav-link(role="link", href='register.html') Register
+		.offcanvas-wrapper
+			include ../menus/offcanvas
+		.offcanvas-overlay(data-js="offcanvas-overlay")
+		nav.navbar--small(role="navigation")
+			a.offcanvas-collapse(href="#", role="link", data-js="offcanvas-collapse")
+				i.fa.fa-bars(aria-hidden="true")
+				img(src="images/logo-bisring-icon-white.png", alt="BisRing")
+				span.sr-only BisRing
+		.site-header--wrap
+			h1.site-header--title Find All Your Real Estate Needs and More in One Location.
+			form.form-inline.site-header--form
+				.form-group
+					label.sr-only(for='selectService') Please select a Service
+					select#selectService.form-control
+						option Services
+						option For Rents
+						option For Sales
+				.form-group
+					.input-group
+						input.form-control(type='text', placeholder="Find a Service", aria-label="Find a Service", aria-describedby='inputFindService')
+						.input-group-append
+							button.btn.btn-outline-secondary(type='button')
+								span.fa.fa-search(aria-hidden="true")
+				.form-group
+					label.sr-only(for='selectLocation') Please select a Location
+					select#selectLocation.form-control
+						option Toronto, Canada
+						option London, United Kingdom
+						option Baghdad, Iraq

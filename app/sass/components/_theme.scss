@@ -173,13 +173,18 @@ Table of Content:
     background-color: $dark;
     background-position: center center;
     background-repeat: no-repeat;
-    background-size: cover;
-    &--content-title {
+    @media (min-width: 48rem) and (max-width: 75rem) {
+      background-size: cover;
+    }
+    &--title {
       text-align: center;
       margin: 5rem 0 2.5rem;
       padding: 0;
       color: $white;
       @include font-size(24);
+    }
+    &--form {
+      margin-bottom: 10rem;
     }
   }
 }

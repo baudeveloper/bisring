@@ -17,7 +17,8 @@ Table of Content:
   }
   .site-header {
     height: 100vh;
-    &--content-title {
+    background-size: cover;
+    &--title {
       margin: 5rem 0 2.5rem;
       padding: 0;
       @include font-size(18);
