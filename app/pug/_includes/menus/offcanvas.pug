@@ -1,7 +1,7 @@
-nav#sidebar
-	a#dismiss(href="#", role="link")
+nav.offcanvas(data-js="offcanvas")
+	a.offcanvas-dismiss(href="#", role="link", data-js="offcanvas-dismiss")
 		i.fa.fa-times-thin.fa-2x(aria-hidden="true")
-	.sidebar-header
+	.offcanvas-header
 		img(src="images/logo-bisring-icon-white.png", alt="BisRing")
 		h3.sr-only(role="heading") BisRing
 	ul.list-unstyled.components(role="list")
@@ -22,8 +22,8 @@ nav#sidebar
 			a(href='#', role="link") Portfolio
 		li(role="listitem")
 			a(href='#', role="link") Contact
-	ul.list-unstyled.CTAs
+	ul.list-unstyled.buttons
 		li
-			a.download(href='https://bootstrapious.com/tutorial/files/sidebar.zip') Download source
+			a.download(href='#') Download source
 		li
-			a.article(href='https://bootstrapious.com/p/bootstrap-sidebar') Back to article
+			a.article(href='#') Back to article

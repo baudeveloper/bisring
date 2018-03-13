@@ -13,17 +13,25 @@ $(document).ready(function () {
 	siteCallout.css("backgroundImage", "url(" + imgSrc + ")");
 
 	// Source: https://bootstrapious.com/tutorial/sidebar/index3.html
-	$("#sidebar").mCustomScrollbar({
+	var offCanvasMenu = $("[data-js=\"offcanvas\"]");
+	var offCanvasCollapse = $("[data-js=\"offcanvas-collapse\"]");
+	var offCanvasDismiss = $("[data-js=\"offcanvas-dismiss\"]");
+	var offCanvasOverlay = $("[data-js=\"offcanvas-overlay\"]");
+	offCanvasMenu.mCustomScrollbar({
 		theme: "minimal"
 	});
-	$("#sidebarCollapse").on("click", function () {
-		$("#sidebar").addClass("active");
-		$(".overlay").fadeIn();
+	offCanvasCollapse.on("click", function () {
+		offCanvasMenu.addClass("active");
+		offCanvasOverlay.fadeIn();
 		$(".collapse.in").toggleClass("in");
 		$("a[aria-expanded=true]").attr("aria-expanded", "false");
 	});
-	$("#dismiss, .overlay").on("click", function () {
-		$("#sidebar").removeClass("active");
-		$(".overlay").fadeOut();
+	offCanvasDismiss.on("click", function () {
+		offCanvasMenu.removeClass("active");
+		offCanvasOverlay.fadeOut();
+	});
+	offCanvasOverlay.on("click", function () {
+		offCanvasMenu.removeClass("active");
+		offCanvasOverlay.fadeOut();
 	});
 });

@@ -2,14 +2,13 @@
 /*
 Table of Content:
 --- Universal Classes
---- Navigation
+--- Navigation & Offcanvas
 */
 
 // Universal Classes
 .hidden {
   display: none !important;
 }
-
 .btn {
   font-weight: normal;
   font-family: "Barlow-SemiBold", sans-serif;
@@ -21,7 +20,7 @@ Table of Content:
   }
 }
 
-// Navigation
+// Navigation & Offcanvas
 .navbar {
   &--large {
     background-color: $dark !important;
@@ -29,7 +28,7 @@ Table of Content:
   &--small {
     padding: 1rem;
     background-color: $dark;
-    #sidebarCollapse {
+    .offcanvas-collapse {
       @include font-size(20);
       &:link {
         color: $white;
@@ -65,7 +64,7 @@ Table of Content:
     }
   }
 }
-#sidebar {
+.offcanvas {
   width: 15.63rem;
   position: fixed;
   top: 0;
@@ -81,11 +80,6 @@ Table of Content:
   &.active {
     overflow: visible;
     left: 0;
-  }
-  .sidebar-header {
-    border-bottom: 1px solid darken($dark, 2%);
-    margin-bottom: 1rem;
-    padding-bottom: 1rem;
   }
   ul {
     &.components {
@@ -147,7 +141,7 @@ Table of Content:
       background: darken($green-AA, 2%);
       @include font-size(16);
     }
-    &.CTAs {
+    &.buttons {
       padding: 1.25rem 0;
       a {
         text-align: center;
@@ -172,50 +166,46 @@ Table of Content:
       }
     }
   }
-}
-.overlay {
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.7);
-  z-index: 998;
-  display: none;
-}
-#dismiss {
-  // width: 2.188rem;
-  // height: 2.188rem;
-  width: auto;
-  height: auto;
-  position: absolute;
-  top: 0;
-  right: 0;
-  // top: 0.625rem;
-  // right: 0.625rem;
-  text-align: center;
-  vertical-align: middle;
-  &:link {
-    color: $white;
+  &-header {
+    border-bottom: 1px solid darken($dark, 2%);
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
   }
-  &:hover,
-  &:visited,
-  &:focus,
-  &:active,
-    {
-    color: $white;
+  &-overlay {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 998;
+    display: none;
   }
-  .fa {
-    line-height: 0;
-    &:before {
-      content: '\00d7';
+  &-dismiss {
+    // width: 2.188rem;
+    // height: 2.188rem;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    // top: 0.625rem;
+    // right: 0.625rem;
+    text-align: center;
+    vertical-align: middle;
+    &:link {
+      color: $white;
+    }
+    &:hover,
+    &:visited,
+    &:focus,
+    &:active,
+      {
+      color: $white;
+    }
+    .fa {
+      line-height: 0;
+      &:before {
+        content: '\00d7';
+      }
     }
   }
-}
-#content {
-  width: 100%;
-  padding: 1.25rem;
-  min-height: 100vh;
-  transition: all 0.3s;
-  position: absolute;
-  top: 0;
-  right: 0;
 }

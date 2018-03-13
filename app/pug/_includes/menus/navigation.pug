@@ -10,11 +10,11 @@ nav.navbar.navbar-expand-md.navbar-dark.fixed-top.bg-dark.navbar--large(role="na
         a.nav-link(role="link", href='/login.html') Login
       li.nav-item(role="listitem", class=(bodyClass === 'register' ? 'active' : ''))
         a.nav-link(role="link", href='/register.html') Register
-.wrapper
+.offcanvas-wrapper
   include ../menus/offcanvas
-.overlay
+.offcanvas-overlay(data-js="offcanvas-overlay")
 nav.navbar--small(role="navigation")
-  a#sidebarCollapse(href="#", role="link")
+  a.offcanvas-collapse(href="#", role="link", data-js="offcanvas-collapse")
     i.fa.fa-bars(aria-hidden="true")
     img(src="images/logo-bisring-icon-white.png", alt="BisRing")
     span.sr-only BisRing
