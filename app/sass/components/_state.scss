@@ -12,9 +12,6 @@ input,
 textarea {
   font-family: "Barlow-Regular", sans-serif;
 }
-.form-control {
-  color: $silver-AB;
-}
 .hidden {
   display: none !important;
 }
@@ -33,7 +30,6 @@ textarea {
     }
   }
 }
-
 // ---
 .navbar {
   .nav-link {

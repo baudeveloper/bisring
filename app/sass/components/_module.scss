@@ -1,11 +1,17 @@
 // MODULE.scss
 
+/*
+Table of Content:
+--- Popover
+--- Modal
+*/
+
 .popover {
 	.form-group {
 		margin: 0;
 	}
 	&-wrap {
-		padding: 1.25rem 1rem;
+		padding: .75rem .5rem;
 	}
 	&-social {
 		color: $white;
@@ -60,6 +66,10 @@
 			@include font-size(14);
 		}
 	}
+	&-email,
+	&-password {
+		border-width: 1px;
+	}
 	&-email {
 		margin-bottom: 1rem;
 	}
@@ -71,8 +81,8 @@
 	}
 	&-reset-password {
 		color: $green-AB;
-		@include font-size(14);
 		font-family: "Barlow-Medium", sans-serif;
+		@include font-size(14);
 		&:link {
 			text-decoration: underline;
 		}
@@ -84,13 +94,22 @@
 	}
 	&-login {
 		color: $green-AB;
-		@include font-size(14);
 		text-transform: uppercase;
 		font-family: "Barlow-SemiBold", sans-serif;
+		@include font-size(14);
+		&:link {
+			text-decoration: none;
+		}
 		&:hover,
 		&:active,
 		&:focus {
 			color: darken($green-AB, 5%);
 		}
+	}
+}
+// ---
+.modal {
+	.form-group {
+		margin: 0;
 	}
 }

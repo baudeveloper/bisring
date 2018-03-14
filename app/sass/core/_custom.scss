@@ -3,9 +3,9 @@ Table of Content:
 --- VARIABLES
 --- BADGES
 --- NAVBAR
+--- INPUTS
 */
 
-// VARIABLES
 $gray-800:                    $green-AG !default;
 $primary: 					  $orange-AA !default;
 $secondary:  				  $green-AB !default;
@@ -13,8 +13,7 @@ $dark:          			  $green-AG !default;
 $font-family-sans-serif:      "Barlow-Regular" !default;
 $btn-padding-y:               .5rem !default;
 $btn-padding-x: 			  2rem !default;
-
-// BADGES
+// ---
 $badge-font-size:             1rem !default;
 $badge-font-weight:           normal !default;
 $badge-padding-y:             .25rem !default;
@@ -22,14 +21,12 @@ $badge-padding-x:             .5rem !default;
 $badge-border-radius:         100% !default;
 $badge-pill-padding-x:        0 !default;
 $badge-pill-border-radius:    1rem !default;
-
-// NAVBAR
+// ---
 $navbar-dark-color:           $white !default;
 $navbar-dark-hover-color:     darken($white, 15%) !default;
 $navbar-dark-active-color:    darken($white, 25%) !default;
 $navbar-dark-disabled-color:  darken($white, 50%) !default;
-
-// INPUTS
+// ---
 $input-placeholder-color:     $silver-AB !default;
 $input-btn-focus-width:       0 !default;
 $input-btn-focus-color:       transparent !default;
