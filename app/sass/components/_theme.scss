@@ -230,10 +230,44 @@ Table of Content:
         border-color: $orange-AA;
         text-transform: uppercase;
         background-color: $orange-AA;
-        padding: .375rem 2rem .375rem 0;
+        padding: .375rem 0 .375rem 0;
         border-radius: .25rem 0 0 .25rem;
         .filter-option {
-          text-align: right;
+          text-align: center;
+        }
+        &::after {
+          position: absolute;
+          right: 1rem;
+          top: 48%;
+        }
+        &:hover,
+        &:focus,
+        &:active {
+          color: $orange-AA;
+          border-color: transparent;
+          background-color: $orange-AB;
+        }
+      }
+      .dropdown-menu {
+        margin: 0;
+        padding: 0;
+        border-radius: 0;
+      }
+      .dropdown-item {
+        color: $orange-AA;
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+        font-family: "Barlow-SemiBold", sans-serif;
+        &:hover,
+        &:active
+        &:focus {
+          color: $orange-AA;
+          border-color: transparent;
+          background-color: $orange-AB;
+        }
+        &.active {
+          border-color: transparent;
+          background-color: $orange-AB;
         }
       }
     }
@@ -264,6 +298,38 @@ Table of Content:
         background-color: $orange-AB;
         border-radius: 0 .25rem .25rem 0;
         border-left: 1px solid $orange-AA;
+        &:hover,
+        &:focus,
+        &:active {
+          color: $white;
+          border-color: transparent;
+          background-color: $orange-AA;
+        }
+      }
+      .dropdown-menu {
+        margin: 0;
+        padding: 0;
+        border-radius: 0;
+      }
+      .dropdown-divider {
+        margin: 0;
+      }
+      .dropdown-item {
+        color: $orange-AA;
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+        font-family: "Barlow-SemiBold", sans-serif;
+        &:hover,
+        &:active
+        &:focus {
+          color: $orange-AA;
+          border-color: transparent;
+          background-color: $orange-AB;
+        }
+        &.active {
+          border-color: transparent;
+          background-color: $orange-AB;
+        }
       }
     }
     &--sticky {
