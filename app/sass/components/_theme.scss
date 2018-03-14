@@ -282,9 +282,9 @@ Table of Content:
         color: $orange-AA;
         border-radius: 0;
         background-color: $white;
-        border-top: 1px solid $silver-AG;
-        border-bottom: 1px solid $silver-AG;
-        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        // border-top: 1px solid $silver-AG;
+        // border-bottom: 1px solid $silver-AG;
+        // transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
         @include font-size(20);
       }
     }
