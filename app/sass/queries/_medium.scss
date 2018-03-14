@@ -112,6 +112,9 @@ Table of Content:
       padding: 0;
       @include font-size(18);
     }
+    &-form {
+      padding-bottom: 0;
+    }
     &--sticky {
       position: absolute;
       bottom: 0;

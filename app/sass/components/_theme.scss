@@ -172,7 +172,7 @@ Table of Content:
 // ---
 .home {
   .site-header {
-    overflow: auto;
+    // overflow: auto;
     background-color: $dark;
     background-position: center center;
     background-repeat: no-repeat;
@@ -187,7 +187,7 @@ Table of Content:
       @include font-size(24);
     }
     &--form {
-      margin-bottom: 10rem;
+      padding-bottom: 10rem;
     }
     &--sticky {
       display: none;

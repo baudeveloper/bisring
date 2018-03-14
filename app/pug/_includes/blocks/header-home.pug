@@ -8,22 +8,29 @@ header.site-header(role="header", data-js="site-header")
 			form.form-inline.site-header--form
 				.form-group
 					label.sr-only(for='selectService') Please select a Service
-					select#selectService.form-control
+					select#selectService.selectpicker
 						option Services
 						option For Rents
 						option For Sales
 				.form-group
 					.input-group
-						input.form-control(type='text', placeholder="Find a Service", aria-label="Find a Service", aria-describedby='inputFindService')
+						label.sr-only(for='inputFindService') Find a Service
+						input#inputFindService.form-control(type='text', placeholder="Find a Service", aria-label="Find a Service", aria-describedby='inputFindService')
 						.input-group-append
 							button.btn.btn-outline-secondary(type='button')
 								span.fa.fa-search(aria-hidden="true")
 				.form-group
 					label.sr-only(for='selectLocation') Please select a Location
-					select#selectLocation.form-control
-						option Toronto, Canada
-						option London, United Kingdom
-						option Baghdad, Iraq
+					select#selectLocation.selectpicker
+						optgroup(label="America")
+							option Toronto, Canada
+							option California, United States
+						optgroup(label="Asia")
+							option New Delhi, India
+							option Tokyo, Japan
+						optgroup(label="Australia")
+							option Sydney, Australia
+							option Christchurch, New Zealand
 		footer.site-header--sticky
 			a.btn.site-header--sticky-link.disabled(href="#")
 				span.site-header--sticky-icon.fa.fa-thumb-tack(aria-hidden="true")
