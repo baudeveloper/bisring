@@ -59,9 +59,9 @@ $(document).ready(function () {
 		"<a href=\"#\" class=\"popover-login\">Login</a>",
 		"</div><p class=\"popover-linebreak\"><span>or login via:</span></p>",
 		"<div class=\"form-group\">",
-		"<a href=\"http://facebook.com\" target=\"_blank\" class=\"btn btn-block popover-social popover-facebook\"><span class=\"popover-icon fa fa-facebook-official\" aria-hidden=\"true\"></span>Facebook</a>",
-		"<a href=\"http://plus.google.com\" target=\"_blank\" class=\"btn btn-block popover-social popover-google\"><span class=\"popover-icon fa fa-google-plus-square\" aria-hidden=\"true\"></span>Google</a>",
-		"<a href=\"http://linkedin.com\" target=\"_blank\" class=\"btn btn-block popover-social popover-linkedin\"><span class=\"popover-icon fa fa-linkedin-square\" aria-hidden=\"true\"></span>Linkedin</a>",
+		"<a href=\"http://facebook.com\" target=\"_blank\" class=\"btn btn-block popover-social popover-facebook\"><span class=\"popover-icon fab fa-facebook-square\"></span>Facebook</a>",
+		"<a href=\"http://plus.google.com\" target=\"_blank\" class=\"btn btn-block popover-social popover-google\"><span class=\"popover-icon fab fa-google-plus-square\"></span>Google</a>",
+		"<a href=\"http://linkedin.com\" target=\"_blank\" class=\"btn btn-block popover-social popover-linkedin\"><span class=\"popover-icon fab fa-linkedin\"></span>Linkedin</a>",
 		"</div>"
 	].join("");
 	var popoverTitle = "Login";
