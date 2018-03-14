@@ -108,27 +108,56 @@ Table of Content:
     position: relative;
     background-size: cover;
     &--title {
-      margin: 5rem 0 2.5rem;
       padding: 0;
-      @include font-size(18);
+      margin: 2rem 0 2.5rem;
+      @include font-size(24);
+    }
+    &--logo {
+      display: block;
+      margin: 2rem auto 0;
     }
     &--form {
       padding-bottom: 0;
-      display: flex;
       flex-direction: column;
-      flex-wrap: nowrap;
-      justify-content: flex-start;
-      .form-group:first-child {
-        flex-grow: 1;
+    }
+    &--service {
+      margin-bottom: 0;
+      .dropdown-toggle {
+        line-height: 2.5rem;
+        text-transform: uppercase;
+        border-radius: .25rem .25rem 0 0;
+        padding: .375rem 2rem .375rem 1rem;
+        .filter-option {
+          text-align: left;
+        }
       }
-      .form-group:first-child+div {
-        flex-grow: 3;
+    }
+    &--search {
+      margin-bottom: 2rem;
+      input[type="text"] {
+        line-height: 3rem;
+        border-radius: 0 0 0 .25rem;
+        padding: .375rem 2rem .375rem 1rem;
       }
-      .form-group:last-child {
-        flex-grow: 2;
+      button {
+        padding: .5rem 1rem;
+        border-radius: 0 0 .25rem 0;
+        border-top: 1px solid #ced4da;
+        border-bottom: 1px solid #ced4da;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        @include font-size(20);
       }
-      .bootstrap-select {
-        width: 100%!important;
+    }
+    &--location {
+      .dropdown-toggle {
+        color: $white;
+        border-width: 2px;
+        line-height: 2.5rem;
+        border-radius: .1rem;
+        background: transparent;
+        border-left-color: $white;
+        padding: .375rem 2rem .375rem 1rem;
+        font-family: "Barlow-Medium", sans-serif;
       }
     }
     &--sticky {
@@ -138,14 +167,14 @@ Table of Content:
       right: 0;
       display: flex;
       flex-direction: row;
-      justify-content: space-between;
       background-color: $green-AA;
+      justify-content: space-between;
       &-link {
         color: $white;
         display: block;
         padding: 1.25rem;
-        text-transform: uppercase;
         text-decoration: none;
+        text-transform: uppercase;
         font-family: "Barlow-SemiBold", sans-serif;
         @include font-size(16);
         &:hover,

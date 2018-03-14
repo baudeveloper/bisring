@@ -180,29 +180,90 @@ Table of Content:
       background-size: cover;
     }
     &--title {
-      text-align: center;
-      margin: 5rem 0 2.5rem;
       padding: 0;
       color: $white;
+      text-align: center;
+      margin: 5rem 0 2.5rem;
       @include font-size(24);
     }
+    &--logo {
+      display: none;
+    }
     &--form {
-      padding-bottom: 10rem;
       display: flex;
       flex-direction: row;
       flex-wrap: nowrap;
+      padding-bottom: 10rem;
       justify-content: space-between;
-      .form-group:first-child {
-        flex-grow: 1;
-      }
-      .form-group:first-child+div {
-        flex-grow: 3;
-      }
-      .form-group:last-child {
-        flex-grow: 2;
-      }
       .bootstrap-select {
         width: 100%!important;
+      }
+      .form-group {
+        &:first-child {
+          flex-grow: 1;
+        }
+        &:first-child+div {
+          flex-grow: 3;
+        }
+        &:last-child {
+          flex-grow: 2;
+        }
+      }
+      @media (min-width: 48rem) and (max-width: 62rem) {
+        .form-group {
+          &:first-child {
+            flex-grow: 2;
+          }
+          &:first-child+div {
+            flex-grow: 1;
+          }
+          &:last-child {
+            flex-grow: 3;
+          }
+        }
+      }
+    }
+    &--service {
+      .dropdown-toggle {
+        color: $white;
+        line-height: 3rem;
+        border-color: $orange-AA;
+        text-transform: uppercase;
+        background-color: $orange-AA;
+        padding: .375rem 2rem .375rem 0;
+        border-radius: .25rem 0 0 .25rem;
+        .filter-option {
+          text-align: right;
+        }
+      }
+    }
+    &--search {
+      input[type="text"] {
+        border-radius: 0;
+        color: $silver-AA;
+        line-height: 3rem;
+        padding: .375rem 2rem;
+      }
+      button {
+        color: $orange-AA;
+        border-radius: 0;
+        background-color: $white;
+        border-top: 1px solid $silver-AG;
+        border-bottom: 1px solid $silver-AG;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        @include font-size(20);
+      }
+    }
+    &--location {
+      .dropdown-toggle {
+        line-height: 3rem;
+        color: $orange-AA;
+        padding-top: .375rem;
+        padding-left: .75rem;
+        padding-bottom: .375rem;
+        background-color: $orange-AB;
+        border-radius: 0 .25rem .25rem 0;
+        border-left: 1px solid $orange-AA;
       }
     }
     &--sticky {

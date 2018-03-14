@@ -20,12 +20,14 @@ $green-AF: #e6eff1;
 $green-AG: #136e80;
 $green-AH: #e1ebec;
 $orange-AA: #f1592a;
+$orange-AB: #fef2ee;
 $silver-AA: #666;
 $silver-AB: #333;
 $silver-AC: #c9c9cb;
 $silver-AD: #e0e0e0;
 $silver-AE: #fafafa;
 $silver-AF: #838486;
+$silver-AG: #ced4da;
 // ---
 @mixin font-size($sizeValue: 16) {
   font-size: ($sizeValue) + px;

@@ -4,33 +4,31 @@ header.site-header(role="header", data-js="site-header")
 		include ../menus/primary-menu
 		include ../menus/offcanvas
 		.site-header--wrap
+			img.site-header--logo(src="images/logo-bisring-white.png", alt="BisRing")
 			h1.site-header--title Find All Your Real Estate Needs and More in One Location.
 			form.site-header--form
-				//- .row
-					//- .col-sm-12.col-md-2
-				.form-group
+				.form-group.site-header--service
 					label.sr-only(for='selectService') Please select a Service
 					select#selectService.selectpicker
 						option Services
 						option For Rents
 						option For Sales
-				//- .col-sm-12.col-md-6
-				.form-group
+				.form-group.site-header--search
 					.input-group
 						label.sr-only(for='inputFindService') Find a Service
 						input#inputFindService.form-control(type='text', placeholder="Find a Service", aria-label="Find a Service", aria-describedby='inputFindService')
 						.input-group-append
-							button.btn.btn-outline-secondary(type='button')
+							button.btn(type='button')
 								span.fa.fa-search(aria-hidden="true")
-				//- .col-sm-12.col-md-4
-				.form-group
+				.form-group.site-header--location
 					label.sr-only(for='selectLocation') Please select a Location
 					select#selectLocation.selectpicker
 						optgroup(label="America")
-							option Toronto, Canada
 							option California, United States
+							option Toronto, Canada
 						optgroup(label="Asia")
 							option New Delhi, India
+							option Thimbirigasyaya, Sri Lanka
 							option Tokyo, Japan
 						optgroup(label="Australia")
 							option Sydney, Australia
