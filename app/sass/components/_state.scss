@@ -8,6 +8,13 @@ Table of Content:
     --- HOME
 */
 
+input,
+textarea {
+  font-family: "Barlow-Regular", sans-serif;
+}
+.form-control {
+  color: $silver-AB;
+}
 .hidden {
   display: none !important;
 }

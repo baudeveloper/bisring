@@ -1,1 +1,96 @@
 // MODULE.scss
+
+.popover {
+	.form-group {
+		margin: 0;
+	}
+	&-wrap {
+		padding: 1.25rem 1rem;
+	}
+	&-social {
+		color: $white;
+		position: relative;
+		&:hover,
+		&:active,
+		&:focus {
+			color: $white;
+			background: darken($color-FBOOK, 5%);
+		}
+	}
+	&-icon {
+		position: absolute;
+		left: 1rem;
+		top: .75rem;
+	}
+	&-facebook {
+		background: $color-FBOOK;
+		&:hover,
+		&:active,
+		&:focus {
+			background: darken($color-FBOOK, 5%);
+		}
+	}
+	&-google {
+		background: $color-GOOGL;
+		&:hover,
+		&:active,
+		&:focus {
+			background: darken($color-GOOGL, 5%);
+		}
+	}
+	&-linkedin {
+		background: $color-LINKD;
+		&:hover,
+		&:active,
+		&:focus {
+			background: darken($color-LINKD, 5%);
+		}
+	}
+	&-linebreak {
+		width: 100%;
+		text-align: center;
+		line-height: 0.1em;
+		margin: 1rem 0 1.5rem;
+		border-bottom: 1px solid $silver-AH;
+		span {
+			padding: 0 1rem;
+			background: $white;
+			text-transform: uppercase;
+			font-family: "Barlow-Medium", sans-serif;
+			@include font-size(14);
+		}
+	}
+	&-email {
+		margin-bottom: 1rem;
+	}
+	&-resets {
+		padding: 2rem 0 1rem;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	&-reset-password {
+		color: $green-AB;
+		@include font-size(14);
+		font-family: "Barlow-Medium", sans-serif;
+		&:link {
+			text-decoration: underline;
+		}
+		&:hover,
+		&:active,
+		&:focus {
+			color: darken($green-AB, 5%);
+		}
+	}
+	&-login {
+		color: $green-AB;
+		@include font-size(14);
+		text-transform: uppercase;
+		font-family: "Barlow-SemiBold", sans-serif;
+		&:hover,
+		&:active,
+		&:focus {
+			color: darken($green-AB, 5%);
+		}
+	}
+}

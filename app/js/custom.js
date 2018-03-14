@@ -42,22 +42,33 @@ $(document).ready(function () {
 	var popoverTemplate = [
 		"<div class=\"popover\" role=\"tooltip\">",
 		"<div class=\"arrow\"></div>",
-		"<h3 class=\"popover-header\">",
-		"</h3>",
 		"<div class=\"popover-body\">",
 		"</div>",
 		"</div>"
 	].join("");
 	var popoverContent = [
-		"Hello World...",
-		"Hello World 2..."
+		"<div class=\"popover-wrap\">",
+		"<div class=\"form-group\">",
+		"<label class=\"sr-only\" for=\"popoverEmail\">Enter email address</label>",
+		"<input id=\"popoverEmail\" class=\"form-control popover-email\" placeholder=\"Email\">",
+		"</div><div class=\"form-group\">",
+		"<label class=\"sr-only\" for=\"popoverPassword\">Enter password</label>",
+		"<input id=\"popoverPassword\" class=\"form-control popover-password\" placeholder=\"Password\">",
+		"</div><div class=\"form-group popover-resets\">",
+		"<a href=\"#\" class=\"popover-reset-password\">Forgot Password?</a>",
+		"<a href=\"#\" class=\"popover-login\">Login</a>",
+		"</div><p class=\"popover-linebreak\"><span>or login via:</span></p>",
+		"<div class=\"form-group\">",
+		"<a href=\"http://facebook.com\" target=\"_blank\" class=\"btn btn-block popover-social popover-facebook\"><span class=\"popover-icon fa fa-facebook-official\" aria-hidden=\"true\"></span>Facebook</a>",
+		"<a href=\"http://plus.google.com\" target=\"_blank\" class=\"btn btn-block popover-social popover-google\"><span class=\"popover-icon fa fa-google-plus-square\" aria-hidden=\"true\"></span>Google</a>",
+		"<a href=\"http://linkedin.com\" target=\"_blank\" class=\"btn btn-block popover-social popover-linkedin\"><span class=\"popover-icon fa fa-linkedin-square\" aria-hidden=\"true\"></span>Linkedin</a>",
+		"</div>"
 	].join("");
 	var popoverTitle = "Login";
 	$("body").popover({
 		selector: "[data-js=\"popover-login\"]",
 		trigger: "click",
 		content: popoverContent,
-		title: popoverTitle,
 		template: popoverTemplate,
 		placement: "bottom",
 		html: true
