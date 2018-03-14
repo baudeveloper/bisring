@@ -32,11 +32,22 @@ textarea {
 }
 // ---
 .navbar {
-  .nav-link {
-    font-family: "Barlow-Medium";
-  }
   &--large {
     background-color: $dark !important;
+    .nav-item {
+      .nav-link {
+        padding-top: 1.5rem;
+        padding-bottom: 1rem;
+        font-family: "Barlow-Medium";
+        border-bottom-width: 6px;
+        border-bottom-color: transparent;
+      }
+      &.active {
+        .nav-link {
+          border-bottom: 6px solid $white;
+        }
+      }
+    }
   }
   &--small {
     padding: 1rem;

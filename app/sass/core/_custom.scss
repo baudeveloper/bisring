@@ -22,10 +22,13 @@ $badge-border-radius:         100% !default;
 $badge-pill-padding-x:        0 !default;
 $badge-pill-border-radius:    1rem !default;
 // ---
+$navbar-brand-padding-y:      0 !default;
+$navbar-padding-y:            0 !default;
+$navbar-padding-x:            0 !default;
 $navbar-dark-color:           $white !default;
 $navbar-dark-hover-color:     darken($white, 15%) !default;
-$navbar-dark-active-color:    darken($white, 25%) !default;
-$navbar-dark-disabled-color:  darken($white, 50%) !default;
+$navbar-dark-active-color:    $white !default;
+$navbar-dark-disabled-color:  darken($white, 25%) !default;
 // ---
 $input-placeholder-color:     $silver-AB !default;
 $input-btn-focus-width:       0 !default;
