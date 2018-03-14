@@ -181,6 +181,38 @@ Table of Content:
     background-color: $dark;
     background-position: center center;
     background-repeat: no-repeat;
+    &--breadcrumb {
+      padding-top: 0;
+      padding-bottom: 1.5rem;
+      .breadcrumb {
+        &-item {
+          &::before {
+            font-family: "fontawesome";
+          }
+        }
+        &-link {
+          color: $white;
+          text-transform: uppercase;
+          font-family: "Barlow-Medium", sans-serif;
+          @include font-size(14);
+          &:link {
+            color: $white;
+            text-decoration: none;
+          }
+          &:hover,
+          &:focus,
+          &:active {
+            color: darken($white, 10%);
+          }
+        }
+        &-text {
+          color: darken($white, 15%);
+          text-transform: uppercase;
+          font-family: "Barlow-Medium", sans-serif;
+          @include font-size(14);
+        }
+      }
+    }
     &--form {
       display: flex;
       flex-direction: row;
@@ -350,7 +382,6 @@ Table of Content:
       background-size: contain;
       &--form {
         padding-top: 2rem;
-        padding-bottom: 3.5rem;
       }
     }
   }

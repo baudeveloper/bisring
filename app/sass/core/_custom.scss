@@ -4,6 +4,7 @@ Table of Content:
 --- BADGES
 --- NAVBAR
 --- INPUTS
+--- BREADCRUMBS
 */
 
 $gray-800:                    $green-AG !default;
@@ -35,3 +36,12 @@ $input-btn-focus-width:       0 !default;
 $input-btn-focus-color:       transparent !default;
 $input-btn-focus-box-shadow:  none !default;
 $input-btn-border-width:      0 !default;
+// ---
+$breadcrumb-padding-y:              0 !default;
+$breadcrumb-padding-x:              0 !default;
+$breadcrumb-item-padding:           .5rem !default;
+$breadcrumb-margin-bottom:          0 !default;
+$breadcrumb-bg:                     transparent !default;
+$breadcrumb-divider-color:          $white !default;
+$breadcrumb-active-color:           $orange-AA !default;
+$breadcrumb-divider:                "\f105" !default;

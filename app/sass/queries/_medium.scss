@@ -227,7 +227,8 @@ Table of Content:
       }
     }
     .site-header {
-      &--form {
+      &--form,
+      &--breadcrumb {
         display: none;
       }
     }
