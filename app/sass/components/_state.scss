@@ -17,10 +17,16 @@ Table of Content:
   &-primary {
     background-color: $orange-AA;
   }
-  @media #{$large__up} {
-    min-width: 12rem;
+}
+@media #{$large__up} {
+  .site-callout,
+  .site-feature {
+    .btn {
+      min-width: 12rem;
+    }
   }
 }
+
 // ---
 .navbar {
   .nav-link {

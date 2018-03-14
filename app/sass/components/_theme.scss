@@ -188,6 +188,9 @@ Table of Content:
     }
     &--form {
       padding-bottom: 10rem;
+      .bootstrap-select {
+        width: 100%;
+      }
     }
     &--sticky {
       display: none;
