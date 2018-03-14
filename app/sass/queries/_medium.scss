@@ -98,18 +98,20 @@ Table of Content:
 }
 // ---
 .navbar {
-  &--small {
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 1rem;
-    z-index: 10;
-  }
   &--large {
     display: none;
   }
 }
 .home {
+  .navbar {
+    &--small {
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 1rem;
+      z-index: 10;
+    }
+  }
   .site-feature,
   .site-callout,
   .site-footer {
