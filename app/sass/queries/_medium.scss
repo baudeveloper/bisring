@@ -103,6 +103,7 @@ Table of Content:
     position: fixed;
     top: 0;
     left: 1rem;
+    z-index: 10;
   }
   &--large {
     display: none;
@@ -115,7 +116,7 @@ Table of Content:
     display: none;
   }
   .site-header {
-    height: 100vh;
+    min-height: 100vh;
     position: relative;
     background-size: cover;
     &--title {
@@ -174,7 +175,7 @@ Table of Content:
     }
     &--sticky {
       position: fixed;
-      z-index: 2;
+      z-index: 5;
       bottom: 0;
       left: 0;
       right: 0;
