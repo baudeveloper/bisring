@@ -55,7 +55,7 @@ $(document).ready(function () {
 		"<label class=\"sr-only\" for=\"popoverPassword\">Enter password</label>",
 		"<input id=\"popoverPassword\" class=\"form-control popover-password\" placeholder=\"Password\">",
 		"</div><div class=\"form-group popover-resets\">",
-		"<a href=\"#\" class=\"popover-reset-password\">Forgot Password?</a>",
+		"<a href=\"forgot-password.html\" class=\"popover-reset-password\">Forgot Password?</a>",
 		"<a href=\"#\" class=\"popover-login\">Login</a>",
 		"</div><p class=\"popover-linebreak\"><span>or login via:</span></p>",
 		"<div class=\"form-group\">",
@@ -64,7 +64,6 @@ $(document).ready(function () {
 		"<a href=\"http://linkedin.com\" target=\"_blank\" class=\"btn btn-block popover-social popover-linkedin\"><span class=\"popover-icon fab fa-linkedin\"></span>Linkedin</a>",
 		"</div>"
 	].join("");
-	var popoverTitle = "Login";
 	$("body").popover({
 		selector: "[data-js=\"popover-login\"]",
 		trigger: "click",

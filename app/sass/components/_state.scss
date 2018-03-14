@@ -5,7 +5,7 @@ Table of Content:
 --- Universal Classes
 --- Navigation
 --- Offcanvas
-    --- HOME
+    --- STANDARD PAGE
 */
 
 input,
@@ -27,56 +27,6 @@ textarea {
   .site-feature {
     .btn {
       min-width: 12rem;
-    }
-  }
-}
-// ---
-.navbar {
-  &--large {
-    background-color: $dark !important;
-    .nav-item {
-      .nav-link {
-        padding-top: 1.5rem;
-        padding-bottom: 1rem;
-        font-family: "Barlow-Medium";
-        border-bottom-width: 6px;
-        border-bottom-color: transparent;
-      }
-      &.active {
-        .nav-link {
-          border-bottom: 6px solid $white;
-        }
-      }
-    }
-  }
-  &--small {
-    padding: 1rem;
-    background-color: $dark;
-    .offcanvas-collapse {
-      @include font-size(20);
-      &:link {
-        color: $white;
-      }
-      &:active,
-      &:focus,
-      &:hover,
-      &:visited {
-        color: $white;
-      }
-    }
-    .offcanvas-icon {
-      color: inherit;
-      line-height: 1;
-      vertical-align: middle;
-      margin-right: 1rem;
-    }
-  }
-  @media #{$medium__up} {
-    &--small {
-      display: none;
-    }
-    &--large {
-      display: block;
     }
   }
 }
@@ -138,6 +88,46 @@ textarea {
       margin-right: 1.875rem;
     }
   }
+  &-logo {
+    margin-left: .5rem;
+  }
+  &-page-title {
+    display: inline;
+    color: $white;
+    margin: 0 0 0 .5rem;
+    padding: 0;
+    font-family: "Barlow-Medium";
+    @include font-size(20);
+  }
+  &-collapse {
+    color: $white;
+    @include font-size(20);
+    &:focus,
+    &:hover {
+      color: darken($white, 10%);
+    }
+    .offcanvas-icon {
+      vertical-align: middle;
+    }
+  }
+  &-icon {
+    color: inherit;
+    line-height: 1;
+    margin-right: 1rem;
+  }
+  &-search {
+    position: absolute;
+    right: 1rem;
+    color: $white;
+    @include font-size(20);
+    &:hover,
+    &:focus {
+      color: darken($white, 10%);
+    }
+    .offcanvas-icon {
+      margin-right: 0;
+    }
+  }
   &-list {
     &.components {
       padding: 0;
@@ -194,7 +184,7 @@ textarea {
     height: auto;
     position: absolute;
     top: 1rem;
-    right: 1rem;
+    right: 0;
     text-align: center;
     vertical-align: middle;
     &:link {
@@ -216,12 +206,27 @@ textarea {
   }
 }
 // ---
-.home {
+.page {
   .navbar {
     &--large {
+      // background-color: $dark !important;
       background-color: transparent!important;
       padding-left: 0;
       padding-right: 0;
+      .nav-item {
+        .nav-link {
+          padding-top: 1.5rem;
+          padding-bottom: 1rem;
+          font-family: "Barlow-Medium";
+          border-bottom-width: 6px;
+          border-bottom-color: transparent;
+        }
+        &.active {
+          .nav-link {
+            border-bottom: 6px solid $white;
+          }
+        }
+      }
       .container {
         padding-left: 0;
         padding-right: 0;
@@ -229,7 +234,22 @@ textarea {
     }
     &--small {
       padding: 1rem 0;
-      background-color: transparent;
+      background-color: $dark;
+    }
+    @media #{$medium__up} {
+      &--large {
+        display: block;
+      }
+      &--small {
+        display: none;
+      }
+    }
+  }
+  &-front {
+    .navbar {
+      &--small {
+        background-color: transparent;
+      }
     }
   }
 }

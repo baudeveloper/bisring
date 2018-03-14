@@ -5,7 +5,7 @@ Table of Content:
 --- Site Feature
 --- Site Callout
 --- Site Footer
-    --- HOME
+    --- STANDARD PAGE
     --- DASHBOARD
 */
 
@@ -170,30 +170,21 @@ Table of Content:
   }
 }
 // ---
-.home {
+.site-content {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+// ---
+.page {
   .site-header {
     // overflow: auto;
     background-color: $dark;
     background-position: center center;
     background-repeat: no-repeat;
-    @media (min-width: 48rem) and (max-width: 75rem) {
-      background-size: cover;
-    }
-    &--title {
-      padding: 0;
-      color: $white;
-      text-align: center;
-      margin: 5rem 0 2.5rem;
-      @include font-size(24);
-    }
-    &--logo {
-      display: none;
-    }
     &--form {
       display: flex;
       flex-direction: row;
       flex-wrap: nowrap;
-      padding-bottom: 10rem;
       justify-content: space-between;
       .bootstrap-select {
         width: 100%!important;
@@ -282,9 +273,6 @@ Table of Content:
         color: $orange-AA;
         border-radius: 0;
         background-color: $white;
-        // border-top: 1px solid $silver-AG;
-        // border-bottom: 1px solid $silver-AG;
-        // transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
         @include font-size(20);
       }
     }
@@ -332,8 +320,38 @@ Table of Content:
         }
       }
     }
-    &--sticky {
-      display: none;
+  }
+  &-front {
+    .site-header {
+      @media (min-width: 48rem) and (max-width: 75rem) {
+        background-size: cover;
+      }
+      &--title {
+        padding: 0;
+        color: $white;
+        text-align: center;
+        margin: 5rem 0 2.5rem;
+        @include font-size(24);
+      }
+      &--logo {
+        display: none;
+      }
+      &--form {
+        padding-bottom: 10rem;
+      }
+      &--sticky {
+        display: none;
+      }
+    }
+  }
+  &-compact {
+    .site-header {
+      background-color: $dark;
+      background-size: contain;
+      &--form {
+        padding-top: 2rem;
+        padding-bottom: 3.5rem;
+      }
     }
   }
 }

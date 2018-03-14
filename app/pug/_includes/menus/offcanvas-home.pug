@@ -3,48 +3,45 @@
 		a.offcanvas-dismiss(href="#", role="link", data-js="offcanvas-dismiss")
 			span.offcanvas-icon.far.fa-times.fa-2x
 		.offcanvas-header
-			//- img(src="images/logo-bisring-icon-white.png", alt="BisRing")
 			span.offcanvas-user Prasanna Kugananthan
 			a.offcanvas-title(href="#", role="link", data-toggle='modal', data-target='#modalLogin')
 				span.offcanvas-icon.fas.fa-key
 				| Logout
 		ul.list-unstyled.components.offcanvas-list(role="list")
-			li.active.offcanvas-listitem(role="listitem")
-				a.offcanvas-link(href='#', role="link")
+			li.offcanvas-listitem(role="listitem", class=(bodyId === 'home' ? 'active' : ''))
+				a.offcanvas-link(href='index.html', role="link")
 					span.offcanvas-icon.fas.fa-home
 					| Home
-			li.offcanvas-listitem(role="listitem")
-				a.offcanvas-link(href='#', role="link")
+			li.offcanvas-listitem(role="listitem", class=(bodyId === 'why-bisring' ? 'active' : ''))
+				a.offcanvas-link(href='why-bisring.html', role="link")
 					span.offcanvas-icon.fas.fa-star
 					| Why BisRing?
-			li.offcanvas-listitem(role="listitem")
-				a.offcanvas-link(href='#', role="link")
+			li.offcanvas-listitem(role="listitem", class=(bodyId === 'about-us' ? 'active' : ''))
+				a.offcanvas-link(href='about-us.html', role="link")
 					span.offcanvas-icon.fas.fa-bookmark
 					| About Us
-			li.offcanvas-listitem(role="listitem")
-				a.offcanvas-link(href='#', role="link")
+			li.offcanvas-listitem(role="listitem", class=(bodyId === 'faqs' ? 'active' : ''))
+				a.offcanvas-link(href='faqs.html', role="link")
 					span.offcanvas-icon.fas.fa-question
 					| FAQs
-			li.offcanvas-listitem(role="listitem")
-				a.offcanvas-link(href='#', role="link")
+			li.offcanvas-listitem(role="listitem", class=(bodyId === 'careers' ? 'active' : ''))
+				a.offcanvas-link(href='careers.html', role="link")
 					span.offcanvas-icon.fas.fa-tachometer-alt
 					| Careers
-			li.offcanvas-listitem(role="listitem")
-				a.offcanvas-link(href='#', role="link")
+			li.offcanvas-listitem(role="listitem", class=(bodyId === 'press' ? 'active' : ''))
+				a.offcanvas-link(href='press.html', role="link")
 					span.offcanvas-icon.fas.fa-newspaper
 					| Press
-			li.offcanvas-listitem(role="listitem")
-				a.offcanvas-link(href='#', role="link")
+			li.offcanvas-listitem(role="listitem", class=(bodyId === 'contact-us' ? 'active' : ''))
+				a.offcanvas-link(href='contact-us.html', role="link")
 					span.offcanvas-icon.fas.fa-envelope
 					| Contact Us
-			li.offcanvas-listitem(role="listitem")
-				a.offcanvas-link(href='#', role="link")
+			li.offcanvas-listitem(role="listitem", class=(bodyId === 'register' ? 'active' : ''))
+				a.offcanvas-link(href='register.html', role="link")
 					span.offcanvas-icon.fas.fa-clipboard-list
 					| Become a Bisringer
 .offcanvas-overlay(data-js="offcanvas-overlay")
 nav.navbar--small(role="navigation")
 	a.offcanvas-collapse(href="#", role="link", data-js="offcanvas-collapse")
-		//- span.offcanvas-icon.fa.fa-bars
 		span.offcanvas-icon.fas.fa-bars
-		//- img(src="images/logo-bisring-icon-white.png", alt="BisRing")
 		span.sr-only BisRing
