@@ -4,9 +4,10 @@
 			span.offcanvas-icon.far.fa-times.fa-2x
 		.offcanvas-header
 			//- img(src="images/logo-bisring-icon-white.png", alt="BisRing")
-			h1.offcanvas-title(role="heading")
-				span.offcanvas-icon.fas.fa-home
-				| Home
+			span.offcanvas-user Prasanna Kugananthan
+			a.offcanvas-title(href="#", role="link", data-toggle='modal', data-target='#modalLogin')
+				span.offcanvas-icon.fas.fa-key
+				| Logout
 		ul.list-unstyled.components.offcanvas-list(role="list")
 			li.active.offcanvas-listitem(role="listitem")
 				a.offcanvas-link(href='#', role="link")
