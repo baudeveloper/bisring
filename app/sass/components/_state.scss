@@ -64,14 +64,6 @@ textarea {
       margin-right: 1rem;
     }
   }
-  @media #{$medium} {
-    &--small {
-      display: block;
-    }
-    &--large {
-      display: none;
-    }
-  }
   @media #{$medium__up} {
     &--small {
       display: none;
