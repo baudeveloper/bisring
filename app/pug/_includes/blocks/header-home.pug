@@ -6,35 +6,35 @@ header.site-header(role="header", data-js="site-header")
 		.site-header--wrap
 			h1.site-header--title Find All Your Real Estate Needs and More in One Location.
 			form.site-header--form
-				.row
-					.col-sm-12.col-md-2
-						.form-group
-							label.sr-only(for='selectService') Please select a Service
-							select#selectService.selectpicker
-								option Services
-								option For Rents
-								option For Sales
-					.col-sm-12.col-md-6
-						.form-group
-							.input-group
-								label.sr-only(for='inputFindService') Find a Service
-								input#inputFindService.form-control(type='text', placeholder="Find a Service", aria-label="Find a Service", aria-describedby='inputFindService')
-								.input-group-append
-									button.btn.btn-outline-secondary(type='button')
-										span.fa.fa-search(aria-hidden="true")
-					.col-sm-12.col-md-4
-						.form-group
-							label.sr-only(for='selectLocation') Please select a Location
-							select#selectLocation.selectpicker
-								optgroup(label="America")
-									option Toronto, Canada
-									option California, United States
-								optgroup(label="Asia")
-									option New Delhi, India
-									option Tokyo, Japan
-								optgroup(label="Australia")
-									option Sydney, Australia
-									option Christchurch, New Zealand
+				//- .row
+					//- .col-sm-12.col-md-2
+				.form-group
+					label.sr-only(for='selectService') Please select a Service
+					select#selectService.selectpicker
+						option Services
+						option For Rents
+						option For Sales
+				//- .col-sm-12.col-md-6
+				.form-group
+					.input-group
+						label.sr-only(for='inputFindService') Find a Service
+						input#inputFindService.form-control(type='text', placeholder="Find a Service", aria-label="Find a Service", aria-describedby='inputFindService')
+						.input-group-append
+							button.btn.btn-outline-secondary(type='button')
+								span.fa.fa-search(aria-hidden="true")
+				//- .col-sm-12.col-md-4
+				.form-group
+					label.sr-only(for='selectLocation') Please select a Location
+					select#selectLocation.selectpicker
+						optgroup(label="America")
+							option Toronto, Canada
+							option California, United States
+						optgroup(label="Asia")
+							option New Delhi, India
+							option Tokyo, Japan
+						optgroup(label="Australia")
+							option Sydney, Australia
+							option Christchurch, New Zealand
 		footer.site-header--sticky
 			a.btn.site-header--sticky-link.disabled(href="#")
 				span.site-header--sticky-icon.fa.fa-thumb-tack(aria-hidden="true")

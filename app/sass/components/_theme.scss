@@ -188,8 +188,21 @@ Table of Content:
     }
     &--form {
       padding-bottom: 10rem;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      .form-group:first-child {
+        flex-grow: 1;
+      }
+      .form-group:first-child+div {
+        flex-grow: 3;
+      }
+      .form-group:last-child {
+        flex-grow: 2;
+      }
       .bootstrap-select {
-        width: 100%;
+        width: 100%!important;
       }
     }
     &--sticky {

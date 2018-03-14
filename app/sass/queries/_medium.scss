@@ -112,8 +112,24 @@ Table of Content:
       padding: 0;
       @include font-size(18);
     }
-    &-form {
+    &--form {
       padding-bottom: 0;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      .form-group:first-child {
+        flex-grow: 1;
+      }
+      .form-group:first-child+div {
+        flex-grow: 3;
+      }
+      .form-group:last-child {
+        flex-grow: 2;
+      }
+      .bootstrap-select {
+        width: 100%!important;
+      }
     }
     &--sticky {
       position: absolute;
