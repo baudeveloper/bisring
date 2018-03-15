@@ -77,7 +77,7 @@ Table of Content:
     .btn {
       &--fixed {
         position: absolute;
-        right: 0;
+        right: 1rem;
         bottom: 0;
         text-transform: uppercase;
         border-bottom-left-radius: 0;
@@ -92,6 +92,9 @@ Table of Content:
       margin-left: 1rem;
       background-color: $white;
       font-family: "Barlow-SemiBold", sans-serif;
+    }
+    &--minimal {
+      border-bottom: 1px solid $silver-AD;
     }
   }
   &-header {
@@ -374,12 +377,12 @@ Table of Content:
         }
       }
     }
-    @media #{$medium__up} {
-      .column {
-        padding-left: 0;
-        padding-right: 0;
-      }
-    }
+    // @media #{$medium__up} {
+    //   .column {
+    //     padding-left: 0;
+    //     padding-right: 0;
+    //   }
+    // }
   }
   &-content {
     padding-top: 2rem;
@@ -463,28 +466,40 @@ Table of Content:
         padding-top: 2rem;
       }
     }
+    // .site-header {
+    //   background-color: $dark;
+    //   background-size: contain;
+    //   @media (min-width: 48rem) and (max-width: 75rem) {
+    //     background-size: cover;
+    //   }
+    //   &--form {
+    //     padding-top: 8rem;
+    //   }
+    //   &--footer {
+    //     padding-bottom: 8rem;
+    //   }
+    // }
+  }
+  &#dashboard {
+    .site-footer {
+      color: $white;
+      background-color: $green-AA;
+      .row {
+        &--top {
+          border-bottom: 1px solid $green-AE;
+        }
+      }
+      &--navigation-link,
+      &--social-link,
+      &--copyright-link,
+      &--creator-link {
+        color: $white;
+        &:hover,
+        &:active,
+        &:focus {
+          color: darken($white, 25%);
+        }
+      }
+    }
   }
 }
-
-// .dashboard {
-//   .site-footer {
-//     color: $white;
-//     background-color: $green-AA;
-//     .row {
-//       &--top {
-//         border-bottom: 1px solid $green-AE;
-//       }
-//     }
-//     &--navigation-link,
-//     &--social-link,
-//     &--copyright-link,
-//     &--creator-link {
-//       color: $white;
-//       &:hover,
-//       &:active,
-//       &:focus {
-//         color: darken($white, 25%);
-//       }
-//     }
-//   }
-// }

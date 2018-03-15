@@ -3,9 +3,8 @@
 /*
 Table of Content:
 --- Universal Classes
---- Navigation
 --- Sidenav
-    --- STANDARD PAGE
+--- Types
 */
 
 .hidden {
@@ -203,6 +202,33 @@ textarea {
       line-height: 0;
       &:before {
         content: '\00d7';
+      }
+    }
+  }
+}
+// ---
+.site {
+  &-content {
+    h1 {
+      margin: 0 0 1rem;
+      color: $green-AB;
+      font-family: "Barlow-Regular", sans-serif;
+      @include font-size(32);
+    }
+    p {
+      color: $silver-AB;
+      font-family: "Barlow-Regular", sans-serif;
+      @include font-size(16);
+      &.lead {
+        color: $green-AB;
+        @include font-size(20);
+      }
+    }
+  }
+  &#why-bisring {
+    .site-content {
+      h1, p {
+        text-align: center;
       }
     }
   }
