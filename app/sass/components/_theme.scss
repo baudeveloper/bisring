@@ -537,6 +537,11 @@ Table of Content:
         min-height: 100vh;
       }
     }
+    .site-header {
+      &--sticky {
+        display: none;
+      }
+    }
     .site-callout {
       &--minimal {
         border-bottom: none;

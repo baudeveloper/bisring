@@ -15,6 +15,8 @@ Table of Content:
 
 .site {
   &-content {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     h1 {
       @include font-size(20);
     }
@@ -114,12 +116,6 @@ Table of Content:
     .navToSelect {
       display: block!important;
     }
-    &--list {
-      margin: 0;
-    }
-    &--addbusiness {
-      display: none;
-    }
     .bootstrap-select {
       width: 100%!important;
     }
@@ -147,6 +143,7 @@ Table of Content:
       margin: 0;
       padding: 0;
       border-radius: 0;
+      // transform: none!important;
     }
     .dropdown-item {
       color: $orange-AA;
@@ -165,6 +162,12 @@ Table of Content:
         border-color: transparent!important;
         background-color: $orange-AB!important;
       }
+    }
+    &--list {
+      margin: 0;
+    }
+    &--addbusiness {
+      display: none;
     }
   }
   &#why-bisring {
@@ -322,6 +325,41 @@ Table of Content:
       &--breadcrumb,
       &--footer, {
         display: none;
+      }
+    }
+  }
+  &-admin {
+    .site {
+      &-footer {
+        display: none;
+      }
+      &-header {
+        &--sticky {
+          position: fixed;
+          z-index: 5;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          display: flex;
+          flex-direction: row;
+          background-color: $green-AA;
+          justify-content: flex-end;
+          &-link {
+            color: $white;
+            display: block;
+            padding: 1.25rem;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-family: "Barlow-SemiBold", sans-serif;
+            @include font-size(16);
+            &:hover,
+            &:active,
+            &:focus,
+            &:visited, {
+              color: $white;
+            }
+          }
+        }
       }
     }
   }
