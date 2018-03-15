@@ -270,6 +270,28 @@ Table of Content:
         }
       }
     }
+    &--footer {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    &--maps {
+      color: $white;
+      text-transform: uppercase;
+      font-family: "Barlow-Medium", sans-serif;
+      @include font-size(14);
+      &:link {
+        text-decoration: none;
+      }
+      &:hover,
+      &:focus,
+      &:active {
+        color: darken($white, 10%);
+      }
+      &-icon {
+        margin-right: .5rem;
+      }
+    }
   }
   &-footer {
     color: $silver-AA;
@@ -392,6 +414,7 @@ Table of Content:
       }
     }
     &--small {
+      position: relative;
       padding: 1rem 0;
       background-color: $dark;
     }

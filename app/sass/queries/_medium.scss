@@ -243,7 +243,8 @@ Table of Content:
     }
     .site-header {
       &--form,
-      &--breadcrumb {
+      &--breadcrumb,
+      &--footer, {
         display: none;
       }
     }
