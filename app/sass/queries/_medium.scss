@@ -14,6 +14,11 @@ Table of Content:
 */
 
 .site {
+  &-content {
+    h1 {
+      @include font-size(20);
+    }
+  }
   &-feature {
     padding-top: 3rem;
     padding-bottom: 3rem;
@@ -96,6 +101,70 @@ Table of Content:
     &--social,
     &--creator {
       text-align: left;
+    }
+  }
+  &-sidebar {
+    padding-left: 0;
+    padding-right: 0;
+    overflow: visible;
+    background-color: transparent;
+    nav .site-sidebar--list {
+      display: none;
+    }
+    .navToSelect {
+      display: block!important;
+    }
+    &--list {
+      margin: 0;
+    }
+    &--addbusiness {
+      display: none;
+    }
+    .bootstrap-select {
+      width: 100%!important;
+    }
+    .dropdown-toggle {
+      color: $white!important;
+      border-radius: 0;
+      padding-left: 1rem;
+      background: $orange-AA!important;
+      font-family: "Barlow-SemiBold", sans-serif;
+      @include font-size(14);
+      &:hover,
+      &:focus,
+      &:active {
+        color: $orange-AA!important;
+        border-color: transparent!important;
+        background-color: $orange-AB!important;
+      }
+    }
+    .show .dropdown-toggle {
+      color: $orange-AA!important;
+      border-color: transparent!important;
+      background-color: $orange-AB!important;
+    }
+    .dropdown-menu {
+      margin: 0;
+      padding: 0;
+      border-radius: 0;
+    }
+    .dropdown-item {
+      color: $orange-AA;
+      padding-top: .5rem;
+      padding-bottom: .5rem;
+      font-family: "Barlow-SemiBold", sans-serif;
+      @include font-size(14);
+      &:hover,
+      &:active
+      &:focus {
+        color: $orange-AA!important;
+        border-color: transparent!important;
+        background-color: $orange-AB!important;
+      }
+      &.active {
+        border-color: transparent!important;
+        background-color: $orange-AB!important;
+      }
     }
   }
   &#why-bisring {

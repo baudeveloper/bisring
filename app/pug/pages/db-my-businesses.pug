@@ -1,10 +1,10 @@
 extends ../_layouts/default
 
 block title
-	title Dashboard - BisRing
+	title My Businesses - BisRing
 
 block vars
-	- var pageId = 'dashboard', pageClass = 'site page page-standard page-admin', pageTitle = 'Dashboard', dbId = 'my-account';
+	- var pageId = 'dashboard', pageClass = 'site page page-standard page-admin', pageTitle = 'My Businesses', dbId = 'my-businesses';
 
 block metas
 	- var siteAuthor = 'Walter Drexl'
@@ -23,7 +23,7 @@ block metas
 
 block content
 	include ../_includes/blocks/header-dashboard
-	include ../_includes/content/dashboard
+	include ../_includes/dashboards/db-my-businesses
 	include ../_includes/blocks/footer
 	include ../_includes/popovers/notification
 	include ../_includes/modals/modal-notification

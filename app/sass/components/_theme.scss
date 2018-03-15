@@ -394,6 +394,51 @@ Table of Content:
     padding-top: 2rem;
     padding-bottom: 2rem;
   }
+  &-sidebar {
+    overflow: auto;
+    background-color: $silver-AI;
+    &--link {
+      display: block;
+      margin: 1rem 0;
+      color: $silver-AA;
+      font-family: "Barlow-Medium", sans-serif;
+      @include font-size(16);
+      &:link {
+        text-decoration: none;
+      }
+      &:hover,
+      &:active,
+      &:focus {
+        color: darken($silver-AA, 10%);
+      }
+    }
+    &--list {
+      margin: 2.85rem 0 0;
+      padding: 0;
+      list-style-type: none;
+    }
+    &--listitem {
+      &.active {
+        .site-sidebar--link {
+          color: $green-AA;
+          font-family: "Barlow-SemiBold", sans-serif;
+          &:hover,
+          &:active,
+          &:focus {
+            color: darken($green-AA, 10%);
+          }
+        }
+      }
+    }
+    &--addbusiness {
+      margin: 2.5rem auto;
+    }
+    @media #{$medium__up} {
+      .navToSelect {
+        display: none!important;
+      }
+    }
+  }
 }
 
 .page {
@@ -486,7 +531,12 @@ Table of Content:
     //   }
     // }
   }
-  &#dashboard {
+  &-admin {
+    .site-admin {
+      .site-content {
+        min-height: 100vh;
+      }
+    }
     .site-callout {
       &--minimal {
         border-bottom: none;

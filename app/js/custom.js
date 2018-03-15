@@ -64,4 +64,8 @@ $(document).ready(function () {
 	// Selectpickers
 	$(".selectpicker").selectpicker();
 
+	// UL to select
+	$("[data-js=\"site-sidebar--nav\"] > ul").navToSelect();
+	$(".navToSelect").addClass("selectpicker").selectpicker("refresh");
+
 });
