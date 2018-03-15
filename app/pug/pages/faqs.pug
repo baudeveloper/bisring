@@ -4,7 +4,7 @@ block title
 	title Frequently Asked Questions - BisRing
 
 block vars
-	- var bodyId = 'faqs', bodyClass = 'page page-compact', pageTitle = 'Frequently Asked Questions';
+	- var pageId = 'faqs', pageClass = 'site page page-standard', pageTitle = 'Frequently Asked Questions';
 
 block metas
 	- var siteAuthor = 'Walter Drexl'
@@ -22,4 +22,8 @@ block metas
 	- var siteFRURL = 'http://bisring.io/fr'
 
 block content
-	include ../_partials/faqs
+	include ../_includes/blocks/header-standard
+	include ../_includes/content/faqs
+	include ../_includes/blocks/footer
+	include ../_includes/modals/modal-quick-list
+	include ../_includes/modals/modal-login

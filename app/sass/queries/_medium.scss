@@ -4,99 +4,102 @@
 
 /*
 Table of Content:
---- Site Feature
---- Site Callout
---- Site Footer
---- STANDARD PAGE
+--- SITE
+    --- Site Feature
+    --- Site Callout
+    --- Site Footer
+--- PAGE
+    --- Front
+    --- Standard
 */
 
-.site-feature {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  &--title {
-    margin-top: 0;
-    margin-bottom: 1.5rem;
-    @include font-size(24);
-  }
-  &--thumbnail {
-    max-height: 5rem;
-    margin-bottom: 1.25rem;
-  }
-  &--heading {
-    margin-top: 0rem;
-    margin-bottom: .5rem;
-    @include font-size(20);
-  }
-  &--content {
-    margin-bottom: 0;
-  }
-  .card {
-    margin-bottom: 1.25rem;
-    &-header {
-      padding-top: 1.5rem;
-      min-height: auto;
+.site {
+  &-feature {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    &--title {
+      margin-top: 0;
+      margin-bottom: 1.5rem;
+      @include font-size(24);
+    }
+    &--thumbnail {
+      max-height: 5rem;
+      margin-bottom: 1.25rem;
+    }
+    &--heading {
+      margin-top: 0rem;
+      margin-bottom: .5rem;
+      @include font-size(20);
+    }
+    &--content {
+      margin-bottom: 0;
+    }
+    .card {
+      margin-bottom: 1.25rem;
+      &-header {
+        padding-top: 1.5rem;
+        min-height: auto;
+      }
+    }
+    .btn {
+      margin-top: 0;
     }
   }
-  .btn {
-    margin-top: 0;
+  &-callout {
+    .container {
+      padding-top: 4.5rem;
+      padding-bottom: 5.5rem;
+    }
+    &--title {
+      margin-bottom: 1.25rem;
+      @include font-size(24);
+    }
+    .btn {
+      &--fixed {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin-left: auto;
+        margin-right: auto;
+        width: 12.5rem;
+      }
+    }
+  }
+  &-footer {
+    .row {
+      .column {
+        margin-top: auto;
+        margin-bottom: auto;
+      }
+      &--top {
+        .column:first-of-type {
+          margin-top: 1rem;
+          margin-bottom: 0;
+        }
+        .column:last-of-type {
+          margin-top: .5rem;
+          margin-bottom: 1rem;
+        }
+      }
+      &--bottom {
+        .column:first-of-type {
+          margin-top: 1rem;
+          margin-bottom: 0;
+        }
+        .column:last-of-type {
+          margin-top: .5rem;
+          margin-bottom: 1rem;
+        }
+      }
+    }
+    &--social,
+    &--creator {
+      text-align: left;
+    }
   }
 }
-// ---
-.site-callout {
-  .container {
-    padding-top: 4.5rem;
-    padding-bottom: 5.5rem;
-  }
-  &--title {
-    margin-bottom: 1.25rem;
-    @include font-size(24);
-  }
-  .btn {
-    &--fixed {
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      margin-left: auto;
-      margin-right: auto;
-      width: 12.5rem;
-    }
-  }
-}
-// ---
-.site-footer {
-  .row {
-    .column {
-      margin-top: auto;
-      margin-bottom: auto;
-    }
-    &--top {
-      .column:first-of-type {
-        margin-top: 1rem;
-        margin-bottom: 0;
-      }
-      .column:last-of-type {
-        margin-top: .5rem;
-        margin-bottom: 1rem;
-      }
-    }
-    &--bottom {
-      .column:first-of-type {
-        margin-top: 1rem;
-        margin-bottom: 0;
-      }
-      .column:last-of-type {
-        margin-top: .5rem;
-        margin-bottom: 1rem;
-      }
-    }
-  }
-  &--social,
-  &--creator {
-    text-align: left;
-  }
-}
-// ---
+
 .page {
   .navbar {
     &--large {
@@ -169,14 +172,26 @@ Table of Content:
       }
       &--location {
         .dropdown-toggle {
-          color: $white;
-          border-width: 2px;
+          color: $white!important;
+          border-width: 2px!important;
           line-height: 2.5rem;
           border-radius: .1rem;
-          background: transparent;
-          border-left-color: $white;
+          background: transparent!important;
+          border-left-color: $white!important;
           padding: .375rem 2rem .375rem 1rem;
           font-family: "Barlow-Medium", sans-serif;
+          &:hover,
+          &:focus,
+          &:active {
+            color: $white!important;
+            border-color: $white!important;
+            background-color: rgba($white, .2)!important;
+          }
+        }
+        .show .dropdown-toggle {
+          color: $white!important;
+          border-color: $white!important;
+          background-color: rgba($white, .2)!important;
         }
       }
       &--sticky {
@@ -220,7 +235,7 @@ Table of Content:
       }
     }
   }
-  &-compact {
+  &-standard {
     .navbar {
       &--small {
         display: block;

@@ -4,7 +4,7 @@ block title
 	title Home - BisRing
 
 block vars
-	- var bodyId = 'home', bodyClass = 'page page-front', pageTitle = 'Home';
+	- var pageId = 'home', pageClass = 'site page page-front', pageTitle = 'Home';
 
 block metas
 	- var siteAuthor = 'Walter Drexl'
@@ -22,4 +22,8 @@ block metas
 	- var siteFRURL = 'http://bisring.io/fr'
 
 block content
-	include ../_partials/index
+	include ../_includes/blocks/header-front
+	include ../_includes/content/index
+	include ../_includes/blocks/footer
+	include ../_includes/modals/modal-quick-list
+	include ../_includes/modals/modal-login

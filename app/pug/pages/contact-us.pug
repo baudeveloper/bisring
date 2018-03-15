@@ -4,7 +4,7 @@ block title
 	title Contact Us - BisRing
 
 block vars
-	- var bodyId = 'contact-us', bodyClass = 'page page-compact', pageTitle = 'Contact Us';
+	- var pageId = 'contact-us', pageClass = 'site page page-standard', pageTitle = 'Contact Us';
 
 block metas
 	- var siteAuthor = 'Walter Drexl'
@@ -22,4 +22,8 @@ block metas
 	- var siteFRURL = 'http://bisring.io/fr'
 
 block content
-	include ../_partials/contact-us
+	include ../_includes/blocks/header-standard
+	include ../_includes/content/contact-us
+	include ../_includes/blocks/footer
+	include ../_includes/modals/modal-quick-list
+	include ../_includes/modals/modal-login

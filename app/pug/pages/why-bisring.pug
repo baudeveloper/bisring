@@ -4,7 +4,7 @@ block title
 	title Why BisRing? - BisRing
 
 block vars
-	- var bodyId = 'why-bisring', bodyClass = 'page page-compact', pageTitle = 'Why BisRing';
+	- var pageId = 'why-bisring', pageClass = 'site page page-standard', pageTitle = 'Why BisRing';
 
 block metas
 	- var siteAuthor = 'Walter Drexl'
@@ -22,4 +22,8 @@ block metas
 	- var siteFRURL = 'http://bisring.io/fr'
 
 block content
-	include ../_partials/why-bisring
+	include ../_includes/blocks/header-standard
+	include ../_includes/content/why-bisring
+	include ../_includes/blocks/footer
+	include ../_includes/modals/modal-quick-list
+	include ../_includes/modals/modal-login

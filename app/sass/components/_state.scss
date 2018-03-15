@@ -4,16 +4,16 @@
 Table of Content:
 --- Universal Classes
 --- Navigation
---- Offcanvas
+--- Sidenav
     --- STANDARD PAGE
 */
 
+.hidden {
+  display: none !important;
+}
 input,
 textarea {
   font-family: "Barlow-Regular", sans-serif;
-}
-.hidden {
-  display: none !important;
 }
 .btn {
   font-weight: normal;
@@ -23,21 +23,23 @@ textarea {
   }
 }
 @media #{$large__up} {
-  .site-callout,
-  .site-feature {
-    .btn {
-      min-width: 12rem;
+  .site {
+    &-callout,
+    &-feature {
+      .btn {
+        min-width: 12rem;
+      }
     }
   }
 }
 // ---
-.offcanvas-wrapper,
-.offcanvas-overlay {
+.sidenav-wrapper,
+.sidenav-overlay {
   @media #{$medium__up} {
     display: none!important;
   }
 }
-.offcanvas {
+.sidenav {
   width: 15.63rem;
   position: fixed;
   top: 0;
@@ -82,7 +84,7 @@ textarea {
     &:focus {
       color: darken($white, 10%);
     }
-    .offcanvas-icon {
+    .sidenav-icon {
       max-width: 1.25rem;
       min-width: 1rem;
       margin-right: 1.875rem;
@@ -106,7 +108,7 @@ textarea {
     &:hover {
       color: darken($white, 10%);
     }
-    .offcanvas-icon {
+    .sidenav-icon {
       vertical-align: middle;
     }
   }
@@ -124,7 +126,7 @@ textarea {
     &:focus {
       color: darken($white, 10%);
     }
-    .offcanvas-icon {
+    .sidenav-icon {
       margin-right: 0;
     }
   }
@@ -132,15 +134,15 @@ textarea {
     &.components {
       padding: 0;
     }
-    .offcanvas-listitem {
-      &.active > .offcanvas-link {
+    .sidenav-listitem {
+      &.active > .sidenav-link {
         color: $green-AA;
         background: $green-AH;
-        .offcanvas-icon {
+        .sidenav-icon {
           color: $green-AA;
         }
       }
-      .offcanvas-link {
+      .sidenav-link {
         padding: .85rem 1rem;
         display: block;
         @include font-size(14);
@@ -150,11 +152,11 @@ textarea {
         &:hover {
           color: $green-AA;
           background: $green-AH;
-          .offcanvas-icon {
+          .sidenav-icon {
             color: $green-AA;
           }
         }
-        .offcanvas-icon {
+        .sidenav-icon {
           color: $silver-AF;
           max-width: 1.25rem;
           min-width: 1rem;
@@ -197,58 +199,10 @@ textarea {
       {
       color: $white;
     }
-    .offcanvas-icon {
+    .sidenav-icon {
       line-height: 0;
       &:before {
         content: '\00d7';
-      }
-    }
-  }
-}
-// ---
-.page {
-  .navbar {
-    &--large {
-      // background-color: $dark !important;
-      background-color: transparent!important;
-      padding-left: 0;
-      padding-right: 0;
-      .nav-item {
-        .nav-link {
-          padding-top: 1.5rem;
-          padding-bottom: 1rem;
-          font-family: "Barlow-Medium";
-          border-bottom-width: 6px;
-          border-bottom-color: transparent;
-        }
-        &.active {
-          .nav-link {
-            border-bottom: 6px solid $white;
-          }
-        }
-      }
-      .container {
-        padding-left: 0;
-        padding-right: 0;
-      }
-    }
-    &--small {
-      padding: 1rem 0;
-      background-color: $dark;
-    }
-    @media #{$medium__up} {
-      &--large {
-        display: block;
-      }
-      &--small {
-        display: none;
-      }
-    }
-  }
-  &-front {
-    .navbar {
-      &--small {
-        background-color: transparent;
       }
     }
   }

@@ -1,12 +1,12 @@
 header.site-header(role="header", data-js="site-header")
-	img.site-header--img.hidden(src="images/bg-header-home.png", alt="Background for site header section")
+	img.site-header--img.hidden(src="images/bg-header-home.png", alt="Background for site header section", role="img")
 	.container
 		include ../menus/navigation
-		include ../menus/offcanvas-home
+		include ../menus/sidenav-front
 		.site-header--wrap
-			img.site-header--logo(src="images/logo-bisring-white.png", alt="BisRing")
-			h1.site-header--title Find All Your Real Estate Needs and More in One Location.
-			form.site-header--form
+			img.site-header--logo(src="images/logo-bisring-white.png", alt="BisRing", role="img")
+			h1.site-header--title(role="heading") Find All Your Real Estate Needs and More in One Location.
+			form.site-header--form(role="form")
 				.form-group.site-header--service
 					label.sr-only(for='selectService') Please select a Service
 					select#selectService.selectpicker
@@ -33,9 +33,9 @@ header.site-header(role="header", data-js="site-header")
 						optgroup(label="Australia")
 							option Sydney, Australia
 							option Christchurch, New Zealand
-		footer.site-header--sticky
-			a.btn.site-header--sticky-link.disabled(href="#")
+		footer.site-header--sticky(role="footer")
+			a.btn.site-header--sticky-link.disabled(href="#", role="link")
 				span.site-header--sticky-icon.fas.fa-thumbtack
 				| Quick List
 				span.site-header--sticky-badge.badge.badge-light 2
-			a.btn.site-header--sticky-link(href="register.html") Register for free
+			a.btn.site-header--sticky-link(href="register.html", role="link") Register for free

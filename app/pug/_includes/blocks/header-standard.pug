@@ -1,10 +1,10 @@
 header.site-header.site-header--compact(role="header", data-js="site-header")
-	img.site-header--img.hidden(src="images/bg-header-home.png", alt="Background for site header section")
+	img.site-header--img.hidden(src="images/bg-header-home.png", alt="Background for site header section", role="img")
 	.container
 		include ../menus/navigation
-		include ../menus/offcanvas-standard
+		include ../menus/sidenav-standard
 		.site-header--wrap
-			form.site-header--form
+			form.site-header--form(role="form")
 				.form-group.site-header--service
 					label.sr-only(for='selectService') Please select a Service
 					select#selectService.selectpicker
@@ -32,10 +32,10 @@ header.site-header.site-header--compact(role="header", data-js="site-header")
 							option Sydney, Australia
 							option Christchurch, New Zealand
 			nav.site-header--breadcrumb(aria-label='breadcrumb', role="navigation")
-				ol.breadcrumb
-					li.breadcrumb-item
-						a.breadcrumb-link(href='#') Services
-					li.breadcrumb-item
-						a.breadcrumb-link(href='#') Contractors
-					li.breadcrumb-item.active(aria-current='page')
+				ol.breadcrumb(role="list")
+					li.breadcrumb-item(role="listitem")
+						a.breadcrumb-link(href='#', role="link") Services
+					li.breadcrumb-item(role="listitem")
+						a.breadcrumb-link(href='#', role="link") Contractors
+					li.breadcrumb-item.active(aria-current='page', role="listitem")
 						span.breadcrumb-text Plumbers
