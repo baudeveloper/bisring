@@ -131,8 +131,8 @@ textarea {
     }
   }
   &-notification {
-    position: absolute;
-    right: 0;
+    // position: absolute;
+    // right: 0;
     color: $white;
     font-family: "Barlow-Medium", sans-serif;
     @include font-size(20);

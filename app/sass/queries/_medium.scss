@@ -317,7 +317,14 @@ Table of Content:
   &-standard {
     .navbar {
       &--small {
-        display: block;
+        // display: block;
+        display: flex;
+        justify-content: space-between;
+        .sidenav-collapse,
+        .sidenav-page-title-link,
+        .sidenav-page-title {
+          vertical-align: middle;
+        }
       }
     }
     .site-header {

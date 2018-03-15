@@ -40,6 +40,15 @@
 				a.sidenav-link(href='register.html', role="link")
 					span.sidenav-icon.fas.fa-clipboard-list
 					| Become a Bisringer
+			hr
+			li.sidenav-listitem(role="listitem", class=(pageId === 'privacy-policy' ? 'active' : ''))
+				a.sidenav-link(href='privacy-policy.html', role="link")
+					span.sidenav-icon.fas.fa-clipboard-list
+					| Privacy Policy
+			li.sidenav-listitem(role="listitem", class=(pageId === 'terms-of-use' ? 'active' : ''))
+				a.sidenav-link(href='terms-of-use.html', role="link")
+					span.sidenav-icon.fas.fa-clipboard-list
+					| Terms of Use
 .sidenav-overlay(data-js="sidenav-overlay")
 nav.navbar--small(role="navigation")
 	a.sidenav-collapse(href="#", role="link", data-js="sidenav-collapse")

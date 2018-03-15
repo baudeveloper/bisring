@@ -1,3 +1,18 @@
 // MEDIA QUERY (SMALL SCREENS ONLY)
 // Check this link for more information: http://v4-alpha.getbootstrap.com/layout/overview/#responsive-breakpoints
 // 36rem = 576px
+.page {
+  &-standard {
+    .navbar {
+      &--small {
+        .sidenav-page-title {
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          width: 10rem;
+          display: inline-block;
+        }
+      }
+    }
+  }
+}
