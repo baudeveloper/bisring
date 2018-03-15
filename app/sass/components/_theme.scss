@@ -295,6 +295,12 @@ Table of Content:
         margin-right: .5rem;
       }
     }
+    .notification {
+      &-value {
+        color: $green-AA;
+        font-family: "Barlow-Medium", sans-serif;
+      }
+    }
   }
   &-footer {
     color: $silver-AA;
@@ -481,13 +487,6 @@ Table of Content:
     // }
   }
   &#dashboard {
-    .site-header {
-      .notification {
-        &-value {
-          color: $green-AA;
-        }
-      }
-    }
     .site-callout {
       &--minimal {
         border-bottom: none;

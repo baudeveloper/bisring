@@ -118,8 +118,23 @@ textarea {
   }
   &-search {
     position: absolute;
-    right: 1rem;
+    right: 0;
+    // right: 1rem;
     color: $white;
+    @include font-size(20);
+    &:hover,
+    &:focus {
+      color: darken($white, 10%);
+    }
+    .sidenav-icon {
+      margin-right: 0;
+    }
+  }
+  &-notification {
+    position: absolute;
+    right: 0;
+    color: $white;
+    font-family: "Barlow-Medium", sans-serif;
     @include font-size(20);
     &:hover,
     &:focus {
