@@ -1,0 +1,23 @@
+#popover-content-login.hidden
+	.popover-wrap
+		.form-group
+			label.sr-only(for='popoverEmail') Enter email address
+			input#popoverEmail.form-control.popover-email(placeholder='Email')
+		.form-group
+			label.sr-only(for='popoverPassword') Enter password
+			input#popoverPassword.form-control.popover-password(placeholder='Password')
+		.form-group.popover-resets
+			a.popover-reset-password(href='forgot-password.html') Forgot Password?
+			a.popover-login(href='#') Login
+		p.popover-linebreak
+			span or login via:
+		.form-group
+			a.btn.btn-block.popover-social.popover-facebook(href='http://facebook.com', target='_blank')
+				span.popover-icon.fab.fa-facebook-square
+				| Facebook
+			a.btn.btn-block.popover-social.popover-google(href='http://plus.google.com', target='_blank')
+				span.popover-icon.fab.fa-google-plus-square
+				| Google
+			a.btn.btn-block.popover-social.popover-linkedin(href='http://linkedin.com', target='_blank')
+				span.popover-icon.fab.fa-linkedin
+				| Linkedin

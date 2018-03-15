@@ -42,38 +42,23 @@ $(document).ready(function () {
 
 	// Popovers
 	// Source: https://stackoverflow.com/questions/24580262/make-bootstrap-popover-work-with-custom-html-template
-	var popoverTemplate = [
+	var popoverLoginTemplate = [
 		"<div class=\"popover\" role=\"tooltip\">",
 		"<div class=\"arrow\"></div>",
 		"<div class=\"popover-body\">",
 		"</div>",
 		"</div>"
 	].join("");
-	var popoverContent = [
-		"<div class=\"popover-wrap\">",
-		"<div class=\"form-group\">",
-		"<label class=\"sr-only\" for=\"popoverEmail\">Enter email address</label>",
-		"<input id=\"popoverEmail\" class=\"form-control popover-email\" placeholder=\"Email\">",
-		"</div><div class=\"form-group\">",
-		"<label class=\"sr-only\" for=\"popoverPassword\">Enter password</label>",
-		"<input id=\"popoverPassword\" class=\"form-control popover-password\" placeholder=\"Password\">",
-		"</div><div class=\"form-group popover-resets\">",
-		"<a href=\"forgot-password.html\" class=\"popover-reset-password\">Forgot Password?</a>",
-		"<a href=\"#\" class=\"popover-login\">Login</a>",
-		"</div><p class=\"popover-linebreak\"><span>or login via:</span></p>",
-		"<div class=\"form-group\">",
-		"<a href=\"http://facebook.com\" target=\"_blank\" class=\"btn btn-block popover-social popover-facebook\"><span class=\"popover-icon fab fa-facebook-square\"></span>Facebook</a>",
-		"<a href=\"http://plus.google.com\" target=\"_blank\" class=\"btn btn-block popover-social popover-google\"><span class=\"popover-icon fab fa-google-plus-square\"></span>Google</a>",
-		"<a href=\"http://linkedin.com\" target=\"_blank\" class=\"btn btn-block popover-social popover-linkedin\"><span class=\"popover-icon fab fa-linkedin\"></span>Linkedin</a>",
-		"</div>"
-	].join("");
-	$("body").popover({
-		selector: "[data-js=\"popover-login\"]",
-		trigger: "click",
-		content: popoverContent,
-		template: popoverTemplate,
-		placement: "bottom",
-		html: true
+	$("[data-toggle=popover]").each(function(i, obj) {
+		$(this).popover({
+			html: true,
+			placement: "bottom",
+			template: popoverLoginTemplate,
+			content: function() {
+				var id = $(this).attr("id");
+				return $("body #popover-content-" + id).html();
+			}
+		});
 	});
 
 	// Selectpickers

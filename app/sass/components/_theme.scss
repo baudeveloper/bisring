@@ -481,6 +481,13 @@ Table of Content:
     // }
   }
   &#dashboard {
+    .site-header {
+      .notification {
+        &-value {
+          color: $green-AA;
+        }
+      }
+    }
     .site-callout {
       &--minimal {
         border-bottom: none;
