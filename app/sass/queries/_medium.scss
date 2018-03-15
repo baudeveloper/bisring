@@ -164,10 +164,10 @@ Table of Content:
         button {
           padding: .5rem 1rem;
           border-radius: 0 0 .25rem 0;
-          border-top: 1px solid #ced4da;
-          border-bottom: 1px solid #ced4da;
-          transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
           @include font-size(20);
+          // border-top: 1px solid #ced4da;
+          // border-bottom: 1px solid #ced4da;
+          // transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
         }
       }
       &--location {

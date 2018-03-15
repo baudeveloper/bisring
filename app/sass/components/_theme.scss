@@ -329,6 +329,9 @@ Table of Content:
       &-link {
         margin-right: 0.625rem;
         @include font-size(16);
+        &:last-of-type {
+          margin-right: 0;
+        }
       }
     }
     &--copyright {
@@ -347,6 +350,12 @@ Table of Content:
             content: "";
           }
         }
+      }
+    }
+    @media #{$medium__up} {
+      .column {
+        padding-left: 0;
+        padding-right: 0;
       }
     }
   }
