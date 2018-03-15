@@ -481,6 +481,11 @@ Table of Content:
     // }
   }
   &#dashboard {
+    .site-callout {
+      &--minimal {
+        border-bottom: none;
+      }
+    }
     .site-footer {
       color: $white;
       background-color: $green-AA;
