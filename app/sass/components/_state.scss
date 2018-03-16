@@ -31,13 +31,7 @@ textarea {
     }
   }
 }
-// ---
-.sidenav-wrapper,
-.sidenav-overlay {
-  @media #{$medium__up} {
-    display: none!important;
-  }
-}
+
 .sidenav {
   width: 15.63rem;
   position: fixed;
@@ -220,8 +214,14 @@ textarea {
       }
     }
   }
+  &-wrapper,
+  &-overlay {
+    @media #{$medium__up} {
+      display: none!important;
+    }
+  }
 }
-// ---
+
 .site {
   &-content {
     h1 {
