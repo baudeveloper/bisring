@@ -283,8 +283,11 @@ Table of Content:
       &:active {
         color: darken($white, 10%);
       }
-      &-icon {
+      &::before {
+        content: "\f279";
         margin-right: .5rem;
+        font-weight: 900;
+        font-family: "Font Awesome 5 Pro"
       }
     }
     .notification {

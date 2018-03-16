@@ -169,6 +169,9 @@ Table of Content:
     #map {
       min-height: 100vh;
       height: 100%;
+      &.hidden {
+        display: block !important;
+      }
     }
     .search {
       &--list {

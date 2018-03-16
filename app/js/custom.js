@@ -74,4 +74,13 @@ $(document).ready(function () {
 		theme: "css-stars"
 	});
 
+	// Map switch
+	var mapToggle = $("[data-js=\"site-header--maps-toggle\"]");
+	mapToggle.on("click", function() {
+		$(this).parents(".page").find("#map").toggleClass("hidden");
+		$(this).text(function(i, text) {
+			return text === "Show Map" ? "Hide Map" : "Show Map";
+		});
+	});
+
 });
