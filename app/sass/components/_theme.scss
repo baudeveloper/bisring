@@ -297,6 +297,13 @@ Table of Content:
       }
     }
   }
+  // &-admin,
+  // &-search-results {
+  //   padding-top: 4.375rem;
+  // }
+  // &-content {
+  //   padding-top: 5.5rem;
+  // }
   &-footer {
     color: $silver-AA;
     background-color: $white;
@@ -659,6 +666,7 @@ Table of Content:
     &--small {
       position: relative;
       padding: 1rem 0;
+      line-height: 1;
       background-color: $dark;
     }
     @media #{$medium__up} {
@@ -705,25 +713,51 @@ Table of Content:
       &--form {
         padding-top: 2rem;
       }
+      //   &--fixed {
+      //     position: fixed;
+      //     top: 0;
+      //     right: 0;
+      //     left: 0;
+      //     z-index: 1000;
+      //   }
+      //   &--form {
+      //     padding-top: 3rem;
+      //     transition: 1s padding-top ease;
+      //   }
+      //   &--footer {
+      //     padding-bottom: 2rem;
+      //     transition: 1s padding-bottom ease;
+      //   }
+      //   &.scrolled {
+      //     .site-header--form {
+      //       padding-top: 1rem;
+      //       transition: 1s padding-top ease;
+      //     }
+      //     .site-header--footer {
+      //       padding-bottom: 0;
+      //       transition: 1s padding-bottom ease;
+      //     }
+      //   }
+      // }
+      // .site-header {
+      //   background-color: $dark;
+      //   background-size: contain;
+      //   @media (min-width: 48rem) and (max-width: 75rem) {
+      //     background-size: cover;
+      //   }
+      //   &--form {
+      //     padding-top: 8rem;
+      //   }
+      //   &--footer {
+      //     padding-bottom: 8rem;
+      //   }
     }
-    // .site-header {
-    //   background-color: $dark;
-    //   background-size: contain;
-    //   @media (min-width: 48rem) and (max-width: 75rem) {
-    //     background-size: cover;
-    //   }
-    //   &--form {
-    //     padding-top: 8rem;
-    //   }
-    //   &--footer {
-    //     padding-bottom: 8rem;
-    //   }
-    // }
   }
   &-admin {
     .site-admin {
       .site-content {
         min-height: 100vh;
+        padding-top: 1rem;
       }
     }
     .site-header {

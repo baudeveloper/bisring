@@ -9,8 +9,17 @@ Table of Content:
 */
 
 .site {
+  &-header {
+    &--fixed {
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      z-index: 1000;
+    }
+  }
   &-content {
-    padding-top: 1rem;
+    padding-top: 5.5rem;
     padding-bottom: 1rem;
     h1 {
       @include font-size(20);
@@ -305,6 +314,9 @@ Table of Content:
     &--large {
       display: none;
     }
+    &--small {
+      align-items: center;
+    }
   }
   &-front {
     .navbar {
@@ -457,6 +469,8 @@ Table of Content:
     }
   }
   &-admin {
+    padding-top: 6.188rem;
+    padding-bottom: 4rem;
     .site {
       &-footer {
         display: none;
@@ -468,6 +482,7 @@ Table of Content:
           bottom: 0;
           left: 0;
           right: 0;
+          z-index: 5;
           display: flex;
           flex-direction: row;
           background-color: $green-AA;
@@ -489,55 +504,76 @@ Table of Content:
           }
         }
       }
+      &-sidebar {
+        position: fixed;
+        top: 3.875rem;
+        right: 0;
+        left: 0;
+        z-index: 1000;
+      }
     }
   }
   &-search {
-    .site {
-      &-footer,
-      &-callout {
-        display: none;
-      }
-      &-header {
-        &--sticky {
-          position: fixed;
-          z-index: 5;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          display: flex;
-          flex-direction: row;
-          background-color: $green-AA;
-          justify-content: space-between;
-          &-link {
+    padding-top: 10.5rem;
+    padding-bottom: 4rem;
+    .site-footer,
+    .site-callout {
+      display: none;
+    }
+    .site-header {
+      &--sticky {
+        position: fixed;
+        z-index: 5;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: row;
+        background-color: $green-AA;
+        justify-content: space-between;
+        &-link {
+          color: $white;
+          display: block;
+          padding: 1.25rem;
+          text-decoration: none;
+          text-transform: uppercase;
+          font-family: "Barlow-SemiBold", sans-serif;
+          @include font-size(16);
+          &:hover,
+          &:active,
+          &:focus,
+          &:visited, {
             color: $white;
-            display: block;
-            padding: 1.25rem;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-family: "Barlow-SemiBold", sans-serif;
-            @include font-size(16);
-            &:hover,
-            &:active,
-            &:focus,
-            &:visited, {
-              color: $white;
-            }
-            &.disabled {
-              opacity: 0.3;
-              .site-header--sticky-badge {
-                display: none;
-              }
-            }
           }
-          &-icon {
-            margin-right: .4rem;
-          }
-          &-badge {
-            color: $green-AA;
-            margin-left: .6rem;
+          &.disabled {
+            opacity: 0.3;
+            .site-header--sticky-badge {
+              display: none;
+            }
           }
         }
+        &-icon {
+          margin-right: .4rem;
+        }
+        &-badge {
+          color: $green-AA;
+          margin-left: .6rem;
+        }
       }
+    }
+    .search--list {
+      position: fixed;
+      top: 3.875rem;
+      right: 0;
+      left: 0;
+      z-index: 1000;
+    }
+    .search--tab-list-header {
+      position: fixed;
+      top: 7.063rem;
+      right: 0;
+      left: 0;
+      z-index: 1000;
     }
   }
 }
