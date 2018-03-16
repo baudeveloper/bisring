@@ -20,5 +20,15 @@ Table of Content:
         }
       }
     }
+    .site-header {
+      &--sticky-link {
+        padding: 1.25rem 1rem;
+        // width: 10rem;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        display: inline-block;
+      }
+    }
   }
 }
