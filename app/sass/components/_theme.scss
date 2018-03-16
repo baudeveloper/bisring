@@ -557,16 +557,18 @@ Table of Content:
             .pin-icon:before {
               color: inherit;
               content: "\f08d";
-              font-family: "fontawesome";
+              font-family: "Font Awesome 5 Pro";
+              font-weight: 400;
               @include font-size(16);
             }
           }
           &.active {
             .search--tab-list-item-pin {
               .pin-icon:before {
-                color: $red;
-                // content: "\f08d";
-                // font-family: "fontawesome";
+                color: $green-AA;
+                font-family: 'Font Awesome 5 Pro';
+                font-weight: 900;
+                content: "\f08d";
               }
             }
           }
@@ -607,21 +609,15 @@ Table of Content:
             }
             &-phone {
               margin: .25rem 0;
-              &::before {
+              span {
                 margin-right: .25rem;
                 color: $silver-AJ;
-                content: "\f095";
-                font-family: "fontawesome";
               }
             }
             &-location {
-              &::before {
+              span {
                 margin-right: .25rem;
                 color: $silver-AJ;
-                content: "\f3c5";
-                // font-family: "fontawesome";
-                font-family: 'Font Awesome 5 Free';
-                font-weight: 900;
               }
             }
           }

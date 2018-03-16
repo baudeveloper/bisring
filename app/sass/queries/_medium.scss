@@ -262,6 +262,14 @@ Table of Content:
             display: block;
             color: $green-AA;
             @include font-size(14);
+            span {
+              display: none;
+            }
+          }
+          &-location {
+            span {
+              display: none;
+            }
           }
           &-reviews {
             margin-left: 1rem;
