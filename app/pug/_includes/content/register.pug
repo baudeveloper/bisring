@@ -2,11 +2,32 @@
 	.container
 		h1(role="heading")
 			| #{pageTitle}
-		p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque aut nulla earum! Accusamus ducimus sequi repellendus? Error, illo inventore, consequatur iure laudantium veritatis quisquam a perspiciatis eligendi ipsum impedit omnis.
-		p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque aut nulla earum! Accusamus ducimus sequi repellendus? Error, illo inventore, consequatur iure laudantium veritatis quisquam a perspiciatis eligendi ipsum impedit omnis.
-		p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque aut nulla earum! Accusamus ducimus sequi repellendus? Error, illo inventore, consequatur iure laudantium veritatis quisquam a perspiciatis eligendi ipsum impedit omnis.
-		p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque aut nulla earum! Accusamus ducimus sequi repellendus? Error, illo inventore, consequatur iure laudantium veritatis quisquam a perspiciatis eligendi ipsum impedit omnis.
-		p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque aut nulla earum! Accusamus ducimus sequi repellendus? Error, illo inventore, consequatur iure laudantium veritatis quisquam a perspiciatis eligendi ipsum impedit omnis.
+		form(role="form")
+			.row
+				.col-md-6
+					.form-group
+						label(for="inputFirstName") First Name
+						input#inputFirstName(type="text")
+					.form-group
+						label(for="inputEmail") Email
+						input#inputEmail(type="text")
+					.form-group
+						label(for="inputPassword") Password
+						input#inputPassword(type="password")
+				.col-md-6
+					.form-group
+						label(for="inputLastName") Last Name
+						input#inputLastName(type="text")
+					.form-group
+						label(for="inputPhone") Phone (Optional)
+						input#inputPhone(type="number")
+					.form-group
+						label(for="inputRepeatPassword") Repeat Password
+						input#inputRepeatPassword(type="password")
+			.row
+				.col-sm-12
+					.form-group
+						a.btn.btn-primary(href="#") Register
 .site-callout.site-callout--minimal
 	.container
 		a.btn.btn-primary.btn--fixed(href="#", role="link", data-toggle='modal', data-target='#modalQuickList')
