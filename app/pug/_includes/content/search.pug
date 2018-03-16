@@ -24,11 +24,11 @@
 						span.search--tab-list-tag Plumbers
 						span.search--tab-list-count (6)
 					.search--tab-list-sort
-						a.search--tab-list-sort-name(href="#")
+						a.search--tab-list-sort-name(href="#", role="link")
 							span.search--tab-list-sort-icon.fas.fa-sort
 							span.search--tab-list-sort-label Sort By 
 							| Name
-						a.search--tab-list-sort-rating(href="#")
+						a.search--tab-list-sort-rating(href="#", role="link")
 							span.search--tab-list-sort-icon.fas.fa-sort-down
 							span.search--tab-list-sort-label Sort By 
 							| Rating
@@ -37,11 +37,11 @@
 						li.search--tab-list-item.active
 							header.search--tab-list-item-header
 								img.search--tab-list-item-thumb(src="http://placebear.com/160/85", alt="I am a thumbnail for a specific search")
-								a.search--tab-list-item-name(href="#")
+								a.search--tab-list-item-name(href="#", role="link")
 									| Joe the Plumber
-								a.search--tab-list-item-pin(href="#")
+								a.search--tab-list-item-pin(href="#", role="link")
 									span.pin-icon
-								a.search--tab-list-item-phone(href="#")
+								a.search--tab-list-item-phone(href="#", role="link")
 									| (416) 555-5555
 								span.search--tab-list-item-location 222 Islington Avenue, Etobicoke ON M8V 3W7
 							footer.search--tab-list-item-footer
@@ -52,15 +52,15 @@
 										option(value='3') 3
 										option(value='4') 4
 										option(value='5') 5
-								span.search--tab-list-item-reviews 2 reviews
+								a.search--tab-list-item-reviews(href="#", role="link") 2 reviews
 						li.search--tab-list-item.active
 							header.search--tab-list-item-header
 								img.search--tab-list-item-thumb(src="http://placebear.com/160/85", alt="I am a thumbnail for a specific search")
-								a.search--tab-list-item-name(href="#")
+								a.search--tab-list-item-name(href="#", role="link")
 									| Public Plumbing
-								a.search--tab-list-item-pin(href="#")
+								a.search--tab-list-item-pin(href="#", role="link")
 									span.pin-icon
-								a.search--tab-list-item-phone(href="#")
+								a.search--tab-list-item-phone(href="#", role="link")
 									| (416) 555-5555
 								span.search--tab-list-item-location 222 Islington Avenue, Etobicoke ON M8V 3W7
 							footer.search--tab-list-item-footer
@@ -71,15 +71,15 @@
 										option(value='3') 3
 										option(value='4') 4
 										option(value='5') 5
-								span.search--tab-list-item-reviews 5 reviews
+								a.search--tab-list-item-reviews(href="#", role="link") 5 reviews
 						li.search--tab-list-item
 							header.search--tab-list-item-header
 								img.search--tab-list-item-thumb(src="http://placebear.com/160/85", alt="I am a thumbnail for a specific search")
-								a.search--tab-list-item-name(href="#")
+								a.search--tab-list-item-name(href="#", role="link")
 									| Waterworks Plumbing
-								a.search--tab-list-item-pin(href="#")
+								a.search--tab-list-item-pin(href="#", role="link")
 									span.pin-icon
-								a.search--tab-list-item-phone(href="#")
+								a.search--tab-list-item-phone(href="#", role="link")
 									| (416) 555-5555
 								span.search--tab-list-item-location 222 Islington Avenue, Etobicoke ON M8V 3W7
 							footer.search--tab-list-item-footer
@@ -90,15 +90,15 @@
 										option(value='3', selected) 3
 										option(value='4') 4
 										option(value='5') 5
-								span.search--tab-list-item-reviews 5 reviews
+								a.search--tab-list-item-reviews(href="#", role="link") 5 reviews
 						li.search--tab-list-item
 							header.search--tab-list-item-header
 								img.search--tab-list-item-thumb(src="http://placebear.com/160/85", alt="I am a thumbnail for a specific search")
-								a.search--tab-list-item-name(href="#")
+								a.search--tab-list-item-name(href="#", role="link")
 									| Drain Rescue Plumbers Toronto
-								a.search--tab-list-item-pin(href="#")
+								a.search--tab-list-item-pin(href="#", role="link")
 									span.pin-icon
-								a.search--tab-list-item-phone(href="#")
+								a.search--tab-list-item-phone(href="#", role="link")
 									| (416) 555-5555
 								span.search--tab-list-item-location 222 Islington Avenue, Etobicoke ON M8V 3W7
 							footer.search--tab-list-item-footer
@@ -109,7 +109,7 @@
 										option(value='3') 3
 										option(value='4') 4
 										option(value='5') 5
-								span.search--tab-list-item-reviews 5 reviews
+								a.search--tab-list-item-reviews(href="#", role="link") 5 reviews
 .site-callout.site-callout--minimal
 	.container
 		a.btn.btn-primary.btn--fixed(href="#", role="link", data-toggle='modal', data-target='#modalQuickList')

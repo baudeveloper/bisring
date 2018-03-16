@@ -535,6 +535,14 @@ Table of Content:
             color: $green-AA;
             @include font-size(14);
             text-transform: capitalize;
+            &:link {
+              text-decoration: none;
+            }
+            &:hover,
+            &:active,
+            &:focus {
+              color: darken($green-AA, 10%);
+            }
           }
           &-pin {
             color: $green-AA;
@@ -611,7 +619,9 @@ Table of Content:
                 margin-right: .25rem;
                 color: $silver-AJ;
                 content: "\f3c5";
-                font-family: "fontawesome";
+                // font-family: "fontawesome";
+                font-family: 'Font Awesome 5 Free';
+                font-weight: 900;
               }
             }
           }
