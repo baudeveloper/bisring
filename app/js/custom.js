@@ -68,4 +68,10 @@ $(document).ready(function () {
 	$("[data-js=\"site-sidebar--nav\"] > ul").navToSelect();
 	$(".navToSelect").addClass("selectpicker").selectpicker("refresh");
 
+	// Reviews
+	var starsList = $("[data-js=\"search--tab-list-item-stars\"]");
+	starsList.barrating({
+		theme: "css-stars"
+	});
+
 });
