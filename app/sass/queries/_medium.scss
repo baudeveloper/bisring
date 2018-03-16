@@ -245,7 +245,6 @@ Table of Content:
           position: relative;
           padding: 1.25rem 1rem;
           border-bottom: 1px solid $green-AI;
-          font-family: "Barlow-SemiBold", sans-serif;
           &:last-of-type {
             border-bottom: none;
           }
@@ -253,19 +252,10 @@ Table of Content:
             display: none;
           }
           &-name {
-            display: block;
             margin: 0 0 1rem;
-            color: $green-AA;
             @include font-size(16);
           }
-          &-phone {
-            display: block;
-            color: $green-AA;
-            @include font-size(14);
-            span {
-              display: none;
-            }
-          }
+          &-phone,
           &-location {
             span {
               display: none;
@@ -293,13 +283,6 @@ Table of Content:
           }
           &.active {
             background: $green-AH;
-            // .search--tab-list-item-pin {
-            //   .pin-icon:before {
-            //     color: $red;
-            //     content: "\f08d";
-            //     font-family: "fontawesome";
-            //   }
-            // }
           }
         }
       }
