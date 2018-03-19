@@ -5,6 +5,7 @@ Table of Content:
 --- Universal Classes
 --- Sidenav
 --- Types
+--- Inputs
 */
 
 .hidden {
@@ -246,5 +247,109 @@ textarea {
         text-align: center;
       }
     }
+  }
+}
+
+// --- Google material design for Inputs: https://codepen.io/sevilayha/pen/IdGKH
+.form-group--md {
+  position: relative;
+  margin-bottom: 1.25rem;
+  &-input {
+    // padding: .75rem .75rem .75rem .5rem;
+    padding: .5rem 0;
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid $silver-AK;
+    font-family: "Barlow-Regular";
+    &:focus {
+      outline: none;
+    }
+    @include font-size(14);
+  }
+  &-label {
+    color: $silver-AB;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    // left: .5rem;
+    left: 0;
+    top: .5rem;
+    @include font-size(14);
+    transition: 0.2s ease all;
+    font-family: "Barlow-Regular";
+  }
+  &-input {
+    &:focus ~ label, &:valid ~ label {
+      top: -.75rem;
+      @include font-size(14);
+      color: $silver-AB;
+    }
+  }
+  &-bar {
+    position: relative;
+    display: block;
+    width: 100%;
+    // width: 18rem;
+    &:before, &:after {
+      content: '';
+      height: 2px;
+      width: 0;
+      bottom: 1px;
+      position: absolute;
+      background: $silver-AK;
+      transition: 0.2s ease all;
+    }
+    &:before {
+      left: 50%;
+    }
+    &:after {
+      right: 50%;
+    }
+  }
+  &-input:focus ~ .form-group--md-bar {
+    &:before, &:after {
+      width: 50%;
+    }
+  }
+  &-highlight {
+    position: absolute;
+    height: 60%;
+    // width: 6rem;
+    width: 100%;
+    top: 25%;
+    left: 0;
+    pointer-events: none;
+    opacity: 0.5;
+  }
+  &-input:focus ~ .form-group--md-highlight {
+    animation: inputHighlighter 0.3s ease;
+  }
+}
+@-webkit-keyframes inputHighlighter {
+  from {
+    background: $silver-AK;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+@-moz-keyframes inputHighlighter {
+  from {
+    background: $silver-AK;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+@keyframes inputHighlighter {
+  from {
+    background: $silver-AK;
+  }
+  to {
+    width: 0;
+    background: transparent;
   }
 }

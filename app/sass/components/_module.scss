@@ -8,11 +8,14 @@ Table of Content:
 */
 
 .popover {
+	&-body {
+		padding: 0;
+	}
 	.form-group {
 		margin: 0;
 	}
 	&-wrap {
-		padding: .75rem .5rem;
+		padding: 1.25rem;
 	}
 	&-social {
 		color: $white;
@@ -75,7 +78,7 @@ Table of Content:
 		margin-bottom: 1rem;
 	}
 	&-resets {
-		padding: 2rem 0 1rem;
+		padding: 0 0 1rem;
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
@@ -106,6 +109,9 @@ Table of Content:
 		&:focus {
 			color: darken($green-AB, 5%);
 		}
+	}
+	@media #{$medium__up} {
+		min-width: 15rem;
 	}
 }
 // ---
