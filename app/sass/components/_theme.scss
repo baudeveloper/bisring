@@ -100,7 +100,7 @@ Table of Content:
       .breadcrumb {
         &-item {
           &::before {
-            font-family: "fontawesome";
+            font-family: "Font Awesome 5 Pro";
           }
         }
         &-link {
@@ -291,9 +291,29 @@ Table of Content:
       }
     }
     .notification {
+      padding-left: 1.25rem!important;
+      padding-right: 1.25rem!important;
       &-value {
+        position: relative;
+        z-index: 2;
         color: $green-AA;
+        @include font-size(16);
         font-family: "Barlow-Medium", sans-serif;
+      }
+      &-icon {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &::before {
+          color: $white;
+          content: "\f0f3";
+          font-family: "Font Awesome 5 Pro";
+          font-weight: 900;
+          position: absolute;
+          @include font-size(32);
+        }
       }
     }
   }
