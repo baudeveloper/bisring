@@ -509,7 +509,7 @@ Table of Content:
         top: 3.875rem;
         right: 0;
         left: 0;
-        z-index: 1000;
+        z-index: 999;
       }
     }
   }
@@ -566,14 +566,14 @@ Table of Content:
       top: 3.875rem;
       right: 0;
       left: 0;
-      z-index: 1000;
+      z-index: 999;
     }
     .search--tab-list-header {
       position: fixed;
       top: 7.063rem;
       right: 0;
       left: 0;
-      z-index: 1000;
+      z-index: 999;
     }
   }
 }
