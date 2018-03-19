@@ -24,6 +24,14 @@ Table of Content:
     h1 {
       @include font-size(20);
     }
+    h2 {
+      @include font-size(18);
+    }
+    p {
+      &.lead {
+        @include font-size(16);
+      }
+    }
   }
   &-feature {
     padding-top: 3rem;
@@ -477,6 +485,16 @@ Table of Content:
           &--cards {
             margin: 0;
             padding: 1rem;
+            &-row {
+              display: block;
+              margin-bottom: 1rem;
+              h2 {
+                margin: 0;
+              }
+              .btn {
+                margin: 1rem 1rem 0 0;
+              }
+            }
           }
         }
       }

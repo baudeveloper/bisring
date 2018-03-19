@@ -781,10 +781,25 @@ Table of Content:
         &--cards {
           margin: 0;
           padding: 2rem;
+          &-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            h2 {
+              margin-right: 2rem;
+            }
+            .btn {
+              margin-left: 1rem;
+            }
+          }
+          .highlight {
+            margin-top: .5rem;
+          }
         }
         hr {
           color: $silver-AI;
           border-color: $silver-AI;
+          margin: 0;
         }
       }
     }

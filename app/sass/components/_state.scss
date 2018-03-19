@@ -231,13 +231,38 @@ textarea {
       font-family: "Barlow-Regular", sans-serif;
       @include font-size(32);
     }
+    h2 {
+      color: $green-AB;
+      font-family: "Barlow-Regular", sans-serif;
+      @include font-size(24);
+    }
     p {
       color: $silver-AB;
+      margin-bottom: 0;
       font-family: "Barlow-Regular", sans-serif;
       @include font-size(16);
       &.lead {
         color: $green-AB;
         @include font-size(20);
+      }
+      &.highlight {
+        color: $silver-AB;
+        @include font-size(20);
+        strong {
+          color: $green-AB;
+        }
+      }
+      a {
+        font-family: "Barlow-Medium", sans-serif;
+        &:link {
+          color: $green-AB;
+          text-decoration: none;
+        }
+        &:hover,
+        &:focus,
+        &:visited {
+          color: darken($green-AB, 15%);
+        }
       }
     }
   }

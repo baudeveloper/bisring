@@ -27,13 +27,19 @@
 				form.site-content--form(role="form")
 					.site-content--cards.form-group
 						h1(role="heading") My Account
-						h2 General Information
-						a.btn.btn-secondary(href="#", role="link") Edit
-						a.btn.btn-secondary(href="#", role="link") Change Password
+						.site-content--cards-row
+							h2 General Information
+							a.btn.btn-secondary(href="#", role="link") Edit
+							a.btn.btn-secondary(href="#", role="link") Change Password
+						p
+							| Prasanna Kugananthan
+							br
+							| prasanna@baustein.ca
 					hr
 					.site-content--cards.form-group
-						h2 Billing Address
-						a.btn.btn-secondary(href="#", role="link") Edit
+						.site-content--cards-row
+							h2 Billing Address
+							a.btn.btn-secondary(href="#", role="link") Edit
 						p
 							| 222 Islington Avenue, Suite 204
 							br
@@ -44,15 +50,23 @@
 							| Canada
 					hr
 					.site-content--cards.form-group
-						h2 Subscription (Annual)
-						a.btn.btn-secondary(href="#", role="link") Buy More Categories
+						.site-content--cards-row
+							h2 Subscription (Annual)
+							a.btn.btn-secondary(href="#", role="link") Buy More Categories
 						p
+							| You have used 
+							a(href="#") 3 
+							| out of 
+							a(href="#") 4 
+							| available 
+							a(href="#") Business Categories
+						p.highlight
 							strong $72.00 / month 
 							| (billed annually)
 					hr
 					.site-content--cards.form-group
 						h2 Payment History
-						table
+						table.table
 							thead
 								tr
 									th Order
