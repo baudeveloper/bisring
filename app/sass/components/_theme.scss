@@ -736,6 +736,14 @@ Table of Content:
         display: none;
       }
     }
+    // @media #{$large__up} {
+    //   &-callout,
+    //   &-feature {
+    //     .btn {
+    //       min-width: 12rem;
+    //     }
+    //   }
+    // }
   }
   &-standard {
     .site-header {

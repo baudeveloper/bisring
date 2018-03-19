@@ -4,8 +4,8 @@
 Table of Content:
 --- Universal Classes
 --- Sidenav
---- Types
---- Inputs
+--- Typography
+--- Material Design Inputs
 */
 
 .hidden {
@@ -20,16 +20,6 @@ textarea {
   font-family: "Barlow-SemiBold", sans-serif;
   &-primary {
     background-color: $orange-AA;
-  }
-}
-@media #{$large__up} {
-  .site {
-    &-callout,
-    &-feature {
-      .btn {
-        min-width: 12rem;
-      }
-    }
   }
 }
 
@@ -275,7 +265,7 @@ textarea {
   }
 }
 
-// --- Google material design for Inputs: https://codepen.io/sevilayha/pen/IdGKH
+// https://codepen.io/sevilayha/pen/IdGKH
 .form-group--md {
   position: relative;
   margin-bottom: 1.25rem;
