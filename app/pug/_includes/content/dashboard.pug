@@ -24,4 +24,73 @@
 							a.site-sidebar--link(href="db-bisring-points.html") BisRing Points
 				a.btn.btn-primary.btn-block.site-sidebar--addbusiness(href="#") Add Business
 			main.site-content.col-md-9(role="main")
-				h1(role="heading") My Account
+				form.site-content--form(role="form")
+					.site-content--cards.form-group
+						h1(role="heading") My Account
+						h2 General Information
+						a.btn.btn-secondary(href="#", role="link") Edit
+						a.btn.btn-secondary(href="#", role="link") Change Password
+					hr
+					.site-content--cards.form-group
+						h2 Billing Address
+						a.btn.btn-secondary(href="#", role="link") Edit
+						p
+							| 222 Islington Avenue, Suite 204
+							br
+							| Etobicoke, Ontario
+							br
+							| M8V 3H9
+							br
+							| Canada
+					hr
+					.site-content--cards.form-group
+						h2 Subscription (Annual)
+						a.btn.btn-secondary(href="#", role="link") Buy More Categories
+						p
+							strong $72.00 / month 
+							| (billed annually)
+					hr
+					.site-content--cards.form-group
+						h2 Payment History
+						table
+							thead
+								tr
+									th Order
+									th Date
+									th Details
+									th Amount
+									th Status
+							tbody
+								tr
+									td
+										a(href="#") # 1636
+									td
+										| 03-20-2017 8:42 am EDT
+									td
+										| Annual Subscription Renewal
+									td
+										| $ 864.00
+									td
+										| Paid
+								tr
+									td
+										a(href="#") # 1639
+									td
+										| 04-16-2016 9:03 am EDT
+									td
+										| Category Purchase (2)
+									td
+										| $ 40.00
+									td
+										| Paid
+								tr
+									td
+										a(href="#") # 1743
+									td
+										| 04-22-2015 12:03 pm EDT
+									td
+										| Annual Subscription Renewal
+									td
+										| $ 864.00
+									td
+										| Paid

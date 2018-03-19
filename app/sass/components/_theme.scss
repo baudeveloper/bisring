@@ -777,7 +777,15 @@ Table of Content:
     .site-admin {
       .site-content {
         min-height: 100vh;
-        padding-top: 1rem;
+        padding: 0;
+        &--cards {
+          margin: 0;
+          padding: 2rem;
+        }
+        hr {
+          color: $silver-AI;
+          border-color: $silver-AI;
+        }
       }
     }
     .site-header {

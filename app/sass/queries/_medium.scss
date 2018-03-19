@@ -472,6 +472,14 @@ Table of Content:
     padding-top: 6.188rem;
     padding-bottom: 4rem;
     .site {
+      &-admin {
+        .site-content {
+          &--cards {
+            margin: 0;
+            padding: 1rem;
+          }
+        }
+      }
       &-footer {
         display: none;
       }
