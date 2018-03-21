@@ -203,12 +203,13 @@ Table of Content:
         border-radius: 0;
       }
       .dropdown-item {
+        outline: none!important;
         color: $orange-AA;
         padding-top: .5rem;
         padding-bottom: .5rem;
         font-family: "Barlow-SemiBold", sans-serif;
         &:hover,
-        &:active
+        &:active,
         &:focus {
           color: $orange-AA!important;
           border-color: transparent!important;
@@ -267,12 +268,13 @@ Table of Content:
         margin: 0;
       }
       .dropdown-item {
+        outline: none!important;
         color: $orange-AA;
         padding-top: .5rem;
         padding-bottom: .5rem;
         font-family: "Barlow-SemiBold", sans-serif;
         &:hover,
-        &:active
+        &:active,
         &:focus {
           color: $orange-AA!important;
           border-color: transparent!important;

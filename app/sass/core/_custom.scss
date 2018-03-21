@@ -7,41 +7,48 @@ Table of Content:
 --- BREADCRUMBS
 */
 
-$gray-800:                    $green-AG !default;
-$primary: 					  $orange-AA !default;
-$secondary:  				  $green-AB !default;
-$dark:          			  $green-AG !default;
-$font-family-sans-serif:      "Barlow-Regular" !default;
-$btn-padding-y:               .5rem !default;
-$btn-padding-x: 			  2rem !default;
+$gray-800:                    				$green-AG !default;
+$primary: 					  				$orange-AA !default;
+$secondary:  				  				$green-AB !default;
+$dark:          			  				$green-AG !default;
+$font-family-sans-serif:      				"Barlow-Regular" !default;
+$btn-padding-y:               				.5rem !default;
+$btn-padding-x: 			  				2rem !default;
 // ---
-$badge-font-size:             1rem !default;
-$badge-font-weight:           normal !default;
-$badge-padding-y:             .25rem !default;
-$badge-padding-x:             .5rem !default;
-$badge-border-radius:         100% !default;
-$badge-pill-padding-x:        0 !default;
-$badge-pill-border-radius:    1rem !default;
+$badge-font-size:             				1rem !default;
+$badge-font-weight:           				normal !default;
+$badge-padding-y:             				.25rem !default;
+$badge-padding-x:             				.5rem !default;
+$badge-border-radius:         				100% !default;
+$badge-pill-padding-x:        				0 !default;
+$badge-pill-border-radius:    				1rem !default;
 // ---
-$navbar-brand-padding-y:      0 !default;
-$navbar-padding-y:            0 !default;
-$navbar-padding-x:            0 !default;
-$navbar-dark-color:           $white !default;
-$navbar-dark-hover-color:     darken($white, 15%) !default;
-$navbar-dark-active-color:    $white !default;
-$navbar-dark-disabled-color:  darken($white, 25%) !default;
+$navbar-brand-padding-y:      				0 !default;
+$navbar-padding-y:            				0 !default;
+$navbar-padding-x:            				0 !default;
+$navbar-dark-color:           				$white !default;
+$navbar-dark-hover-color:     				darken($white, 15%) !default;
+$navbar-dark-active-color:    				$white !default;
+$navbar-dark-disabled-color:  				darken($white, 25%) !default;
 // ---
-$input-placeholder-color:     $silver-AB !default;
-$input-btn-focus-width:       0 !default;
-$input-btn-focus-color:       transparent !default;
-$input-btn-focus-box-shadow:  none !default;
-$input-btn-border-width:      0 !default;
+$input-placeholder-color:     				$silver-AB !default;
+$input-btn-focus-width:       				0 !default;
+$input-btn-focus-color:       				transparent !default;
+$input-btn-focus-box-shadow:  				none !default;
+$input-btn-border-width:      				0 !default;
+$btn-focus-width:             				0 !default;
+$btn-focus-box-shadow:        				none !default;
+$btn-active-box-shadow:       				none !default;
+$input-focus-width:           				0 !default;
+$input-focus-box-shadow:      				none !default;
+$custom-select-focus-border-color:  		transparent !default;
+$custom-select-focus-box-shadow:    		none !default;
 // ---
-$breadcrumb-padding-y:              0 !default;
-$breadcrumb-padding-x:              0 !default;
-$breadcrumb-item-padding:           .5rem !default;
-$breadcrumb-margin-bottom:          0 !default;
-$breadcrumb-bg:                     transparent !default;
-$breadcrumb-divider-color:          $white !default;
-$breadcrumb-active-color:           $orange-AA !default;
-$breadcrumb-divider:                "\f105" !default;
+$breadcrumb-padding-y:              		0 !default;
+$breadcrumb-padding-x:              		0 !default;
+$breadcrumb-item-padding:           		.5rem !default;
+$breadcrumb-margin-bottom:          		0 !default;
+$breadcrumb-bg:                     		transparent !default;
+$breadcrumb-divider-color:          		$white !default;
+$breadcrumb-active-color:           		$orange-AA !default;
+$breadcrumb-divider:                		"\f105" !default;
