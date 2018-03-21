@@ -1,5 +1,8 @@
 header.site-header(role="header", data-js="site-header")
-	img.site-header--img.hidden(src="images/bg-header-home.png", alt="Background for site header section", role="img")
+	//- figure.hidden
+	//- 	img.services(src="images/bg-header-home.png", alt="Services", role="img")
+	//- 	img.for-rents(src="http://placebear/1200/600", alt="For Rents", role="img")
+	//- 	img.for-sales(src="http://placebear/1300/600", alt="For Sales", role="img")
 	.container
 		include ../menus/navigation
 		include ../menus/sidenav-front
@@ -9,10 +12,10 @@ header.site-header(role="header", data-js="site-header")
 			form.site-header--form(role="form")
 				.form-group.site-header--service
 					label.sr-only(for='selectService') Please select a Service
-					select#selectService.selectpicker
-						option Services
-						option For Rents
-						option For Sales
+					select#selectService.selectpicker(data-js="selectService")
+						option(value="services") Services
+						option(value="for-rents") For Rents
+						option(value="for-sales") For Sales
 				.form-group.site-header--search
 					.input-group
 						label.sr-only(for='inputFindService') Find a Service

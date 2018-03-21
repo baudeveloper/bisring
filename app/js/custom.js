@@ -13,8 +13,8 @@ $(document).ready(function () {
 	var imgSrc = siteCallout.find(".site-callout--img").attr("src");
 	siteCallout.css("backgroundImage", "url(" + imgSrc + ")");
 	var siteHeader = $("[data-js=\"site-header\"]");
-	var imgHeaderSrc = siteHeader.find(".site-header--img").attr("src");
-	siteHeader.css("backgroundImage", "url(" + imgHeaderSrc + ")");
+	// var imgHeaderSrc = siteHeader.find(".site-header--img").attr("src");
+	// siteHeader.css("backgroundImage", "url(" + imgHeaderSrc + ")");
 
 	// Sidebar
 	// Source: https://bootstrapious.com/tutorial/sidebar/index3.html
@@ -63,6 +63,13 @@ $(document).ready(function () {
 
 	// Selectpickers
 	$(".selectpicker").selectpicker();
+	$(".page-front [data-js=\"selectService\"]").change(function(){
+		console.log($(this).find("option:selected").val().toLowerCase());
+		siteHeader.removeClass("services for-rents for-sales").addClass(
+			$(this).find("option:selected").val().toLowerCase()
+		);
+	})
+	.change();
 
 	// UL to select
 	$("[data-js=\"site-sidebar--nav\"] > ul").navToSelect();
