@@ -716,15 +716,15 @@ Table of Content:
       }
     }
     .site-header {
-      &.services {
-        background-image: url("../images/bg-header-home.png");
-      }
-      &.for-rents {
-        background-image: url("http://placebear.com/1201/600");
-      }
-      &.for-sales {
-        background-image: url("http://placebear.com/1202/600");
-      }
+      // &.services {
+      //   background-image: url("../images/bg-header-home.png");
+      // }
+      // &.for-rents {
+      //   background-image: url("http://placebear.com/1201/600");
+      // }
+      // &.for-sales {
+      //   background-image: url("http://placebear.com/1202/600");
+      // }
       @media (min-width: 48rem) and (max-width: 75rem) {
         background-size: cover;
       }
