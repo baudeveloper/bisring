@@ -926,6 +926,14 @@ Table of Content:
         margin-top: 14.75rem;
       }
     }
+    // SEARCH PAGE
+    &-search {
+      .site {
+        &-search-results {
+          margin-top: 13.75rem;
+        }
+      }
+    }
     // REGISTER PAGE | Matches with Dashboard pages in terms of margin
     &#register {
       .site-content {
