@@ -145,10 +145,23 @@ Table of Content:
           flex-grow: 2;
         }
       }
-      @media (min-width: 48rem) and (max-width: 62rem) {
+      @media (min-width: 62rem) and (max-width: 75rem) {
         .form-group {
           &:first-child {
             flex-grow: 2;
+          }
+          &:first-child+div {
+            flex-grow: 1;
+          }
+          &:last-child {
+            flex-grow: 3;
+          }
+        }
+      }
+      @media (min-width: 48rem) and (max-width: 62rem) {
+        .form-group {
+          &:first-child {
+            flex-grow: 3;
           }
           &:first-child+div {
             flex-grow: 1;
@@ -208,6 +221,12 @@ Table of Content:
       }
     }
     &--search {
+      .input-group {
+        justify-content: space-between;
+      }
+      .twitter-typeahead {
+        flex-grow: 1;
+      }
       input[type="text"] {
         border-radius: 0;
         color: $silver-AA;

@@ -5,6 +5,7 @@ Table of Content:
 --- Popover
 --- Modal
 --- Stars
+--- Typeahead
 */
 
 .popover {
@@ -135,6 +136,33 @@ Table of Content:
 			&.br-active:after,
 			&.br-selected:after {
 				color: $orange-AA;
+			}
+		}
+	}
+}
+// ---
+.twitter-typeahead {
+	.tt {
+		&-menu {
+			right: -5.188rem;
+			padding: 2rem;
+			color: $orange-AA;
+			background: rgba($white, .9);
+			box-shadow: 5px 5px 5px 0px rgba($black, .1);
+		}
+		&-cursor {
+			color: $black;
+		}
+	}
+	@media #{$medium} {
+		.tt {
+			&-menu {
+				padding: 1rem;
+				right: -3.25rem;
+				border-radius: 3px;
+			}
+			&-title {
+				@include font-size(18);
 			}
 		}
 	}

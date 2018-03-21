@@ -105,4 +105,22 @@ $(document).ready(function () {
 		}
 	});
 
+	// Typeahead
+	var findServiceTypeahead = $("[data-js=\"findServiceTypeahead\"]");
+	var nbaTeams = new Bloodhound({
+		datumTokenizer: Bloodhound.tokenizers.obj.whitespace("team"),
+		queryTokenizer: Bloodhound.tokenizers.whitespace,
+		prefetch: "http://twitter.github.io/typeahead.js/data/nba.json"
+	});
+	findServiceTypeahead.typeahead({
+		highlight: true
+	}, {
+		name: "nba-teams",
+		display: "team",
+		source: nbaTeams,
+		templates: {
+			header: "<h3 class=\"tt-title\">Services</h3>"
+		}
+	});
+
 });
