@@ -95,14 +95,14 @@ $(document).ready(function () {
 	});
 
 	// On Nav Scroll
-	// $(window).scroll(function() {
-	// 	var scroll = $(window).scrollTop();
-	// 	var siteHeaders = $(".page-standard [data-js=\"site-header\"]");
-	// 	if (scroll >= 30) {
-	// 		siteHeaders.addClass("scrolled");
-	// 	} else {
-	// 		siteHeaders.removeClass("scrolled");
-	// 	}
-	// });
+	$(window).scroll(function() {
+		var scroll = $(window).scrollTop();
+		var siteHeaders = $(".page-front [data-js=\"site-header\"]");
+		if (scroll >= 30) {
+			siteHeaders.addClass("scrolled");
+		} else {
+			siteHeaders.removeClass("scrolled");
+		}
+	});
 
 });

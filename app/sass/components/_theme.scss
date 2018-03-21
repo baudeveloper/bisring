@@ -316,6 +316,13 @@ Table of Content:
         }
       }
     }
+    @media #{$medium__up} {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 999;
+    }
   }
   // &-admin,
   // &-search-results {
@@ -655,17 +662,6 @@ Table of Content:
       }
     }
   }
-  &#why-bisring {
-    .site-content {
-      h1 {
-        margin-top: 2rem;
-        margin-bottom: 3rem;
-      }
-      p {
-        margin-bottom: 1rem;
-      }
-    }
-  }
 }
 
 .page {
@@ -733,6 +729,7 @@ Table of Content:
         color: $white;
         text-align: center;
         margin: 5rem 0 2.5rem;
+        line-height: 1;
         @include font-size(24);
       }
       &--logo {
@@ -866,6 +863,59 @@ Table of Content:
     .site-header {
       &--sticky {
         display: none;
+      }
+    }
+  }
+  // STICKY HEADER STYLES
+  @media #{$medium__up} {
+    // STANDARD PAGE
+    &-standard {
+      .site-content {
+        margin-top: 4rem;
+      }
+    }
+    // DASHBOARD PAGES
+    &-admin {
+      .site-admin {
+        margin-top: 4.375rem;
+      }
+      .site-content {
+        margin-top: 0;
+      }
+    }
+    // LANDING PAGE
+    &-front {
+      .site-feature {
+        margin-top: 27.75rem;
+      }
+      .scrolled {
+        background-size: contain;
+        transition: .5s all ease;
+        .site-header--title {
+          display: none;
+          transition: .5s all ease;
+        }
+        .site-header--form {
+          padding-top: 3rem;
+          padding-bottom: 3rem;
+          transition: .5s all ease;
+        }
+      }
+      .scrolled + .site-feature {
+        margin-top: 14.75rem;
+      }
+    }
+    // REGISTER PAGE | Matches with Dashboard pages in terms of margin
+    &#register {
+      .site-content {
+        margin-top: 4.375rem;
+      }
+    }
+    // WHY BISRING PAGE
+    &#why-bisring {
+      .site-content {
+        margin-top: 14.13rem;
+        padding-top: 0;
       }
     }
   }
