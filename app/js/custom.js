@@ -131,17 +131,20 @@ $(document).ready(function () {
 		$(this).addClass("hidden");
 		$(this).siblings(".btn-update-general-information, .btn-cancel-general-information").removeClass("hidden");
 		$(this).parents(".site-content--cards-editable").find(".site-content--editable-wrap").removeClass("hidden");
+		$(this).parents(".site-content--cards-editable").find(".site-content--uneditable-wrap").addClass("hidden");
 	});
 	cancelGIButton.click(function() {
 		$(this).siblings(".btn-edit-general-information").removeClass("hidden");
 		$(this).siblings(".btn-update-general-information").addClass("hidden");
 		$(this).parents(".site-content--cards-editable").find(".site-content--editable-wrap").addClass("hidden");
+		$(this).parents(".site-content--cards-editable").find(".site-content--uneditable-wrap").removeClass("hidden");
 		$(this).addClass("hidden");
 	});
 	updateGIButton.click(function() {
 		$(this).siblings(".btn-edit-general-information").removeClass("hidden");
 		$(this).siblings(".btn-cancel-general-information").addClass("hidden");
 		$(this).parents(".site-content--cards-editable").find(".site-content--editable-wrap").addClass("hidden");
+		$(this).parents(".site-content--cards-editable").find(".site-content--uneditable-wrap").removeClass("hidden");
 		$(this).addClass("hidden");
 	});
 
@@ -153,17 +156,20 @@ $(document).ready(function () {
 		$(this).addClass("hidden");
 		$(this).siblings(".btn-update-billing-address, .btn-cancel-billing-address").removeClass("hidden");
 		$(this).parents(".site-content--cards-editable").find(".site-content--editable-wrap").removeClass("hidden");
+		$(this).parents(".site-content--cards-editable").find(".site-content--uneditable-wrap").addClass("hidden");
 	});
 	cancelBIButton.click(function() {
 		$(this).siblings(".btn-edit-billing-address").removeClass("hidden");
 		$(this).siblings(".btn-update-billing-address").addClass("hidden");
 		$(this).parents(".site-content--cards-editable").find(".site-content--editable-wrap").addClass("hidden");
+		$(this).parents(".site-content--cards-editable").find(".site-content--uneditable-wrap").removeClass("hidden");
 		$(this).addClass("hidden");
 	});
 	updateBIButton.click(function() {
 		$(this).siblings(".btn-edit-billing-address").removeClass("hidden");
 		$(this).siblings(".btn-cancel-billing-address").addClass("hidden");
 		$(this).parents(".site-content--cards-editable").find(".site-content--editable-wrap").addClass("hidden");
+		$(this).parents(".site-content--cards-editable").find(".site-content--uneditable-wrap").removeClass("hidden");
 		$(this).addClass("hidden");
 	});
 
