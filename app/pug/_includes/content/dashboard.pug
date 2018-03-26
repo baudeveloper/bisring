@@ -25,21 +25,42 @@
 				a.btn.btn-primary.btn-block.site-sidebar--addbusiness(href="#") Add Business
 			main.site-content.col-md-9(role="main")
 				form.site-content--form(role="form")
-					.site-content--cards.form-group
+					.site-content--cards.site-content--cards-editable.form-group
 						h1(role="heading") My Account
 						.site-content--cards-row
 							h2 General Information
-							a.btn.btn-secondary(href="#", role="link") Edit
-							a.btn.btn-secondary(href="#", role="link") Change Password
+							div
+								a.btn.btn-secondary.btn-edit-general-information(href="#", role="link", data-js="edit-general-information") Edit
+								a.btn.btn-secondary.btn-update-general-information.hidden(href="#", role="link", data-js="update-general-information") Update
+								a.btn.btn-light.btn-cancel-general-information.hidden(href="#", role="link", data-js="cancel-general-information") Cancel
+								a.btn.btn-secondary(href="#", role="link") Change Password
 						p
 							| Prasanna Kugananthan
 							br
 							| prasanna@baustein.ca
+						.site-content--editable-wrap.hidden
+							.row
+								.col-sm-6
+									label.sr-only(for="userFirstName") First Name
+									input#userFirstName(type="text", placeholder="Prasanna")
+								.col-sm-6
+									label.sr-only(for="userLastName") Last Name
+									input#userLastName(type="text", placeholder="Kugananthan")
+							.row
+								.col-sm-6
+									label.sr-only(for="userEmail") Email
+									input#userEmail(type="email", placeholder="prasanna@baustein.ca")
+								.col-sm-6
+									label.sr-only(for="userPhone") Phone Number (optional)
+									input#userPhone(type="text", placeholder="(647) 430 5262")
 					hr
-					.site-content--cards.form-group
+					.site-content--cards.site-content--cards-editable.form-group
 						.site-content--cards-row
 							h2 Billing Address
-							a.btn.btn-secondary(href="#", role="link") Edit
+							div
+								a.btn.btn-secondary.btn-edit-billing-address(href="#", role="link", data-js="edit-billing-address") Edit
+								a.btn.btn-secondary.btn-update-billing-address.hidden(href="#", role="link", data-js="update-billing-address") Update
+								a.btn.btn-light.btn-cancel-billing-address.hidden(href="#", role="link", data-js="cancel-billing-address") Cancel
 						p
 							| 222 Islington Avenue, Suite 204
 							br
@@ -48,6 +69,33 @@
 							| M8V 3H9
 							br
 							| Canada
+						.site-content--editable-wrap.hidden
+							.row
+								.col-sm-6
+									label.sr-only(for="userPrimaryAddress") Address Line #1
+									input#userPrimaryAddress(type="text", placeholder="222 Islington Avenue")
+								.col-sm-6
+									label.sr-only(for="userSecondaryAddress") Address Line #2 (Optional)
+									input#userSecondaryAddress(type="text", placeholder="")
+							.row
+								.col-sm-6
+									label.sr-only(for="userCity") City
+									input#userCity(type="text", placeholder="Toronto")
+								.col-sm-3
+									label.sr-only(for="userState") Province/State
+									input#userState(type="text", placeholder="Ontario")
+								.col-sm-3
+									label.sr-only(for="userPostalCode") Postal Code/ZIP
+									input#userPostalCode(type="text", placeholder="M8V 3W7")
+							.row
+								.col-sm-6
+									label.sr-only(for="userPhone") Phone Number (Optional)
+									input#userPhone(type="text", placeholder="(647) 430 5262")
+								.col-sm-6
+									label.sr-only(for="userSecondaryAddress") Country
+									select#userCountry
+										option(value="Canada") Canada
+										option(value="United States") United States
 					hr
 					.site-content--cards.form-group
 						.site-content--cards-row

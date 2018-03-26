@@ -31,4 +31,25 @@ Table of Content:
       }
     }
   }
+  &-admin {
+    padding-top: 6.188rem;
+    padding-bottom: 4rem;
+    .site {
+      &-admin {
+        .site-content {
+          &--cards {
+            &-row {
+              div {
+                margin-top: .5rem;
+              }
+              .btn {
+                display: block;
+                margin: .5rem 0 0 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }

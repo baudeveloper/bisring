@@ -21,6 +21,16 @@ textarea {
   &-primary {
     background-color: $orange-AA;
   }
+  &-light {
+    color: $green-AA;
+    background-color: $silver-AI;
+    &:hover,
+    &:active,
+    &:focus {
+      color: darken($green-AA, 5%)!important;
+      background-color: darken($silver-AI, 5%)!important;
+    }
+  }
 }
 
 .sidenav {

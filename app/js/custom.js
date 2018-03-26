@@ -123,4 +123,48 @@ $(document).ready(function () {
 		}
 	});
 
+	// Dashboard GENERAL INFORMATION buttons toggle: http://jsfiddle.net/j08691/JbZnf/2/
+	var editGIButton = $("[data-js=\"edit-general-information\"]");
+	var updateGIButton = $("[data-js=\"update-general-information\"]");
+	var cancelGIButton = $("[data-js=\"cancel-general-information\"]");
+	editGIButton.click(function() {
+		$(this).addClass("hidden");
+		$(this).siblings(".btn-update-general-information, .btn-cancel-general-information").removeClass("hidden");
+		$(this).parents(".site-content--cards-editable").find(".site-content--editable-wrap").removeClass("hidden");
+	});
+	cancelGIButton.click(function() {
+		$(this).siblings(".btn-edit-general-information").removeClass("hidden");
+		$(this).siblings(".btn-update-general-information").addClass("hidden");
+		$(this).parents(".site-content--cards-editable").find(".site-content--editable-wrap").addClass("hidden");
+		$(this).addClass("hidden");
+	});
+	updateGIButton.click(function() {
+		$(this).siblings(".btn-edit-general-information").removeClass("hidden");
+		$(this).siblings(".btn-cancel-general-information").addClass("hidden");
+		$(this).parents(".site-content--cards-editable").find(".site-content--editable-wrap").addClass("hidden");
+		$(this).addClass("hidden");
+	});
+
+	// Dashboard BILLING ADDRESS buttons toggle: http://jsfiddle.net/j08691/JbZnf/2/
+	var editBIButton = $("[data-js=\"edit-billing-address\"]");
+	var updateBIButton = $("[data-js=\"update-billing-address\"]");
+	var cancelBIButton = $("[data-js=\"cancel-billing-address\"]");
+	editBIButton.click(function() {
+		$(this).addClass("hidden");
+		$(this).siblings(".btn-update-billing-address, .btn-cancel-billing-address").removeClass("hidden");
+		$(this).parents(".site-content--cards-editable").find(".site-content--editable-wrap").removeClass("hidden");
+	});
+	cancelBIButton.click(function() {
+		$(this).siblings(".btn-edit-billing-address").removeClass("hidden");
+		$(this).siblings(".btn-update-billing-address").addClass("hidden");
+		$(this).parents(".site-content--cards-editable").find(".site-content--editable-wrap").addClass("hidden");
+		$(this).addClass("hidden");
+	});
+	updateBIButton.click(function() {
+		$(this).siblings(".btn-edit-billing-address").removeClass("hidden");
+		$(this).siblings(".btn-cancel-billing-address").addClass("hidden");
+		$(this).parents(".site-content--cards-editable").find(".site-content--editable-wrap").addClass("hidden");
+		$(this).addClass("hidden");
+	});
+
 });
