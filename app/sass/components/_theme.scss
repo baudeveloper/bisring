@@ -8,49 +8,70 @@ Table of Content:
 
 .site {
   &-feature {
-    padding-top: 4.688rem;
-    padding-bottom: 4.688rem;
-    text-align: center;
     color: $green-AB;
     background-color: $green-AF;
-    &--thumbnail {
-      max-height: 7.5rem;
-    }
-    &--title {
-      margin-top: 0;
-      margin-bottom: 2.5rem;
-      font-weight: normal;
-      @include font-size(32);
-    }
-    &--heading {
-      margin-top: 0rem;
-      margin-bottom: 1rem;
-      font-weight: normal;
-      @include font-size(24);
-    }
-    &--content {
-      margin-bottom: 0;
-      @include font-size(14);
-    }
-    .card {
-      width: 100%;
-      &-header {
-        padding-top: 1rem;
-        padding-bottom: 0;
-        min-height: 11rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        background: none;
-        border-bottom: none;
+    .advantage {
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+      &.alt {
+        background-color: #f5f9f9;
       }
-      &-body {
-        padding: 0 1.75rem 1.5rem;
+      .copy {
+        padding-left: 8rem;
+        padding-right: 8rem;
+        @media #{$large} {
+          padding-left: 2rem;
+          padding-right: 2rem;
+        }
+        &.order-sm-1 {
+          text-align: right;
+        }
+        h2 {
+          color: $orange-AA;
+        }
+        p {
+          font-size: 1.125rem;
+        }
       }
     }
-    .btn {
-      margin-top: 2.5rem;
-    }
+    // &--thumbnail {
+    //   max-height: 7.5rem;
+    // }
+    // &--title {
+    //   margin-top: 0;
+    //   margin-bottom: 2.5rem;
+    //   font-weight: normal;
+    //   @include font-size(32);
+    // }
+    // &--heading {
+    //   margin-top: 0rem;
+    //   margin-bottom: 1rem;
+    //   font-weight: normal;
+    //   @include font-size(24);
+    // }
+    // &--content {
+    //   margin-bottom: 0;
+    //   @include font-size(14);
+    // }
+    // .card {
+    //   width: 100%;
+    //   &-header {
+    //     padding-top: 1rem;
+    //     padding-bottom: 0;
+    //     min-height: 11rem;
+    //     display: flex;
+    //     flex-direction: column;
+    //     justify-content: center;
+    //     background: none;
+    //     border-bottom: none;
+    //   }
+    //   &-body {
+    //     padding: 0 1.75rem 1.5rem;
+    //   }
+    // }
+    // .btn {
+    //   margin-top: 2.5rem;
+    // }
   }
   &-callout {
     text-align: center;
@@ -94,6 +115,7 @@ Table of Content:
     background-color: $dark;
     background-position: center center;
     background-repeat: no-repeat;
+    background-size:cover;
     &--breadcrumb {
       padding-top: 0;
       padding-bottom: 1.5rem;
@@ -775,7 +797,7 @@ Table of Content:
   &-standard {
     .site-header {
       background-color: $dark;
-      background-size: contain;
+      background-size: cover;
       &--form {
         padding-top: 2rem;
       }
@@ -914,7 +936,7 @@ Table of Content:
         margin-top: 27.75rem;
       }
       .scrolled {
-        background-size: contain;
+        background-size: cover;
         transition: .5s all ease;
         .site-header--title {
           display: none;

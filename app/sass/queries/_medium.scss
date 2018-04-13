@@ -33,37 +33,41 @@ Table of Content:
       }
     }
   }
-  &-feature {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-    &--title {
-      margin-top: 0;
-      margin-bottom: 1.5rem;
-      @include font-size(24);
-    }
-    &--thumbnail {
-      max-height: 5rem;
-      margin-bottom: 1.25rem;
-    }
-    &--heading {
-      margin-top: 0rem;
-      margin-bottom: .5rem;
-      @include font-size(20);
-    }
-    &--content {
-      margin-bottom: 0;
-    }
-    .card {
-      margin-bottom: 1.25rem;
-      &-header {
-        padding-top: 1.5rem;
-        min-height: auto;
-      }
-    }
-    .btn {
-      margin-top: 0;
-    }
-  }
+  // &-feature {
+  //   .advantage {
+  //     .copy {
+  //       padding-left: 2rem;
+  //       padding-right: 2rem;
+  //     }
+  //   }
+    // &--title {
+    //   margin-top: 0;
+    //   margin-bottom: 1.5rem;
+    //   @include font-size(24);
+    // }
+    // &--thumbnail {
+    //   max-height: 5rem;
+    //   margin-bottom: 1.25rem;
+    // }
+    // &--heading {
+    //   margin-top: 0rem;
+    //   margin-bottom: .5rem;
+    //   @include font-size(20);
+    // }
+    // &--content {
+    //   margin-bottom: 0;
+    // }
+    // .card {
+    //   margin-bottom: 1.25rem;
+    //   &-header {
+    //     padding-top: 1.5rem;
+    //     min-height: auto;
+    //   }
+    // }
+    // .btn {
+    //   margin-top: 0;
+    // }
+  //}
   &-callout {
     .container {
       padding-top: 4.5rem;
