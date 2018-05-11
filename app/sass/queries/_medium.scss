@@ -479,11 +479,57 @@ Table of Content:
         }
       }
     }
+    .site-feature,
+    .site-callout,
+    .site-footer {
+      display: none;
+    }
     .site-header {
       &--form,
       &--breadcrumb,
       &--footer, {
         display: none;
+      }
+    }
+    .site {
+      &-footer {
+        display: none;
+      }
+      &-header {
+        &--sticky {
+          position: fixed;
+          z-index: 5;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          z-index: 5;
+          display: flex;
+          flex-direction: row;
+          background-color: $green-AA;
+          justify-content: flex-end;
+          &-link {
+            color: $white;
+            display: block;
+            padding: 1.25rem;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-family: "Barlow-SemiBold", sans-serif;
+            @include font-size(16);
+            &:hover,
+            &:active,
+            &:focus,
+            &:visited, {
+              color: $white;
+            }
+          }
+          &-icon {
+            margin-right: .4rem;
+          }
+          &-badge {
+            color: $green-AA;
+            margin-left: .6rem;
+          }
+        }
       }
     }
   }

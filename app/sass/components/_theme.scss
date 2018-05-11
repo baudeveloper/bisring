@@ -748,6 +748,16 @@ Table of Content:
       }
     }
   }
+  &-standard {
+    .site-header {
+      &--form {
+        padding-bottom: 1rem;
+      }
+      &--sticky {
+        display: none;
+      }
+    }
+  }
   &-front {
     .navbar {
       &--small {
@@ -785,6 +795,7 @@ Table of Content:
         display: none;
       }
     }
+    
     // @media #{$large__up} {
     //   &-callout,
     //   &-feature {
@@ -801,44 +812,6 @@ Table of Content:
       &--form {
         padding-top: 2rem;
       }
-      //   &--fixed {
-      //     position: fixed;
-      //     top: 0;
-      //     right: 0;
-      //     left: 0;
-      //     z-index: 1000;
-      //   }
-      //   &--form {
-      //     padding-top: 3rem;
-      //     transition: 1s padding-top ease;
-      //   }
-      //   &--footer {
-      //     padding-bottom: 2rem;
-      //     transition: 1s padding-bottom ease;
-      //   }
-      //   &.scrolled {
-      //     .site-header--form {
-      //       padding-top: 1rem;
-      //       transition: 1s padding-top ease;
-      //     }
-      //     .site-header--footer {
-      //       padding-bottom: 0;
-      //       transition: 1s padding-bottom ease;
-      //     }
-      //   }
-      // }
-      // .site-header {
-      //   background-color: $dark;
-      //   background-size: contain;
-      //   @media (min-width: 48rem) and (max-width: 75rem) {
-      //     background-size: cover;
-      //   }
-      //   &--form {
-      //     padding-top: 8rem;
-      //   }
-      //   &--footer {
-      //     padding-bottom: 8rem;
-      //   }
     }
   }
   &-admin {
@@ -918,7 +891,7 @@ Table of Content:
     // STANDARD PAGE
     &-standard {
       .site-content {
-        margin-top: 4rem;
+        margin-top: 12rem;
       }
     }
     // DASHBOARD PAGES
@@ -960,18 +933,95 @@ Table of Content:
         }
       }
     }
-    // REGISTER PAGE | Matches with Dashboard pages in terms of margin
-    &#register {
-      .site-content {
-        margin-top: 4.375rem;
+  }
+}
+
+
+.business{
+  &-map {
+    #map {
+      height: 100%;
+    }
+    @include media-breakpoint-down(md) {
+      margin-bottom: 2rem;
+    }
+    @include media-breakpoint-down(sm) {
+      #map {
+        height: 200px;
       }
     }
-    // WHY BISRING PAGE
-    &#why-bisring {
-      .site-content {
-        margin-top: 14.13rem;
-        padding-top: 0;
+  }
+  &-details {
+    @include media-breakpoint-down(md) {
+      margin-bottom: 2rem;
+    }
+  }
+  &--name {
+    margin-bottom:1rem;
+  }
+  &--website {
+    display: inline-block;
+    margin-bottom:1rem;
+    color: $green-AA;
+  }
+  &--phone {
+    display: block;
+    margin-bottom:1rem;
+    color: $green-AA;
+  }
+  &--rating {
+    display: inline-block;
+    color:$orange-AA;
+  }
+  &--leave-review {
+    display: inline-block;
+    margin-left:20px;
+    color: $green-AA;
+  }
+  &--decription {
+    margin-top:1rem;
+  }
+  &-assets {
+    #myCarousel {
+      .carousel-inner {
+        height: 100%;
+        border: 1px solid $gray-300;
+        .carousel-item {
+          height: 100%;
+        }
+        @include media-breakpoint-down(md) {
+          height: 370px;
+        }
       }
+    }
+    #myCarousel .list-inline {
+      white-space:nowrap;
+      overflow-x:auto;
+    }
+    
+    #myCarousel .carousel-indicators {
+        left: initial;
+        width: initial;
+        margin-left: initial;
+        margin-right:0;
+        overflow-y: hidden;
+        display: block;
+        margin-bottom:0;
+        bottom:0;
+    }
+    
+    #myCarousel .carousel-indicators > li {
+        width: initial;
+        height: initial;
+        text-indent: initial;
+        a {
+          height: 100%;
+          display: block;
+        }
+    }
+    
+    #myCarousel .carousel-indicators > li.active img {
+        opacity: 0.7;
     }
   }
 }

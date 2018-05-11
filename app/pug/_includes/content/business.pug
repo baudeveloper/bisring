@@ -1,0 +1,70 @@
+.site-content
+	.container
+		.row
+			.business-map.col-lg-4.col-md-4.order-md-1
+				#map
+			.business-details.col-lg-4.col-md-8.order-md-0
+				h1.business--name Joe the Plumber
+				a.business--website(href="http://www.joetheplumber.com") www.joetheplumber.com
+				address.business--address
+					span.bussiness--address-street 222 Islington Ave.
+					br
+					span.bussiness--address-city Etobicoke, 
+					span.business--address-province ON
+					br
+					span.business--address-postcode M8V 3W7
+				a.business--phone(href="tel:+14165555555") (416) 555-5555
+				.business--rating
+					i.fas.fa-star
+					i.fas.fa-star
+					i.fas.fa-star
+					i.fas.fa-star
+					i.fas.fa-star-half
+				a.business--leave-review(href="#", role="link", data-toggle='modal', data-target='#modalQuickList') Leave a Review
+				.business--decription
+					p Some description of the business.Curabitur diam mi, elementum sit amet diam eu, ornare luctus magna. Donec rutrum congue mi eu dignissim. Cras felis tortor, vehicula et feugiat eget, pellentesque nec massa. Sed suscipit egestas maximus. Cras mollis dignissim libero vel semper. Proin id volutpat enim. Morbi sagittis enim id urna suscipit venenatis. Nam vel erat lacinia, aliquet magna dictum, mollis felis. Praesent quis facilisis neque. Duis at lobortis leo.
+			.business-assets.col-lg-4.col-md-12.d-flex.order-md-2
+				#myCarousel.carousel.slide(data-ride="carousel")
+					.carousel-inner
+						.carousel-item.active
+							img.d-block.w-100(src="http://placehold.it/1200x480&amp;text=one", alt="First slide")
+						.carousel-item
+							img.d-block.w-100(src="http://placehold.it/1200x480&amp;text=two", alt="Second slide")
+						.carousel-item
+							img.d-block.w-100(src="http://placehold.it/1200x480&amp;text=three", alt="Third slide")
+						.carousel-item
+							img.d-block.w-100(src="http://placehold.it/1200x480&amp;text=four", alt="Fourth slide")
+						.carousel-item
+							img.d-block.w-100(src="http://placehold.it/1200x480&amp;text=five", alt="Fifth slide")
+						.carousel-item
+							img.d-block.w-100(src="http://placehold.it/1200x480&amp;text=six", alt="Sixth slide")
+						.carousel-item
+							img.d-block.w-100(src="http://placehold.it/1200x480&amp;text=seven", alt="Sevent slide")
+					a.carousel-control-prev(href="#myCarousel", role="button", data-slide="prev")
+						span.carousel-control-prev-icon(aria-hidden="true")
+						span.sr-only Previous
+					a.carousel-control-next(href="#myCarousel", role="button", data-slide="next")
+						span.carousel-control-next-icon(aria-hidden="true")
+						span.sr-only Next
+					ul.carousel-indicators.list-inline
+						li.list-inline-item.active
+							a#carousel-selector-0.selected(data-slide-to="0", data-target="#myCarousel")
+								img.img-fluid(src="http://placehold.it/80x60&text=one")
+						li.list-inline-item
+							a#carousel-selector-1(data-slide-to="1", data-target="#myCarousel")
+								img.img-fluid(src="http://placehold.it/80x60&text=two")
+						li.list-inline-item
+							a#carousel-selector-2(data-slide-to="2", data-target="#myCarousel")
+								img.img-fluid(src="http://placehold.it/80x60&text=three")
+						li.list-inline-item
+							a#carousel-selector-3(data-slide-to="3", data-target="#myCarousel")
+								img.img-fluid(src="http://placehold.it/80x60&text=four")
+						li.list-inline-item
+							a#carousel-selector-4(data-slide-to="4", data-target="#myCarousel")
+								img.img-fluid(src="http://placehold.it/80x60&text=five")
+						li.list-inline-item
+							a#carousel-selector-5(data-slide-to="5", data-target="#myCarousel")
+								img.img-fluid(src="http://placehold.it/80x60&text=six")
+						li.list-inline-item
+							a#carousel-selector-6(data-slide-to="6", data-target="#myCarousel")
+								img.img-fluid(src="http://placehold.it/80x60&text=seven")
