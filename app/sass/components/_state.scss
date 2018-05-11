@@ -286,7 +286,8 @@ textarea {
 .form-group--md {
   position: relative;
   margin-bottom: 1.25rem;
-  &-input {
+  &-input,
+  &-textare {
     // padding: .75rem .75rem .75rem .5rem;
     padding: .5rem 0;
     display: block;
@@ -311,7 +312,8 @@ textarea {
     transition: 0.2s ease all;
     font-family: "Barlow-Regular";
   }
-  &-input {
+  &-input,
+  &-textarea {
     &:focus ~ label, &:valid ~ label {
       top: -.75rem;
       @include font-size(14);
@@ -339,7 +341,8 @@ textarea {
       right: 50%;
     }
   }
-  &-input:focus ~ .form-group--md-bar {
+  &-input:focus ~ .form-group--md-bar,
+  &-textarea:focus ~ .form-group--md-bar {
     &:before, &:after {
       width: 50%;
     }
@@ -354,7 +357,9 @@ textarea {
     pointer-events: none;
     opacity: 0.5;
   }
-  &-input:focus ~ .form-group--md-highlight {
+  &-input:focus ~ .form-group--md-highlight,
+  &-textarea:focus ~ .form-group--md-highlight {
+
     animation: inputHighlighter 0.3s ease;
   }
   .bootstrap-select {

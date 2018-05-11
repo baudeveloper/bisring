@@ -173,4 +173,9 @@ $(document).ready(function () {
 		$(this).addClass("hidden");
 	});
 
+	$(".carousel").carousel({
+		interval: 0
+	});
+
+
 });

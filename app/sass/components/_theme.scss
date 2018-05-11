@@ -946,6 +946,7 @@ Table of Content:
       margin-bottom: 2rem;
     }
     @include media-breakpoint-down(sm) {
+      padding:0;
       #map {
         height: 200px;
       }
@@ -982,17 +983,34 @@ Table of Content:
     margin-top:1rem;
   }
   &-assets {
+    @include media-breakpoint-down(sm) {
+      padding: 0;
+    }
     #myCarousel {
+      width: 100%;
+      text-align: center;
       .carousel-inner {
-        height: 100%;
+        height: 80%;
         border: 1px solid $gray-300;
+        background-color: #f5f9f9;
         .carousel-item {
           height: 100%;
+          @include media-breakpoint-down(md) {
+            text-align: center;
+            img {
+              height: 100%;
+            }
+          }
         }
         @include media-breakpoint-down(md) {
           height: 370px;
         }
       }
+      .carousel-control-prev,
+      .carousel-control-next {
+        height: 80%;
+      }
+
     }
     #myCarousel .list-inline {
       white-space:nowrap;
@@ -1000,7 +1018,6 @@ Table of Content:
     }
     
     #myCarousel .carousel-indicators {
-        left: initial;
         width: initial;
         margin-left: initial;
         margin-right:0;
@@ -1008,6 +1025,11 @@ Table of Content:
         display: block;
         margin-bottom:0;
         bottom:0;
+        @include media-breakpoint-down(md) {
+         position: relative;
+         margin-top:1rem;
+        }
+
     }
     
     #myCarousel .carousel-indicators > li {
@@ -1024,4 +1046,79 @@ Table of Content:
         opacity: 0.7;
     }
   }
+  &-actions {
+    margin-top:2rem;
+    .btn {
+      margin-bottom: 1rem;
+    }
+  }
+  &-promotion {
+    margin-top:1rem;
+    text-align: center;
+    .card {
+      background-color: mix($secondary, white, 10%);
+      padding:2rem;
+      .promotion-link {
+        color: $secondary;
+        text-decoration: underline;
+      }
+    }
+  }
+  &-recommended-list {
+    border-right: 1px solid $gray-300;
+    margin-top: 2rem;
+    ul {
+      list-style-type: none;
+      margin:0;
+      padding:0;
+      li {
+        padding: 0.35rem 0;
+        a {
+          display: inline-block;
+          color: $secondary;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  &-reviews {
+    margin-top:2rem;
+    h2 {
+      display: inline-block;
+      margin-right: 2rem;
+    }
+    .btn {
+      color: white!important;
+    }
+    ul {
+      list-style-type: none;
+      margin:0;
+      padding:0;
+      li {
+        margin-top:2rem;
+        .review-star-rating {
+          color: $primary;
+          display: inline-block;
+          margin-right:2rem;
+        }
+        .review-title {
+          font-size: 1rem;
+          font-weight: bold;
+          display: inline-block;
+        }
+        .review-meta {
+          font-size: 0.85em;
+          margin-top:0.5rem;
+        }
+        .review-description {
+          font-size: 0.85em;
+          margin-top:0.5rem;
+          p {
+            font-size: inherit;
+          }
+        }
+      }
+    }
+  }
+
 }
