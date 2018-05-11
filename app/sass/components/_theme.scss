@@ -367,13 +367,6 @@ Table of Content:
       z-index: 999;
     }
   }
-  // &-admin,
-  // &-search-results {
-  //   padding-top: 4.375rem;
-  // }
-  // &-content {
-  //   padding-top: 5.5rem;
-  // }
   &-footer {
     color: $silver-AA;
     background-color: $white;
@@ -795,15 +788,7 @@ Table of Content:
         display: none;
       }
     }
-    
-    // @media #{$large__up} {
-    //   &-callout,
-    //   &-feature {
-    //     .btn {
-    //       min-width: 12rem;
-    //     }
-    //   }
-    // }
+  
   }
   &-standard {
     .site-header {
@@ -845,6 +830,63 @@ Table of Content:
           color: $silver-AI;
           border-color: $silver-AI;
           margin: 0;
+        }
+      }
+      .admin-nav {
+        background-color: $silver-AI;
+      }
+      .admin-content{
+        padding-left:0;
+        padding-right:0;
+        h1 {
+          margin-left: 2rem;
+        }
+        hr {
+          color: $silver-AI;
+          border-color: $silver-AI;
+          margin: 0;
+        }
+        .admin-blocks {
+          padding:2rem;
+          header {
+            margin-bottom:1rem;
+            h2 {
+              display: inline-block;
+              margin-bottom: 0;
+            }
+            .admin-blocks-btns {
+              display: inline-block;
+              margin-left:1rem;
+              .btn {
+                margin-right:1rem;
+              }
+            }
+          }
+        }
+        .form-group {
+          label {
+            font-size: 0.85rem;
+            margin-bottom: 0;
+            color:$gray-600;
+          }
+          input {
+            border:0;
+            border-bottom: 2px solid $secondary;
+            padding-left:0;
+            border-radius: 0;
+            color:$secondary;
+            &:focus {
+              outline: none;
+              box-shadow: none!important;
+              border-bottom: 2px solid $primary;
+            }
+            &[value=""] {
+               border-bottom: 2px solid $gray-400;
+               &:focus {
+                 border-bottom: 2px solid $primary;
+               }
+            }
+          }
         }
       }
     }
@@ -1120,5 +1162,4 @@ Table of Content:
       }
     }
   }
-
 }
