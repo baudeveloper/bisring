@@ -5,10 +5,13 @@ ul
 		a(href="db-my-virtual-teams.html") My Virtual Teams
 	li(class=(dbId === 'my-reviews' ? 'active' : ''))
 		a(href="db-my-reviews.html") My Reviews
+	// ***My Businesses only for Business Users***
 	li(class=(dbId === 'my-businesses' ? 'active' : ''))
 		a(href="db-my-businesses.html") My Businesses
+	// ***My Recommended Business only for Business Users***
 	li(class=(dbId === 'my-recommended-businesses' ? 'active' : ''))
 		a(href="db-my-recommended-businesses.html") My Recommended Businesses
+	// ***My Followers only for Business Users***
 	li(class=(dbId === 'my-followers' ? 'active' : ''))
 		a(href="db-my-followers.html") My Followers
 	li(class=(dbId === 'businesses-im-following' ? 'active' : ''))
@@ -17,6 +20,7 @@ ul
 		a(href="db-refer-bisring.html") Refer BisRing
 	li(class=(dbId === 'bisring-points' ? 'active' : ''))
 		a(href="db-bisring-points.html") BisRing Points
+	// ***Add Business only for Business Users***
 	li.main-action-button(class=(dbId === 'add-business' ? 'active' : ''))
 		a.btn.btn-primary.btn-block(href="db-add-business.html") Add Business
 	li.main-action-button(class=(dbId === 'become-business-user' ? 'active' : ''))

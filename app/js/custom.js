@@ -147,6 +147,19 @@ $(document).ready(function () {
 		$(this).closest(".admin-blocks").find(".display-info").removeClass("hidden");
 	});
 
+	//Dashboard Become a Business User Buy More than 21 Categories Click Event
+	$(".edit-info .btn-group-toggle label.email").click(function () {
+		window.location.href = "mailto:sales@bisring.com?subject=Request%20to%20Buy%20More%20Categories&body=I%20would%20like%20to%20purchase%20more%20categories%20that%20are%20not%20currently%20available%20through%20the%20site.%0A%0ANo.%20of%20Categories%20needed%3A%20%3Center%20number%20here%3E%0A%0APlease%20contact%20me%20back.%20Thanks.";
+
+
+	});
+	// $(".edit-info .btn-group-toggle label input[name='categories']").click(function() {
+	// 	alert("You clicked radio!");
+	// 	if ($("input:radio[name=categories]:checked").val() == "email") {
+	// 		alert($("input:radio[name=categories]:checked").val());
+	// 	}
+	// });
+
 	// adminBlocksEditButton.click(function(){
 	// 	$(this).closest(".admin-blocks").find(".edit, .change-password").addClass("hidden");
 	// 	$(this).closest(".admin-blocks").find(".update, .cancel").removeClass("hidden");
