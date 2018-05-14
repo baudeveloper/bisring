@@ -76,7 +76,7 @@ $(document).ready(function () {
 	.change();
 
 	// UL to select
-	$("[data-js=\"site-sidebar--nav\"] > ul").navToSelect();
+	$(".admin-nav > ul").navToSelect();
 	$(".navToSelect").addClass("selectpicker").selectpicker("refresh");
 
 	// Reviews
@@ -124,54 +124,94 @@ $(document).ready(function () {
 	});
 
 	// Dashboard GENERAL INFORMATION buttons toggle: http://jsfiddle.net/j08691/JbZnf/2/
-	var editGIButton = $("[data-js=\"edit-general-information\"]");
-	var updateGIButton = $("[data-js=\"update-general-information\"]");
-	var cancelGIButton = $("[data-js=\"cancel-general-information\"]");
-	editGIButton.click(function() {
-		$(this).addClass("hidden");
-		$(this).siblings(".btn-update-general-information, .btn-cancel-general-information").removeClass("hidden");
-		$(this).parents(".site-content--cards-editable").find(".site-content--editable-wrap").removeClass("hidden");
-		$(this).parents(".site-content--cards-editable").find(".site-content--uneditable-wrap").addClass("hidden");
+	var adminBlocksEditButton = $(".admin-blocks .edit");
+	var adminBlocksUpdateButton = $(".admin-blocks .update");
+	var adminBlocksCancelButton = $(".admin-blocks .cancel");
+
+	adminBlocksEditButton.click(function(){
+		$(this).closest(".admin-blocks").find(".edit, .change-password").addClass("hidden");
+		$(this).closest(".admin-blocks").addClass("edit-mode");
+		$(this).closest(".admin-blocks").find(".display-info").addClass("hidden");
+		$(this).closest(".admin-blocks").find(".edit-info").removeClass("hidden");
 	});
-	cancelGIButton.click(function() {
-		$(this).siblings(".btn-edit-general-information").removeClass("hidden");
-		$(this).siblings(".btn-update-general-information").addClass("hidden");
-		$(this).parents(".site-content--cards-editable").find(".site-content--editable-wrap").addClass("hidden");
-		$(this).parents(".site-content--cards-editable").find(".site-content--uneditable-wrap").removeClass("hidden");
-		$(this).addClass("hidden");
+	adminBlocksUpdateButton.click(function(){
+		$(this).closest(".admin-blocks").find(".edit, .change-password").removeClass("hidden");
+		$(this).closest(".admin-blocks").removeClass("edit-mode");
+		$(this).closest(".admin-blocks").find(".edit-info").addClass("hidden");
+		$(this).closest(".admin-blocks").find(".display-info").removeClass("hidden");
 	});
-	updateGIButton.click(function() {
-		$(this).siblings(".btn-edit-general-information").removeClass("hidden");
-		$(this).siblings(".btn-cancel-general-information").addClass("hidden");
-		$(this).parents(".site-content--cards-editable").find(".site-content--editable-wrap").addClass("hidden");
-		$(this).parents(".site-content--cards-editable").find(".site-content--uneditable-wrap").removeClass("hidden");
-		$(this).addClass("hidden");
+	adminBlocksCancelButton.click(function(){
+		$(this).closest(".admin-blocks").find(".edit, .change-password").removeClass("hidden");
+		$(this).closest(".admin-blocks").removeClass("edit-mode");
+		$(this).closest(".admin-blocks").find(".edit-info").addClass("hidden");
+		$(this).closest(".admin-blocks").find(".display-info").removeClass("hidden");
 	});
 
-	// Dashboard BILLING ADDRESS buttons toggle: http://jsfiddle.net/j08691/JbZnf/2/
-	var editBIButton = $("[data-js=\"edit-billing-address\"]");
-	var updateBIButton = $("[data-js=\"update-billing-address\"]");
-	var cancelBIButton = $("[data-js=\"cancel-billing-address\"]");
-	editBIButton.click(function() {
-		$(this).addClass("hidden");
-		$(this).siblings(".btn-update-billing-address, .btn-cancel-billing-address").removeClass("hidden");
-		$(this).parents(".site-content--cards-editable").find(".site-content--editable-wrap").removeClass("hidden");
-		$(this).parents(".site-content--cards-editable").find(".site-content--uneditable-wrap").addClass("hidden");
-	});
-	cancelBIButton.click(function() {
-		$(this).siblings(".btn-edit-billing-address").removeClass("hidden");
-		$(this).siblings(".btn-update-billing-address").addClass("hidden");
-		$(this).parents(".site-content--cards-editable").find(".site-content--editable-wrap").addClass("hidden");
-		$(this).parents(".site-content--cards-editable").find(".site-content--uneditable-wrap").removeClass("hidden");
-		$(this).addClass("hidden");
-	});
-	updateBIButton.click(function() {
-		$(this).siblings(".btn-edit-billing-address").removeClass("hidden");
-		$(this).siblings(".btn-cancel-billing-address").addClass("hidden");
-		$(this).parents(".site-content--cards-editable").find(".site-content--editable-wrap").addClass("hidden");
-		$(this).parents(".site-content--cards-editable").find(".site-content--uneditable-wrap").removeClass("hidden");
-		$(this).addClass("hidden");
-	});
+	// adminBlocksEditButton.click(function(){
+	// 	$(this).closest(".admin-blocks").find(".edit, .change-password").addClass("hidden");
+	// 	$(this).closest(".admin-blocks").find(".update, .cancel").removeClass("hidden");
+	// 	$(this).closest(".admin-blocks").addClass("edit-mode");
+	// });
+	// adminBlocksUpdateButton.click(function(){
+	// 	$(this).siblings(adminBlocksCancelButton).addClass("hidden");
+	// 	$(this).addClass("hidden");
+	// 	$(this).closest(".admin-blocks").removeClass("edit-mode");
+	// 	$(this).siblings(adminBlocksEditButton, adminBlocksChangePasswordButton).removeClass("hidden");
+	// });
+	// adminBlocksCancelButton.click(function(){
+	// 	$(this).siblings(adminBlocksUpdateButton).addClass("hidden");
+	// 	$(this).addClass("hidden");
+	// 	$(this).closest(".admin-blocks").removeClass("edit-mode");
+	// 	$(this).siblings(adminBlocksEditButton, adminBlocksChangePasswordButton).removeClass("hidden");
+	// });
+	// var editGIButton = $("[data-js=\"edit-general-information\"]");
+	// var updateGIButton = $("[data-js=\"update-general-information\"]");
+	// var cancelGIButton = $("[data-js=\"cancel-general-information\"]");
+	// editGIButton.click(function() {
+	// 	$(this).addClass("hidden");
+	// 	$(this).siblings(".btn-update-general-information, .btn-cancel-general-information").removeClass("hidden");
+	// 	$(this).parents(".site-content--cards-editable").find(".site-content--editable-wrap").removeClass("hidden");
+	// 	$(this).parents(".site-content--cards-editable").find(".site-content--uneditable-wrap").addClass("hidden");
+	// });
+	// cancelGIButton.click(function() {
+	// 	$(this).siblings(".btn-edit-general-information").removeClass("hidden");
+	// 	$(this).siblings(".btn-update-general-information").addClass("hidden");
+	// 	$(this).parents(".site-content--cards-editable").find(".site-content--editable-wrap").addClass("hidden");
+	// 	$(this).parents(".site-content--cards-editable").find(".site-content--uneditable-wrap").removeClass("hidden");
+	// 	$(this).addClass("hidden");
+	// });
+	// updateGIButton.click(function() {
+	// 	$(this).siblings(".btn-edit-general-information").removeClass("hidden");
+	// 	$(this).siblings(".btn-cancel-general-information").addClass("hidden");
+	// 	$(this).parents(".site-content--cards-editable").find(".site-content--editable-wrap").addClass("hidden");
+	// 	$(this).parents(".site-content--cards-editable").find(".site-content--uneditable-wrap").removeClass("hidden");
+	// 	$(this).addClass("hidden");
+	// });
+
+	// // Dashboard BILLING ADDRESS buttons toggle: http://jsfiddle.net/j08691/JbZnf/2/
+	// var editBIButton = $("[data-js=\"edit-billing-address\"]");
+	// var updateBIButton = $("[data-js=\"update-billing-address\"]");
+	// var cancelBIButton = $("[data-js=\"cancel-billing-address\"]");
+	// editBIButton.click(function() {
+	// 	$(this).addClass("hidden");
+	// 	$(this).siblings(".btn-update-billing-address, .btn-cancel-billing-address").removeClass("hidden");
+	// 	$(this).parents(".site-content--cards-editable").find(".site-content--editable-wrap").removeClass("hidden");
+	// 	$(this).parents(".site-content--cards-editable").find(".site-content--uneditable-wrap").addClass("hidden");
+	// });
+	// cancelBIButton.click(function() {
+	// 	$(this).siblings(".btn-edit-billing-address").removeClass("hidden");
+	// 	$(this).siblings(".btn-update-billing-address").addClass("hidden");
+	// 	$(this).parents(".site-content--cards-editable").find(".site-content--editable-wrap").addClass("hidden");
+	// 	$(this).parents(".site-content--cards-editable").find(".site-content--uneditable-wrap").removeClass("hidden");
+	// 	$(this).addClass("hidden");
+	// });
+	// updateBIButton.click(function() {
+	// 	$(this).siblings(".btn-edit-billing-address").removeClass("hidden");
+	// 	$(this).siblings(".btn-cancel-billing-address").addClass("hidden");
+	// 	$(this).parents(".site-content--cards-editable").find(".site-content--editable-wrap").addClass("hidden");
+	// 	$(this).parents(".site-content--cards-editable").find(".site-content--uneditable-wrap").removeClass("hidden");
+	// 	$(this).addClass("hidden");
+	// });
 
 
 });

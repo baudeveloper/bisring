@@ -1,13 +1,32 @@
 #modalNotification.modal.fade(tabindex='-1', role='dialog', aria-labelledby='modalNotification', aria-hidden='true')
-	.modal-dialog.modal-dialog-centered(role='document')
+	.modal-dialog(role='document')
 		.modal-content
 			.modal-header
 				h5#modalNotification.modal-title Notification
 				button.close(type='button', data-dismiss='modal', aria-label='Close')
 					span(aria-hidden='true') ×
 			.modal-body
-				span
-					| Don't see any notifications, Dang!
-			.modal-footer
-				button.btn.btn-secondary(type='button', data-dismiss='modal') Close
-				button.btn.btn-primary(type='button') Save changes
+				.alert.alert-success.alert-dismissible.fade.show(role="alert")
+					h6.alert-heading New Poromotion
+					p.mb-0
+						a(href="#") Joe the Plumber 
+						|  has a new promotion.
+					small.alert-date-time November 24, 2017
+					button.close(type="button" data-dismiss="alert" aria-label="Close")
+						span(aria-hidden="true") ×
+				.alert.alert-success.alert-dismissible.fade.show(role="alert")
+					h6.alert-heading New Poromotion
+					p.mb-0
+						a(href="#") Alex the Carpenter 
+						| has a new promotion.
+					small.alert-date-time October 28, 2017
+					button.close(type="button" data-dismiss="alert" aria-label="Close")
+						span(aria-hidden="true") ×
+				.alert.alert-info.alert-dismissible.fade.show(role="alert")
+					h6.alert-heading Changed Infomration
+					p.mb-0
+						a(href="#") Joe the Plumber 
+						| changed their contact information.
+					small.alert-date-time September 28, 2017
+					button.close(type="button" data-dismiss="alert" aria-label="Close")
+						span(aria-hidden="true") ×

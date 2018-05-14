@@ -1,0 +1,65 @@
+.site-admin
+	.container-fluid
+		.row
+			// Dasboard Sidebar Menu
+			aside.admin-nav.col-lg-3.col-md-4
+				include db-sidebar-navigation
+			// Dasboard Content
+			main.admin-content.col-lg-9.col-md-8.d-flex.align-content-stretch.flex-wrap(role="main")
+				h1.page-title Become a Business User				
+				// Step 3: Pay
+				section#step03.admin-blocks.edit-mode
+					form(action="")
+						header.d-flex
+							h2.mr-auto Step 3: Pay
+						section.edit-info
+							.pay-table
+								table.table.table-striped
+									tbody
+										tr.categories
+											td 4 Categories
+											td $72.00 / month
+										tr.redeem-points
+											td
+												.custom-control.custom-checkbox
+													input.custom-control-input(type="checkbox", id="redeemPoints")
+													label.custom-control-label(for="redeemPoints")
+														| Redeem BisRing Points (You have 
+														span.points-available 100
+														|  pts)
+											td
+												| CR 
+												span.credit-added $100 
+												| / 
+												span.period month
+										tr.coupon-code
+											td
+												.form-group.row
+													label.col-lg-3.col-md-4.col-sm-3.col-form-label(for="couponCode") Coupon Code:
+													.col-lg-4.col-md-6.col-sm-5
+														input#couponCode.form-control(type="text" placeholder="Enter Code")
+											td
+												span.coupon-added -
+										tr.total
+											td(colspan="2")
+												| Total: 
+												span.total-calculated $62.00
+												|  /  
+												span.period month
+							.pay-method.card.card-block
+								.row.d-flex.align-items-center
+									.col-auto
+										| Choose Payment Method:
+									.col-auto.d-flex.align-items-center.payment-choose
+										.custom-control.custom-radio
+											input.custom-control-input(type="radio", name="method", id="creditCard", value="creditcard")
+											label.custom-control-label(for="creditCard")
+												| Credit Card
+										.custom-control.custom-radio
+											input.custom-control-input(type="radio", name="method", id="payPal", value="paypal")
+											label.custom-control-label(for="payPal")
+												| PayPal
+									.col-auto.ml-auto.payment-submit
+										a.btn.btn-primary(href="#") Pay Now
+
+									

@@ -1,0 +1,107 @@
+.site-admin
+	.container-fluid
+		.row
+			// Dasboard Sidebar Menu
+			aside.admin-nav.col-lg-3.col-md-4
+				include db-sidebar-navigation
+			// Dasboard Content
+			main.admin-content.col-lg-9.col-md-8.d-flex.align-content-stretch.flex-wrap(role="main")
+				h1.page-title Become a Business User				
+				// Step 2: Select # of Categories & Billing Information
+				section#step02.admin-blocks.edit-mode
+					form(action="")
+						header.d-flex
+							h2.mr-auto Step 2: Select # of Categories &amp; Billing Information
+							.admin-blocks-btns
+								a.next.btn.btn-primary(href="db-become-business-user-step-03.html") Next							
+						section.edit-info
+							h3 Select Number of Categories to Purchase
+							p You can always purchase additional categories anytime after you upgrade.
+							.refine-categories
+								.d-flex.align-items-center.flex-wrap
+									.category-number-select.form-group
+										label.sr-only(for="#catNumber") Select Number of Categories to Purchase
+										select#catNumber.form-control.selectpicker(title="Select Number", required)
+											option(value='1') 1
+											option(value='2') 2
+											option(value='3') 3
+											option(value='4') 4
+											option(value='5') 5
+											option(value='6') 6
+											option(value='7') 7
+											option(value='8') 8
+											option(value='9') 9
+											option(value='10') 11
+											option(value='12') 12
+											option(value='13') 13
+											option(value='14') 14
+											option(value='15') 15
+											option(value='16') 16
+											option(value='17') 17
+											option(value='18') 18
+											option(value='19') 19
+											option(value='20') 20
+											option(value='21') 21
+									.period-check.d-flex.align-items-center
+										.custom-control.custom-radio
+											input.custom-control-input(type="radio", name="period", id="monthlyPeriod", value="monthly")
+											label.custom-control-label(for="monthlyPeriod")
+												| Monthly
+										.custom-control.custom-radio
+											input.custom-control-input(type="radio", name="period", id="annualPeriod", value="annually")
+											label.custom-control-label(for="annualPeriod")
+												| Annually (
+												span.disount-ambout 10% Discount
+												| )
+									.total-calculated.ml-auto
+										| Total: 
+										span.total-price $72.00
+										|  / 
+										span.total-period monthly
+
+							.add-billing-info
+								h3 Your Billing Information
+								.form-row
+									.col-md
+										.form-group
+											label(for="#acctBillingStreet") Address Line #1
+											input#acctBillingStreet.form-control(type="text", placeholder="Enter an Address", value="222 Islington Avenue", required)
+									.col-md
+										.form-group
+											label(for="#acctBillingLine02") Address Line #2 (optional)
+											input#acctBillingLine02.form-control(type="text", placeholder="Enter a Suite or Apt. #", value="", required)
+								.form-row
+									.col-lg-6
+										.form-group
+											label(for="#acctBillingCity") City
+											input#acctBillingCity.form-control(type="text", placeholder="Enter a City", value="Toronto", required)
+									.col-lg-4.col-md-6
+										.form-group
+											label(for="#acctBillingProvince") Province/State
+											select#acctBillingProvince.form-control.selectpicker(title="Select a Province or State", regquired)
+												option(value='AB') Alberta
+												option(value='BC') British Columbia
+												option(value='MB') Manitoba
+												option(value='NB') New Brunswick
+												option(value='NL') Newfoundland and Labrador
+												option(value='NS') Nova Scotia
+												option(value='ON', selected) Ontario
+												option(value='PE') Prince Edward Island
+												option(value='QC') Quebec
+												option(value='SK') Saskatchewan
+												option(value='NT') Northwest Territories
+												option(value='NU') Nunavut
+												option(value='YT') Yukon
+									.col-lg-2.col-md-6
+										.form-group
+											label(for="#acctBillingPostCoSde") Postal Code/Zip
+											input#acctBillingPostCode.form-control(type="text", placeholder="Postal Code", value="M8V 3W7", required)
+								.form-row
+									.col-md-6
+										.form-group
+											label(for="#acctBillingCountry") Country
+											select#acctBillingProvince.form-control.selectpicker(title="Select a Country", regquired)
+												option(value='AU') Australia
+												option(value='CA', selected) Canada
+												option(value='GB') United Kingdom
+												option(value='US') United States

@@ -4,7 +4,7 @@
 			span.sidenav-icon.far.fa-times.fa-2x
 		.sidenav-header(role="header")
 			span.sidenav-user Prasanna Kugananthan
-			a.sidenav-title(href="#", role="link", data-toggle='modal', data-target='#modalLogin')
+			a.sidenav-title(href="index.html")
 				span.sidenav-icon.fas.fa-key
 				| Logout
 		ul.list-unstyled.components.sidenav-list(role="list")
@@ -12,6 +12,10 @@
 				a.sidenav-link(href='index.html', role="link")
 					span.sidenav-icon.fas.fa-home
 					| Home
+			li.sidenav-listitem(role="listitem", class=(pageId === 'my-account' ? 'active' : ''))
+				a.sidenav-link(href='db-my-account.html', role="link")
+					span.sidenav-icon.fas.fa-tachometer-alt
+					| Dashboard
 			li.sidenav-listitem(role="listitem", class=(pageId === 'why-bisring' ? 'active' : ''))
 				a.sidenav-link(href='why-bisring.html', role="link")
 					span.sidenav-icon.fas.fa-star
@@ -36,10 +40,6 @@
 				a.sidenav-link(href='contact-us.html', role="link")
 					span.sidenav-icon.fas.fa-envelope
 					| Contact Us
-			li.sidenav-listitem(role="listitem", class=(pageId === 'register' ? 'active' : ''))
-				a.sidenav-link(href='register.html', role="link")
-					span.sidenav-icon.fas.fa-clipboard-list
-					| Become a Bisringer
 			hr
 			li.sidenav-listitem(role="listitem", class=(pageId === 'privacy-policy' ? 'active' : ''))
 				a.sidenav-link(href='privacy-policy.html', role="link")

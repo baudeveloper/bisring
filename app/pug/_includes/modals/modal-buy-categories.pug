@@ -1,0 +1,20 @@
+#modalBuyCategories.modal.fade(tabindex='-1', role='dialog', aria-labelledby='modalLogin', aria-hidden='true')
+	.modal-dialog.modal-dialog-centered(role='document')
+		.modal-content
+			.modal-header
+				h5#modalLogin.modal-title(role="heading") Buy Categories
+				button.close(type='button', data-dismiss='modal', aria-label='Close')
+					span(aria-hidden='true') ×
+			form
+				.modal-body
+					.form-row
+						.col-md
+							.form-group
+								label(for="#acctSelectNumberOfCategories") Select Number of Categories to Buy
+								input#acctSelectNumberOfCategories.form-control(type="number", placeholder="Select a Number", min="1", max="21", required)
+					.row
+						.col-md
+							a.more-categories.btn.btn-outline-secondary.btn-block(href="mailto:sales@bisring.com?subject=Request%20to%20Buy%20More%20Categories&body=I%20would%20like%20to%20purchase%20more%20categories%20that%20are%20not%20currently%20available%20through%20the%20site.%0A%0ANo.%20of%20Categories%20needed%3A%20%3Center%20number%20here%3E%0A%0APlease%20contact%20me%20back.%20Thanks.") I Need More Than 21 Categories
+				.modal-footer
+					button.btn.btn-light(type="button" data-dismiss="modal") Cancel
+					button.btn.btn-primary(type="submit") Purchase

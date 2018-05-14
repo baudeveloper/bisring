@@ -1,0 +1,197 @@
+.site-admin
+	.container-fluid
+		.row
+			// Dasboard Sidebar Menu
+			aside.admin-nav.col-lg-3.col-md-4
+				include db-sidebar-navigation	
+			// Dasboard Content
+			main.admin-content.col-lg-9.col-md-8(role="main")
+				h1.page-title My Account
+				// General Information
+				section#generalInformation.admin-blocks
+					form(action="")
+						header.d-flex
+							h2 General Information
+							.admin-blocks-btns
+								a.edit.btn.btn-secondary(href="#") Edit
+								a.change-password.btn.btn-secondary(href="#", role="link", data-toggle='modal', data-target='#modalChangePassword') Change Password
+							.admin-blocks-btns-mobile.dropdown.dropleft.ml-auto
+								button#dropdownGeneralInformationButtons.dropdown-toggle(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+									i.fas.fa-ellipsis-v
+								.dropdown-menu(aria-labelledby="dropdownGeneralInformationButtons")
+									a.edit.dropdown-item(href="#") Edit
+									a.change-password.dropdown-item(href="#", role="link", data-toggle='modal', data-target='#modalChangePassword') Change Password
+						section.display-info
+							.acct-user-name Prasanna Kugananthan
+							br
+							.acct-user-email prasanna@baustein.ca
+							br
+							.acct-user-phone (647) 430 5262
+						section.edit-info.hidden
+							.form-row
+								.col-md
+									.form-group
+										label(for="#acctUserFirstName") First Name
+										input#acctUserFirstName.form-control(type="text", placeholder="Enter your First Name", value="Prasanna", required)
+								.col-md
+									.form-group
+										label(for="#acctUserLastName") Last Name
+										input#acctUserLastName.form-control(type="text", placeholder="Enter your Last Name", value="Kugananthan", required)
+							.form-row
+								.col-md
+									.form-group
+										label(for="#acctUserEmail") Email Address
+										input#acctUserFirstName.form-control(type="email", placeholder="Enter your First Name", value="prasanna@baustein.ca", required)
+								.col-md
+									.form-group
+										label(for="#acctUserLastName") Phone Number (optional)
+										input#acctUserLastName.form-control(type="tel" placeholder="Enter your Phone Number", value="647 430 5262")
+							.form-row.form-action-btns
+								.col-md
+									a.update.btn.btn-secondary(href="#") Update
+									a.cancel.btn.btn-light(href="#") Cancel
+
+				hr
+				// Billing Address
+				section#billingAddress.admin-blocks
+					form(action="")
+						header.d-flex
+							h2 Billing Address
+							.admin-blocks-btns
+								a.edit.btn.btn-secondary(href="#") Edit
+							.admin-blocks-btns-mobile.dropdown.dropleft.ml-auto
+								button#dropdownBillingAddressButtons.dropdown-toggle(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+									i.fas.fa-ellipsis-v
+								.dropdown-menu(aria-labelledby="dropdownBillingAddressButtons")
+									a.edit.dropdown-item(href="#") Edit
+						section.display-info
+							.acct-billing-street 222 Islington Ave.
+							.acct-billing-line-02 Suite 204
+							br
+							.acct-billing-city Etobicoke
+							.acct-billing-province Ontario
+							br
+							.acct-billing-post-code M8V 3W7
+							br
+							.acct-billing-country Canada
+						section.edit-info.hidden
+							.form-row
+								.col-md
+									.form-group
+										label(for="#acctBillingStreet") Address Line #1
+										input#acctBillingStreet.form-control(type="text", placeholder="Enter an Address", value="222 Islington Avenue", required)
+								.col-md
+									.form-group
+										label(for="#acctBillingLine02") Address Line #2 (optional)
+										input#acctBillingLine02.form-control(type="text", placeholder="Enter a Suite or Apt. #", value="", required)
+							.form-row
+								.col-lg-6
+									.form-group
+										label(for="#acctBillingCity") City
+										input#acctBillingCity.form-control(type="text", placeholder="Enter a City", value="Toronto", required)
+								.col-lg-4.col-md-6
+									.form-group
+										label(for="#acctBillingProvince") Province/State
+										select#acctBillingProvince.form-control.selectpicker(title="Select a Province or State", regquired)
+											option(value='AB') Alberta
+											option(value='BC') British Columbia
+											option(value='MB') Manitoba
+											option(value='NB') New Brunswick
+											option(value='NL') Newfoundland and Labrador
+											option(value='NS') Nova Scotia
+											option(value='ON', selected) Ontario
+											option(value='PE') Prince Edward Island
+											option(value='QC') Quebec
+											option(value='SK') Saskatchewan
+											option(value='NT') Northwest Territories
+											option(value='NU') Nunavut
+											option(value='YT') Yukon
+								.col-lg-2.col-md-6
+									.form-group
+										label(for="#acctBillingPostCoSde") Postal Code/Zip
+										input#acctBillingPostCode.form-control(type="text", placeholder="Postal Code", value="M8V 3W7", required)
+							.form-row
+								.col-md-6
+									.form-group
+										label(for="#acctBillingCountry") Country
+										select#acctBillingProvince.form-control.selectpicker(title="Select a Country", regquired)
+											option(value='AU') Australia
+											option(value='CA', selected) Canada
+											option(value='GB') United Kingdom
+											option(value='US') United States
+							.form-row.form-action-btns
+								.col-md
+									a.update.btn.btn-secondary(href="#") Update
+									a.cancel.btn.btn-light(href="#") Cancel
+
+				hr
+				// Subscription Information
+				section#subscriptionInformation.admin-blocks
+					form(action="")
+						header.d-flex
+							h2 Subscription 
+								|(
+								span.subscrtiption-type Annual
+								|)
+							.admin-blocks-btns
+								a.buy.btn.btn-secondary(href="#", role="link", data-toggle='modal', data-target='#modalBuyCategories') Buy More Categories
+							.admin-blocks-btns-mobile.dropdown.dropleft.ml-auto
+								button#dropdownSubscriptionInformationButtons.dropdown-toggle(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+									i.fas.fa-ellipsis-v
+								.dropdown-menu(aria-labelledby="dropdownSubscriptionInformationButtons")
+									a.but.dropdown-item(href="#", role="link", data-toggle='modal', data-target='#modalBuyCategories') Buy More Categories
+						section.display-info
+							p 
+								| You have 
+								span.acct-categories-remaining 3
+								|  out of 
+								span.acct-categories-total 4
+								|  available Business Categories
+							.acct-billing-price
+								.acct-billing-amount $72.00
+								|  / 
+								.acct-billing-period month
+								.acct-billing-is-annual (billed annually)
+				hr
+				// Payment History
+				section#paymentHistory.admin-blocks
+					header.d-flex
+						h2 Payment History
+					section.display-info
+						.table-wrapper
+							table.table.table-bordered.table-striped
+								thead
+									tr
+										th.purchase-invoice-title Order
+										th.purchase-date-title Date
+										th.purchase-details-title Details
+										th.purchase-amount-title Amount
+										th.purchase-status-title Status
+								tbody
+									tr
+										td.purchase-invoice(data-title="Order")
+											a.purchace-pdf(href="#", target="_blank")
+												| # 
+												span.purchase-invoice-number 1636
+										td.purchase-date(data-title="Date") 03-20-2017 8:42 am EDT
+										td.purchase-details(data-title="Details") Annual Subscription Renewal
+										td.purchase-amount(data-title="Amount") $864.00
+										td.purchase-status(data-title="Status") Paid
+									tr
+										td.purchase-invoice(data-title="Order")
+											a.purchace-pdf(href="#", target="_blank")
+												| # 
+												span.purchase-invoice-number 1639
+										td.purchase-date(data-title="Date") 04-16-2016 9:03 am EDT
+										td.purchase-details(data-title="Details") Category Purchase (2)
+										td.purchase-amount(data-title="Amount") $40.00
+										td.purchase-status(data-title="Status") Paid
+									tr
+										td.purchase-invoice(data-title="Order")
+											a.purchace-pdf(href="#", target="_blank")
+												| # 
+												span.purchase-invoice-number 1743
+										td.purchase-date(data-title="Date") 04-22-2015 12:03 pm EDT
+										td.purchase-details(data-title="Details") Annual Subscription Renewal
+										td.purchase-amount(data-title="Amount") $864.00
+										td.purchase-status(data-title="Status") Paid

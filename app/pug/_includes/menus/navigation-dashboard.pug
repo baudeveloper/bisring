@@ -4,13 +4,11 @@ nav.navbar.navbar-expand-md.navbar-dark.fixed-top.bg-dark.navbar--large(role="na
       img.sidenav-logo(src="images/logo-bisring-white.png", alt="BisRing", role="img")
       span.sr-only BisRing Logo
     ul.navbar-nav.ml-auto.navbar-list-large(role="list")
-      li.nav-item(role="listitem", class=(pageId === 'dashboard' ? 'active' : ''))
-        a.nav-link(role="link", href='dashboard.html') Dashboard
-      li.nav-item(role="listitem", class=(pageId === 'why-bisring' ? 'active' : ''))
-        a.nav-link(role="link", href='why-bisring.html') Why BisRing?
+      li.nav-item.active(role="listitem")
+        a.nav-link(role="link", href='#') Dashboard
       li.nav-item(role="listitem")
         a.nav-link(role="link", href='#') Logout
       li.nav-item(role="listitem")
-        a.nav-link.notification(role="link", href='#', data-toggle='popover', id="notification")
+        a.nav-link.notification(href="search.html", role="link", data-toggle='modal', data-target='#modalNotification')
           span.notification-icon
             span.notification-value 26
