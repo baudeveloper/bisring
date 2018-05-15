@@ -1,38 +1,251 @@
 .site-admin
 	.container-fluid
 		.row
-			aside.site-sidebar.col-md-3(role="complementary")
-				nav(role="navigation", data-js="site-sidebar--nav")
-					ul.site-sidebar--list(role="list")
-						li.site-sidebar--listitem(role="listitem", class=(dbId === 'my-account' ? 'active' : ''))
-							a.site-sidebar--link(href="dashboard.html") My Account
-						li.site-sidebar--listitem(role="listitem", class=(dbId === 'my-virtual-teams' ? 'active' : ''))
-							a.site-sidebar--link(href="db-my-virtual-teams.html") My Virtual Teams
-						li.site-sidebar--listitem(role="listitem", class=(dbId === 'my-reviews' ? 'active' : ''))
-							a.site-sidebar--link(href="db-my-reviews.html") My Reviews
-						li.site-sidebar--listitem(role="listitem", class=(dbId === 'my-businesses' ? 'active' : ''))
-							a.site-sidebar--link(href="db-my-businesses.html") My Businesses
-						li.site-sidebar--listitem(role="listitem", class=(dbId === 'my-recommended-businesses' ? 'active' : ''))
-							a.site-sidebar--link(href="db-my-recommended-businesses.html") My Recommended Businesses
-						li.site-sidebar--listitem(role="listitem", class=(dbId === 'my-followers' ? 'active' : ''))
-							a.site-sidebar--link(href="db-my-followers.html") My Followers
-						li.site-sidebar--listitem(role="listitem", class=(dbId === 'businesses-following' ? 'active' : ''))
-							a.site-sidebar--link(href="db-businesses-following.html") Businesses I'm Following
-						li.site-sidebar--listitem(role="listitem", class=(dbId === 'refer-bisring' ? 'active' : ''))
-							a.site-sidebar--link(href="db-refer-bisring.html") Refer BisRing
-						li.site-sidebar--listitem(role="listitem", class=(dbId === 'bisring-points' ? 'active' : ''))
-							a.site-sidebar--link(href="db-bisring-points.html") BisRing Points
-				a.btn.btn-primary.btn-block.site-sidebar--addbusiness(href="#") Add Business
-			main.site-content.col-md-9(role="main")
-				form.site-content--form(role="form")
-					.site-content--cards.form-group
-						h1(role="heading") #{pageTitle}
-					hr
-					.site-content--cards.form-group
-						p Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi fugit perferendis quos vitae? At reprehenderit, earum quae dolor autem rerum accusamus molestiae odio excepturi illo enim nemo eveniet maiores perspiciatis!
-						p Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi fugit perferendis quos vitae? At reprehenderit, earum quae dolor autem rerum accusamus molestiae odio excepturi illo enim nemo eveniet maiores perspiciatis!
-						p Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi fugit perferendis quos vitae? At reprehenderit, earum quae dolor autem rerum accusamus molestiae odio excepturi illo enim nemo eveniet maiores perspiciatis!
-						p Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi fugit perferendis quos vitae? At reprehenderit, earum quae dolor autem rerum accusamus molestiae odio excepturi illo enim nemo eveniet maiores perspiciatis!
-						p Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi fugit perferendis quos vitae? At reprehenderit, earum quae dolor autem rerum accusamus molestiae odio excepturi illo enim nemo eveniet maiores perspiciatis!
-						p Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi fugit perferendis quos vitae? At reprehenderit, earum quae dolor autem rerum accusamus molestiae odio excepturi illo enim nemo eveniet maiores perspiciatis!
-						p Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi fugit perferendis quos vitae? At reprehenderit, earum quae dolor autem rerum accusamus molestiae odio excepturi illo enim nemo eveniet maiores perspiciatis!
+			// Dasboard Sidebar Menu
+			aside.admin-nav.col-lg-3.col-md-4
+				include db-sidebar-navigation	
+			// Dasboard Content
+			main.admin-content.col-lg-9.col-md-8(role="main")
+				h1.page-title My Virtual Team
+				// Virtual Teams
+				section#virtualTeams.admin-blocks
+					a.btn.btn-secondary.btn-lg(href="#") Add New Virtual Team
+					#virtualTeamsGroup.accordion
+						.card
+							#virtualTeamHeader01.card-header
+								h5.mb-0
+									button.close(type="button" aria-label="Close")
+											i.fas.fa-trash-alt
+									button.btn.btn-link.btn-block(type="button" data-toggle="collapse" data-target="#virtualTeamContent01" aria-expanded="true" aria-controls="collapseOne")
+										span.vteam-title Virtual Team Title 01
+										|  (
+										span.vteam-member-count 6
+										|  members) in 
+										span.vteam-city Toronto, ON, CANADA
+							#virtualTeamContent01.collapse.show(aria-labelledby="virtualTeamHeader01" data-parent="#virtualTeamsGroup")
+								.card-body
+									form.search-business.d-md-flex(role="form")
+										select.form-control.selectpicker.align-self-start
+												option(value="services") Services
+												option(value="for-rents") For Rents
+												option(value="for-sales") For Sales
+										.input-group.justify-content-md-between
+											input.form-control(type='text', placeholder="Find a Business", data-js="findServiceTypeahead")
+											.input-group-append
+												button.btn.btn-secondary(type='button') Add
+									.business-groups
+										.service-group
+											h6 Services
+											.table-responsive(data-business-category="cleaners")
+												table.table.table-sm
+													thead
+														tr
+															th(colspan="4") Cleaners
+													tbody
+														tr
+															td(width="40" align="center")
+																a(href="#" align="center")
+																	i.fas.fa-bars
+															td.vbusiness-rank(width="40") 1
+															td.vbusiness-name 
+																a(href="#") Jolly Maid
+															td(width="40" align="center")
+																a(href="#")
+																	i.fas.fa-trash-alt
+														tr
+															td(width="40" align="center")
+																a(href="#" align="center")
+																	i.fas.fa-bars
+															td.vbusiness-rank(width="40") 2
+															td.vbusiness-name 
+																a(href="#") VIP Cleaner
+															td(width="40" align="center")
+																a(href="#")
+																	i.fas.fa-trash-alt
+														tr
+															td(width="40" align="center")
+																a(href="#" align="center")
+																	i.fas.fa-bars
+															td.vbusiness-rank(width="40") 3
+															td.vbusiness-name 
+																a(href="#") Shire Clearning
+															td(width="40" align="center")
+																a(href="#")
+																	i.fas.fa-trash-alt
+											.table-responsive(data-business-category="Plumbers")
+												table.table.table-sm
+													thead
+														tr
+															th(colspan="4") Plumbers
+													tbody
+														tr
+															td(width="40" align="center")
+																a(href="#" align="center")
+																	i.fas.fa-bars
+															td.vbusiness-rank(width="40") 1
+															td.vbusiness-name 
+																a(href="#") Drain Rescue Plumbers Toronto
+															td(width="40" align="center")
+																a(href="#")
+																	i.fas.fa-trash-alt
+														tr
+															td(width="40" align="center")
+																a(href="#" align="center")
+																	i.fas.fa-bars
+															td.vbusiness-rank(width="40") 2
+															td.vbusiness-name 
+																a(href="#") Toronto Plumbing
+															td(width="40" align="center")
+																a(href="#")
+																	i.fas.fa-trash-alt
+														tr
+															td(width="40" align="center")
+																a(href="#" align="center")
+																	i.fas.fa-bars
+															td.vbusiness-rank(width="40") 3
+															td.vbusiness-name 
+																a(href="#") Anta Plumbing
+															td(width="40" align="center")
+																a(href="#")
+																	i.fas.fa-trash-alt
+										.rent-group
+											h6 Rent
+										.sale-group
+											h6 Sale
+						.card
+							#virtualTeamHeader02.card-header
+								h5.mb-0
+									button.close(type="button" aria-label="Close")
+										i.fas.fa-trash-alt(aria-hidden="true")
+									button.btn.btn-link.collapsed.btn-block(type="button" data-toggle="collapse" data-target="#virtualTeamContent02" aria-expanded="false" aria-controls="collapseTwo")
+										span.vteam-title Virtual Team Title 02
+										|  (
+										span.vteam-member-count 2
+										|  members) in 
+										span.vteam-city Ottawa, ON, CANADA
+							#virtualTeamContent02.collapse(aria-labelledby="virtualTeamHeader02" data-parent="#virtualTeamsGroup")
+								.card-body
+									form.search-business.d-md-flex(role="form")
+										select.form-control.selectpicker.align-self-start
+												option(value="services") Services
+												option(value="for-rents") For Rents
+												option(value="for-sales") For Sales
+										.input-group.justify-content-md-between
+											input.form-control(type='text', placeholder="Find a Business", data-js="findServiceTypeahead")
+											.input-group-append
+												button.btn.btn-secondary(type='button') Add
+									.business-groups
+										.service-group
+											h6 Services
+										.rent-group
+											h6 Rent
+											.table-responsive(data-business-category="cleaners")
+												table.table.table-sm
+													thead
+														tr
+															th(colspan="4") Cleaners
+													tbody
+														tr
+															td(width="40" align="center")
+																a(href="#" align="center")
+																	i.fas.fa-bars
+															td.vbusiness-rank(width="40") 1
+															td.vbusiness-name 
+																a(href="#") Jolly Maid
+															td(width="40" align="center")
+																a(href="#")
+																	i.fas.fa-trash-alt
+														tr
+															td(width="40" align="center")
+																a(href="#" align="center")
+																	i.fas.fa-bars
+															td.vbusiness-rank(width="40") 2
+															td.vbusiness-name 
+																a(href="#") VIP Cleaner
+															td(width="40" align="center")
+																a(href="#")
+																	i.fas.fa-trash-alt
+										.sale-group
+											h6 Sale
+						.card
+							#virtualTeamHeader03.card-header
+								h5.mb-0
+									button.close(type="button" aria-label="Close")
+										i.fas.fa-trash-alt(aria-hidden="true")
+									button.btn.btn-link.collapsed.btn-block(type="button" data-toggle="collapse" data-target="#virtualTeamContent03" aria-expanded="false" aria-controls="collapseTwo")
+										span.vteam-title Virtual Team Title 03
+										|  (
+										span.vteam-member-count 4
+										|  members) in 
+										span.vteam-city New York, NY, United States of America
+							#virtualTeamContent03.collapse(aria-labelledby="virtualTeamHeader03" data-parent="#virtualTeamsGroup")
+								.card-body
+									form.search-business.d-md-flex(role="form")
+										select.form-control.selectpicker.align-self-start
+												option(value="services") Services
+												option(value="for-rents") For Rents
+												option(value="for-sales") For Sales
+										.input-group.justify-content-md-between
+											input.form-control(type='text', placeholder="Find a Business", data-js="findServiceTypeahead")
+											.input-group-append
+												button.btn.btn-secondary(type='button') Add
+									.business-groups
+										.service-group
+											h6 Services
+											.table-responsive(data-business-category="cleaners")
+												table.table.table-sm
+													thead
+														tr
+															th(colspan="4") Cleaners
+													tbody
+														tr
+															td(width="40" align="center")
+																a(href="#" align="center")
+																	i.fas.fa-bars
+															td.vbusiness-rank(width="40") 1
+															td.vbusiness-name 
+																a(href="#") Jolly Maid
+															td(width="40" align="center")
+																a(href="#")
+																	i.fas.fa-trash-alt
+														tr
+															td(width="40" align="center")
+																a(href="#" align="center")
+																	i.fas.fa-bars
+															td.vbusiness-rank(width="40") 2
+															td.vbusiness-name 
+																a(href="#") VIP Cleaner
+															td(width="40" align="center")
+																a(href="#")
+																	i.fas.fa-trash-alt
+														tr
+															td(width="40" align="center")
+																a(href="#" align="center")
+																	i.fas.fa-bars
+															td.vbusiness-rank(width="40") 3
+															td.vbusiness-name 
+																a(href="#") Shire Clearning
+															td(width="40" align="center")
+																a(href="#")
+																	i.fas.fa-trash-alt
+											.table-responsive(data-business-category="Plumbers")
+												table.table.table-sm
+													thead
+														tr
+															th(colspan="4") Plumbers
+													tbody
+														tr
+															td(width="40" align="center")
+																a(href="#" align="center")
+																	i.fas.fa-bars
+															td.vbusiness-rank(width="40") 1
+															td.vbusiness-name 
+																a(href="#") Drain Rescue Plumbers Toronto
+															td(width="40" align="center")
+																a(href="#")
+																	i.fas.fa-trash-alt
+										.rent-group
+											h6 Rent
+										.sale-group
+											h6 Sale 
+					

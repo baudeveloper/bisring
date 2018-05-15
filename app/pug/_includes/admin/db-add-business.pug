@@ -25,21 +25,72 @@
 					// Select Business Category
 					section#selectBusinessCategory.admin-blocks
 						.row
-							.cat-add.col-sm-8
+							.cat-add.col-lg-8.col-md-7
 								header
 									h2 Select Business Category
-								p dsfs
-							.cat-cost.col-sm-4
-								p sdfsdf
+								.row.align-items-center
+									.col-sm-8
+										.form-group
+												label.invisible(for="#businessCategory") Choose a Category
+												select#businessCategory.form-control.selectpicker(title="Choose Category...", data-live-search="true", required)
+													option
+													option(value='TOR') Finance
+													option(value='MON') Plumber
+													option(value='OTA') Contractor
+													option(value='VAN') Decorator
+									.col-sm-4
+										button#businessCategoryAdd.btn.btn-secondary.btn-lg.btn-block(type="button") Add
+								.row
+									.col
+										h6 Categories Selected:
+											span.categories
+												span.category.badge.badge-secondary(data-category="Plumber")
+													| Plumber
+													button.close(type="button" aria-label="Close")
+														span(aria-hidden="true") ×
+							.cat-cost.col-lg-4.col-md-5
+								p You have used 
+									span.categories-available 3
+									|  out of 
+									span.categories-total 4
+									|  available Business Categories
+								h6 Esitmated Cost:
+								h4
+									span.cost $72.00
+									|  / 
+									span.period month
+								a#businessCategoryBuy.btn.btn-secondary.btn-lg(href="#", role="link", data-toggle='modal', data-target='#modalBuyCategories') Buy More Categories
 					// Select Market
 					section#selectMarket.admin-blocks
 						.row
-							.market-add.col-sm-8
+							.market-add.col-lg-8.col-md-7
 								header
 									h2 Select Market
-								p dsfs
-							.market-cost.col-sm-4
-								p sdfsdf
+								.row.align-items-center
+									.col-sm-8
+										.form-group
+												label.invisible(for="#businessMarket") Choose a City
+												select#businessMarket.form-control.selectpicker(title="Choose City...", data-live-search="true", required)
+													option
+													option(value='TOR') Toronto, ON, CANADA
+													option(value='MON') Montreal, ON, CANADA
+													option(value='OTA') Ottawa, ON, CANADA
+													option(value='VAN') Vancouver, ON, CANADA
+									.col-sm-4
+										button#businessMarketAdd.btn.btn-secondary.btn-lg.btn-block(type="button") Add
+								.row
+									.col
+										h6 Location Selected:
+											span.markets
+												span.market.badge.badge-secondary(data-market="Ottawa, ON, Canada")
+													| Ottawa, ON, CANADA
+													button.close(type="button" aria-label="Close")
+														span(aria-hidden="true") ×
+							.market-cost.col-lg-4.col-md-5
+								p 
+									| Upgrade to Premium Plan to select more than one location at the cost of 
+									strong $20 / Location
+								a#upgradeToPremiumPlan.btn.btn-secondary.btn-lg(href="#") Upgrade to Premium Plan
 					// General
 					section#businessGeneral.admin-blocks
 						header.d-flex
@@ -206,3 +257,26 @@
 											.file-size 3.1 MB
 										button.close(type="button" aria-label="Close")
 											i.fas.fa-trash-alt(aria-hidden="true")
+					// Terms & Conditions
+					section#businessTermsConditions.admin-blocks
+						header.d-flex
+							h2 Terms &amp; Conditions
+						section
+							.form-row
+								.col-md
+									.form-group
+										.card.card-block
+											p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lacinia sem convallis, vestibulum odio vel, porttitor dolor. Vivamus non libero libero. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam a aliquam urna, non sodales quam. Aliquam at lorem sodales metus faucibus aliquam. Ut porta, leo eget efficitur sagittis, purus lacus lobortis turpis, in euismod mauris enim vel ante. Fusce eget pellentesque enim, ac maximus massa. Nam dui tellus, pretium feugiat elit eu, cursus luctus nisl. Donec quis nulla mauris. Interdum et malesuada fames ac ante ipsum primis in faucibus. Morbi convallis accumsan bibendum. Aenean pellentesque augue eget nisi ultricies volutpat. Nullam quis justo justo. Vestibulum arcu turpis, ultricies quis ullamcorper a, commodo a turpis. Integer euismod vel nisi id consectetur. Nam condimentum odio quis pellentesque dapibus.
+											p Aliquam rutrum quam dolor, a sagittis quam condimentum vitae. In sed mollis magna, non hendrerit diam. Sed lacus massa, scelerisque eget congue sit amet, viverra efficitur ipsum. Praesent lacinia accumsan nunc, at fermentum est vulputate nec. Praesent elit risus, pellentesque nec ultrices et, consequat sed libero. Curabitur a porta nunc. Donec tincidunt mattis dui. Nullam at sodales odio. Vestibulum porta risus non urna pulvinar sollicitudin. Maecenas mi urna, iaculis id metus vitae, sagittis venenatis ex. Aenean posuere odio vel ipsum aliquet gravida. Pellentesque pharetra ac ligula quis consequat.
+											p Nam ac metus vulputate, sagittis dui a, posuere ex. Donec cursus placerat elit, a convallis enim maximus in. Donec vitae leo at orci pretium hendrerit in ac ante. Morbi elementum, massa vitae hendrerit ullamcorper, eros libero vehicula ante, sed lobortis tellus est id ante. Praesent aliquet erat at ante varius ornare. Aenean auctor orci lacus, sed finibus tortor finibus in. Suspendisse id odio est. Maecenas vulputate mi sit amet nisi ultrices venenatis. Proin ut erat eget felis dictum posuere. Sed sodales, velit vel aliquet volutpat, neque orci varius neque, id tincidunt ipsum leo quis ante. Vestibulum nec eleifend neque. Praesent dignissim neque ante, ac pulvinar ipsum convallis sit amet. Fusce velit magna, euismod nec lobortis quis, fermentum et ante.
+							.form-row
+								.col-md
+									.custom-control.custom-checkbox
+										input#acceptTerms.custom-control-input(type="checkbox")
+										label.custom-control-label(for="acceptTerms") I Accept the Terms &amp; Conditions
+					// Sumbit Add Business
+					section#businessFinalSubmit.admin-blocks
+						.row
+							.col-sm-6.offset-sm-6.d-flex.justify-content-end
+								a.btn.btn-primary.btn-lg(href="#") Save As Draft
+								button.btn.btn-secondary.btn-lg(type="submit") Add Business
