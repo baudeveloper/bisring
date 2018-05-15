@@ -1340,13 +1340,70 @@ Table of Content:
             }
           }
         }
+        #selectTypeofBusiness{
+          padding-bottom: 1rem;
+        }
+        #selectBusinessCategory {
+          padding: 1rem;
+          padding-bottom:0;
+          .cat-add {
+            padding: 2rem;
+            background-color: mix($secondary,white, 10%);
+          }
+          .cat-cost {
+            padding: 2rem;
+            background-color: mix($secondary,white, 20%);
+          }
+        }
+        #selectMarket {
+          padding: 1rem;
+          padding-top:0;
+          .market-add {
+            padding: 2rem;
+            background-color: $gray-100;
+          }
+          .market-cost {
+            padding: 2rem;
+            background-color: $gray-300;
+          }
+        }
+        #businessPromotion {
+          background-color:  mix($primary,white, 8%);
+          h2 {
+            color: $primary;
+          }
+        }
+        #businessImages,
+        #businessVideos,
+        #businessAudio {
+          .listview {
+            background-color:  mix($secondary,white, 10%);
+            color:$secondary;
+            max-height: 422px;
+            overflow-y: auto;
+            .list-unstyled {
+              margin-bottom: 0;
+            }
+          }
+          .media {
+            padding: 1rem;
+            border-bottom:1px solid $gray-400;
+          }
+          .close {
+            font-size: 1rem;
+            color:$secondary;
+            outline:none;
+            box-shadow: none;
+          }
+        }
         .form-group {
           label {
             font-size: 0.85rem;
             margin-bottom: 0;
             color:$gray-600;
           }
-          input {
+          input,
+          textarea {
             border:0;
             border-bottom: 2px solid $secondary;
             padding-left:0;
@@ -1724,6 +1781,7 @@ Table of Content:
   content: "\f111";
   outline:none!important;
   box-shadow:none!important;
+  color: $secondary;
 }
 .custom-radio .custom-control-input:checked ~ .custom-control-label::after {
   background-image: none!important;

@@ -7,78 +7,77 @@
 			// Dasboard Content
 			main.admin-content.col-lg-9.col-md-8(role="main")
 				h1.page-title Add Business
-				// General Information
-				section#generalInformation.admin-blocks
-					form(action="")
+				form(action="")
+					// Select Type of Business
+					section#selectTypeofBusiness.admin-blocks
 						header.d-flex
-							h2 Select Type of Business *
-							
+							h2 Select Type of Business
+						section
+							.custom-control.custom-radio.custom-control-inline
+								input#serviceType.custom-control-input(type="radio" name="businessType" value="service")
+								label.custom-control-label(for="serviceType") Service
+							.custom-control.custom-radio.custom-control-inline
+								input#rentType.custom-control-input(type="radio" name="businessType" value="forrent")
+								label.custom-control-label(for="rentType") For Rent
+							.custom-control.custom-radio.custom-control-inline
+								input#saleType.custom-control-input(type="radio" name="businessType" value="forsale")
+								label.custom-control-label(for="saleType") For Sale
+					// Select Business Category
+					section#selectBusinessCategory.admin-blocks
+						.row
+							.cat-add.col-sm-8
+								header
+									h2 Select Business Category
+								p dsfs
+							.cat-cost.col-sm-4
+								p sdfsdf
+					// Select Market
+					section#selectMarket.admin-blocks
+						.row
+							.market-add.col-sm-8
+								header
+									h2 Select Market
+								p dsfs
+							.market-cost.col-sm-4
+								p sdfsdf
+					// General
+					section#businessGeneral.admin-blocks
+						header.d-flex
+							h2 General
 						section
 							.form-row
 								.col-md
 									.form-group
-										label(for="#acctUserFirstName") First Name
-										input#acctUserFirstName.form-control(type="text", placeholder="Enter your First Name", value="Prasanna", required)
-								.col-md
-									.form-group
-										label(for="#acctUserLastName") Last Name
-										input#acctUserLastName.form-control(type="text", placeholder="Enter your Last Name", value="Kugananthan", required)
+										label(for="#businessName") Business Name
+										input#businessName.form-control(type="text", placeholder="Enter the business name", value="Joe the Plumber", required)
 							.form-row
 								.col-md
 									.form-group
-										label(for="#acctUserEmail") Email Address
-										input#acctUserFirstName.form-control(type="email", placeholder="Enter your First Name", value="prasanna@baustein.ca", required)
-								.col-md
-									.form-group
-										label(for="#acctUserLastName") Phone Number (optional)
-										input#acctUserLastName.form-control(type="tel" placeholder="Enter your Phone Number", value="647 430 5262")
-							.form-row.form-action-btns
-								.col-md
-									a.update.btn.btn-secondary(href="#") Update
-									a.cancel.btn.btn-light(href="#") Cancel
-
-				hr
-				// Billing Address ***Only For Business Users***
-				section#billingAddress.admin-blocks
-					form(action="")
+										label(for="#businessWebsite") Wesite URL (optional)
+										input#businessWebsite.form-control(type="url", placeholder="Enter the URL for the business", value="http://www.joetheplumber.com", required)
+					// Primary Business Address
+					section#businessAddress.admin-blocks
 						header.d-flex
-							h2 Billing Address
-							.admin-blocks-btns
-								a.edit.btn.btn-secondary(href="#") Edit
-							.admin-blocks-btns-mobile.dropdown.dropleft.ml-auto
-								button#dropdownBillingAddressButtons.dropdown-toggle(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
-									i.fas.fa-ellipsis-v
-								.dropdown-menu(aria-labelledby="dropdownBillingAddressButtons")
-									a.edit.dropdown-item(href="#") Edit
-						section.display-info
-							.acct-billing-street 222 Islington Ave.
-							.acct-billing-line-02 Suite 204
-							br
-							.acct-billing-city Etobicoke
-							.acct-billing-province Ontario
-							br
-							.acct-billing-post-code M8V 3W7
-							br
-							.acct-billing-country Canada
-						section.edit-info.hidden
+							h2 Primary Business Address
+						section
 							.form-row
 								.col-md
 									.form-group
-										label(for="#acctBillingStreet") Address Line #1
-										input#acctBillingStreet.form-control(type="text", placeholder="Enter an Address", value="222 Islington Avenue", required)
+										label(for="#businessStreet") Address Line #1
+										input#businessStreet.form-control(type="text", placeholder="Enter an Address", value="222 Islington Avenue", required)
 								.col-md
 									.form-group
-										label(for="#acctBillingLine02") Address Line #2 (optional)
-										input#acctBillingLine02.form-control(type="text", placeholder="Enter a Suite or Apt. #", value="", required)
+										label(for="#businessLine02") Address Line #2 (optional)
+										input#businessLine02.form-control(type="text", placeholder="Enter a Suite or Apt. #", value="", required)
 							.form-row
 								.col-lg-6
 									.form-group
-										label(for="#acctBillingCity") City
-										input#acctBillingCity.form-control(type="text", placeholder="Enter a City", value="Toronto", required)
+										label(for="#businessCity") City
+										input#businessCity.form-control(type="text", placeholder="Enter a City", value="Toronto", required)
 								.col-lg-4.col-md-6
 									.form-group
-										label(for="#acctBillingProvince") Province/State
-										select#acctBillingProvince.form-control.selectpicker(title="Select a Province or State", regquired)
+										label(for="#businessProvince") Province/State
+										select#businessProvince.form-control.selectpicker(title="Select a Province or State", regquired)
 											option(value='AB') Alberta
 											option(value='BC') British Columbia
 											option(value='MB') Manitoba
@@ -94,90 +93,116 @@
 											option(value='YT') Yukon
 								.col-lg-2.col-md-6
 									.form-group
-										label(for="#acctBillingPostCoSde") Postal Code/Zip
-										input#acctBillingPostCode.form-control(type="text", placeholder="Postal Code", value="M8V 3W7", required)
+										label(for="#businessPostCoSde") Postal Code/Zip
+										input#businessPostCode.form-control(type="text", placeholder="Postal Code", value="M8V 3W7", required)
 							.form-row
+								.col-lg-6
+									.form-group
+										label(for="#businessPhone") Phone Number (optional)
+										input#businessPhone.form-control(type="tel", placeholder="Enter a phone number", value="(647) 430 5262", required)
 								.col-md-6
 									.form-group
-										label(for="#acctBillingCountry") Country
-										select#acctBillingProvince.form-control.selectpicker(title="Select a Country", regquired)
+										label(for="#businessCountry") Country
+										select#businessCountry.form-control.selectpicker(title="Select a Country", regquired)
 											option(value='AU') Australia
 											option(value='CA', selected) Canada
 											option(value='GB') United Kingdom
 											option(value='US') United States
-							.form-row.form-action-btns
-								.col-md
-									a.update.btn.btn-secondary(href="#") Update
-									a.cancel.btn.btn-light(href="#") Cancel
-
-				hr
-				// Subscription Information ***Only For Business Users***
-				section#subscriptionInformation.admin-blocks
-					form(action="")
+					// Contact Information
+					section#businessContactInfo.admin-blocks
 						header.d-flex
-							h2 Subscription 
-								|(
-								span.subscrtiption-type Annual
-								|)
+							h2 Contact Information
+						section
+							.form-row
+								.col-md
+									.form-group
+										label(for="#businessEmail") Email
+										input#businessStreet.form-control(type="email", placeholder="Enter Email Address", value="info@joetheplumber.com", required)
+								.col-md
+									.form-group
+										label(for="#businessPhone02") Phone Number (optional)
+										input#businessPhone02.form-control(type="tel", placeholder="Enter a phone number", value="", required)
+					// Promotion
+					section#businessPromotion.admin-blocks
+						header.d-flex
+							h2 Promotion (optional)
+						section
+							.form-row
+								.col-md
+									.form-group
+										label(for="#businessPromotionTitle") Promotion Title
+										input#businessPromotionTitle.form-control(type="text", placeholder="A Promotion Title", value="", required)
+							.form-row
+								.col-md
+									.form-group
+										label(for="#businessPromotionDetails") Promotion Details (max 500 characters)
+										textarea#businessWebsite.form-control(placeholder="Promotion Details", value="", rows="3", required)
+					// Upload Images
+					section#businessImages.admin-blocks
+						header.d-flex
+							h2.mr-auto Upload Images
 							.admin-blocks-btns
-								a.buy.btn.btn-secondary(href="#", role="link", data-toggle='modal', data-target='#modalBuyCategories') Buy More Categories
-							.admin-blocks-btns-mobile.dropdown.dropleft.ml-auto
-								button#dropdownSubscriptionInformationButtons.dropdown-toggle(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
-									i.fas.fa-ellipsis-v
-								.dropdown-menu(aria-labelledby="dropdownSubscriptionInformationButtons")
-									a.but.dropdown-item(href="#", role="link", data-toggle='modal', data-target='#modalBuyCategories') Buy More Categories
-						section.display-info
-							p 
-								| You have 
-								span.acct-categories-remaining 3
-								|  out of 
-								span.acct-categories-total 4
-								|  available Business Categories
-							.acct-billing-price
-								.acct-billing-amount $72.00
-								|  / 
-								.acct-billing-period month
-								.acct-billing-is-annual (billed annually)
-				hr
-				// Payment History ***Only For Business Users***
-				section#paymentHistory.admin-blocks
-					header.d-flex
-						h2 Payment History
-					section.display-info
-						.table-wrapper
-							table.table.table-bordered.table-striped
-								thead
-									tr
-										th.purchase-invoice-title Order
-										th.purchase-date-title Date
-										th.purchase-details-title Details
-										th.purchase-amount-title Amount
-										th.purchase-status-title Status
-								tbody
-									tr
-										td.purchase-invoice(data-title="Order")
-											a.purchace-pdf(href="#", target="_blank")
-												| # 
-												span.purchase-invoice-number 1636
-										td.purchase-date(data-title="Date") 03-20-2017 8:42 am EDT
-										td.purchase-details(data-title="Details") Annual Subscription Renewal
-										td.purchase-amount(data-title="Amount") $864.00
-										td.purchase-status(data-title="Status") Paid
-									tr
-										td.purchase-invoice(data-title="Order")
-											a.purchace-pdf(href="#", target="_blank")
-												| # 
-												span.purchase-invoice-number 1639
-										td.purchase-date(data-title="Date") 04-16-2016 9:03 am EDT
-										td.purchase-details(data-title="Details") Category Purchase (2)
-										td.purchase-amount(data-title="Amount") $40.00
-										td.purchase-status(data-title="Status") Paid
-									tr
-										td.purchase-invoice(data-title="Order")
-											a.purchace-pdf(href="#", target="_blank")
-												| # 
-												span.purchase-invoice-number 1743
-										td.purchase-date(data-title="Date") 04-22-2015 12:03 pm EDT
-										td.purchase-details(data-title="Details") Annual Subscription Renewal
-										td.purchase-amount(data-title="Amount") $864.00
-										td.purchase-status(data-title="Status") Paid
+								a.edit.btn.btn-secondary(href="#") Add
+						section
+							.card.card-block.listview
+								ul.list-unstyled
+									li.media
+										img.mr-3(src="http://via.placeholder.com/350x250" width="150" alt="Generic placeholder image")
+										.media-body
+											.file-name.mt-0.mb-1 Some_image_file.jpg
+											.file-size 200 KB
+										button.close(type="button" aria-label="Close")
+											i.fas.fa-trash-alt(aria-hidden="true")
+									li.media
+										img.mr-3(src="http://via.placeholder.com/350x250" width="150" alt="Generic placeholder image")
+										.media-body
+											.file-name.mt-0.mb-1 Some_image_file.jpg
+											.file-size 200 KB
+										button.close(type="button" aria-label="Close")
+											i.fas.fa-trash-alt(aria-hidden="true")
+									li.media
+										img.mr-3(src="http://via.placeholder.com/350x250" width="150" alt="Generic placeholder image")
+										.media-body
+											.file-name.mt-0.mb-1 Some_image_file.jpg
+											.file-size 200 KB
+										button.close(type="button" aria-label="Close")
+											i.fas.fa-trash-alt(aria-hidden="true")
+					// Upload Videos
+					section#businessVideos.admin-blocks
+						header.d-flex
+							h2.mr-auto Upload Videos
+							.admin-blocks-btns
+								a.edit.btn.btn-secondary(href="#") Add
+						section
+							.card.card-block.listview
+								ul.list-unstyled
+									li.media
+										img.mr-3(src="http://via.placeholder.com/350x250" width="150" alt="Generic placeholder image")
+										.media-body
+											.file-name.mt-0.mb-1 Some_image_file.mp4
+											.file-size 10 MB
+										button.close(type="button" aria-label="Close")
+											i.fas.fa-trash-alt(aria-hidden="true")
+									li.media
+										img.mr-3(src="http://via.placeholder.com/350x250" width="150" alt="Generic placeholder image")
+										.media-body
+											.file-name.mt-0.mb-1 Some_image_file.mp4
+											.file-size 20 MB
+										button.close(type="button" aria-label="Close")
+											i.fas.fa-trash-alt(aria-hidden="true")
+					// Upload Audio Files
+					section#businessAudio.admin-blocks
+						header.d-flex
+							h2.mr-auto Upload Audio
+							.admin-blocks-btns
+								a.edit.btn.btn-secondary(href="#") Add
+						section
+							.card.card-block.listview
+								ul.list-unstyled
+									li.media
+										img.mr-3(src="http://via.placeholder.com/350x250" width="150" alt="Generic placeholder image")
+										.media-body
+											.file-name.mt-0.mb-1 Some_image_file.mp3
+											.file-size 3.1 MB
+										button.close(type="button" aria-label="Close")
+											i.fas.fa-trash-alt(aria-hidden="true")
