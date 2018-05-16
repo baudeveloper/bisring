@@ -1638,6 +1638,83 @@ Table of Content:
           }
 
         }
+        #reviews {
+          .nav-item {
+            color: $gray-700;
+            &.active {
+              color: $secondary;
+              background-color: mix($secondary, white, 10%);
+              border-bottom:1px solid mix($secondary, white, 10%);
+            }
+            @include media-breakpoint-down(sm) {
+              line-height: 1.15;
+              white-space: normal;
+              width: 50%;
+            }
+          }
+          .tab-content {
+            border:1px solid $gray-300;
+            border-top:0;
+            padding: 2rem;
+            background-color: mix($secondary, white, 10%);
+          }
+          .business-review,
+          .my-review {
+            border-bottom: 1px solid mix($secondary, white, 40%);
+            margin-bottom:2rem;
+            &:last-child {
+              border-bottom: 0;
+            }
+            h2 {
+              font-size: 1.5rem;
+              margin-bottom: 1.5rem;
+              .business-reviewed {
+                color: $secondary;
+              }
+            }
+            ul {
+              margin-left:2rem;
+              @include media-breakpoint-down(sm) {
+                margin-left:0;
+              }
+              li {
+                .close {
+                  font-size: 1rem;
+                  color: $secondary;
+                }
+              }
+            }
+            .business-reviewed-star-rating,
+            .my-reviewed-star-rating {
+              color: $primary;
+            }
+            .business-reviewed-title,
+            .my-reviewed-title {
+              display: inline;
+              font-size: 1.125rem;
+              font-weight: bold;
+              margin-left:1rem;
+            }
+            .business-reviewed-meta,
+            .my-reviewed-meta {
+              font-size: 0.85rem;
+              margin-top:0.35rem;
+              margin-bottom: 0.35rem;
+              .business-reviewed-reviewer {
+                font-weight: bold;
+              }
+            }
+            .business-reviewed-message,
+            .my-reviewed-message {
+              margin-bottom: 2rem;
+            }
+          }
+          .my-review {
+            ul {
+              margin-left:0;
+            }
+          }
+        }
         .form-group {
           label {
             font-size: 0.85rem;
@@ -2022,6 +2099,19 @@ Table of Content:
           background-color: transparent !important;
         }
       }
+      .dropdown-menu {
+        .form-control {
+          border:1px solid $gray-300;
+          background-color: $gray-100;
+          border-radius: 3px;
+          padding-left:.75rem;
+          &:focus {
+            outline: none;
+            box-shadow: none !important;
+            border:1px solid $gray-300;
+          }
+        }
+      }
     }
   }
   .alert {
@@ -2053,7 +2143,6 @@ Table of Content:
 .custom-radio .custom-control-label::after {
   top:0;
   font-family: "Font Awesome 5 Free";
-  font-weight: 900;
   content: "\f111";
   outline:none!important;
   box-shadow:none!important;
@@ -2063,7 +2152,6 @@ Table of Content:
   background-image: none!important;
   top:0;
   font-family: "Font Awesome 5 Free";
-  font-weight: 900;
   content: "\f192";
   outline:none!important;
   box-shadow:none!important;
@@ -2085,7 +2173,6 @@ Table of Content:
 .custom-checkbox .custom-control-label::after {
   top:0;
   font-family: "Font Awesome 5 Free";
-  font-weight: 900;
   content: "\f0c8";
   outline:none!important;
   box-shadow:none!important;
@@ -2095,7 +2182,6 @@ Table of Content:
   background-image: none!important;
   top:0;
   font-family: "Font Awesome 5 Free";
-  font-weight: 900;
   content: "\f14a";
   outline:none!important;
   box-shadow:none!important;

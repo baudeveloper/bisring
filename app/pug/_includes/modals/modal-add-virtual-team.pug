@@ -1,0 +1,27 @@
+#modalAddVirtualTeam.modal.fade(tabindex='-1', role='dialog', aria-labelledby='modalLogin', aria-hidden='true')
+	.modal-dialog.modal-dialog-centered(role='document')
+		.modal-content
+			.modal-header
+				h5#modalLogin.modal-title(role="heading") Add New Virtual Team
+				button.close(type='button', data-dismiss='modal', aria-label='Close')
+					span(aria-hidden='true') ×
+			form
+				.modal-body
+					.form-row
+						.col-md
+							.form-group
+								label(for="#virtualTeamName") Virtual Team Name
+								input#virtualTeamName.form-control(type="text", placeholder="Enter a name for your virtual team", value="", required)
+					.form-row
+						.col-md
+							.form-group
+								label(for="#virtualTeamCity") Virtual Team City
+								select#virtualTeamCity.form-control.selectpicker(title="Choose City...", data-live-search="true", required)
+									option
+									option(value='TOR') Toronto, ON, CANADA
+									option(value='MON') Montreal, ON, CANADA
+									option(value='OTA') Ottawa, ON, CANADA
+									option(value='VAN') Vancouver, ON, CANADA
+				.modal-footer
+					button.btn.btn-light(type="button" data-dismiss="modal") Cancel
+					button.btn.btn-primary(type="submit") Add
