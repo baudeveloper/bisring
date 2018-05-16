@@ -1805,6 +1805,129 @@ Table of Content:
             }
           }
         }
+        #recommendedBusinessList {
+          .search-business {
+            .bootstrap-select {
+              width: 200px;
+              @include media-breakpoint-down(sm) {
+                width: 100%;
+              }
+              .btn {
+                background-color: $secondary;
+                color: white;
+                border-color: $secondary;
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+                outline: none !important;
+                box-shadow: none !important;
+                &:hover,
+                &:focus,
+                &:active {
+                  background-color: $secondary !important;
+                  color: white !important;
+                }
+                @include media-breakpoint-down(sm) {
+                  border-top-right-radius: 0.25rem;
+                  border-bottom-right-radius: 0;
+                  border-bottom-left-radius: 0;
+                }
+              }
+            }
+            .input-group {
+              outline: none !important;
+              box-shadow: none !important;
+              .form-control {
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+                border-right: 0;
+                padding: 0.5rem 0.75rem;
+                outline: none !important;
+                box-shadow: none !important;
+                &:focus {
+                  outline: none !important;
+                  box-shadow: none !important;
+                }
+                @include media-breakpoint-down(sm) {
+                  border-bottom-left-radius: 0.25rem;
+                }
+              }
+              .btn {
+                outline: none !important;
+                box-shadow: none !important;
+                @include media-breakpoint-down(sm) {
+                  border-top-right-radius: 0;
+                  background-color: $primary;
+                  border-color: $primary;
+                }
+              }
+              .twitter-typeahead {
+                flex-grow: 1;
+                width: 100px;
+              }
+            }
+          }
+          .business-groups {
+            margin-right: -1.25rem;
+            margin-left: -1.25rem;
+            padding: 0;
+            .service-group {
+              padding: 1rem 1.25rem;
+            }
+            .rent-group {
+              padding: 1rem 1.25rem; // border-top: 1px solid mix($secondary, white, 40%);
+            }
+            .sale-group {
+              padding: 1rem 1.25rem; // border-top: 1px solid mix($secondary, white, 40%);
+            }
+            h6 {
+              font-size: 1rem;
+              font-weight: bold;
+              color: $gray-600;
+              text-transform: uppercase;
+              letter-spacing: 1px;
+              margin-bottom: 0;
+            }
+            .table {
+              background-color: white;
+              margin-bottom: 0.5rem;
+              margin-top: 0.5rem;
+              thead {
+                th {
+                  background-color: $secondary;
+                  color: white;
+                }
+              }
+              tbody {
+                td {
+                  &:first-child {
+                    border-right: 0;
+                  }
+                  &:last-child {
+                    border-left:0;
+                  }
+                  a {
+                    color: $secondary;
+                  }
+                  &.vbusiness {
+                    color: $secondary;
+                    font-weight: bold;
+                  }
+                }
+              }
+            }
+          }
+          .vteam-title {
+            font-family: $font-family-sans-serif;
+            font-size: 1.5rem;
+            color: $secondary;
+            margin-right: 1rem;
+            @include media-breakpoint-down(sm) {
+              display: block;
+              margin-bottom: 0.25rem;
+            }
+          }
+        }
+
         .form-group {
           label {
             font-size: 0.85rem;
