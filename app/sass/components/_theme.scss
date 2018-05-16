@@ -1715,6 +1715,92 @@ Table of Content:
             }
           }
         }
+        #businessList {
+          .list-group-item {
+            border-right:0;
+            border-left:0;
+            border-bottom:0;
+            padding-left:0;
+            padding-right:0;
+            border-top: 1px solid $gray-300;
+            &:first-child {
+              border-top:0;
+              &:hover,
+              &:focus {
+                z-index: 0;
+                border-top: 1px solid $gray-300;
+              }
+
+            }
+            &:hover,
+            &:focus {
+              z-index: 0;
+              border-top: 1px solid $gray-300;
+            }
+            &.inactive {
+              h5 {
+                color: $gray-400;
+              }
+              a, button {
+                color: $gray-400;
+              }
+              .toggle-activation {
+                color:$secondary;
+              }
+              .telephone,
+              .address {
+                color: $gray-400;
+                i {
+                  color: inherit;
+                }
+              }
+            }
+          }
+          .btn-is-disabled {
+            pointer-events:none;
+          }
+
+          h5 {
+            font-weight: bold;
+          }
+          .actions {
+            width: 120px;
+            text-align: right;
+          }
+          a, button {
+            color: $secondary;
+            border:0;
+            background-color: transparent;
+            outline: none;
+            box-shadow: none;
+            cursor: pointer;
+            padding:0.25rem;
+          }
+          .toggle-activation {
+            i {
+              font-style: normal;
+            }
+            i:after {
+              font-family: "Font Awesome 5 Free";
+              content: "\f204";
+              font-weight: 900;
+            }
+            &.active {
+              i:after {
+                font-family: "Font Awesome 5 Free";
+                content: "\f205";
+                font-weight: 900;
+              }
+            }
+          }
+          .telephone, .address {
+            font-size: 0.85rem;
+            i {
+              margin-right:0.5rem;
+              color: $gray-600;
+            }
+          }
+        }
         .form-group {
           label {
             font-size: 0.85rem;
