@@ -1,0 +1,13 @@
+extends ../_layouts/default
+
+block title
+	title Businesses I'm Following - BisRing
+
+block vars
+	- var pageId = 'dashboard', pageClass = 'site page page-standard page-admin', pageTitle = 'Businesses I\'m Following', dbId = 'businesses-following';
+
+block content
+	include ../_includes/blocks/header-dashboard
+	include ../_includes/admin/db-businesses-following
+	include ../_includes/blocks/footer
+	include ../_includes/modals/modal-notification

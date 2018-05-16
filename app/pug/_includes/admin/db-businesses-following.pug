@@ -1,38 +1,66 @@
 .site-admin
 	.container-fluid
 		.row
-			aside.site-sidebar.col-md-3(role="complementary")
-				nav(role="navigation", data-js="site-sidebar--nav")
-					ul.site-sidebar--list(role="list")
-						li.site-sidebar--listitem(role="listitem", class=(dbId === 'my-account' ? 'active' : ''))
-							a.site-sidebar--link(href="dashboard.html") My Account
-						li.site-sidebar--listitem(role="listitem", class=(dbId === 'my-virtual-teams' ? 'active' : ''))
-							a.site-sidebar--link(href="db-my-virtual-teams.html") My Virtual Teams
-						li.site-sidebar--listitem(role="listitem", class=(dbId === 'my-reviews' ? 'active' : ''))
-							a.site-sidebar--link(href="db-my-reviews.html") My Reviews
-						li.site-sidebar--listitem(role="listitem", class=(dbId === 'my-businesses' ? 'active' : ''))
-							a.site-sidebar--link(href="db-my-businesses.html") My Businesses
-						li.site-sidebar--listitem(role="listitem", class=(dbId === 'my-recommended-businesses' ? 'active' : ''))
-							a.site-sidebar--link(href="db-my-recommended-businesses.html") My Recommended Businesses
-						li.site-sidebar--listitem(role="listitem", class=(dbId === 'my-followers' ? 'active' : ''))
-							a.site-sidebar--link(href="db-my-followers.html") My Followers
-						li.site-sidebar--listitem(role="listitem", class=(dbId === 'businesses-following' ? 'active' : ''))
-							a.site-sidebar--link(href="db-businesses-following.html") Businesses I'm Following
-						li.site-sidebar--listitem(role="listitem", class=(dbId === 'refer-bisring' ? 'active' : ''))
-							a.site-sidebar--link(href="db-refer-bisring.html") Refer BisRing
-						li.site-sidebar--listitem(role="listitem", class=(dbId === 'bisring-points' ? 'active' : ''))
-							a.site-sidebar--link(href="db-bisring-points.html") BisRing Points
-				a.btn.btn-primary.btn-block.site-sidebar--addbusiness(href="#") Add Business
-			main.site-content.col-md-9(role="main")
-				form.site-content--form(role="form")
-					.site-content--cards.form-group
-						h1(role="heading") #{pageTitle}
-					hr
-					.site-content--cards.form-group
-						p Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi fugit perferendis quos vitae? At reprehenderit, earum quae dolor autem rerum accusamus molestiae odio excepturi illo enim nemo eveniet maiores perspiciatis!
-						p Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi fugit perferendis quos vitae? At reprehenderit, earum quae dolor autem rerum accusamus molestiae odio excepturi illo enim nemo eveniet maiores perspiciatis!
-						p Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi fugit perferendis quos vitae? At reprehenderit, earum quae dolor autem rerum accusamus molestiae odio excepturi illo enim nemo eveniet maiores perspiciatis!
-						p Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi fugit perferendis quos vitae? At reprehenderit, earum quae dolor autem rerum accusamus molestiae odio excepturi illo enim nemo eveniet maiores perspiciatis!
-						p Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi fugit perferendis quos vitae? At reprehenderit, earum quae dolor autem rerum accusamus molestiae odio excepturi illo enim nemo eveniet maiores perspiciatis!
-						p Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi fugit perferendis quos vitae? At reprehenderit, earum quae dolor autem rerum accusamus molestiae odio excepturi illo enim nemo eveniet maiores perspiciatis!
-						p Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi fugit perferendis quos vitae? At reprehenderit, earum quae dolor autem rerum accusamus molestiae odio excepturi illo enim nemo eveniet maiores perspiciatis!
+			// Dasboard Sidebar Menu
+			aside.admin-nav.col-lg-3.col-md-4
+				include db-sidebar-navigation	
+			// Dasboard Content
+			main.admin-content.col-lg-9.col-md-8(role="main")
+				h1.page-title Businesses I'm Following
+				// Recommended Busines List
+				section#followingBusinessList.admin-blocks
+					.business-groups
+						.service-group
+							h6 Services
+							.table-responsive(data-business-category="cleaners")
+								table.table.table-sm.table-bordered
+									thead
+										tr
+											th(colspan="2") Cleaners
+									tbody
+										tr
+											td.vbusiness-name 
+												a(href="#") Jolly Maid
+											td(width="40" align="center")
+												a(href="#")
+													i.fas.fa-trash-alt
+										tr
+											td.vbusiness-name 
+												a(href="#") VIP Cleaner
+											td(width="40" align="center")
+												a(href="#")
+													i.fas.fa-trash-alt
+										tr
+											td.vbusiness-name 
+												a(href="#") Shire Clearning
+											td(width="40" align="center")
+												a(href="#")
+													i.fas.fa-trash-alt
+							.table-responsive(data-business-category="Plumbers")
+								table.table.table-sm.table-bordered
+									thead
+										tr
+											th(colspan="2") Plumbers
+									tbody
+										tr
+											td.vbusiness-name 
+												a(href="#") Drain Rescue Plumbers Toronto
+											td(width="40" align="center")
+												a(href="#")
+													i.fas.fa-trash-alt
+										tr
+											td.vbusiness-name 
+												a(href="#") Toronto Plumbing
+											td(width="40" align="center")
+												a(href="#")
+													i.fas.fa-trash-alt
+										tr
+											td.vbusiness-name 
+												a(href="#") Anta Plumbing
+											td(width="40" align="center")
+												a(href="#")
+													i.fas.fa-trash-alt
+						.rent-group
+							h6 Rent
+						.sale-group
+							h6 Sale

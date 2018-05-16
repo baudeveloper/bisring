@@ -1572,6 +1572,7 @@ Table of Content:
                     th {
                       background-color: $secondary;
                       color:white;
+                      padding-left: 0.75rem;
                     }
                   }
                   tbody {
@@ -1805,7 +1806,8 @@ Table of Content:
             }
           }
         }
-        #recommendedBusinessList {
+        #recommendedBusinessList,
+        #followingBusinessList {
           .search-business {
             .bootstrap-select {
               width: 200px;
@@ -1895,12 +1897,14 @@ Table of Content:
                 th {
                   background-color: $secondary;
                   color: white;
+                  padding-left: 0.75rem;
                 }
               }
               tbody {
                 td {
                   &:first-child {
                     border-right: 0;
+                    padding-left: 0.75rem;
                   }
                   &:last-child {
                     border-left:0;
