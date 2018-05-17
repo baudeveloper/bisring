@@ -1952,6 +1952,13 @@ Table of Content:
             font-size: 1.75rem;
           }
         }
+        #referBisring {
+          @include media-breakpoint-down(sm) {
+            .refer-via-socialmedia {
+              margin-top: 2rem;
+            }
+          }
+        }
         .form-group {
           label {
             font-size: 0.85rem;
@@ -2509,25 +2516,10 @@ Table of Content:
     margin-bottom:1rem;
     white-space: normal;
   }
-  .btn-facebook {
-    background-color: $color-FBOOK;
-    &:hover {
-      background-color:mix($color-FBOOK, black, 80%);
-    }
-  }
-  .btn-google {
-    background-color: $color-GOOGL;
-    &:hover {
-      background-color: mix($color-GOOGL, black, 80%);
-    }
-  }
   .btn-linkedin {
-    background-color: $color-LINKD;
     margin-bottom: 0;
-    &:hover {
-      background-color: mix($color-LINKD, black, 80%);
-    }
   }
+
 }
 
 //General Fix
@@ -2572,5 +2564,40 @@ Table of Content:
     box-shadow: none !important;
   }
 }
+
+.btn-facebook {
+  background-color: $color-FBOOK;
+  color:white;
+  &:hover {
+    background-color: mix($color-FBOOK, black, 80%);
+  }
+}
+
+.btn-twitter {
+  background-color: $color-TWITT;
+  color:white;
+  &:hover {
+    background-color: mix($color-TWITT, black, 80%);
+  }
+}
+
+
+.btn-google {
+  background-color: $color-GOOGL;
+  color:white;
+  &:hover {
+    background-color: mix($color-GOOGL, black, 80%);
+  }
+}
+
+.btn-linkedin {
+  background-color: $color-LINKD;
+  margin-bottom: 0;
+  color:white;
+  &:hover {
+    background-color: mix($color-LINKD, black, 80%);
+  }
+}
+
 
 

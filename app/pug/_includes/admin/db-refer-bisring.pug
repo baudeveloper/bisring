@@ -1,38 +1,30 @@
 .site-admin
 	.container-fluid
 		.row
-			aside.site-sidebar.col-md-3(role="complementary")
-				nav(role="navigation", data-js="site-sidebar--nav")
-					ul.site-sidebar--list(role="list")
-						li.site-sidebar--listitem(role="listitem", class=(dbId === 'my-account' ? 'active' : ''))
-							a.site-sidebar--link(href="dashboard.html") My Account
-						li.site-sidebar--listitem(role="listitem", class=(dbId === 'my-virtual-teams' ? 'active' : ''))
-							a.site-sidebar--link(href="db-my-virtual-teams.html") My Virtual Teams
-						li.site-sidebar--listitem(role="listitem", class=(dbId === 'my-reviews' ? 'active' : ''))
-							a.site-sidebar--link(href="db-my-reviews.html") My Reviews
-						li.site-sidebar--listitem(role="listitem", class=(dbId === 'my-businesses' ? 'active' : ''))
-							a.site-sidebar--link(href="db-my-businesses.html") My Businesses
-						li.site-sidebar--listitem(role="listitem", class=(dbId === 'my-recommended-businesses' ? 'active' : ''))
-							a.site-sidebar--link(href="db-my-recommended-businesses.html") My Recommended Businesses
-						li.site-sidebar--listitem(role="listitem", class=(dbId === 'my-followers' ? 'active' : ''))
-							a.site-sidebar--link(href="db-my-followers.html") My Followers
-						li.site-sidebar--listitem(role="listitem", class=(dbId === 'businesses-following' ? 'active' : ''))
-							a.site-sidebar--link(href="db-businesses-following.html") Businesses I'm Following
-						li.site-sidebar--listitem(role="listitem", class=(dbId === 'refer-bisring' ? 'active' : ''))
-							a.site-sidebar--link(href="db-refer-bisring.html") Refer BisRing
-						li.site-sidebar--listitem(role="listitem", class=(dbId === 'bisring-points' ? 'active' : ''))
-							a.site-sidebar--link(href="db-bisring-points.html") BisRing Points
-				a.btn.btn-primary.btn-block.site-sidebar--addbusiness(href="#") Add Business
-			main.site-content.col-md-9(role="main")
-				form.site-content--form(role="form")
-					.site-content--cards.form-group
-						h1(role="heading") #{pageTitle}
-					hr
-					.site-content--cards.form-group
-						p Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi fugit perferendis quos vitae? At reprehenderit, earum quae dolor autem rerum accusamus molestiae odio excepturi illo enim nemo eveniet maiores perspiciatis!
-						p Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi fugit perferendis quos vitae? At reprehenderit, earum quae dolor autem rerum accusamus molestiae odio excepturi illo enim nemo eveniet maiores perspiciatis!
-						p Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi fugit perferendis quos vitae? At reprehenderit, earum quae dolor autem rerum accusamus molestiae odio excepturi illo enim nemo eveniet maiores perspiciatis!
-						p Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi fugit perferendis quos vitae? At reprehenderit, earum quae dolor autem rerum accusamus molestiae odio excepturi illo enim nemo eveniet maiores perspiciatis!
-						p Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi fugit perferendis quos vitae? At reprehenderit, earum quae dolor autem rerum accusamus molestiae odio excepturi illo enim nemo eveniet maiores perspiciatis!
-						p Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi fugit perferendis quos vitae? At reprehenderit, earum quae dolor autem rerum accusamus molestiae odio excepturi illo enim nemo eveniet maiores perspiciatis!
-						p Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi fugit perferendis quos vitae? At reprehenderit, earum quae dolor autem rerum accusamus molestiae odio excepturi illo enim nemo eveniet maiores perspiciatis!
+			// Dasboard Sidebar Menu
+			aside.admin-nav.col-lg-3.col-md-4
+				include db-sidebar-navigation	
+			// Dasboard Content
+			main.admin-content.col-lg-9.col-md-8(role="main")
+				h1.page-title Refer BisRing
+				// Refer BisRings
+				section#referBisring.admin-blocks
+					.row
+						.refer-via-email.col-sm-6
+							form(action="")
+								p.mb-0 
+									| Gain credits for referring BisRing to your friends via email:
+								.form-group
+									label.invisible(for="#referEmail") Email Address
+									input#referEmail.form-control(type="email", placeholder="Enter an Email Address", value="", required)
+								.form-group
+									button.btn.btn-secondary(type="submit") Send Referral
+						.refer-via-socialmedia.col-lg-4.col-sm-5.ml-auto
+							p Share via Social Media:
+							.d-flex.justify-content-between
+								a.btn.btn-facebook(href="#")
+									i.fab.fa-facebook-f
+								a.btn.btn-twitter(href="#", tabindex='6')
+									i.fab.fa-twitter
+								a.btn.btn-linkedin(href="#", tabindex='7')
+									i.fab.fa-linkedin-in
