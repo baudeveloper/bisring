@@ -10,19 +10,25 @@
 					.form-group
 						label(for="inputFirstName") First Name
 						input#inputFirstName.form-control(type="text", value="", required, tabindex="1")
-					.form-group
-						label(for="inputEmail") Email
-						input#inputEmail.form-control(type="email", value="", required, tabindex="3")
-					.form-group
-						label(for="inputPassword") Password
-						input#inputPassword.form-control(type="password", value="", required, tabindex="5")
 				.col-md-6
 					.form-group
 						label(for="inputLastName") Last Name
 						input#inputLastName.form-control(type="text", value="", required, tabindex="2")
+			.form-row
+				.col-md-6
+					.form-group
+						label(for="inputEmail") Email
+						input#inputEmail.form-control(type="email", value="", required, tabindex="3")
+				.col-md-6
 					.form-group
 						label(for="inputPhone") Phone (Optional)
 						input#inputPhone.form-control(type="tel", value="", tabindex="4")
+			.form-row
+				.col-md-6
+					.form-group
+						label(for="inputPassword") Password
+						input#inputPassword.form-control(type="password", value="", required, tabindex="5")
+				.col-md-6
 					.form-group
 						label(for="inputRepeatPassword") Repeat Password
 						input#inputRepeatPassword.form-control(type="password", required, value="", tabindex="6")
