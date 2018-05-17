@@ -65,7 +65,7 @@
 									.col-md
 										.form-group
 											label(for="#acctBillingStreet") Address Line #1
-											input#acctBillingStreet.form-control(type="text", placeholder="Enter an Address", value="222 Islington Avenue", required)
+											input#acctBillingStreet.form-control(type="text", placeholder="Enter an Address", value="", required)
 									.col-md
 										.form-group
 											label(for="#acctBillingLine02") Address Line #2 (optional)
@@ -74,7 +74,7 @@
 									.col-lg-6
 										.form-group
 											label(for="#acctBillingCity") City
-											input#acctBillingCity.form-control(type="text", placeholder="Enter a City", value="Toronto", required)
+											input#acctBillingCity.form-control(type="text", placeholder="Enter a City", value="", required)
 									.col-lg-4.col-md-6
 										.form-group
 											label(for="#acctBillingProvince") Province/State
@@ -85,7 +85,7 @@
 												option(value='NB') New Brunswick
 												option(value='NL') Newfoundland and Labrador
 												option(value='NS') Nova Scotia
-												option(value='ON', selected) Ontario
+												option(value='ON') Ontario
 												option(value='PE') Prince Edward Island
 												option(value='QC') Quebec
 												option(value='SK') Saskatchewan
@@ -95,13 +95,13 @@
 									.col-lg-2.col-md-6
 										.form-group
 											label(for="#acctBillingPostCoSde") Postal Code/Zip
-											input#acctBillingPostCode.form-control(type="text", placeholder="Postal Code", value="M8V 3W7", required)
+											input#acctBillingPostCode.form-control(type="text", placeholder="Postal Code", value="", required)
 								.form-row
 									.col-md-6
 										.form-group
 											label(for="#acctBillingCountry") Country
 											select#acctBillingProvince.form-control.selectpicker(title="Select a Country", regquired)
 												option(value='AU') Australia
-												option(value='CA', selected) Canada
+												option(value='CA') Canada
 												option(value='GB') United Kingdom
 												option(value='US') United States

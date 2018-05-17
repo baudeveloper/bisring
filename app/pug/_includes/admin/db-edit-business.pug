@@ -6,7 +6,7 @@
 				include db-sidebar-navigation	
 			// Dasboard Content
 			main.admin-content.col-lg-9.col-md-8(role="main")
-				h1.page-title Add Business
+				h1.page-title Joe the Plumber
 				form(action="")
 					// Select Type of Business
 					section#selectTypeofBusiness.admin-blocks
@@ -14,7 +14,7 @@
 							h2 Select Type of Business
 						section
 							.custom-control.custom-radio.custom-control-inline
-								input#serviceType.custom-control-input(type="radio" name="businessType" value="service")
+								input#serviceType.custom-control-input(type="radio" name="businessType" value="service" checked)
 								label.custom-control-label(for="serviceType") Service
 							.custom-control.custom-radio.custom-control-inline
 								input#rentType.custom-control-input(type="radio" name="businessType" value="forrent")
@@ -44,6 +44,10 @@
 									.col
 										h6 Categories Selected:
 											span.categories
+												span.category.badge.badge-secondary(data-category="Plumber")
+													| Plumber
+													button.close(type="button" aria-label="Close")
+														span(aria-hidden="true") ×
 							.cat-cost.col-lg-4.col-md-5
 								p You have used 
 									span.categories-available 3
@@ -78,6 +82,10 @@
 									.col
 										h6 Location Selected:
 											span.markets
+												span.market.badge.badge-secondary(data-market="Ottawa, ON, Canada")
+													| Ottawa, ON, CANADA
+													button.close(type="button" aria-label="Close")
+														span(aria-hidden="true") ×
 							.market-cost.col-lg-4.col-md-5
 								p 
 									| Upgrade to Premium Plan to select more than one location at the cost of 
@@ -92,12 +100,12 @@
 								.col-md
 									.form-group
 										label(for="#businessName") Business Name
-										input#businessName.form-control(type="text", placeholder="Enter the business name", value="", required)
+										input#businessName.form-control(type="text", placeholder="Enter the business name", value="Joe the Plumber", required)
 							.form-row
 								.col-md
 									.form-group
 										label(for="#businessWebsite") Wesite URL (optional)
-										input#businessWebsite.form-control(type="url", placeholder="Enter the URL for the business", value="", required)
+										input#businessWebsite.form-control(type="url", placeholder="Enter the URL for the business", value="http://www.joetheplumber.com", required)
 					// Primary Business Address
 					section#businessAddress.admin-blocks
 						header.d-flex
@@ -107,7 +115,7 @@
 								.col-md
 									.form-group
 										label(for="#businessStreet") Address Line #1
-										input#businessStreet.form-control(type="text", placeholder="Enter an Address", value="", required)
+										input#businessStreet.form-control(type="text", placeholder="Enter an Address", value="222 Islington Avenue", required)
 								.col-md
 									.form-group
 										label(for="#businessLine02") Address Line #2 (optional)
@@ -116,7 +124,7 @@
 								.col-lg-6
 									.form-group
 										label(for="#businessCity") City
-										input#businessCity.form-control(type="text", placeholder="Enter a City", value="", required)
+										input#businessCity.form-control(type="text", placeholder="Enter a City", value="Toronto", required)
 								.col-lg-4.col-md-6
 									.form-group
 										label(for="#businessProvince") Province/State
@@ -127,7 +135,7 @@
 											option(value='NB') New Brunswick
 											option(value='NL') Newfoundland and Labrador
 											option(value='NS') Nova Scotia
-											option(value='ON') Ontario
+											option(value='ON', selected) Ontario
 											option(value='PE') Prince Edward Island
 											option(value='QC') Quebec
 											option(value='SK') Saskatchewan
@@ -137,18 +145,18 @@
 								.col-lg-2.col-md-6
 									.form-group
 										label(for="#businessPostCoSde") Postal Code/Zip
-										input#businessPostCode.form-control(type="text", placeholder="Postal Code", value="", required)
+										input#businessPostCode.form-control(type="text", placeholder="Postal Code", value="M8V 3W7", required)
 							.form-row
 								.col-lg-6
 									.form-group
 										label(for="#businessPhone") Phone Number (optional)
-										input#businessPhone.form-control(type="tel", placeholder="Enter a phone number", value="", required)
+										input#businessPhone.form-control(type="tel", placeholder="Enter a phone number", value="(647) 430 5262", required)
 								.col-md-6
 									.form-group
 										label(for="#businessCountry") Country
 										select#businessCountry.form-control.selectpicker(title="Select a Country", regquired)
 											option(value='AU') Australia
-											option(value='CA') Canada
+											option(value='CA', selected) Canada
 											option(value='GB') United Kingdom
 											option(value='US') United States
 					// Contact Information
@@ -160,7 +168,7 @@
 								.col-md
 									.form-group
 										label(for="#businessEmail") Email
-										input#businessStreet.form-control(type="email", placeholder="Enter Email Address", value="", required)
+										input#businessStreet.form-control(type="email", placeholder="Enter Email Address", value="info@joetheplumber.com", required)
 								.col-md
 									.form-group
 										label(for="#businessPhone02") Phone Number (optional)
@@ -174,7 +182,7 @@
 								.col-md
 									.form-group
 										label(for="#businessPromotionTitle") Promotion Title
-										input#businessPromotionTitle.form-control(type="text", placeholder="", value="", required)
+										input#businessPromotionTitle.form-control(type="text", placeholder="A Promotion Title", value="", required)
 							.form-row
 								.col-md
 									.form-group
@@ -189,7 +197,27 @@
 						section
 							.card.card-block.listview
 								ul.list-unstyled
-								
+									li.media
+										img.mr-3(src="http://via.placeholder.com/350x250" width="150" alt="Generic placeholder image")
+										.media-body
+											.file-name.mt-0.mb-1 Some_image_file.jpg
+											.file-size 200 KB
+										button.close(type="button" aria-label="Close")
+											i.fas.fa-trash-alt(aria-hidden="true")
+									li.media
+										img.mr-3(src="http://via.placeholder.com/350x250" width="150" alt="Generic placeholder image")
+										.media-body
+											.file-name.mt-0.mb-1 Some_image_file.jpg
+											.file-size 200 KB
+										button.close(type="button" aria-label="Close")
+											i.fas.fa-trash-alt(aria-hidden="true")
+									li.media
+										img.mr-3(src="http://via.placeholder.com/350x250" width="150" alt="Generic placeholder image")
+										.media-body
+											.file-name.mt-0.mb-1 Some_image_file.jpg
+											.file-size 200 KB
+										button.close(type="button" aria-label="Close")
+											i.fas.fa-trash-alt(aria-hidden="true")
 					// Upload Videos
 					section#businessVideos.admin-blocks
 						header.d-flex
@@ -199,7 +227,20 @@
 						section
 							.card.card-block.listview
 								ul.list-unstyled
-									
+									li.media
+										img.mr-3(src="http://via.placeholder.com/350x250" width="150" alt="Generic placeholder image")
+										.media-body
+											.file-name.mt-0.mb-1 Some_image_file.mp4
+											.file-size 10 MB
+										button.close(type="button" aria-label="Close")
+											i.fas.fa-trash-alt(aria-hidden="true")
+									li.media
+										img.mr-3(src="http://via.placeholder.com/350x250" width="150" alt="Generic placeholder image")
+										.media-body
+											.file-name.mt-0.mb-1 Some_image_file.mp4
+											.file-size 20 MB
+										button.close(type="button" aria-label="Close")
+											i.fas.fa-trash-alt(aria-hidden="true")
 					// Upload Audio Files
 					section#businessAudio.admin-blocks
 						header.d-flex
@@ -209,27 +250,16 @@
 						section
 							.card.card-block.listview
 								ul.list-unstyled
-								
-					// Terms & Conditions
-					section#businessTermsConditions.admin-blocks
-						header.d-flex
-							h2 Terms &amp; Conditions
-						section
-							.form-row
-								.col-md
-									.form-group
-										.card.card-block
-											p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lacinia sem convallis, vestibulum odio vel, porttitor dolor. Vivamus non libero libero. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam a aliquam urna, non sodales quam. Aliquam at lorem sodales metus faucibus aliquam. Ut porta, leo eget efficitur sagittis, purus lacus lobortis turpis, in euismod mauris enim vel ante. Fusce eget pellentesque enim, ac maximus massa. Nam dui tellus, pretium feugiat elit eu, cursus luctus nisl. Donec quis nulla mauris. Interdum et malesuada fames ac ante ipsum primis in faucibus. Morbi convallis accumsan bibendum. Aenean pellentesque augue eget nisi ultricies volutpat. Nullam quis justo justo. Vestibulum arcu turpis, ultricies quis ullamcorper a, commodo a turpis. Integer euismod vel nisi id consectetur. Nam condimentum odio quis pellentesque dapibus.
-											p Aliquam rutrum quam dolor, a sagittis quam condimentum vitae. In sed mollis magna, non hendrerit diam. Sed lacus massa, scelerisque eget congue sit amet, viverra efficitur ipsum. Praesent lacinia accumsan nunc, at fermentum est vulputate nec. Praesent elit risus, pellentesque nec ultrices et, consequat sed libero. Curabitur a porta nunc. Donec tincidunt mattis dui. Nullam at sodales odio. Vestibulum porta risus non urna pulvinar sollicitudin. Maecenas mi urna, iaculis id metus vitae, sagittis venenatis ex. Aenean posuere odio vel ipsum aliquet gravida. Pellentesque pharetra ac ligula quis consequat.
-											p Nam ac metus vulputate, sagittis dui a, posuere ex. Donec cursus placerat elit, a convallis enim maximus in. Donec vitae leo at orci pretium hendrerit in ac ante. Morbi elementum, massa vitae hendrerit ullamcorper, eros libero vehicula ante, sed lobortis tellus est id ante. Praesent aliquet erat at ante varius ornare. Aenean auctor orci lacus, sed finibus tortor finibus in. Suspendisse id odio est. Maecenas vulputate mi sit amet nisi ultrices venenatis. Proin ut erat eget felis dictum posuere. Sed sodales, velit vel aliquet volutpat, neque orci varius neque, id tincidunt ipsum leo quis ante. Vestibulum nec eleifend neque. Praesent dignissim neque ante, ac pulvinar ipsum convallis sit amet. Fusce velit magna, euismod nec lobortis quis, fermentum et ante.
-							.form-row
-								.col-md
-									.custom-control.custom-checkbox
-										input#acceptTerms.custom-control-input(type="checkbox")
-										label.custom-control-label(for="acceptTerms") I Accept the Terms &amp; Conditions
+									li.media
+										img.mr-3(src="http://via.placeholder.com/350x250" width="150" alt="Generic placeholder image")
+										.media-body
+											.file-name.mt-0.mb-1 Some_image_file.mp3
+											.file-size 3.1 MB
+										button.close(type="button" aria-label="Close")
+											i.fas.fa-trash-alt(aria-hidden="true")
 					// Sumbit Add Business
 					section#businessFinalSubmit.admin-blocks
 						.row
 							.col-sm-6.offset-sm-6.d-flex.justify-content-end
-								a.btn.btn-primary.btn-lg(href="#") Save As Draft
-								button.btn.btn-secondary.btn-lg(type="submit") Add Business
+								a.btn.btn-light.btn-lg(href="#") Cancel
+								button.btn.btn-primary.btn-lg(type="submit") Save & Publish

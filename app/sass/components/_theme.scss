@@ -1438,6 +1438,7 @@ Table of Content:
             background-color:  mix($secondary,white, 10%);
             color:$secondary;
             max-height: 422px;
+            min-height: 100px;
             overflow-y: auto;
             .list-unstyled {
               margin-bottom: 0;
@@ -1931,7 +1932,7 @@ Table of Content:
             }
           }
         }
-        #fmyFollowersList {
+        #myFollowersList {
           .business-followers {
             margin-bottom: 2rem;
             .card {
@@ -2003,6 +2004,10 @@ Table of Content:
                 box-shadow: none!important;
                 border-bottom: 2px solid $primary!important;
                 background-color: transparent!important;
+              }
+              &[title^="Select"] {
+                color:$gray-600;
+                border-bottom: 2px solid $gray-400;
               }
             }
             .dropdown-menu {

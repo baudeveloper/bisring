@@ -1,0 +1,14 @@
+extends ../_layouts/default
+
+block title
+	title Joe the Plumber - My Business - BisRing
+
+block vars
+	- var pageId = 'dashboard', pageClass = 'site page page-standard page-admin', pageTitle = 'Joe the Plumber', dbId = 'my-businesses';
+
+block content
+	include ../_includes/blocks/header-dashboard
+	include ../_includes/admin/db-edit-business
+	include ../_includes/blocks/footer
+	include ../_includes/modals/modal-notification
+	include ../_includes/modals/modal-buy-categories
