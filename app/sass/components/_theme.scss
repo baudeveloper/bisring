@@ -2574,6 +2574,7 @@ Table of Content:
   background-color: $color-FBOOK;
   color:white;
   &:hover {
+    color:white;
     background-color: mix($color-FBOOK, black, 80%);
   }
 }
@@ -2582,6 +2583,7 @@ Table of Content:
   background-color: $color-TWITT;
   color:white;
   &:hover {
+    color:white;
     background-color: mix($color-TWITT, black, 80%);
   }
 }
@@ -2591,6 +2593,7 @@ Table of Content:
   background-color: $color-GOOGL;
   color:white;
   &:hover {
+    color:white;
     background-color: mix($color-GOOGL, black, 80%);
   }
 }
@@ -2600,6 +2603,7 @@ Table of Content:
   margin-bottom: 0;
   color:white;
   &:hover {
+    color:white;
     background-color: mix($color-LINKD, black, 80%);
   }
 }
