@@ -1931,7 +1931,27 @@ Table of Content:
             }
           }
         }
-
+        #fmyFollowersList {
+          .business-followers {
+            margin-bottom: 2rem;
+            .card {
+              padding: 1rem;
+              background-color: mix($secondary, white, 10%);
+              color: $secondary;
+              max-height: 200px;
+              overflow-y: auto;
+              ul {
+                margin-bottom: 0;
+              }
+            }
+          }
+        }
+        #bisringPoints {
+          .points-available {
+            font-family: $font-family-sans-serif;
+            font-size: 1.75rem;
+          }
+        }
         .form-group {
           label {
             font-size: 0.85rem;
