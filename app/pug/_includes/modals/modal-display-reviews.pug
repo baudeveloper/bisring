@@ -1,0 +1,41 @@
+#modalDisplayReview.modal.fade(tabindex='-1', role='dialog', aria-labelledby='modalLogin', aria-hidden='true')
+	.modal-dialog.modal-dialog-centered(role='document')
+		.modal-content
+			.modal-header
+				h5#modalLogin.modal-title(role="heading")
+					span.number-of-reviews 2 
+					| Reviews
+				button.close(type='button', data-dismiss='modal', aria-label='Close')
+					span(aria-hidden='true') ×
+			form
+				.modal-body
+					.col-md-12.business-reviews
+						ul
+							li
+								.review-star-rating
+									i.fas.fa-star
+									i.fas.fa-star
+									i.fas.fa-star
+									i.fas.fa-star
+									i.fas.fa-star-half
+								h3.review-title Highly recommended, would use their services again
+								.review-meta
+									| By 
+									strong.review-person Akilan Theva
+									|   on 
+									span.review-date Sepetember 3, 2017
+								.review-description
+									p Some description of the business.Curabitur diam mi, elementum sit amet diam eu, ornare luctus magna. Donec rutrum congue mi eu dignissim. Cras felis tortor, vehicula et feugiat eget, pellentesque nec massa. Sed suscipit egestas maximus. Cras mollis dignissim libero vel semper.
+							li
+								.review-star-rating
+									i.fas.fa-star
+									i.fas.fa-star
+									i.fas.fa-star
+								h3.review-title Highly recommended, would use their services again
+								.review-meta
+									| By 
+									strong.review-person Akilan Theva
+									|   on 
+									span.review-date Sepetember 3, 2017
+								.review-description
+									p Some description of the business.Curabitur diam mi, elementum sit amet diam eu, ornare luctus magna. Donec rutrum congue mi eu dignissim. Cras felis tortor, vehicula et feugiat eget, pellentesque nec massa. Sed suscipit egestas maximus. Cras mollis dignissim libero vel semper.
