@@ -2,12 +2,20 @@
 	.modal-dialog.modal-dialog-centered(role='document')
 		.modal-content
 			.modal-header
-				h5#modalQuickList.modal-title Quick List
+				h5.modal-title 
+					span.pin-icon 
+					| Quick List
 				button.close(type='button', data-dismiss='modal', aria-label='Close')
 					span(aria-hidden='true') ×
 			.modal-body
-				span
-					| Don't see any lists, Dang!
-			.modal-footer
-				button.btn.btn-light(type='button', data-dismiss='modal') Close
-				button.btn.btn-primary(type='button') Save changes
+				ul.list-group
+					li.list-group-item
+						a(href="#") 
+							span.business-name Joe the Plumber
+							br
+							span.business-address 222 Islington Avenue, Etobicoke ON M8V 3W7
+					li.list-group-item
+						a(href="#") 
+							span.business-name Public Plumbing
+							br
+							span.business-address 222 Islington Avenue, Etobicoke ON M8V 3W7

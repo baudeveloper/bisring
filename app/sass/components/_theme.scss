@@ -635,6 +635,9 @@ Table of Content:
               @include font-size(16);
             }
           }
+          &-stars {
+            text-align: right;
+          }
           &.active {
             .search--tab-list-item-pin {
               .pin-icon:before {
@@ -2473,6 +2476,34 @@ Table of Content:
     a {
       color: $secondary;
       font-weight: bold;
+    }
+  }
+  &#modalQuickList {
+    .pin-icon:before {
+      color: $secondary;
+      content: "\f08d";
+      font-family: "Font Awesome 5 Pro";
+      font-weight: 900;
+      @include font-size(16);
+    }
+    .list-group {
+      a {
+        color: $secondary;
+        display: block;
+        text-decoration: none;
+        span.business-name {
+          font-size: 1.25rem;
+        }
+        span.business-address {
+          font-size: 0.85rem;
+        }
+      }
+      .list-group-item:hover {
+        background-color: $secondary;
+        a {
+          color: white;
+        }
+      }
     }
   }
 }
