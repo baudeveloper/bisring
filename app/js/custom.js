@@ -164,4 +164,24 @@ $(document).ready(function () {
 		$(this).closest(".list-group-item").find(".delete").toggleClass("btn-is-disabled");
 	});
 
+	//Toggle Premim Feature
+	var premiumButton = $(".premium-upgrade");
+	premiumButton.click(function () {
+		$(this).toggleClass("active");
+		var activeState = $(this).hasClass("active");
+		if (activeState) {
+			$(this).closest("#selectMarket").removeClass("disabled");
+			$(this).closest("#selectMarket").find(".business-market-select").prop("disabled", false);
+			$(this).closest("#selectMarket").find(".business-market-select").selectpicker("refresh");
+			$(this).closest("#selectMarket").find("#businessMarketAdd").removeClass("disabled");
+			
+		} else {
+			$(this).closest("#selectMarket").addClass("disabled");
+			$(this).closest("#selectMarket").find(".business-market-select").prop("disabled", true);
+			$(this).closest("#selectMarket").find(".business-market-select").selectpicker("refresh");
+			$(this).closest("#selectMarket").find("#businessMarketAdd").addClass("disabled");
+
+		}
+	});
+
 });

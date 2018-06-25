@@ -1,0 +1,21 @@
+#modalBuyMarkets.modal.fade(tabindex='-1', role='dialog', aria-labelledby='modalLogin', aria-hidden='true')
+	.modal-dialog.modal-dialog-centered(role='document')
+		.modal-content
+			.modal-header
+				h5#modalLogin.modal-title(role="heading") Buy Additional Market Locations
+				button.close(type='button', data-dismiss='modal', aria-label='Close')
+					span(aria-hidden='true') ×
+			form
+				.modal-body
+					.row
+						.col
+							div
+								| Purchase 
+								strong
+									span.no-markets-selected 2
+								|  Market locations for 
+								strong 
+									span.cost $40.00
+				.modal-footer
+					button.btn.btn-light(type="button" data-dismiss="modal") Cancel
+					button.btn.btn-primary(type="submit") Purchase
