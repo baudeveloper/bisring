@@ -27,6 +27,18 @@
 						.row
 							.cat-add.col-lg-8.col-md-7
 								header
+									h2 Select Primary Category
+								.row.align-items-center
+									.col-sm-8
+										.form-group
+												label.invisible(for="#businessCategory") Select a Primary Category
+												select#primaryCategory.form-control.selectpicker(title="Choose Category...", data-live-search="true", required)
+													option
+													option(value='Con1') Contractor
+													option(value='Con2') Contractor
+													option(value='Con3', selected) Contractor
+													option(value='Con4') Contractor
+								header.mt-5
 									h2 Select Business Category
 								.row.align-items-center
 									.col-sm-8
@@ -34,19 +46,18 @@
 												label.invisible(for="#businessCategory") Choose a Category
 												select#businessCategory.form-control.selectpicker(title="Choose Category...", data-live-search="true", required)
 													option
-													option(value='TOR') Finance
-													option(value='MON') Plumber
-													option(value='OTA') Contractor
-													option(value='VAN') Decorator
+													option(value='Finance') Finance
+													option(value='Plumber') Plumber
+													option(value='Painter') Painter
+													option(value='Decorator') Decorator
 									.col-sm-4
 										button#businessCategoryAdd.btn.btn-secondary.btn-lg.btn-block(type="button") Add
 								.row
 									.col
 										h6 Categories Selected:
 											span.categories
-												span.category.badge.badge-secondary(data-category="Plumber")
-													| Plumber
-													button.close(type="button" aria-label="Close")
+												span.category.badge.badge-secondary(data-category="Plumber") Plumber
+													button.close(type="button", aria-label="Close")
 														span(aria-hidden="true") ×
 							.cat-cost.col-lg-4.col-md-5
 								p You have used 
@@ -59,18 +70,19 @@
 									span.cost $72.00
 									|  / 
 									span.period month
-								a#businessCategoryBuy.btn.btn-secondary.btn-lg(href="#", role="link", data-toggle='modal', data-target='#modalBuyCategories') Buy More Categories
+								a#businessCategoryBuy.btn.btn-secondary.btn-block.btn-lg(href="#", role="link", data-toggle='modal', data-target='#modalBuyCategories') Buy More Categories
 					// Select Market
 					section#selectMarket.admin-blocks
 						.row
 							.market-add.col-lg-8.col-md-7
 								header
-									h2 Select Market
+									button.premium-upgrade.btn.btn-secondary.active(type="button") Premium Upgrade
+									h2 Select Additional Marketing Locations
 								.row.align-items-center
 									.col-sm-8
 										.form-group
 												label.invisible(for="#businessMarket") Choose a City
-												select#businessMarket.form-control.selectpicker(title="Choose City...", data-live-search="true", required)
+												select#businessMarket.form-control.selectpicker.business-market-select(title="Choose City...", data-live-search="true", disabled)
 													option
 													option(value='TOR') Toronto, ON, CANADA
 													option(value='MON') Montreal, ON, CANADA
@@ -82,15 +94,23 @@
 									.col
 										h6 Location Selected:
 											span.markets
-												span.market.badge.badge-secondary(data-market="Ottawa, ON, Canada")
-													| Ottawa, ON, CANADA
-													button.close(type="button" aria-label="Close")
+												span.market.badge.badge-secondary(data-category="TorontoONCAN") Toront ON, CAN
+													button.close(type="button", aria-label="Close")
+														span(aria-hidden="true") ×
+												span.market.badge.badge-secondary(data-category="OttawaONCAN") Ottawa ON, CAN
+													button.close(type="button", aria-label="Close")
 														span(aria-hidden="true") ×
 							.market-cost.col-lg-4.col-md-5
-								p 
-									| Upgrade to Premium Plan to select more than one location at the cost of 
-									strong $20 / Location
-								a#upgradeToPremiumPlan.btn.btn-secondary.btn-lg(href="#") Upgrade to Premium Plan
+								.market-premium-content
+									p You have selected 
+										span.no-markets-selected 2
+										|  additional marketing locations.
+									h6 Esitmated Cost:
+									h4
+										span.cost $40.00
+										|  / 
+										span.period month
+									//- a#businessMarketBuy.btn.btn-secondary.btn-block.btn-lg(href="#", role="link", data-toggle='modal', data-target='#modalBuyMarkets') Pay Now
 					// General
 					section#businessGeneral.admin-blocks
 						header.d-flex
@@ -101,6 +121,11 @@
 									.form-group
 										label(for="#businessName") Business Name
 										input#businessName.form-control(type="text", placeholder="Enter the business name", value="Joe the Plumber", required)
+							.form-row
+								.col-md
+									.form-group
+										label(for="#businessDescription") Business Description (max 500 characters)
+										textarea#businessDescription.form-control(placeholder="Enter a Business Description", value="Some Business Descriptions Blah Blah Blah...", rows="3", required) Some Business Descriptions Blah Blah Blah...
 							.form-row
 								.col-md
 									.form-group
@@ -191,7 +216,7 @@
 					// Upload Images
 					section#businessImages.admin-blocks
 						header.d-flex
-							h2.mr-auto Upload Images
+							h2.mr-auto Upload Images (optional)
 							.admin-blocks-btns
 								a.edit.btn.btn-secondary(href="#") Add
 						section
@@ -221,7 +246,7 @@
 					// Upload Videos
 					section#businessVideos.admin-blocks
 						header.d-flex
-							h2.mr-auto Upload Videos
+							h2.mr-auto Upload Videos (optional)
 							.admin-blocks-btns
 								a.edit.btn.btn-secondary(href="#") Add
 						section
@@ -244,7 +269,7 @@
 					// Upload Audio Files
 					section#businessAudio.admin-blocks
 						header.d-flex
-							h2.mr-auto Upload Audio
+							h2.mr-auto Upload Audio (optional)
 							.admin-blocks-btns
 								a.edit.btn.btn-secondary(href="#") Add
 						section

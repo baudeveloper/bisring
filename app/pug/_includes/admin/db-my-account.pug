@@ -141,17 +141,60 @@
 								.dropdown-menu(aria-labelledby="dropdownSubscriptionInformationButtons")
 									a.but.dropdown-item(href="#", role="link", data-toggle='modal', data-target='#modalBuyCategories') Buy More Categories
 						section.display-info
-							p 
-								| You have 
-								span.acct-categories-remaining 3
-								|  out of 
-								span.acct-categories-total 4
-								|  available Business Categories
-							.acct-billing-price
-								.acct-billing-amount $72.00
-								|  / 
-								.acct-billing-period month
-								.acct-billing-is-annual (billed annually)
+							.table-wrapper
+								table.table
+									tr
+										td(width="60%")
+											p 
+												| You have 
+												span.acct-categories-remaining 3
+												|  out of 
+												span.acct-categories-total 4
+												|  available Business Categories
+										td 
+											.acct-billing-price
+												.acct-billing-amount $72.00
+												|  / 
+												.acct-billing-period month
+												.acct-billing-is-annual (billed annually)
+				// Additional Marketing Locations ***Only For Business Users***
+				section#premiumInformation.admin-blocks
+					form(action="")
+						header
+							h2 Additional Marketing Locations (Premium Feature)
+							p You have selected a total of 
+								span.total-market-locations 3
+								|   additional marketing locations for your business(es).
+						section.display-info
+							.table-wrapper
+								table.table
+									tr
+										td.business-name(width="60%") Joe the Plumber
+										td 
+											.mkt-billing-price
+												.mkt-billing-amount $40.00
+												|  / 
+												.mkt-billing-period month
+									tr
+										td.business-name Joe the Contractor
+										td 
+											.mkt-billing-price
+												.mkt-billing-amount $20.00
+												|  / 
+												.mkt-billing-period month
+					// Additional Marketing Locations ***Only For Business Users***
+				section#totalBilled.admin-blocks
+					form(action="")
+						section.display-info
+							.table-wrapper
+								table.table
+									tr
+										td.total(width="60%") Total Billed:
+										td 
+											.total-billing-price
+												.total-billing-amount $132.00
+												|  / 
+												.total-billing-period month
 				hr
 				// Payment History ***Only For Business Users***
 				section#paymentHistory.admin-blocks
@@ -159,7 +202,7 @@
 						h2 Payment History
 					section.display-info
 						.table-wrapper
-							table.table.table-bordered.table-striped
+							table.table.table-bordered.table-striped.special
 								thead
 									tr
 										th.purchase-invoice-title Order

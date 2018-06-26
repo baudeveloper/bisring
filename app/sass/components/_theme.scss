@@ -982,6 +982,48 @@ Table of Content:
               }
             }
           }
+          &#subscriptionInformation {
+            table.table {
+              td {
+                border:0;
+              }
+            }
+          }
+          &#premiumInformation {
+            padding-top: 0rem;
+            margin-top: -2rem;
+            table.table {
+              td {
+                border: 0;
+              }
+            }
+          }
+          &#totalBilled {
+            padding-top: 0rem;
+            padding-bottom: 0rem;
+            margin-top: -2rem;
+            table.table {
+              td {
+                border: 0;
+                font-size: 1.5rem;
+                color: $secondary;
+                &:first-child {
+                  padding-left:0;
+                  color: $primary !important;
+                }
+                &:last-child {
+                  font-size: 2rem;
+                  .total-billing-amount,
+                  .total-billing-period {
+                    font-size: 2rem;
+                    color: $primary !important;
+                  }
+                }
+              }
+            }
+          }
+
+
           @include media-breakpoint-down(sm) {
             padding: 2rem 1rem;
           }
@@ -1040,7 +1082,11 @@ Table of Content:
             }
           }
           .display-info {
-            div[class^="acct-"] {
+            div[class^="acct-"],
+            div[class^="mkt-"],
+            div[class^="total-"] {
+
+
               display: inline-block;
             }
 						.acct-billing-line-02 {
@@ -1058,18 +1104,24 @@ Table of Content:
             .acct-categories-total {
               color: $secondary;
             }
-            .acct-billing-price {
+            .acct-billing-price,
+            .mkt-billing-price,
+            .total-billing-price {
               font-size: 1.35rem;
-              .acct-billing-amount {
+              .acct-billing-amount,
+              .mkt-billing-amount,
+              .total-billing-amount {
                 font-weight: bold;
                 color: $secondary;
               }
-              .acct-billing-period {
+              .acct-billing-period,
+              .mkt-billing-period,
+              .total-billing-period {
                 font-weight: bold;
                 color: $secondary;
               }
             }
-            .table {
+            .table.special {
               thead {
                 tr{
                   th {
@@ -1329,6 +1381,9 @@ Table of Content:
                 margin-right:1rem;
                 .custom-control-label {
                   cursor:pointer;
+                  &:after {
+                    color:white;
+                  }
                 }
               }
             }
@@ -1395,17 +1450,58 @@ Table of Content:
         #selectMarket {
           padding: 1rem;
           padding-top:0;
+          &.disabled {
+            header {
+              h2 {
+                color: $gray-500;
+              }
+            }
+            .market-add {
+              background-color: $gray-100;
+            }
+            h6 {
+              color: $gray-500;
+            }
+            .market-cost {
+              background-color: $gray-200;
+
+            }
+            .market-premium-content,
+            .markets {
+              display: none;
+            }
+          }
+          header {
+            .btn {
+              margin-right: 30px;
+              box-shadow: none;
+              outline: none;
+              &.active {
+                background-color: $gray-300;
+                border-color: $gray-300;
+                color: $secondary;
+
+              }
+            }
+          }
           .market-add {
             padding: 2rem;
-            background-color: $gray-100;
+            background-color: mix($secondary, white, 10%);
+
           }
           .market-cost {
             padding: 2rem;
-            background-color: $gray-300;
+            background-color: mix($secondary, white, 20%);
+
             .btn {
               margin-top: 1rem;
               white-space: normal;
             }
+            .no-markets-selected {
+              font-weight: bold;
+              color: $secondary;
+            }
+
             strong {
               color: $secondary;
             }
@@ -1416,6 +1512,11 @@ Table of Content:
             color: $secondary;
             margin-top: 1rem;
           }
+          h4 {
+            font-weight: bold;
+            color: $secondary;
+          }
+
           .badge {
             border-radius: 3px;
             margin-left: 0.5rem;
@@ -2632,6 +2733,85 @@ Table of Content:
   }
   .custom-checkbox {
     margin-bottom:1rem;
+  }
+}
+
+//Forgot Password and Password Reovery Form
+#forgotPasswordEmailForm,
+#forgotPasswordPhoneForm,
+#resetPasswordForm {
+  .form-group {
+    margin-bottom: 1.5rem;
+    label {
+      font-size: 0.85rem;
+      margin-bottom: 0;
+      color: $gray-600;
+    }
+    input {
+      border: 0;
+      border-bottom: 2px solid $secondary;
+      padding-left: 0;
+      border-radius: 0;
+      color: $secondary;
+      background-color: transparent;
+      &:focus {
+        outline: none;
+        box-shadow: none !important;
+        border-bottom: 2px solid $primary;
+      }
+      &[value=""] {
+        border-bottom: 2px solid $gray-400;
+        &:focus {
+          border-bottom: 2px solid $primary;
+        }
+      }
+    }
+    .bootstrap-select {
+      background-color: transparent;
+      .btn {
+        border: 0;
+        border-bottom: 2px solid $secondary;
+        padding: .375rem .75rem;
+        padding-left: 0;
+        border-radius: 0;
+        color: $secondary;
+        background-color: transparent;
+        font-family: $font-family-sans-serif;
+        &:focus,
+        &:hover,
+        &:active {
+          outline: none !important;
+          box-shadow: none !important;
+          border-bottom: 2px solid $primary !important;
+          background-color: transparent !important;
+        }
+      }
+      .dropdown-menu {
+        .form-control {
+          border: 1px solid $gray-300;
+          background-color: $gray-100;
+          border-radius: 3px;
+          padding-left: .75rem;
+          &:focus {
+            outline: none;
+            box-shadow: none !important;
+            border: 1px solid $gray-300;
+          }
+        }
+      }
+    }
+  }
+  .card {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 0.85rem;
+    padding: 1rem;
+    max-height: 250px;
+    overflow-y: auto;
+    background-color: mix($secondary, white, 10%);
+  }
+  .custom-checkbox {
+    margin-bottom: 1rem;
   }
 }
 

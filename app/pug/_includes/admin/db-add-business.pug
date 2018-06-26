@@ -27,6 +27,18 @@
 						.row
 							.cat-add.col-lg-8.col-md-7
 								header
+									h2 Select Primary Category
+								.row.align-items-center
+									.col-sm-8
+										.form-group
+												label.invisible(for="#businessCategory") Select a Primary Category
+												select#primaryCategory.form-control.selectpicker(title="Choose Category...", data-live-search="true", required)
+													option
+													option(value='TOR') Contractor
+													option(value='MON') Contractor
+													option(value='OTA') Contractor
+													option(value='VAN') Contractor
+								header.mt-5
 									h2 Select Business Category
 								.row.align-items-center
 									.col-sm-8
@@ -55,34 +67,7 @@
 									span.cost $72.00
 									|  / 
 									span.period month
-								a#businessCategoryBuy.btn.btn-secondary.btn-lg(href="#", role="link", data-toggle='modal', data-target='#modalBuyCategories') Buy More Categories
-					// Select Market
-					section#selectMarket.admin-blocks
-						.row
-							.market-add.col-lg-8.col-md-7
-								header
-									h2 Select Market
-								.row.align-items-center
-									.col-sm-8
-										.form-group
-												label.invisible(for="#businessMarket") Choose a City
-												select#businessMarket.form-control.selectpicker(title="Choose City...", data-live-search="true", required)
-													option
-													option(value='TOR') Toronto, ON, CANADA
-													option(value='MON') Montreal, ON, CANADA
-													option(value='OTA') Ottawa, ON, CANADA
-													option(value='VAN') Vancouver, ON, CANADA
-									.col-sm-4
-										button#businessMarketAdd.btn.btn-secondary.btn-lg.btn-block(type="button") Add
-								.row
-									.col
-										h6 Location Selected:
-											span.markets
-							.market-cost.col-lg-4.col-md-5
-								p 
-									| Upgrade to Premium Plan to select more than one location at the cost of 
-									strong $20 / Location
-								a#upgradeToPremiumPlan.btn.btn-secondary.btn-lg(href="#") Upgrade to Premium Plan
+								a#businessCategoryBuy.btn.btn-secondary.btn-block.btn-lg(href="#", role="link", data-toggle='modal', data-target='#modalBuyCategories') Buy More Categories
 					// General
 					section#businessGeneral.admin-blocks
 						header.d-flex
@@ -93,6 +78,11 @@
 									.form-group
 										label(for="#businessName") Business Name
 										input#businessName.form-control(type="text", placeholder="Enter the business name", value="", required)
+							.form-row
+								.col-md
+									.form-group
+										label(for="#businessDescription") Business Description (max 500 characters)
+										textarea#businessDescription.form-control(placeholder="Enter a Business Description", value="", rows="3", required)
 							.form-row
 								.col-md
 									.form-group
@@ -165,50 +155,6 @@
 									.form-group
 										label(for="#businessPhone02") Phone Number (optional)
 										input#businessPhone02.form-control(type="tel", placeholder="Enter a phone number", value="", required)
-					// Promotion
-					section#businessPromotion.admin-blocks
-						header.d-flex
-							h2 Promotion (optional)
-						section
-							.form-row
-								.col-md
-									.form-group
-										label(for="#businessPromotionTitle") Promotion Title
-										input#businessPromotionTitle.form-control(type="text", placeholder="", value="", required)
-							.form-row
-								.col-md
-									.form-group
-										label(for="#businessPromotionDetails") Promotion Details (max 500 characters)
-										textarea#businessWebsite.form-control(placeholder="Promotion Details", value="", rows="3", required)
-					// Upload Images
-					section#businessImages.admin-blocks
-						header.d-flex
-							h2.mr-auto Upload Images
-							.admin-blocks-btns
-								a.edit.btn.btn-secondary(href="#") Add
-						section
-							.card.card-block.listview
-								ul.list-unstyled
-								
-					// Upload Videos
-					section#businessVideos.admin-blocks
-						header.d-flex
-							h2.mr-auto Upload Videos
-							.admin-blocks-btns
-								a.edit.btn.btn-secondary(href="#") Add
-						section
-							.card.card-block.listview
-								ul.list-unstyled
-									
-					// Upload Audio Files
-					section#businessAudio.admin-blocks
-						header.d-flex
-							h2.mr-auto Upload Audio
-							.admin-blocks-btns
-								a.edit.btn.btn-secondary(href="#") Add
-						section
-							.card.card-block.listview
-								ul.list-unstyled
 								
 					// Terms & Conditions
 					section#businessTermsConditions.admin-blocks
@@ -231,5 +177,6 @@
 					section#businessFinalSubmit.admin-blocks
 						.row
 							.col-sm-6.offset-sm-6.d-flex.justify-content-end
-								a.btn.btn-primary.btn-lg(href="#") Save As Draft
-								button.btn.btn-secondary.btn-lg(type="submit") Add Business
+								// button.btn.btn-secondary.btn-lg(type="submit") Create Business and Go To Next Step
+								// The following link is a temporary link to the next step, we should use the commented out button above after submitted should go to the next page.
+								a.btn.btn-secondary.btn-lg(href="db-add-business-options.html") Create Business and Go To Next Step
