@@ -405,11 +405,12 @@ Table of Content:
       &--location {
         .dropdown-toggle {
           color: $white!important;
+          width: 100%;
           border-width: 2px!important;
           line-height: 2.5rem;
           border-radius: .1rem;
           background: transparent!important;
-          border-left-color: $white!important;
+          border-color: $white!important;
           padding: .375rem 2rem .375rem 1rem;
           font-family: "Barlow-Medium", sans-serif;
           &:hover,
@@ -424,6 +425,9 @@ Table of Content:
           color: $white!important;
           border-color: $white!important;
           background-color: rgba($white, .2)!important;
+        }
+        .dropdown-menu {
+          width: 100%;
         }
       }
       &--sticky {

@@ -184,4 +184,32 @@ $(document).ready(function () {
 		}
 	});
 
+	//Location Selector
+	var countrySelected = $("#countrySelector option:selected").text();
+	$("#locationSelector").find(".dropdown-toggle").html(countrySelected);
+
+	$("#locationSelector select").change(function () {
+	  var countrySelected = $("#countrySelector option:selected").text();
+	  var provinceStateSelected = ", " + $("#provinceStateSelector option:selected").text();
+	  var citySelected = ", " + $("#citySelector option:selected").text();
+	  var townSelected = ", " + $("#townSelector option:selected").text();
+	  // $('#locationSelector').find('.dropdown-toggle').html( countrySelected + provinceStateSelected + citySelected + townSelected + ' <span class="caret"></span>');
+	  if ($("#countrySelector").val()) {
+	    $("#locationSelector").find(".dropdown-toggle").html(countrySelected);
+	  } else {
+	    $("#locationSelector").find(".dropdown-toggle").html(" Select Location");
+	  }
+	  if ($("#provinceStateSelector").val()) {
+	    $("#locationSelector").find(".dropdown-toggle").html(countrySelected + provinceStateSelected);
+	  }
+	  if ($("#citySelector").val()) {
+	    $("#locationSelector").find(".dropdown-toggle").html(countrySelected + provinceStateSelected +
+	      citySelected);
+	  }
+	  if ($("#townSelector").val()) {
+	    $("#locationSelector").find(".dropdown-toggle").html(countrySelected + provinceStateSelected +
+	      citySelected + townSelected);
+	  }
+	});
+
 });

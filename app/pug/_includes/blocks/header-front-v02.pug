@@ -1,0 +1,63 @@
+header.site-header(role="header", data-js="site-header")
+	include ../menus/navigation
+	figure.hidden
+		img.services(src="images/header_services_banner.jpg", alt="Services", role="img", data-js="banner-services")
+		img.for-rents(src="http://placebear.com/1200/600", alt="For Rents", role="img", data-js="banner-for-rents")
+		img.for-sales(src="http://placebear.com/1300/600", alt="For Sales", role="img", data-js="banner-for-sales")
+	.container
+		include ../menus/sidenav-front
+		.site-header--wrap
+			img.site-header--logo(src="images/logo-bisring-white.png", alt="BisRing", role="img")
+			h1.site-header--title(role="heading") Find All Your Real Estate Needs and More in One Location.
+			div.site-header--form
+				.form-group.site-header--service
+					label.sr-only(for='selectService') Please select a Service
+					select#selectService.selectpicker(data-js="selectService")
+						option(value="services") Services
+						option(value="for-rents") For Rent
+						option(value="for-sales") For Sales
+				.form-group.site-header--search
+					.input-group
+						label.sr-only(for='inputFindService') Find a Service
+						input#inputFindService.form-control(type='text', placeholder="Find a Service", aria-label="Find a Service", aria-describedby='inputFindService', data-js="findServiceTypeahead")
+						.input-group-append
+							button.btn(type='button')
+								span.fas.fa-search
+				.form-group.site-header--location
+					#locationSelector.dropdown.dropdown-lg
+						button.btn.btn-default.dropdown-toggle(type='button' data-toggle='dropdown' aria-haspopup="true" aria-expanded='false')
+							| Select Location
+						.dropdown-menu.dropdown-menu-right(role='menu')
+							form.form-horizontal(role='form')
+								.form-group
+									label(for='countrySelector') Country
+									select#countrySelector.form-control
+										option(value='canada' selected='selected') Canada
+										option(value='unitedstates') United States
+								.form-group
+									label(for='provinceStateSelector') Province/State
+									select#provinceStateSelector.form-control
+										option
+										option(value='ontario') Ontario
+										option(value='quebec') Quebec
+								.form-group
+									label(for='citySelector') City
+									select#citySelector.form-control
+										option
+										option(value='toronto') Toronto
+										option(value='montreal') Montreal
+										option(value='ottawa') Ottawa
+								.form-group
+									label(for='townSelector') Town
+									select#townSelector.form-control
+										option
+										option(value='downtwon') Downtown
+										option(value='scarborough') Scarborough
+										option(value='northyork') North York
+										option(value='etobicoke') Etobicoke
+		footer.site-header--sticky(role="footer")
+			a.btn.site-header--sticky-link.disabled(href="#", role="link", data-toggle="modal", data-target="#modalQuickList")
+				span.site-header--sticky-icon.fas.fa-thumbtack
+				| Quick List
+				span.site-header--sticky-badge.badge.badge-light 2
+			a.btn.site-header--sticky-link(href="register.html", role="link") Register for free

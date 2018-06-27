@@ -201,7 +201,7 @@ Table of Content:
         border-color: $orange-AA!important;
         text-transform: uppercase;
         background-color: $orange-AA!important;
-        padding: .375rem 0 .375rem 0;
+        padding: .375rem 1rem .375rem 0;
         border-radius: .25rem 0 0 .25rem;
         .filter-option {
           text-align: center;
@@ -273,6 +273,9 @@ Table of Content:
         background-color: $orange-AB!important;
         border-radius: 0 .25rem .25rem 0;
         border-left: 1px solid $orange-AA!important;
+        min-width: 200px;
+        text-align: left;
+        position: absolute;
         &:hover,
         &:focus,
         &:active {
@@ -280,11 +283,18 @@ Table of Content:
           border-color: transparent!important;
           background-color: $orange-AA!important;
         }
+        &::after {
+          position: absolute;
+          right: 1rem;
+          top: 48%;
+        }
       }
       .dropdown-menu {
         margin: 0;
         padding: 0;
         border-radius: 0;
+        color: $orange-AA !important;
+        background-color: $orange-AB !important;
       }
       .dropdown-divider {
         margin: 0;
@@ -2897,4 +2907,24 @@ Table of Content:
 }
 
 
+// Location Selector
+
+#locationSelector .dropdown-menu {
+  margin-top: -1px;
+  padding: 6px 20px;
+  text-align: left;
+}
+
+@media screen and (min-width: 768px) {
+  #adv-search {
+    width: 100%;
+    /* margin: 0 auto; */
+  }
+  #locationSelector {
+    position: static !important;
+    .dropdown-menu {
+      min-width: 500px;
+    }
+  }
+}
 
