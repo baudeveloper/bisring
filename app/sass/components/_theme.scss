@@ -1794,9 +1794,14 @@ Table of Content:
                 margin-left:0;
               }
               li {
-                .close {
+                .delete-review {
                   font-size: 1rem;
                   color: $secondary;
+                }
+                .edit-review {
+                  font-size: 1rem;
+                  color: $secondary;
+                  margin-right: 1rem;
                 }
               }
             }
@@ -1810,6 +1815,14 @@ Table of Content:
               font-size: 1.125rem;
               font-weight: bold;
               margin-left:1rem;
+              .badge {
+                font-size: 0.75rem;
+                font-weight: bold;
+                padding-right:0.5rem;
+                padding-left:0.5rem;
+                margin-left:1rem;
+                text-transform: uppercase;
+              }
             }
             .business-reviewed-meta,
             .my-reviewed-meta {
@@ -2423,7 +2436,8 @@ Table of Content:
       margin-bottom: 0;
       color:$gray-600;
     }
-    input {
+    input,
+    textarea {
       border:0;
       border-bottom: 2px solid $secondary;
       padding-left:0;

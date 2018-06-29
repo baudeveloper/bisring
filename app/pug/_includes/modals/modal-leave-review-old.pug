@@ -1,4 +1,4 @@
-#modalLeaveReviewLoggedInUser.modal.fade(tabindex='-1', role='dialog', aria-labelledby='modalLogin', aria-hidden='true')
+#modalLeaveReview.modal.fade(tabindex='-1', role='dialog', aria-labelledby='modalLogin', aria-hidden='true')
 	.modal-dialog.modal-dialog-centered(role='document')
 		.modal-content
 			.modal-header
@@ -7,6 +7,21 @@
 					span(aria-hidden='true') ×
 			form
 				.modal-body
+						.form-group--md
+							input#reviewerFirstName.form-group--md-input(type='text', required)
+							span.form-group--md-highlight
+							span.form-group--md-bar
+							label.form-group--md-label(for='reviewerFirstName') First Name
+						.form-group--md
+							input#reviewerLastName.form-group--md-input(type='text', required)
+							span.form-group--md-highlight
+							span.form-group--md-bar
+							label.form-group--md-label(for='reviewerLastName') Last Name
+						.form-group--md
+							input#reviewerEmail.form-group--md-input(type='text', required)
+							span.form-group--md-highlight
+							span.form-group--md-bar
+							label.form-group--md-label(for='reviewerEmail') Email Address
 						.form-group--md
 							textarea#reviewerMessage.form-group--md-input(rows="5", required)
 							span.form-group--md-highlight

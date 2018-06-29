@@ -1,0 +1,28 @@
+#modalEditReivew.modal.fade(tabindex='-1', role='dialog', aria-labelledby='modalReview', aria-hidden='true')
+	.modal-dialog.modal-dialog-centered(role='document')
+		.modal-content
+			.modal-header
+				h5.modal-title(role="heading") Edit Review
+				button.close(type='button', data-dismiss='modal', aria-label='Close')
+					span(aria-hidden='true') ×
+			form
+				.modal-body
+					.form-group
+						label(for="reviewTitle") Review Title
+						input#reviewTitle.form-control(type="email", value="Highly recommended, would use their services again", required, tabindex="3")
+					.form-group
+						label(for="reviewerMessage") Review Message
+						textarea#reviewerMessage.form-control(rows="5", required, value="")
+							| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus viverra venenatis arcu. Ut purus ipsum, rhoncus non nisi at, pharetra cursus lorem. Aliquam vel vehicula erat, quis convallis leo. Nam vitae fringilla mauris. Ut dignissim, purus a pretium eleifend, felis quam pretium urna, ac ultricies eros ipsum non elit. Nunc rhoncus nulla et arcu dictum eleifend. Aenean sit amet mi vel metus luctus fermentum. Donec ac nulla non diam tincidunt elementum placerat vitae erat.
+					.form-group
+						label(for='reviewRating') Edit Star Rating
+						.search--tab-list-item-stars
+							select#reviewRating.form-control(data-js="search--tab-list-item-stars", required)
+								option(value='1') 1
+								option(value='2') 2
+								option(value='3') 3
+								option(value='4') 4
+								option(value='5') 5
+				.modal-footer
+					button.btn.btn-secondary(type="button" data-dismiss="modal") Cancel
+					button.btn.btn-primary(type="submit") Save

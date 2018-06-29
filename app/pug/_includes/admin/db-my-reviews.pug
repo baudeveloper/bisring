@@ -30,6 +30,9 @@
 											i.fas.fa-star-half
 										h3.business-reviewed-title 
 											| Highly recommended, would use their services again
+											span.badge.badge-pill.badge-success
+												i.far.fa-check-circle(aria-hidden="true")
+												|  Approved
 										.business-reviewed-meta
 											| By: 
 											span.business-reviewed-reviewer
@@ -46,6 +49,9 @@
 											i.fas.fa-star
 										h3.business-reviewed-title 
 											| Quality Service, but not as affordable
+											span.badge.badge-pill.badge-danger
+												i.far.fa-times-circle(aria-hidden="true")
+												|  Rejected
 										.business-reviewed-meta
 											| By: 
 											span.business-reviewed-reviewer
@@ -71,6 +77,9 @@
 											i.fas.fa-star-half
 										h3.business-reviewed-title 
 											| Highly recommended, would use their services again
+											span.badge.badge-pill.badge-success
+												i.far.fa-check-circle(aria-hidden="true")
+												|  Approved
 										.business-reviewed-meta
 											| By: 
 											span.business-reviewed-reviewer
@@ -87,6 +96,9 @@
 											i.fas.fa-star
 										h3.business-reviewed-title 
 											| Quality Service, but not as affordable
+											span.badge.badge-pill.badge-success
+												i.far.fa-check-circle(aria-hidden="true")
+												|  Approved
 										.business-reviewed-meta
 											| By: 
 											span.business-reviewed-reviewer
@@ -101,8 +113,10 @@
 							.my-review
 								ul.list-unstyled
 									li
-										button.close(type="button" aria-label="Delete" title="Delete Review")
+										button.close.delete-review(type="button" aria-label="Delete" title="Delete Review")
 											i.fas.fa-trash-alt(aria-hidden="true")
+										button.close.edit-review(type="button" aria-label="Edit" title="Edit Review", data-toggle='modal', data-target='#modalEditReivew')
+											i.fas.fa-pencil-alt(aria-hidden="true")
 										span.my-reviewed-star-rating
 											i.fas.fa-star
 											i.fas.fa-star
@@ -110,6 +124,9 @@
 											i.fas.fa-star-half
 										h3.my-reviewed-title 
 											| Highly recommended, would use their services again
+											span.badge.badge-pill.badge-success
+												i.far.fa-check-circle(aria-hidden="true")
+												|  Approved
 										.my-reviewed-meta
 											| For: 
 											a.busines-reviewed-name(href="#")
@@ -120,14 +137,19 @@
 										.my-reviewed-message
 											p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus viverra venenatis arcu. Ut purus ipsum, rhoncus non nisi at, pharetra cursus lorem. Aliquam vel vehicula erat, quis convallis leo. Nam vitae fringilla mauris. Ut dignissim, purus a pretium eleifend, felis quam pretium urna, ac ultricies eros ipsum non elit. Nunc rhoncus nulla et arcu dictum eleifend. Aenean sit amet mi vel metus luctus fermentum. Donec ac nulla non diam tincidunt elementum placerat vitae erat.
 									li
-										button.close(type="button" aria-label="Delete" title="Delete Review")
+										button.close.delete-review(type="button" aria-label="Delete" title="Delete Review")
 											i.fas.fa-trash-alt(aria-hidden="true")
+										button.close.edit-review(type="button" aria-label="Edit" title="Edit Review", data-toggle='modal', data-target='#modalEditReivew')
+											i.fas.fa-pencil-alt(aria-hidden="true")
 										span.my-reviewed-star-rating
 											i.fas.fa-star
 											i.fas.fa-star
 											i.fas.fa-star
 										h3.my-reviewed-title 
 											| Quality Service, but not as affordable
+											span.badge.badge-pill.badge-danger
+												i.far.fa-times-circle(aria-hidden="true")
+												|  Rejected
 										.my-reviewed-meta
 											| For: 
 											a.busines-reviewed-name(href="#")
