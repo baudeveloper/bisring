@@ -3,7 +3,7 @@
 		.row
 			// Dasboard Sidebar Menu
 			aside.admin-nav.col-lg-3.col-md-4
-				include db-sidebar-navigation	
+				include db-sidebar-navigation
 			// Dasboard Content
 			main.admin-content.col-lg-9.col-md-8(role="main")
 				h1.page-title Add Business
@@ -50,22 +50,18 @@
 													option(value='MON') Plumber
 													option(value='OTA') Contractor
 													option(value='VAN') Decorator
-									.col-sm-4
-										button#businessCategoryAdd.btn.btn-secondary.btn-lg.btn-block(type="button") Add
-								.row
-									.col
-										h6 Categories Selected:
-											span.categories
+									//- .col-sm-4
+									//- 	button#businessCategoryAdd.btn.btn-secondary.btn-lg.btn-block(type="button") Add
 							.cat-cost.col-lg-4.col-md-5
-								p You have used 
+								p You have used&nbsp;
 									span.categories-available 3
-									|  out of 
+									|  out of&nbsp;
 									span.categories-total 4
 									|  available Business Categories
 								h6 Esitmated Cost:
 								h4
 									span.cost $72.00
-									|  / 
+									|  /
 									span.period month
 								a#businessCategoryBuy.btn.btn-secondary.btn-block.btn-lg(href="#", role="link", data-toggle='modal', data-target='#modalBuyCategories') Buy More Categories
 					// General
@@ -155,7 +151,7 @@
 									.form-group
 										label(for="#businessPhone02") Phone Number (optional)
 										input#businessPhone02.form-control(type="tel", placeholder="Enter a phone number", value="", required)
-								
+
 					// Terms & Conditions
 					section#businessTermsConditions.admin-blocks
 						header.d-flex

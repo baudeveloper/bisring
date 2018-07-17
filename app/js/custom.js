@@ -119,7 +119,7 @@ $(document).ready(function () {
 		display: "team",
 		source: nbaTeams,
 		templates: {
-			header: "<h3 class=\"tt-title\">Services</h3>"
+			header: "<a href='#' class=\"tt-title\">Services</a>"
 		}
 	});
 
@@ -174,7 +174,7 @@ $(document).ready(function () {
 			$(this).closest("#selectMarket").find(".business-market-select").prop("disabled", false);
 			$(this).closest("#selectMarket").find(".business-market-select").selectpicker("refresh");
 			$(this).closest("#selectMarket").find("#businessMarketAdd").removeClass("disabled");
-			
+
 		} else {
 			$(this).closest("#selectMarket").addClass("disabled");
 			$(this).closest("#selectMarket").find(".business-market-select").prop("disabled", true);
@@ -213,3 +213,22 @@ $(document).ready(function () {
 	});
 
 });
+
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function() {
+	"use strict";
+	window.addEventListener("load", function() {
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+		var forms = document.getElementsByClassName("needs-validation");
+    // Loop over them and prevent submission
+		var validation = Array.prototype.filter.call(forms, function(form) {
+			form.addEventListener("submit", function(event) {
+				if (form.checkValidity() === false) {
+					event.preventDefault();
+					event.stopPropagation();
+				}
+				form.classList.add("was-validated");
+			}, false);
+		});
+	}, false);
+})();

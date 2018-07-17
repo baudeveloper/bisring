@@ -7,6 +7,8 @@
 						img.img-fluid(src="images/BisRing_logo.jpg")
 					.login-form
 						form.needs-validation(novalidate)
+							.alert.alert-danger(role="alert")
+								span The username or password was not valid.
 							.form-group
 								label.sr-only(for='loginEmail') Email address
 								input#loginEmail.form-control(type='email', aria-describedby='emailHelp', placeholder='Email Address', required, tabindex='1')
