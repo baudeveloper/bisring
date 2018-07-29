@@ -468,6 +468,12 @@ Table of Content:
   &-content {
     padding-top: 2rem;
     padding-bottom: 2rem;
+    h2 {
+      margin-top: 2rem;
+    }
+    p {
+      margin-bottom:1rem;
+    }
   }
   &-sidebar {
     overflow: auto;
@@ -803,7 +809,7 @@ Table of Content:
         display: none;
       }
     }
-  
+
   }
   &-standard {
     .site-header {
@@ -973,7 +979,7 @@ Table of Content:
           @include media-breakpoint-down(sm) {
             margin-left: 1rem;
           }
-          
+
         }
         hr {
           color: $silver-AI;
@@ -1068,7 +1074,7 @@ Table of Content:
                 outline:none;
                 box-shadow: none;
                 color: $secondary;
-                
+
                 &:after,
                 &:before {
                   display: none;
@@ -1174,12 +1180,12 @@ Table of Content:
                 }
                 tr {
                 }
-                
+
                 td {
                   /* Behave  like a "row" */
                   border: none;
                   position: relative;
-                  padding-left: 50%; 
+                  padding-left: 50%;
                   white-space: normal;
                   text-align:right!important;
                   padding:0.25rem 0.5rem;
@@ -1187,11 +1193,11 @@ Table of Content:
                     /* Now like a table header */
                     position: absolute;
                     /* Top/left values mimic padding */
-                    color: $secondary; 
+                    color: $secondary;
                     top: 6px;
                     left: 0.5rem;
-                    width: 45%; 
-                    padding-right: 10px; 
+                    width: 45%;
+                    padding-right: 10px;
                     white-space: nowrap;
                     text-align:left;
                     font-size: 0.85rem;
@@ -1236,7 +1242,7 @@ Table of Content:
               @include media-breakpoint-down(sm) {
                 margin-bottom: 1rem;
                 border: 1px solid $gray-500;
-              } 
+              }
               h3 {
                 font-size: 1rem;
                 text-transform: uppercase;
@@ -1328,7 +1334,7 @@ Table of Content:
               .custom-control-label {
                 cursor:pointer;
               }
-              
+
               @include media-breakpoint-down(sm) {
                 &:first-child {
                   margin-left:0!important;
@@ -2322,7 +2328,7 @@ Table of Content:
       white-space:nowrap;
       overflow-x:auto;
     }
-    
+
     #myCarousel .carousel-indicators {
         width: initial;
         margin-left: initial;
@@ -2337,7 +2343,7 @@ Table of Content:
         }
 
     }
-    
+
     #myCarousel .carousel-indicators > li {
         width: initial;
         height: initial;
@@ -2347,7 +2353,7 @@ Table of Content:
           display: block;
         }
     }
-    
+
     #myCarousel .carousel-indicators > li.active img {
         opacity: 0.7;
     }
