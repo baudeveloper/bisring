@@ -2,14 +2,243 @@
 	.container
 		h1(role="heading")
 			| #{pageTitle}
-		p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque aut nulla earum! Accusamus ducimus sequi repellendus? Error, illo inventore, consequatur iure laudantium veritatis quisquam a perspiciatis eligendi ipsum impedit omnis.
-		p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque aut nulla earum! Accusamus ducimus sequi repellendus? Error, illo inventore, consequatur iure laudantium veritatis quisquam a perspiciatis eligendi ipsum impedit omnis.
-		p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque aut nulla earum! Accusamus ducimus sequi repellendus? Error, illo inventore, consequatur iure laudantium veritatis quisquam a perspiciatis eligendi ipsum impedit omnis.
-		p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque aut nulla earum! Accusamus ducimus sequi repellendus? Error, illo inventore, consequatur iure laudantium veritatis quisquam a perspiciatis eligendi ipsum impedit omnis.
-		p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque aut nulla earum! Accusamus ducimus sequi repellendus? Error, illo inventore, consequatur iure laudantium veritatis quisquam a perspiciatis eligendi ipsum impedit omnis.
-.site-callout.site-callout--minimal
-	.container
-		a.btn.btn-primary.btn--fixed(href="#", role="link", data-toggle='modal', data-target='#modalQuickList')
-			span.site-callout--icon.fas.fa-thumbtack
-			| Quick List
-			span.site-callout--badge.badge.badge-light 2
+		#faqlist.accordion
+			.card
+				#heading01.card-header
+					h5.mb-0
+					button.btn.btn-link(type='button' data-toggle='collapse' data-target='#collapse01' aria-expanded='false' aria-controls='collapse01')
+						| What is a BisRinger?
+				#collapse01.collapse(aria-labelledby='heading01' data-parent='#faqlist')
+					.card-body
+						| A BisRinger is a FREE registered user who doesn&rsquo;t advertise their business but seeks the services of other companies. They have access to a certain number of features such as My Virtual Team, rating and writing reviews for businesses, and follow businesses. By referring BisRing to other people, they can accumulate BisRing points that can potentially be used towards upgrading to a ProBisRinger.
+			.card
+				#heading02.card-header
+					h5.mb-0
+					button.btn.btn-link.collapsed(type='button' data-toggle='collapse' data-target='#collapse02' aria-expanded='false' aria-controls='collapse02')
+						| What is a ProBisRinger?
+				#collapse02.collapse(aria-labelledby='heading02' data-parent='#faqlist')
+					.card-body
+						| When a BisRinger upgrades their account to market their business, they become a ProBisRinger. By upgrading, a BisRinger provides their business information and their payment information. By choosing a monthly subscription plan, a ProBisRinger can advertise a selected number of businesses they own on a global scale. They have access to all the features a BisRinger has, additionally being able to recommend businesses to others and see reviews left on their businesses by others. By referring BisRing, they can accumulate BisRing points that can be used towards purchasing more business categories, payment towards monthly bill, or purchasing BisRing merchandise in the online store.
+			.card
+				#heading03.card-header
+					h5.mb-0
+					button.btn.btn-link.collapsed(type='button' data-toggle='collapse' data-target='#collapse03' aria-expanded='false' aria-controls='collapse03')
+						| How to become a BisRinger?
+				#collapse03.collapse(aria-labelledby='heading03' data-parent='#faqlist')
+					.card-body
+						| When a user registers for the first time with BisRing and creates a basic account, they are considered a BisRinger. They have access to certain features and can browse through businesses leaving reviews and ratings. They are not able to promote any type of businesses.
+			.card
+				#heading04.card-header
+					h5.mb-0
+					button.btn.btn-link.collapsed(type='button' data-toggle='collapse' data-target='#collapse04' aria-expanded='false' aria-controls='collapse04')
+						| How to become a ProBisRinger?
+				#collapse04.collapse(aria-labelledby='heading04' data-parent='#faqlist')
+					.card-body
+						| When a BisRinger upgrades their account by selecting a subscription plan, provide their business and payment details; they are now a ProBisRinger. They still have access to all the BisRinger features, now they can promote their businesses and reach people on a global scale. There are many features that ProBisRingers can utilize to attract more customers.
+			.card
+				#heading05.card-header
+					h5.mb-0
+					button.btn.btn-link.collapsed(type='button' data-toggle='collapse' data-target='#collapse05' aria-expanded='false' aria-controls='collapse05')
+						| How do I reset my password?
+				#collapse05.collapse(aria-labelledby='heading05' data-parent='#faqlist')
+					.card-body
+						| If you want to reset your passwords possibly for security reasons, simply go to your user dashboard and under &lsquo;My Account&rsquo; you will see the change password button. By clicking this it will open a small window asking for your current password and then asking you to enter your new password two times. Simply click change after you have filled in all the field, and your password has been updated.
+			.card
+				#heading06.card-header
+					h5.mb-0
+					button.btn.btn-link.collapsed(type='button' data-toggle='collapse' data-target='#collapse06' aria-expanded='false' aria-controls='collapse06')
+						| I forgot my password; how do I get a new one?
+				#collapse06.collapse(aria-labelledby='heading06' data-parent='#faqlist')
+					.card-body
+						| If you forget your password when logging in, click the forgot password link to reset your password. It will take you to a page that will give you the option of resetting it using your email or phone number. By entering your email, you will be sent a recovery link to reset your password. On that page you will enter your new password twice. After filling out all the required fields, click login and your password has been changed. If you decide to use your phone number, you will be sent a recovery code via text that you will be required to enter to reset. After entering your phone number and clicking reset, you will be taken to the &lsquo;Password Recovery&rsquo; page where you will be required to enter the recovery code and your new password. After you have filled out all the required fields, simply click login and your password has been updated.
+			.card
+				#heading07.card-header
+					h5.mb-0
+					button.btn.btn-link.collapsed(type='button' data-toggle='collapse' data-target='#collapse07' aria-expanded='false' aria-controls='collapse07')
+						| How do I effectively search a business?
+				#collapse07.collapse(aria-labelledby='heading07' data-parent='#faqlist')
+					.card-body
+						| To effectively search for a business its important to select the prime category your business falls under to narrow the search down. When looking for a business its important to include as many keywords as possible to create a descriptive search that will help the system find the perfect list of results. Choosing the location of where you require this business can also help as it narrows down the search to look for the business in a single city.
+			.card
+				#heading08.card-header
+					h5.mb-0
+					button.btn.btn-link.collapsed(type='button' data-toggle='collapse' data-target='#collapse08' aria-expanded='false' aria-controls='collapse08')
+						| How to use the map?
+				#collapse08.collapse(aria-labelledby='heading08' data-parent='#faqlist')
+					.card-body
+						| After you search for a business and takes you to the search results page, you will see a map of the city you have selected and all the businesses in that area pinned on the map. Using the scroll on your mouse you can zoom in and out of the map to see all the businesses in the area. When you click the pins on the map, it will display the information of the business. If you do not require the map, you can simply click the &lsquo;Hide Map&rsquo; located on the top right above the map.
+			.card
+				#heading09.card-header
+					h5.mb-0
+					button.btn.btn-link.collapsed(type='button' data-toggle='collapse' data-target='#collapse09' aria-expanded='false' aria-controls='collapse09')
+						| How does Quick list work and how do I utilize it?
+				#collapse09.collapse(aria-labelledby='heading09' data-parent='#faqlist')
+					.card-body
+						| When you search for a business and it shows you a list of relevant businesses in the location you have selected, it gives you the option to pin the business to your quicklist. If you are searching for various businesses and don&rsquo;t want to keep going back from one business to another, you can simply add the businesses to your quicklist for easy viewing later. You can view all the businesses you have added to your quicklist by clicking on the &lsquo;My Quicklist&rsquo; tab located in the bottom right corner of the webpage. When you close the browser, all of the businesses you have added will be deleted.
+			.card
+				#heading10.card-header
+					h5.mb-0
+					button.btn.btn-link.collapsed(type='button' data-toggle='collapse' data-target='#collapse10' aria-expanded='false' aria-controls='collapse10')
+						| How do I add a business?
+				#collapse10.collapse(aria-labelledby='heading10' data-parent='#faqlist')
+					.card-body
+						| When you go to your user dashboard, you will see a tab named &lsquo;Add Business&rsquo; on the left-hand side. By clicking this it will take you to a page that will require you to enter information about your business. You will have to select the type of business, what category it falls under, and where your business is located. Next, you will be required to enter the general information about your information like the name of your business, your website URL, address, contact information, and then a brief description of your business. An optional feature is adding a promotion your business may be having at the time but if you have none at the time of creating you can always add one later. Uploading images, videos and audio files always makes your profile page stand out more. Here you can upload up to 1gb in files including commercials and pictures of your past work. After accepting the terms and conditions, you are now able to start promoting your business.
+			.card
+				#heading11.card-header
+					h5.mb-0
+					button.btn.btn-link.collapsed(type='button' data-toggle='collapse' data-target='#collapse11' aria-expanded='false' aria-controls='collapse11')
+						| How do I follow a business?
+				#collapse11.collapse(aria-labelledby='heading11' data-parent='#faqlist')
+					.card-body
+						| When you search for a business and go to their profile page, you will see a follow business button that will add them to your following list. As a BisRinger you can view all the businesses you follow on your dashboard under the tab &lsquo;Businesses I&rsquo;m Following.&rsquo; As a ProBisRinger you can view all the businesses you follow and who follows you from your dashboard under the &lsquo;Businesses I&rsquo;m Following&rsquo; and &lsquo;My Followers&rsquo; tabs. Any new promotions a business you follow adds, you will receive a notification.
+			.card
+				#heading12.card-header
+					h5.mb-0
+					button.btn.btn-link.collapsed(type='button' data-toggle='collapse' data-target='#collapse12' aria-expanded='false' aria-controls='collapse12')
+						| How do I create a promotion?
+				#collapse12.collapse(aria-labelledby='heading12' data-parent='#faqlist')
+					.card-body
+						| When you Add a Business, there is an option to add a promotion at the bottom of the page. At the time of creating your business and you didn&rsquo;t have any ongoing promotions and left it blank, you can go back and make some changes. Simply go to your dashboard and click on the tab &lsquo;My Businesses.&rsquo; This will take you to a page with a list of all your businesses. Select the business you want to add a promotion to and click the edit icon. This will take you to the page you were on when first adding the business and now can make any changes. Scroll down to the add promotion section and fill out all the necessary information. When finished, scroll all the way to the bottom and click update to finalize your changes and add your promotion to your page. Your followers will then be notified of your new promotion.
+			.card
+				#heading13.card-header
+					h5.mb-0
+					button.btn.btn-link.collapsed(type='button' data-toggle='collapse' data-target='#collapse13' aria-expanded='false' aria-controls='collapse13')
+						| What does the BisRing Notification mean?
+				#collapse13.collapse(aria-labelledby='heading13' data-parent='#faqlist')
+					.card-body
+						| Whenever a business that you follow updates their business profile or adds a promotion, you will be notified of this. You can find all your notifications by clicking the bell icon located in the top right corner of the webpage. It displays a number showing how many unread notifications you have. Also using our Instant Lead Generation feature, if you had searched for electricians in the past week and a new electrician business was just added, you will be notified of this new business.
+			.card
+				#heading14.card-header
+					h5.mb-0
+					button.btn.btn-link.collapsed(type='button' data-toggle='collapse' data-target='#collapse14' aria-expanded='false' aria-controls='collapse14')
+						| What is the Premium Plan?
+				#collapse14.collapse(aria-labelledby='heading14' data-parent='#faqlist')
+					.card-body
+						| The Premium Plan is an additional feature to a ProBisRinger account primarily for users who have a business located in multiple locations or users who want to advertise their one category in multiple cities. By paying an additional fee of $20.00 per location, you can purchase one category and market that one business in multiple locations. This additional fee will be added on top of the subscription plan every month.
+			.card
+				#heading15.card-header
+					h5.mb-0
+					button.btn.btn-link.collapsed(type='button' data-toggle='collapse' data-target='#collapse15' aria-expanded='false' aria-controls='collapse15')
+						| How do I become a Premium User?
+				#collapse15.collapse(aria-labelledby='heading15' data-parent='#faqlist')
+					.card-body
+						| As a ProBisRinger if you want to market your business in multiple cities, you are recommended to upgrade to a Premium User. This is done by simply visiting the &lsquo;My Businesses&rsquo; page located on the left hand side of the dashboard. You can select the business you want to upgrade to a Premium Plan and select the edit option. This will take you to the edit page where you will find the Premium button to be enabled, allowing you to add the number of cities you desire. Another method of upgrading to a Premium User is going to the &lsquo;Add Business&rsquo; page. You will be required to fill out all the mandatory information for your business and then proceed to the next step by clicking the &lsquo;Create Business: Next&rsquo; button located at the bottom of the page. This will then take the user to the final page of &lsquo;Add Business&rsquo; where the &lsquo;Premium Upgrade&rsquo; button is to be enabled. When you enable the button, you will then be able to add the number of cities you desire.
+			.card
+				#heading16.card-header
+					h5.mb-0
+					button.btn.btn-link.collapsed(type='button' data-toggle='collapse' data-target='#collapse16' aria-expanded='false' aria-controls='collapse16')
+						| Does BisRing save my credit card information?
+				#collapse16.collapse(aria-labelledby='heading16' data-parent='#faqlist')
+					.card-body
+						| No, BisRing does not save your payment information. Whenever we require you to make a payment, we will prompt you to go through PayPal. All payment transactions are dealt through Braintree which is a division of PayPal. Braintree is a company that specializes in mobile and web payment systems for e-commerce companies. They provide their customers with a merchant account and a payment gateway, along with various features including recurring billing and credit card storage.
+			.card
+				#heading17.card-header
+					h5.mb-0
+					button.btn.btn-link.collapsed(type='button' data-toggle='collapse' data-target='#collapse17' aria-expanded='false' aria-controls='collapse17')
+						| How do I get my monthly invoices?
+				#collapse17.collapse(aria-labelledby='heading17' data-parent='#faqlist')
+					.card-body
+						| As a ProBisRinger you have purchased a monthly subscription plan to advertise your business(es). Every month your credit card will be charged automatically, and you will receive your monthly invoice through the email you have provided us. The invoice will also be kept in your dashboard under payment history located in &lsquo;My Account.&rsquo;
+			.card
+				#heading18.card-header
+					h5.mb-0
+					button.btn.btn-link.collapsed(type='button' data-toggle='collapse' data-target='#collapse18' aria-expanded='false' aria-controls='collapse18')
+						| What is My Virtual Team?
+				#collapse18.collapse(aria-labelledby='heading18' data-parent='#faqlist')
+					.card-body
+						| My Virtual Team is a unique feature to BisRing that allows a BisRinger and ProBisRinger to create multiple teams of businesses. In the future when you want to work with or need a service from these businesses in various cities, you now have access to all your contacts in one location. Teams will be organized by location, so the businesses you add to each team will all be from the same area. This allows for multiple teams to be created depending on where you desire to form your teams. You will then be able to rank the companies you have selected by most preferred to least preferred. For every business category you can select up to three businesses to add to your team and rank them accordingly. If your most preferred business is unavailable you can move to your next option. You would also be able to swap out companies and alter their positions within their team.
+						br
+						br
+						img.img-fluid(src="images/bisring_advantage_02.gif", alt="Create Virtual Teams")
+			.card
+				#heading19.card-header
+					h5.mb-0
+					button.btn.btn-link.collapsed(type='button' data-toggle='collapse' data-target='#collapse19' aria-expanded='false' aria-controls='collapse19')
+						| What is the benefit of creating My Virtual Team?
+				#collapse19.collapse(aria-labelledby='heading19' data-parent='#faqlist')
+					.card-body
+						| The benefit of creating My Virtual Team is to have a group of contacts that you will frequently use in a specific location. My Virtual Team removes the needs of outdated business cards or phone contacts. This feature can be useful when you have a big project and require the service of many businesses or having real estate interests in multiple cities. By creating a My Virtual Team you will have all your contacts and information in one click of a button. This creates an easy and convenient way to communicate with one another.
+			.card
+				#heading20.card-header
+					h5.mb-0
+					button.btn.btn-link.collapsed(type='button' data-toggle='collapse' data-target='#collapse20' aria-expanded='false' aria-controls='collapse20')
+						| How to create My Virtual Team?
+				#collapse20.collapse(aria-labelledby='heading20' data-parent='#faqlist')
+					.card-body
+						p When you go to the user dashboard, you will find a &lsquo;My Virtual Teams&rsquo; tab located on the left-hand side. By clicking it you will be taken to a new page where you will find an &lsquo;Add New Virtual Team&rsquo; button. Clicking this allows you to create a team based off a certain location and then you can search for businesses using the search bar provided. Your team will be organized by their primary categories: Services, For Rent and For Sale.
+						p You will then be able to rank the companies you have selected by most preferred to least preferred. For every business category you can select up to three businesses to add to your team and rank them accordingly. If your most preferred business is unavailable you can move to their next option. You would also be able to swap out companies and alter their positions within their team.
+			.card
+				#heading21.card-header
+					h5.mb-0
+					button.btn.btn-link.collapsed(type='button' data-toggle='collapse' data-target='#collapse21' aria-expanded='false' aria-controls='collapse21')
+						| How do I add a business to my Recommended Businesses?
+				#collapse21.collapse(aria-labelledby='heading21' data-parent='#faqlist')
+					.card-body
+						| When you go to the user dashboard, you will find a &lsquo;My Recommended Businesses&rsquo; tab located on the left-hand side. By clicking it you will be taken to a new page where you will find a search bar that will allow you to search for the business you want to recommend. After you find it, just click the button &lsquo;Add&rsquo; to add the business to your list. All the businesses will be organized by their primary categories; services, for rent and for sale.
+			.card
+				#heading22.card-header
+					h5.mb-0
+					button.btn.btn-link.collapsed(type='button' data-toggle='collapse' data-target='#collapse22' aria-expanded='false' aria-controls='collapse22')
+						| Why do I want to add a business to my Recommended Businesses?
+				#collapse22.collapse(aria-labelledby='heading22' data-parent='#faqlist')
+					.card-body
+						| If you&rsquo;ve enjoyed working with a business, you can add them to your Recommended Businesses. It shows that the company you worked with is a reputable business, and your followers can learn about their business and potentially work with them. Recommending one another is a great way to help each other grow as a business community and this is what we hope to achieve at BisRing.
+			.card
+				#heading23.card-header
+					h5.mb-0
+					button.btn.btn-link.collapsed(type='button' data-toggle='collapse' data-target='#collapse23' aria-expanded='false' aria-controls='collapse23')
+						| How do I earn BisRing points?
+				#collapse23.collapse(aria-labelledby='heading23' data-parent='#faqlist')
+					.card-body
+						| A BisRinger and ProBisRinger can both earn BisRing points by referring BisRing to someone. The user will be required to include the email of the referee. If the email provided is used towards creating a BisRinger or ProBisRinger account, the referrer will gain up to 500 BisRing points. When the referred email is used to register as a BisRinger, the referee will obtain 200 points. If that same user then upgrades to a ProBisRinger; the referee will obtain an additional 300 points. After referring someone, the email you sent must be used to register either as a BisRinger or ProBisRinger within 30-days of receiving the email. If the referred lead registers after the 30-day period, the referrer will not receive any points.
+			.card
+				#heading24.card-header
+					h5.mb-0
+					button.btn.btn-link.collapsed(type='button' data-toggle='collapse' data-target='#collapse24' aria-expanded='false' aria-controls='collapse24')
+						| How to Refer BisRing?
+				#collapse24.collapse(aria-labelledby='heading24' data-parent='#faqlist')
+					.card-body
+						| You can refer BisRing by going to your dashboard and on the left-hand side you will see a tab named &lsquo;Refer BisRing. &rsquo;After clicking it you will be taken to a page where it will ask if you want to share via email or social media. When you refer BisRing via email, that email must be used when registering as a BisRinger or ProBisRinger for you to receive BisRing points.
+			.card
+				#heading25.card-header
+					h5.mb-0
+					button.btn.btn-link.collapsed(type='button' data-toggle='collapse' data-target='#collapse25' aria-expanded='false' aria-controls='collapse25')
+						| What can I redeem BisRing Points towards?
+				#collapse25.collapse(aria-labelledby='heading25' data-parent='#faqlist')
+					.card-body
+						| BisRing Points can be used towards anything within BisRing. Some examples of how these points can be used are upgrading from a BisRinger to a ProBisRinger, purchasing more business categories, redeeming the points towards the monthly bill for a discounted price and finally redeeming the points towards the future BisRing store to purchase merchandise.
+			.card
+				#heading26.card-header
+					h5.mb-0
+					button.btn.btn-link.collapsed(type='button' data-toggle='collapse' data-target='#collapse26' aria-expanded='false' aria-controls='collapse26')
+						| How do I write a review?
+				#collapse26.collapse(aria-labelledby='heading26' data-parent='#faqlist')
+					.card-body
+						| When you visit a ProBisRinger&rsquo;s business page, you will see in a couple of places, &lsquo;Leave a Review&rsquo; link. By clicking this, it will open a small window that will let you leave a review of your experience with the business. Your review cannot exceed 500 characters and after you have completed your review you can give them a rating out of 5 stars. When writing your review try to explain your experience with the business as thoroughly as possible. Talk about the quality of their service and how they interacted with you as a customer. It&rsquo;s important for other users to know how a business works with their client and if they produce the quality of work that they advertise. These reviews also help us rank through businesses on our page as we want to reward the businesses who provide their top-quality service by placing them at the top of the search results.
+			.card
+				#heading27.card-header
+					h5.mb-0
+					button.btn.btn-link.collapsed(type='button' data-toggle='collapse' data-target='#collapse27' aria-expanded='false' aria-controls='collapse27')
+						| What is considered acceptable in a negative review?
+				#collapse27.collapse(aria-labelledby='heading27' data-parent='#faqlist')
+					.card-body
+						| When you had an unpleasant experience working with a certain business, it is important to let people know the truth about how a business interacts with their clients. Leaving negative reviews is obviously acceptable as it informs the public who potentially will want to work with that business about the quality of their work and how they treat their clients. When expressing your dissatisfaction, it is highly unnecessary to include any profanity. Try to write a review that conveys your negative experience with the business as professional and thorough as possible.
+			.card
+				#heading28.card-header
+					h5.mb-0
+					button.btn.btn-link.collapsed(type='button' data-toggle='collapse' data-target='#collapse28' aria-expanded='false' aria-controls='collapse28')
+						| How do I edit a review?
+				#collapse28.collapse(aria-labelledby='heading28' data-parent='#faqlist')
+					.card-body
+						| To edit a review, you have previously written, simply go to your user dashboard and on the left-hand side you will find the &lsquo;My Reviews&rsquo; tab. When you go to the &lsquo;My Reviews&rsquo; tab, you will see reviews that were left for your business and reviews you have given. Select the &lsquo;Reviews I have Given&rsquo; tab and you will see a list of reviews you have left for businesses. Select the review you want to edit and click the edit icon located beside the delete icon. A small window will open allowing you to make any changes you desire, and when you are done click the update button. Note that your review will be required to go through the review process again by the admin to check to see if it still follows our guidelines.
+			.card
+				#heading29.card-header
+					h5.mb-0
+					button.btn.btn-link.collapsed(type='button' data-toggle='collapse' data-target='#collapse29' aria-expanded='false' aria-controls='collapse29')
+						| Why was my review rejected?
+				#collapse29.collapse(aria-labelledby='heading29' data-parent='#faqlist')
+					.card-body
+						| When writing a review, there is a specific guideline that must be followed for your review to be published and seen by other users. The admin will thoroughly go through reviews to check for any inappropriate content and spam comments. If a business receives a review with a star rating of two or lower, the reviewer will be required to provide evidence towards their low review. We must make sure businesses aren&rsquo;t getting slandered by wrongfully getting accused for providing horrible service. The reviewer will be required to provide admin official documents and pictures that back up their claim against the business.
+
+
+

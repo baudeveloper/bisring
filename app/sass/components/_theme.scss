@@ -158,13 +158,13 @@ Table of Content:
       }
       .form-group {
         &:first-child {
-          flex-grow: 1;
+          flex-grow: 2;
         }
         &:first-child+div {
-          flex-grow: 3;
+          flex-grow: 4;
         }
         &:last-child {
-          flex-grow: 2;
+          flex-grow: 1;
         }
       }
       @media (min-width: 62rem) and (max-width: 75rem) {
@@ -176,20 +176,28 @@ Table of Content:
             flex-grow: 1;
           }
           &:last-child {
-            flex-grow: 3;
+            flex-grow: 1;
           }
         }
       }
       @media (min-width: 48rem) and (max-width: 62rem) {
         .form-group {
           &:first-child {
-            flex-grow: 3;
+            flex-grow: 5;
           }
           &:first-child+div {
-            flex-grow: 1;
+            flex-grow:2;
+            min-width: 200px;
           }
           &:last-child {
-            flex-grow: 3;
+            flex-grow: 1;
+            overflow: hidden;
+            .dropdown-toggle {
+              max-width:290px;
+              padding-right: 1rem;
+              height: 62px;
+              white-space: normal;
+            }
           }
         }
       }
@@ -203,6 +211,7 @@ Table of Content:
         background-color: $orange-AA!important;
         padding: .375rem 1rem .375rem 0;
         border-radius: .25rem 0 0 .25rem;
+        min-width: 120px;
         .filter-option {
           text-align: center;
         }
@@ -275,7 +284,8 @@ Table of Content:
         border-left: 1px solid $orange-AA!important;
         min-width: 200px;
         text-align: left;
-        position: absolute;
+        position: relative;
+        width: 100%;;
         &:hover,
         &:focus,
         &:active {
@@ -473,6 +483,50 @@ Table of Content:
     }
     p {
       margin-bottom:1rem;
+    }
+    #faqlist {
+      .card {
+        border:0;
+        border-bottom:1px solid $silver-AD;
+        .card-header {
+          padding: 0;
+          background:transparent;
+          border:0;
+          .btn {
+            padding-left:1rem;
+            display: block;
+            width: 100%;
+            text-align: left;
+            position: relative;
+            text-decoration: none;
+            &:after {
+              position: absolute;
+              display: inline-block;
+              right:0rem;
+              width: 2rem;
+              height: 2rem;
+              content:"-";
+              color: $orange-AA;
+            }
+            &[aria-expanded='false']:after {
+              position: absolute;
+              display: inline-block;
+              right:0rem;
+              width: 2rem;
+              height: 2rem;
+              content:"+";
+              color: $orange-AA;
+            }
+            &[aria-expanded='true'] {
+              background-color: rgba($orange-AA, 0.1);
+              border-bottom: 1px solid $orange-AA;
+            }
+          }
+        }
+        .card-body {
+          padding-bottom:3rem;
+        }
+      }
     }
   }
   &-sidebar {
