@@ -8,6 +8,10 @@
 //==================
 $(document).ready(function () {
 
+  //Virtual Team Sortable Order
+	$( ".tablesort" ).sortable();
+	$( ".tablesort" ).disableSelection();
+
 	// Banner backgrounds
 	var siteCallout = $("[data-js=\"site-callout\"]");
 	var imgSrc = siteCallout.find(".site-callout--img").attr("src");
@@ -211,6 +215,8 @@ $(document).ready(function () {
 	      citySelected + townSelected);
 	  }
 	});
+
+
 
 });
 

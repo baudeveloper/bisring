@@ -5,7 +5,9 @@
 				nav(role="navigation", data-js="site-sidebar--nav")
 					ul.site-sidebar--list(role="list")
 						li.site-sidebar--listitem(role="listitem", class=(dbId === 'my-account' ? 'active' : ''))
-							a.site-sidebar--link(href="dashboard.html") My Account
+							a.site-sidebar--link(href="dashboard.html")
+								i.fas.fa-address-card
+								| My Account
 						li.site-sidebar--listitem(role="listitem", class=(dbId === 'my-virtual-teams' ? 'active' : ''))
 							a.site-sidebar--link(href="db-my-virtual-teams.html") My Virtual Teams
 						li.site-sidebar--listitem(role="listitem", class=(dbId === 'my-reviews' ? 'active' : ''))
@@ -399,14 +401,14 @@
 							h2 Subscription (Annual)
 							a.btn.btn-secondary(href="#", role="link") Buy More Categories
 						p
-							| You have used 
-							a(href="#") 3 
-							| out of 
-							a(href="#") 4 
-							| available 
+							| You have used
+							a(href="#") 3
+							| out of
+							a(href="#") 4
+							| available
 							a(href="#") Business Categories
 						p.highlight
-							strong $72.00 / month 
+							strong $72.00 / month
 							| (billed annually)
 					hr
 					.site-content--cards.form-group

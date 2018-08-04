@@ -3,16 +3,18 @@
 		.row
 			// Dasboard Sidebar Menu
 			aside.admin-nav.col-lg-3.col-md-4
-				include db-sidebar-navigation	
+				include db-sidebar-navigation
 			// Dasboard Content
 			main.admin-content.col-lg-9.col-md-8(role="main")
-				h1.page-title Refer BisRing
+				h1.page-title(style="background-image:url(images/refer_bisring_background.jpg);")
+					i.fas.fa-thumbs-up.mr-2
+					| Refer BisRing
 				// Refer BisRings
 				section#referBisring.admin-blocks
 					.row
 						.refer-via-email.col-sm-6
 							form(action="")
-								p.mb-0 
+								p.mb-0
 									| Gain credits for referring BisRing to your friends via email:
 								.form-group
 									label.invisible(for="#referEmail") Email Address

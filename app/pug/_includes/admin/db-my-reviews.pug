@@ -3,17 +3,19 @@
 		.row
 			// Dasboard Sidebar Menu
 			aside.admin-nav.col-lg-3.col-md-4
-				include db-sidebar-navigation	
+				include db-sidebar-navigation
 			// Dasboard Content
 			main.admin-content.col-lg-9.col-md-8(role="main")
-				h1.page-title My Reviews
+				h1.page-title(style="background-image:url(images/reviews_background.jpg);")
+					i.fas.fa-comments-alt.mr-2
+					| My Reviews
 				// Reviews
 				nav#reviews.admin-blocks
 					.nav.nav-tabs(role="tablist")
 						a#business-reviews-tab.nav-item.nav-link.active(data-toggle="tab" href="#business-reviews" role="tab" aria-controls="business-reviews" aria-selected="true") Reviews for My Business
 						a#my-reviews-tab.nav-item.nav-link(data-toggle="tab" href="#my-reviews" role="tab" aria-controls="my-reviews" aria-selected="false") Reviews I Have Given
 					#nav-tabContent.tab-content
-						#business-reviews.tab-pane.fade.show.active(role="tabpanel" aria-labelledby="business-reviews-tab") 
+						#business-reviews.tab-pane.fade.show.active(role="tabpanel" aria-labelledby="business-reviews-tab")
 							.business-review
 								h2
 									span.business-reviewed
@@ -28,16 +30,16 @@
 											i.fas.fa-star
 											i.fas.fa-star
 											i.fas.fa-star-half
-										h3.business-reviewed-title 
+										h3.business-reviewed-title
 											| Highly recommended, would use their services again
 											span.badge.badge-pill.badge-success
 												i.far.fa-check-circle(aria-hidden="true")
 												|  Approved
 										.business-reviewed-meta
-											| By: 
+											| By:
 											span.business-reviewed-reviewer
 												| Akilan Theva
-											|  on 
+											|  on
 											span.business-reviewed-date
 												| September 3, 2017
 										.business-reviewed-message
@@ -47,16 +49,16 @@
 											i.fas.fa-star
 											i.fas.fa-star
 											i.fas.fa-star
-										h3.business-reviewed-title 
+										h3.business-reviewed-title
 											| Quality Service, but not as affordable
 											span.badge.badge-pill.badge-danger
 												i.far.fa-times-circle(aria-hidden="true")
 												|  Rejected
 										.business-reviewed-meta
-											| By: 
+											| By:
 											span.business-reviewed-reviewer
 												| John Smith
-											|  on 
+											|  on
 											span.business-reviewed-date
 												| December 21, 2017
 										.business-reviewed-message
@@ -75,16 +77,16 @@
 											i.fas.fa-star
 											i.fas.fa-star
 											i.fas.fa-star-half
-										h3.business-reviewed-title 
+										h3.business-reviewed-title
 											| Highly recommended, would use their services again
 											span.badge.badge-pill.badge-success
 												i.far.fa-check-circle(aria-hidden="true")
 												|  Approved
 										.business-reviewed-meta
-											| By: 
+											| By:
 											span.business-reviewed-reviewer
 												| Akilan Theva
-											|  on 
+											|  on
 											span.business-reviewed-date
 												| September 3, 2017
 										.business-reviewed-message
@@ -94,16 +96,16 @@
 											i.fas.fa-star
 											i.fas.fa-star
 											i.fas.fa-star
-										h3.business-reviewed-title 
+										h3.business-reviewed-title
 											| Quality Service, but not as affordable
 											span.badge.badge-pill.badge-success
 												i.far.fa-check-circle(aria-hidden="true")
 												|  Approved
 										.business-reviewed-meta
-											| By: 
+											| By:
 											span.business-reviewed-reviewer
 												| John Smith
-											|  on 
+											|  on
 											span.business-reviewed-date
 												| December 21, 2017
 										.business-reviewed-message
@@ -122,16 +124,16 @@
 											i.fas.fa-star
 											i.fas.fa-star
 											i.fas.fa-star-half
-										h3.my-reviewed-title 
+										h3.my-reviewed-title
 											| Highly recommended, would use their services again
 											span.badge.badge-pill.badge-success
 												i.far.fa-check-circle(aria-hidden="true")
 												|  Approved
 										.my-reviewed-meta
-											| For: 
+											| For:
 											a.busines-reviewed-name(href="#")
 												| Public Plubming
-											| , Reviewd on: 
+											| , Reviewd on:
 											span.business-reviewed-date
 												| September 3, 2017
 										.my-reviewed-message
@@ -145,16 +147,16 @@
 											i.fas.fa-star
 											i.fas.fa-star
 											i.fas.fa-star
-										h3.my-reviewed-title 
+										h3.my-reviewed-title
 											| Quality Service, but not as affordable
 											span.badge.badge-pill.badge-danger
 												i.far.fa-times-circle(aria-hidden="true")
 												|  Rejected
 										.my-reviewed-meta
-											| For: 
+											| For:
 											a.busines-reviewed-name(href="#")
 												| Anta Plubming
-											| , Reviewd on: 
+											| , Reviewd on:
 											span.business-reviewed-date
 												| December 21, 2017
 										.my-reviewed-message

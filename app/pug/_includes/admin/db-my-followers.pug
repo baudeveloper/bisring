@@ -3,16 +3,18 @@
 		.row
 			// Dasboard Sidebar Menu
 			aside.admin-nav.col-lg-3.col-md-4
-				include db-sidebar-navigation	
+				include db-sidebar-navigation
 			// Dasboard Content
 			main.admin-content.col-lg-9.col-md-8(role="main")
-				h1.page-title My Followers
+				h1.page-title(style="background-image:url(images/my_followers_background.jpg);")
+					i.fas.fa-user-friends.mr-2
+					| My Followers
 				// My Followers List
 				section#myFollowersList.admin-blocks
 					#getTheBusinessID1.business-followers
 						header
 							h2
-								| Following: 
+								| Following:
 								span.business-name Joe the Plumber
 								|  (
 								span.number-of-followers 48
@@ -33,7 +35,7 @@
 					#getTheBusinessID2.business-followers
 						header
 							h2
-								| Following: 
+								| Following:
 								span.business-name Public Plumbing
 								|  (
 								span.number-of-followers 2

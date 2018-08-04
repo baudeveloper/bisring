@@ -5,15 +5,17 @@
 			aside.admin-nav.col-lg-3.col-md-4
 				include db-sidebar-navigation
 			// Dasboard Content
-			main.admin-content.col-lg-9.col-md-8.d-flex.align-content-stretch.flex-wrap(role="main")
-				h1.page-title Become a Business User				
+			main.admin-content.col-lg-9.col-md-8(role="main")
+				h1.page-title(style="background-image:url(images/probisringer_background.jpg);")
+					i.fas.fa-user-tie.mr-2
+					| Become a ProBisRinger
 				// Step 2: Select # of Categories & Billing Information
 				section#step02.admin-blocks.edit-mode
 					form(action="")
 						header.d-flex
 							h2.mr-auto Step 2: Select # of Categories &amp; Billing Information
 							.admin-blocks-btns
-								a.next.btn.btn-primary(href="db-become-business-user-step-03.html") Next							
+								a.next.btn.btn-primary(href="db-become-business-user-step-03.html") Next
 						section.edit-info
 							h3 Select Number of Categories to Purchase
 							p You can always purchase additional categories anytime after you upgrade.
@@ -51,12 +53,12 @@
 											input.custom-control-input(type="radio", name="period", id="annualPeriod", value="annually")
 											label.custom-control-label(for="annualPeriod")
 												| Annually (
-												span.disount-amount 10% 
+												span.disount-amount 10%
 												| Discount)
 									.total-calculated.ml-auto
-										| Total: 
+										| Total:
 										span.total-price $72.00
-										|  / 
+										|  /
 										span.total-period monthly
 
 							.add-billing-info

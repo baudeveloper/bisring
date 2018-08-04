@@ -923,6 +923,9 @@ Table of Content:
               &.btn {
                 color: white;
               }
+              i {
+                width: 2rem;
+              }
             }
             &:hover {
               a {
@@ -1023,15 +1026,41 @@ Table of Content:
         padding-right:0;
         min-height: calc(100vh - 256px);
         @include media-breakpoint-down(sm) {
-          padding-top:2rem;
+          padding-top:6rem;
         }
         h1 {
-          margin-left: 2rem;
           font-size: 2rem;
+          margin-bottom: 0;
           color:$secondary;
-          margin-top:1.5rem;
+          padding-top:4rem;
+          padding-left: 2rem;
+          padding-bottom:4rem;
+          background-repeat: no-repeat;
+          background-position: top right;
+          background-size: contain;
+          position: relative;
+          display: flex;
+          align-items: center!important;
+          &:before {
+            position: absolute;
+            display: block;
+            top:0;
+            left:0;
+            bottom:0;
+            right:0;
+            width: 100%;
+            height: 100%;
+            content: " ";
+            background-color:rgba($secondary,0.1);
+            z-index: 1;
+          }
           @include media-breakpoint-down(sm) {
-            margin-left: 1rem;
+            background-size: cover;
+            background-position: center;
+            background-image:none!important;
+            padding-top:2rem;
+            padding-left: 1rem;
+            padding-bottom:2rem;
           }
 
         }
@@ -1155,8 +1184,6 @@ Table of Content:
             div[class^="acct-"],
             div[class^="mkt-"],
             div[class^="total-"] {
-
-
               display: inline-block;
             }
 						.acct-billing-line-02 {
@@ -1759,7 +1786,38 @@ Table of Content:
                         color: $secondary;
                         font-weight: bold;
                       }
-
+                      &.vbusiness-rank {
+                        color: $secondary;
+                        span {
+                          display: block;
+                          width: 100%;
+                          position: relative;
+                          &:after {
+                            position: absolute;
+                            top:0;
+                            left:0;
+                            bottom: 0;
+                            right: 0;
+                          }
+                        }
+                      }
+                    }
+                    tr {
+                      &:nth-of-type(1) {
+                        td.vbusiness-rank span:after {
+                          content:"1"
+                        }
+                      }
+                      &:nth-of-type(2) {
+                        td.vbusiness-rank span:after {
+                          content:"2"
+                        }
+                      }
+                      &:nth-of-type(3) {
+                        td.vbusiness-rank span:after {
+                          content:"3"
+                        }
+                      }
                     }
                   }
                 }
@@ -2356,6 +2414,33 @@ Table of Content:
     @include media-breakpoint-down(sm) {
       padding: 0;
     }
+
+    #assets-tab {
+      width: 100%;
+      .nav-link{
+        color:$secondary;
+        &.active {
+          background-color: $secondary;
+          color: white;
+        }
+      }
+    }
+    #pills-tabContent {
+      float: left;
+      clear: both;
+      max-height: 435px;
+      overflow-y: auto;
+      border:1px solid $gray-400;
+      .list-group {
+        li {
+          border:0;
+        }
+      }
+      #assets-audio {
+        text-align: center;
+      }
+    }
+
     #myCarousel {
       width: 100%;
       text-align: center;

@@ -5,8 +5,10 @@
 			aside.admin-nav.col-lg-3.col-md-4
 				include db-sidebar-navigation
 			// Dasboard Content
-			main.admin-content.col-lg-9.col-md-8.d-flex.align-content-stretch.flex-wrap(role="main")
-				h1.page-title Become a Business User				
+			main.admin-content.col-lg-9.col-md-8(role="main")
+				h1.page-title(style="background-image:url(images/probisringer_background.jpg);")
+					i.fas.fa-user-tie.mr-2
+					| Become a ProBisRinger
 				// Step 3: Pay
 				section#step03.admin-blocks.edit-mode
 					form(action="")
@@ -24,14 +26,14 @@
 												.custom-control.custom-checkbox
 													input.custom-control-input(type="checkbox", id="redeemPoints")
 													label.custom-control-label(for="redeemPoints")
-														| Redeem BisRing Points (You have 
+														| Redeem BisRing Points (You have
 														span.points-available 100
 														|  pts)
 											td
 												span.is-credit-true
-													| CR 
-													span.credit-added $10 
-													| / 
+													| CR
+													span.credit-added $10
+													| /
 													span.period month
 												span.is-credit-false.hidden -
 										tr.coupon-code
@@ -42,16 +44,16 @@
 														input#couponCode.form-control(type="text" placeholder="Enter Code")
 											td
 												span.is-coupon-ture.hidden
-													| CR 
+													| CR
 													span.coupon-added $0.00
-													| / 
+													| /
 													span.period month
 												span.is-coupon-false -
 										tr.total
 											td(colspan="2")
-												| Total: 
+												| Total:
 												span.total-calculated $62.00
-												|  /  
+												|  /
 												span.period month
 							.pay-method.card.card-block
 								.row.d-flex.align-items-center

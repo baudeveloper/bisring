@@ -3,10 +3,12 @@
 		.row
 			// Dasboard Sidebar Menu
 			aside.admin-nav.col-lg-3.col-md-4
-				include db-sidebar-navigation	
+				include db-sidebar-navigation
 			// Dasboard Content
 			main.admin-content.col-lg-9.col-md-8(role="main")
-				h1.page-title My Account
+				h1.page-title(style="background-image:url(images/my_account_background.jpg);")
+					i.fas.fa-address-card.mr-2
+					| My Account
 				// General Information
 				section#generalInformation.admin-blocks
 					form(action="")
@@ -129,7 +131,7 @@
 				section#subscriptionInformation.admin-blocks
 					form(action="")
 						header.d-flex
-							h2 Subscription 
+							h2 Subscription
 								|(
 								span.subscrtiption-type Annual
 								|)
@@ -145,16 +147,16 @@
 								table.table
 									tr
 										td(width="60%")
-											p 
-												| You have 
+											p
+												| You have
 												span.acct-categories-remaining 3
-												|  out of 
+												|  out of
 												span.acct-categories-total 4
 												|  available Business Categories
-										td 
+										td
 											.acct-billing-price
 												.acct-billing-amount $72.00
-												|  / 
+												|  /
 												.acct-billing-period month
 												.acct-billing-is-annual (billed annually)
 				// Additional Marketing Locations ***Only For Business Users***
@@ -162,7 +164,7 @@
 					form(action="")
 						header
 							h2 Additional Marketing Locations (Premium Feature)
-							p You have selected a total of 
+							p You have selected a total of
 								span.total-market-locations 3
 								|   additional marketing locations for your business(es).
 						section.display-info
@@ -170,17 +172,17 @@
 								table.table
 									tr
 										td.business-name(width="60%") Joe the Plumber
-										td 
+										td
 											.mkt-billing-price
 												.mkt-billing-amount $40.00
-												|  / 
+												|  /
 												.mkt-billing-period month
 									tr
 										td.business-name Joe the Contractor
-										td 
+										td
 											.mkt-billing-price
 												.mkt-billing-amount $20.00
-												|  / 
+												|  /
 												.mkt-billing-period month
 					// Additional Marketing Locations ***Only For Business Users***
 				section#totalBilled.admin-blocks
@@ -190,10 +192,10 @@
 								table.table
 									tr
 										td.total(width="60%") Total Billed:
-										td 
+										td
 											.total-billing-price
 												.total-billing-amount $132.00
-												|  / 
+												|  /
 												.total-billing-period month
 				hr
 				// Payment History ***Only For Business Users***
@@ -214,7 +216,7 @@
 									tr
 										td.purchase-invoice(data-title="Order")
 											a.purchace-pdf(href="#", target="_blank")
-												| # 
+												| #
 												span.purchase-invoice-number 1636
 										td.purchase-date(data-title="Date") 03-20-2017 8:42 am EDT
 										td.purchase-details(data-title="Details") Annual Subscription Renewal
@@ -223,7 +225,7 @@
 									tr
 										td.purchase-invoice(data-title="Order")
 											a.purchace-pdf(href="#", target="_blank")
-												| # 
+												| #
 												span.purchase-invoice-number 1639
 										td.purchase-date(data-title="Date") 04-16-2016 9:03 am EDT
 										td.purchase-details(data-title="Details") Category Purchase (2)
@@ -232,7 +234,7 @@
 									tr
 										td.purchase-invoice(data-title="Order")
 											a.purchace-pdf(href="#", target="_blank")
-												| # 
+												| #
 												span.purchase-invoice-number 1743
 										td.purchase-date(data-title="Date") 04-22-2015 12:03 pm EDT
 										td.purchase-details(data-title="Details") Annual Subscription Renewal

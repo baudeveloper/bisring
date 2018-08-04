@@ -9,7 +9,7 @@
 				address.business--address
 					span.bussiness--address-street 222 Islington Ave.
 					br
-					span.bussiness--address-city Etobicoke, 
+					span.bussiness--address-city Etobicoke,
 					span.business--address-province ON
 					br
 					span.business--address-postcode M8V 3W7
@@ -23,71 +23,112 @@
 				a.business--leave-review(href="#", role="link", data-toggle='modal', data-target='#modalLeaveReview') Leave a Review
 				.business--decription
 					p Some description of the business.Curabitur diam mi, elementum sit amet diam eu, ornare luctus magna. Donec rutrum congue mi eu dignissim. Cras felis tortor, vehicula et feugiat eget, pellentesque nec massa. Sed suscipit egestas maximus. Cras mollis dignissim libero vel semper. Proin id volutpat enim. Morbi sagittis enim id urna suscipit venenatis. Nam vel erat lacinia, aliquet magna dictum, mollis felis. Praesent quis facilisis neque. Duis at lobortis leo.
-			.business-assets.col-lg-4.col-md-12.d-flex.order-md-2
-				#myCarousel.carousel.slide(data-ride="carousel")
-					.carousel-inner
-						.carousel-item.active
-							img.img-fluid(src="http://placehold.it/580x580&text=one", alt="First slide")
-						.carousel-item
-							img.img-fluid(src="http://placehold.it/580x580&text=two", alt="Second slide")
-						.carousel-item
-							img.img-fluid(src="http://placehold.it/580x580&text=three", alt="Third slide")
-						.carousel-item
-							img.img-fluid(src="http://placehold.it/580x580&text=four", alt="Fourth slide")
-						.carousel-item
-							img.img-fluid(src="http://placehold.it/580x580&text=five", alt="Fifth slide")
-						.carousel-item
-							img.img-fluid(src="http://placehold.it/580x580&text=six", alt="Sixth slide")
-						.carousel-item
-							img.img-fluid(src="http://placehold.it/580x580&text=seven", alt="Sevent slide")
-					a.carousel-control-prev(href="#myCarousel", role="button", data-slide="prev")
-						span.carousel-control-prev-icon(aria-hidden="true")
-						span.sr-only Previous
-					a.carousel-control-next(href="#myCarousel", role="button", data-slide="next")
-						span.carousel-control-next-icon(aria-hidden="true")
-						span.sr-only Next
-					ul.carousel-indicators.list-inline
-						li.list-inline-item.active
-							a.selected(data-slide-to="0", data-target="#myCarousel")
-								img.img-fluid(src="http://placehold.it/80x60&text=one")
-						li.list-inline-item
-							a(data-slide-to="1", data-target="#myCarousel")
-								img.img-fluid(src="http://placehold.it/80x60&text=two")
-						li.list-inline-item
-							a(data-slide-to="2", data-target="#myCarousel")
-								img.img-fluid(src="http://placehold.it/80x60&text=three")
-						li.list-inline-item
-							a(data-slide-to="3", data-target="#myCarousel")
-								img.img-fluid(src="http://placehold.it/80x60&text=four")
-						li.list-inline-item
-							a(data-slide-to="4", data-target="#myCarousel")
-								img.img-fluid(src="http://placehold.it/80x60&text=five")
-						li.list-inline-item
-							a(data-slide-to="5", data-target="#myCarousel")
-								img.img-fluid(src="http://placehold.it/80x60&text=six")
-						li.list-inline-item
-							acronym(title="")(data-slide-to="6", data-target="#myCarousel")
-								img.img-fluid(src="http://placehold.it/80x60&text=seven")
+			.business-assets.col-lg-4.col-md-12.d-flex.order-md-2.flex-column
+				ul#assets-tab.nav.nav-pills.nav-justified.mb-3.flex-sm-row(role='tablist')
+					li.nav-item
+						a#assets-image-tab.nav-link.active(data-toggle='pill' href='#assets-image' role='tab' aria-controls='assets-image' aria-selected='true' title='images')
+							i.fas.fa-images
+					li.nav-item
+						a#assets-video-tab.nav-link(data-toggle='pill' href='#assets-video' role='tab' aria-controls='assets-video' aria-selected='false' title='videos')
+							i.fas.fa-video
+					li.nav-item
+						a#assets-audio-tab.nav-link(data-toggle='pill' href='#assets-audio' role='tab' aria-controls='assets-audio' aria-selected='false' title='audio')
+							i.fas.fa-volume-up
+				#pills-tabContent.tab-content
+					#assets-image.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='assets-image-tab')
+						#myCarousel.carousel.slide(data-ride="carousel")
+							.carousel-inner
+								.carousel-item.active
+									img.img-fluid(src="http://placehold.it/580x580&text=one", alt="First slide")
+								.carousel-item
+									img.img-fluid(src="http://placehold.it/580x580&text=two", alt="Second slide")
+								.carousel-item
+									img.img-fluid(src="http://placehold.it/580x580&text=three", alt="Third slide")
+								.carousel-item
+									img.img-fluid(src="http://placehold.it/580x580&text=four", alt="Fourth slide")
+								.carousel-item
+									img.img-fluid(src="http://placehold.it/580x580&text=five", alt="Fifth slide")
+								.carousel-item
+									img.img-fluid(src="http://placehold.it/580x580&text=six", alt="Sixth slide")
+								.carousel-item
+									img.img-fluid(src="http://placehold.it/580x580&text=seven", alt="Sevent slide")
+							a.carousel-control-prev(href="#myCarousel", role="button", data-slide="prev")
+								span.carousel-control-prev-icon(aria-hidden="true")
+								span.sr-only Previous
+							a.carousel-control-next(href="#myCarousel", role="button", data-slide="next")
+								span.carousel-control-next-icon(aria-hidden="true")
+								span.sr-only Next
+							ul.carousel-indicators.list-inline
+								li.list-inline-item.active
+									a.selected(data-slide-to="0", data-target="#myCarousel")
+										img.img-fluid(src="http://placehold.it/80x60&text=one")
+								li.list-inline-item
+									a(data-slide-to="1", data-target="#myCarousel")
+										img.img-fluid(src="http://placehold.it/80x60&text=two")
+								li.list-inline-item
+									a(data-slide-to="2", data-target="#myCarousel")
+										img.img-fluid(src="http://placehold.it/80x60&text=three")
+								li.list-inline-item
+									a(data-slide-to="3", data-target="#myCarousel")
+										img.img-fluid(src="http://placehold.it/80x60&text=four")
+								li.list-inline-item
+									a(data-slide-to="4", data-target="#myCarousel")
+										img.img-fluid(src="http://placehold.it/80x60&text=five")
+								li.list-inline-item
+									a(data-slide-to="5", data-target="#myCarousel")
+										img.img-fluid(src="http://placehold.it/80x60&text=six")
+					#assets-video.tab-pane.fade(role='tabpanel' aria-labelledby='assets-video-tab')
+						ul.list-group
+							li.list-group-item
+								video(controls='')
+									source(src='SampleVideo_1280x720_1mb.mp4' type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"')
+							li.list-group-item
+								video(controls='')
+									source(src='SampleVideo_1280x720_1mb.mp4' type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"')
+					#assets-audio.tab-pane.fade(role='tabpanel' aria-labelledby='assets-audio-tab')
+						ul.list-group
+							li.list-group-item
+								audio(controls)
+									source(src='SampleAudio_0.4mb.mp3' type='audio/mpeg')
+							li.list-group-item
+								audio(controls)
+									source(src='SampleAudio_0.7mb.mp3' type='audio/mpeg')
+
 		.row.business-actions
 			.col
 				a.business--add-quicklist.btn.btn-secondary.btn-block(href="#")
 					i.site-callout--icon.fas.fa-thumbtack
 					| Add to Quicklist
+				a.business--added-quicklist.btn.btn-outline-secondary.btn-block.disabled(href="#" role="button" aria-disabled="true")
+					i.site-callout--icon.fas.fa-thumbtack
+					| Added to Quicklist
 			.col
 				a.business--follow-business.btn.btn-secondary.btn-block(href="#")
+					i.site-callout--icon.fas.fa-bookmark
 					| Follow Business
+				a.business--unfollow-business.btn.btn-outline-secondary.btn-block(href="#")
+					i.site-callout--icon.fas.fa-bookmark
+					| Unfollow Business
 			.col
 				a.business--add-my-virtual-team.btn.btn-secondary.btn-block(href="#")
+					i.site-callout--icon.fas.fa-user-plus
 					| Add to My Virtual Team
+				a.business--remove-my-virtual-team.btn.btn-outline-secondary.btn-block(href="#")
+					i.site-callout--icon.fas.fa-user-minus
+					| Remove from Virtual Team
+
 			.col
 				a.business--add-recommended-business.btn.btn-secondary.btn-block(href="#")
+					i.site-callout--icon.fas.fa-badge-check
 					| Add to Recommended Businesses
+				a.business--remove-recommended-business.btn.btn-outline-secondary.btn-block(href="#")
+					i.site-callout--icon.fas.fa-badge-check
+					| Remove Recommended Business
 		.row.business-promotion
 			.col
 				.card.card-block
 					h2 Some Current Promotion
 					p Some description of the business.Curabitur diam mi, elementum sit amet diam eu, ornare luctus magna. Donec rutrum congue mi eu dignissim. Cras felis tortor, vehicula et feugiat eget, pellentesque nec massa. Sed suscipit egestas maximus.
-					a.promotion-link.btn.btn-link(href="http://www.joetheplumber.com/link-to-promotion", target="_blank") Go to Promotion
 		.row
 			.col-md-4.business-recommended-list
 				h2 Recommended Businesses
@@ -100,7 +141,9 @@
 						a(href="#") Joey the Rooter
 			.col-md-8.business-reviews
 				h2 2 Reviews
-				a.btn.btn-secondary(href="#", role="link", data-toggle='modal', data-target='#modalLeaveReview') Leave a Review
+				a.btn.btn-secondary(href="#", role="link", data-toggle='modal', data-target='#modalLeaveReview')
+					i.site-callout--icon.fas.fa-comment-alt-lines
+					| Leave a Review
 				ul
 					li
 						.review-star-rating
@@ -111,9 +154,9 @@
 							i.fas.fa-star-half
 						h3.review-title Highly recommended, would use their services again
 						.review-meta
-							| By 
+							| By
 							strong.review-person Akilan Theva
-							|   on 
+							|   on
 							span.review-date Sepetember 3, 2017
 						.review-description
 							p Some description of the business.Curabitur diam mi, elementum sit amet diam eu, ornare luctus magna. Donec rutrum congue mi eu dignissim. Cras felis tortor, vehicula et feugiat eget, pellentesque nec massa. Sed suscipit egestas maximus. Cras mollis dignissim libero vel semper.
@@ -124,9 +167,9 @@
 							i.fas.fa-star
 						h3.review-title Highly recommended, would use their services again
 						.review-meta
-							| By 
+							| By
 							strong.review-person Akilan Theva
-							|   on 
+							|   on
 							span.review-date Sepetember 3, 2017
 						.review-description
 							p Some description of the business.Curabitur diam mi, elementum sit amet diam eu, ornare luctus magna. Donec rutrum congue mi eu dignissim. Cras felis tortor, vehicula et feugiat eget, pellentesque nec massa. Sed suscipit egestas maximus. Cras mollis dignissim libero vel semper.
