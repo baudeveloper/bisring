@@ -1,6 +1,7 @@
 header.site-header(role="header", data-js="site-header")
 	include ../menus/navigation
 	figure.hidden
+		img.default(src="images/header_default_banner.jpg", alt="Services", role="img", data-js="banner-default")
 		img.services(src="images/header_services_banner.jpg", alt="Services", role="img", data-js="banner-services")
 		img.for-rents(src="images/header_rent_banner.jpg", alt="For Rents", role="img", data-js="banner-for-rents")
 		img.for-sales(src="images/header_sale_banner.jpg", alt="For Sales", role="img", data-js="banner-for-sales")
@@ -12,17 +13,11 @@ header.site-header(role="header", data-js="site-header")
 			div.site-header--form
 				.form-group.site-header--service
 					label.sr-only(for='selectService') Please select a Service
-					select#selectService.selectpicker(data-js="selectService")
+					select#selectService.selectpicker(data-js="selectService" data-none-selected-text="Select Category")
+						option(value="default")
 						option(value="services") Services
 						option(value="for-rents") For Rent
 						option(value="for-sales") For Sales
-				.form-group.site-header--search
-					.input-group
-						label.sr-only(for='inputFindService') Find a Service
-						input#inputFindService.form-control(type='text', placeholder="Find a Service", aria-label="Find a Service", aria-describedby='inputFindService', data-js="findServiceTypeahead")
-						.input-group-append
-							button.btn(type='button')
-								span.fas.fa-search
 				.form-group.site-header--location
 					#locationSelector.dropdown.dropdown-lg
 						button.btn.btn-default.dropdown-toggle(type='button' data-toggle='dropdown' aria-haspopup="true" aria-expanded='false')
@@ -55,6 +50,14 @@ header.site-header(role="header", data-js="site-header")
 										option(value='scarborough') Scarborough
 										option(value='northyork') North York
 										option(value='etobicoke') Etobicoke
+				.form-group.site-header--search
+					.input-group
+						label.sr-only(for='inputFindService') Find a Business
+						input#inputFindService.form-control(type='text', placeholder="Find a Business", aria-label="Find a Business", aria-describedby='inputFindService', data-js="findServiceTypeahead")
+						.input-group-append
+							button.btn(type='button')
+								span.fas.fa-search
+				
 		footer.site-header--sticky(role="footer")
 			a.btn.site-header--sticky-link.disabled(href="#", role="link", data-toggle="modal", data-target="#modalQuickList")
 				span.site-header--sticky-icon.fas.fa-thumbtack

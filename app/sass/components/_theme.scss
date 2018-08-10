@@ -158,13 +158,13 @@ Table of Content:
       }
       .form-group {
         &:first-child {
-          flex-grow: 2;
-        }
-        &:first-child+div {
-          flex-grow: 4;
-        }
-        &:last-child {
           flex-grow: 1;
+        }
+        // &:first-child+div {
+        //   flex-grow: 4;
+        // }
+        &:last-child {
+          flex-grow: 4;
         }
       }
       @media (min-width: 62rem) and (max-width: 75rem) {
@@ -261,6 +261,7 @@ Table of Content:
       }
       input[type="text"] {
         border-radius: 0;
+        border-left:0;
         color: $silver-AA;
         line-height: 3rem;
         padding: .375rem 2rem;
@@ -268,11 +269,14 @@ Table of Content:
       button {
         color: $orange-AA;
         border-radius: 0;
+        border-top-right-radius:0.25rem;
+        border-bottom-right-radius:0.25rem;
         background-color: $white;
         @include font-size(20);
       }
     }
     &--location {
+      margin-bottom: 0;
       .dropdown-toggle {
         line-height: 3rem;
         color: $orange-AA!important;
@@ -280,8 +284,12 @@ Table of Content:
         padding-left: .75rem;
         padding-bottom: .375rem;
         background-color: $orange-AB!important;
-        border-radius: 0 .25rem .25rem 0;
+        border-radius: 0;
+        border-right: 0;
+        margin-right: -1px;
         border-left: 1px solid $orange-AA!important;
+        border-top:1px solid #D0D4D9;
+        border-bottom:1px solid #D0D4D9;
         min-width: 200px;
         text-align: left;
         position: relative;
@@ -1317,9 +1325,17 @@ Table of Content:
           .edit-info {
             padding-left:15px;
             padding-right:15px;
-            label.btn {
+            label .cat-wrapper {
+              height: 100%;
               padding:1rem 0;
+              margin-right:4px;
+              margin-left: 4px;
               white-space: normal;
+              font-weight: normal;
+              font-family: "Barlow-SemiBold",sans-serif;
+              background-color:#eaeaea;
+              text-align: center;
+              border: 1px solid $gray-400;
               @include media-breakpoint-down(sm) {
                 margin-bottom: 1rem;
                 border: 1px solid $gray-500;
@@ -1357,28 +1373,28 @@ Table of Content:
                 text-decoration: none;
                 display: block;
               }
-              &.active {
-                background-color: $secondary;
-                color: white;
-                h3, h4, .cat-cost, .cat-annual-discount {
-                  color: inherit;
-                }
-                a {
-                  color: white!important;
-                }
-                &:focus,
-                &:hover {
-                  background-color: $secondary!important;
-                  color: white!important;
-                  h3, h4, .cat-cost, .cat-annual-discount {
-                    color: inherit!important;
-                  }
-                  a {
-                    color: white!important;
-                  }
-                  cursor:default;
-                }
-              }
+              // &.active {
+              //   background-color: $secondary;
+              //   color: white;
+              //   h3, h4, .cat-cost, .cat-annual-discount {
+              //     color: inherit;
+              //   }
+              //   a {
+              //     color: white!important;
+              //   }
+              //   &:focus,
+              //   &:hover {
+              //     background-color: $secondary!important;
+              //     color: white!important;
+              //     h3, h4, .cat-cost, .cat-annual-discount {
+              //       color: inherit!important;
+              //     }
+              //     a {
+              //       color: white!important;
+              //     }
+              //     cursor:default;
+              //   }
+              // }
             }
             .premium-membership-info {
               margin-top: 2rem;
@@ -2660,6 +2676,7 @@ Table of Content:
       @include font-size(16);
     }
     .list-group {
+      color: $secondary;
       a {
         color: $secondary;
         display: block;
@@ -2673,6 +2690,7 @@ Table of Content:
       }
       .list-group-item:hover {
         background-color: $secondary;
+        color: white;
         a {
           color: white;
         }
@@ -3019,6 +3037,9 @@ Table of Content:
   }
   .input-group-append .btn {
     border-right:0;
+    border-top:1px solid #D0D4D9;
+    border-bottom:1px solid #D0D4D9;
+    margin-left:-1px;
     outline:none;
     box-shadow: none;
   }

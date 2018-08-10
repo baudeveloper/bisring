@@ -38,55 +38,56 @@
 					form(action="")
 						header.d-flex
 							h2.mr-auto Step 1: Select Category Range
-							.admin-blocks-btns
-								a.next.btn.btn-primary(href="db-become-business-user-step-02.html") Next
 						section.edit-info
-							.btn-group-toggle.row(data-toggle="buttons")
-								label.btn.btn-light.col-lg-3.col-md-4
-									input(type="radio" name="categories" id="opt1" autocomplete="off")
-									h3.cat-no 1 Category
-									hr
-									.cat-cost $20 / month
-								label.btn.btn-light.col-lg-3.col-md-4
-									input(type="radio" name="categories" id="opt2" autocomplete="off")
-									h3.cat-no 2 Categories
-									hr
-									.cat-cost $40 / month
-									h4 Annual Discount:
-									.cat-annual-discount 5%
-								label.btn.btn-light.col-lg-3.col-md-4
-									input(type="radio" name="categories" id="opt3" autocomplete="off")
-									h3.cat-no 3-5 Categories
-									hr
-									.cat-cost $60 - $100 / month
-									h4 Annual Discount:
-									.cat-annual-discount 10%
-								label.btn.btn-light.col-lg-3.col-md-4
-									input(type="radio" name="categories" id="opt4" autocomplete="off")
-									h3.cat-no 6-10 Categories
-									hr
-									.cat-cost $120 - $200/ month
-									h4 Annual Discount:
-									.cat-annual-discount 15%
-								label.btn.btn-light.col-lg-3.col-md-4
-									input(type="radio" name="categories" id="opt5" autocomplete="off")
-									h3.cat-no 11-15 Categories
-									hr
-									.cat-cost $220 - $300 / month
-									h4 Annual Discount:
-									.cat-annual-discount 20%
-								label.btn.btn-light.col-lg-3.col-md-4
-									input(type="radio" name="categories" id="opt6" autocomplete="off")
-									h3.cat-no 16-20 Categories
-									hr
-									.cat-cost $320 - $400 / month
-									h4 Annual Discount:
-									.cat-annual-discount 25%
-								label.btn.btn-light.col-lg-3.col-md-4.email
-									input(type="radio" name="categories" id="opt7" autocomplete="off" value="email")
-									h3.cat-no > 21 Categories
-									hr
-									.cat-cost Contact BisRing sales team for special customized rates: sales@bisring.com
+							.row.no-gutters
+								label.col-lg-3.col-md-4
+									.cat-wrapper
+										h3.cat-no 1 Category
+										hr
+										.cat-cost $20 / month
+								label.col-lg-3.col-md-4
+									.cat-wrapper
+										h3.cat-no 2 Categories
+										hr
+										.cat-cost $40 / month
+										h4 Annual Discount:
+										.cat-annual-discount 5%
+								label.col-lg-3.col-md-4
+									.cat-wrapper
+										h3.cat-no 3-5 Categories
+										hr
+										.cat-cost $60 - $100 / month
+										h4 Annual Discount:
+										.cat-annual-discount 10%
+								label.col-lg-3.col-md-4
+									.cat-wrapper
+										h3.cat-no 6-10 Categories
+										hr
+										.cat-cost $120 - $200/ month
+										h4 Annual Discount:
+										.cat-annual-discount 15%
+								label.col-lg-3.col-md-4
+									.cat-wrapper
+										h3.cat-no 11-15 Categories
+										hr
+										.cat-cost $220 - $300 / month
+										h4 Annual Discount:
+										.cat-annual-discount 20%
+								label.col-lg-3.col-md-4
+									.cat-wrapper
+										h3.cat-no 16-20 Categories
+										hr
+										.cat-cost $320 - $400 / month
+										h4 Annual Discount:
+										.cat-annual-discount 25%
+								label.col-lg-3.col-md-4.email
+									.cat-wrapper
+										h3.cat-no > 21 Categories
+										hr
+										a(href="mailto:sales@bisring.com?subject=Request%20to%20Buy%20More%20Categories&body=I%20would%20like%20to%20purchase%20more%20categories%20that%20are%20not%20currently%20available%20through%20the%20site.%0A%0ANo.%20of%20Categories%20needed%3A%20%3Center%20number%20here%3E%0A%0APlease%20contact%20me%20back.%20Thanks.")
+											.cat-cost Contact BisRing sales team for special customized rates: sales@bisring.com
 							.premium-membership-info.row
 								.col.text-center
 									p Note: Once you have become a Business User, you are eligble to enhance your marketing with the ability to add additional marketing locations for your business. at the cost of $20/location. A Premium upgrade feature is availbe when you add or edit your business.
+						.admin-blocks-btns.mt-3.mb-5
+							a.next.btn.btn-primary.float-right(href="db-become-business-user-step-02.html") Next
