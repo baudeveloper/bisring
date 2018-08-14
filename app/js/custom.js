@@ -7,6 +7,8 @@
 // Application Logic
 //==================
 $(document).ready(function () {
+  // Tooltip
+	$("[data-toggle='tooltip']").tooltip();
 
   //Virtual Team Sortable Order
 	$( ".tablesort" ).sortable();

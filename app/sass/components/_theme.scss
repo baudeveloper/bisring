@@ -3112,3 +3112,17 @@ Table of Content:
   }
 }
 
+
+//Tooltip
+.form-group {
+  label {
+    button {
+      &[data-toggle='tooltip'] {
+        padding:0;
+        background: transparent;
+        border:0;
+        color:$secondary;
+      }
+    }
+  }
+}

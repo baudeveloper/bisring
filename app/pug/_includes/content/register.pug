@@ -6,34 +6,49 @@
 					| #{pageTitle}
 				p.lead As a BisRinger you gain access to many features that allow you to interact with businesses in your area and satisfy all your real-estate needs. You can follow all your favourite businesses to receive notifications on any special promotions they may have. Create Virtual Teams in multiple cities to have contacts of companies that you will want to work with or will potentially need a service from in the future.
 				br
-		form#registrationForm(role="form" action="")
+		form#registrationForm(role="form" action="" class="needs-validation" novalidate)
 			.form-row
 				.col-md-6
 					.form-group
 						label(for="inputFirstName") First Name
 						input#inputFirstName.form-control(type="text", value="", required, tabindex="1")
+						.invalid-feedback
+							| First Name is required.
 				.col-md-6
 					.form-group
 						label(for="inputLastName") Last Name
 						input#inputLastName.form-control(type="text", value="", required, tabindex="2")
+						.invalid-feedback
+							| Last Name is required.
 			.form-row
 				.col-md-6
 					.form-group
 						label(for="inputEmail") Email
 						input#inputEmail.form-control(type="email", value="", required, tabindex="3")
+						.invalid-feedback
+							| A proper emaill address is required.
 				.col-md-6
 					.form-group
 						label(for="inputPhone") Phone (Optional)
 						input#inputPhone.form-control(type="tel", value="", tabindex="4")
+						.invalid-feedback
+							| Enter a proper phone number.
 			.form-row
 				.col-md-6
 					.form-group
-						label(for="inputPassword") Password
+						label(for="inputPassword")
+							| Password
+							button.ml-2(type='button' data-toggle='tooltip' data-placement='top' title='Must have atleast one uppercase, one lowercase, one special character and one numerical character and minimum 8 characters in total.')
+								i.fas.fa-info-circle
 						input#inputPassword.form-control(type="password", value="", required, tabindex="5")
+						.invalid-feedback
+							| A proper password is required.
 				.col-md-6
 					.form-group
 						label(for="inputRepeatPassword") Repeat Password
 						input#inputRepeatPassword.form-control(type="password", required, value="", tabindex="6")
+						.invalid-feedback
+							| Matching password is required.
 			.form-row
 				.col-md
 					.form-group
