@@ -10,29 +10,33 @@
 			.form-row
 				.col-md-6
 					.form-group
-						label(for="inputFirstName") First Name
+						label(for="inputFirstName")
+							| First Name
 						input#inputFirstName.form-control(type="text", value="", required, tabindex="1")
 						.invalid-feedback
-							| First Name is required.
+							| &times; First Name is required.
 				.col-md-6
 					.form-group
-						label(for="inputLastName") Last Name
+						label(for="inputLastName")
+							| Last Name
 						input#inputLastName.form-control(type="text", value="", required, tabindex="2")
 						.invalid-feedback
-							| Last Name is required.
+							| &times; Last Name is required.
 			.form-row
 				.col-md-6
 					.form-group
-						label(for="inputEmail") Email
+						label(for="inputEmail")
+							| Email
 						input#inputEmail.form-control(type="email", value="", required, tabindex="3")
 						.invalid-feedback
-							| A proper emaill address is required.
+							| &times; A proper emaill address is required.
 				.col-md-6
 					.form-group
-						label(for="inputPhone") Phone (Optional)
+						label(for="inputPhone")
+							| Phone (Optional)
 						input#inputPhone.form-control(type="tel", value="", tabindex="4")
 						.invalid-feedback
-							| Enter a proper phone number.
+							| &times; Enter a proper phone number.
 			.form-row
 				.col-md-6
 					.form-group
@@ -42,13 +46,14 @@
 								i.fas.fa-info-circle
 						input#inputPassword.form-control(type="password", value="", required, tabindex="5")
 						.invalid-feedback
-							| A proper password is required.
+							| &times; A proper password is required.
 				.col-md-6
 					.form-group
-						label(for="inputRepeatPassword") Repeat Password
+						label(for="inputRepeatPassword")
+							| Repeat Password
 						input#inputRepeatPassword.form-control(type="password", required, value="", tabindex="6")
 						.invalid-feedback
-							| Matching password is required.
+							| &times; Matching password is required.
 			.form-row
 				.col-md
 					.form-group

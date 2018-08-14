@@ -3126,3 +3126,10 @@ Table of Content:
     }
   }
 }
+
+.was-validated .form-control:invalid,
+.form-control.is-invalid,
+.was-validated .custom-select:invalid,
+.custom-select.is-invalid {
+  border-color: $danger!important;
+}
