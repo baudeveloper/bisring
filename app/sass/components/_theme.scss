@@ -3140,3 +3140,7 @@ Table of Content:
 .custom-select.is-invalid {
   border-color: $danger!important;
 }
+
+textarea {
+  overflow: hidden;
+}
