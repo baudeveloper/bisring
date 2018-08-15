@@ -248,7 +248,6 @@ $(document).ready(function () {
 
 
 var textarea = document.querySelector("textarea");
-
 textarea.addEventListener("keydown", autosize);
 
 function autosize() {
