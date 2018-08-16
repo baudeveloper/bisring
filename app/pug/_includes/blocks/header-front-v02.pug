@@ -19,37 +19,39 @@ header.site-header(role="header", data-js="site-header")
 						option(value="for-rents") For Rent
 						option(value="for-sales") For Sales
 				.form-group.site-header--location
-					#locationSelector.dropdown.dropdown-lg
-						button.btn.btn-default.dropdown-toggle(type='button' data-toggle='dropdown' aria-haspopup="true" aria-expanded='false')
-							| Select Location
-						.dropdown-menu.dropdown-menu-right(role='menu')
-							form.form-horizontal(role='form')
-								.form-group
-									label(for='countrySelector') Country
-									select#countrySelector.form-control
-										option(value='canada' selected='selected') Canada
-										option(value='unitedstates') United States
-								.form-group
-									label(for='provinceStateSelector') Province/State
-									select#provinceStateSelector.form-control
-										option
-										option(value='ontario') Ontario
-										option(value='quebec') Quebec
-								.form-group
-									label(for='citySelector') City
-									select#citySelector.form-control
-										option
-										option(value='toronto') Toronto
-										option(value='montreal') Montreal
-										option(value='ottawa') Ottawa
-								.form-group
-									label(for='townSelector') Town
-									select#townSelector.form-control
-										option
-										option(value='downtwon') Downtown
-										option(value='scarborough') Scarborough
-										option(value='northyork') North York
-										option(value='etobicoke') Etobicoke
+					label.sr-only(for='selectLocation') Select a Location
+					input#selectLocation.form-control(type='text', placeholder="Select a Location", aria-label="Select a Location", aria-describedby='selectLocation', data-js="findServiceTypeahead")
+					//- #locationSelector.dropdown.dropdown-lg
+					//- 	button.btn.btn-default.dropdown-toggle(type='button' data-toggle='dropdown' aria-haspopup="true" aria-expanded='false')
+					//- 		| Select Location
+					//- 	.dropdown-menu.dropdown-menu-right(role='menu')
+					//- 		form.form-horizontal(role='form')
+					//- 			.form-group
+					//- 				label(for='countrySelector') Country
+					//- 				select#countrySelector.form-control
+					//- 					option(value='canada' selected='selected') Canada
+					//- 					option(value='unitedstates') United States
+					//- 			.form-group
+					//- 				label(for='provinceStateSelector') Province/State
+					//- 				select#provinceStateSelector.form-control
+					//- 					option
+					//- 					option(value='ontario') Ontario
+					//- 					option(value='quebec') Quebec
+					//- 			.form-group
+					//- 				label(for='citySelector') City
+					//- 				select#citySelector.form-control
+					//- 					option
+					//- 					option(value='toronto') Toronto
+					//- 					option(value='montreal') Montreal
+					//- 					option(value='ottawa') Ottawa
+					//- 			.form-group
+					//- 				label(for='townSelector') Town
+					//- 				select#townSelector.form-control
+					//- 					option
+					//- 					option(value='downtwon') Downtown
+					//- 					option(value='scarborough') Scarborough
+					//- 					option(value='northyork') North York
+					//- 					option(value='etobicoke') Etobicoke
 				.form-group.site-header--search
 					.input-group
 						label.sr-only(for='inputFindService') Find a Business

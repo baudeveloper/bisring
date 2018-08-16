@@ -19,14 +19,16 @@
 									h2 Select Additional Marketing Locations
 								.row.align-items-center
 									.col-sm-8
-										.form-group
-												label.invisible(for="#businessMarket") Choose a City
-												select#businessMarket.form-control.selectpicker.business-market-select(title="Choose City...", data-live-search="true", disabled)
-													option
-													option(value='TOR') Toronto, ON, CANADA
-													option(value='MON') Montreal, ON, CANADA
-													option(value='OTA') Ottawa, ON, CANADA
-													option(value='VAN') Vancouver, ON, CANADA
+										.form-group.typehead-control
+											label.invisible(for='businessMarket') Choose a City
+											input#businessMarket.form-control.business-market-select(type='text', placeholder="Choose City...", aria-label="Choose City...", aria-describedby='businessMarket', data-js="findServiceTypeahead", disabled)
+											//- label.invisible(for="#businessMarket") Choose a City
+											//- select#businessMarket.form-control.selectpicker.business-market-select(title="Choose City...", data-live-search="true", disabled)
+											//- 	option
+											//- 	option(value='TOR') Toronto, ON, CANADA
+											//- 	option(value='MON') Montreal, ON, CANADA
+											//- 	option(value='OTA') Ottawa, ON, CANADA
+											//- 	option(value='VAN') Vancouver, ON, CANADA
 									.col-sm-4
 										button#businessMarketAdd.btn.btn-secondary.btn-lg.btn-block.disabled(type="button") Add
 								.row

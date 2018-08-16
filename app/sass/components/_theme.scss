@@ -172,9 +172,12 @@ Table of Content:
           &:first-child {
             flex-grow: 2;
           }
-          &:first-child+div {
+          &:nth-of-type(2) {
             flex-grow: 1;
           }
+          // &:first-child+div {
+          //   flex-grow: 1;
+          // }
           &:last-child {
             flex-grow: 1;
           }
@@ -185,10 +188,14 @@ Table of Content:
           &:first-child {
             flex-grow: 5;
           }
-          &:first-child+div {
+          &:nth-of-type(2) {
             flex-grow:2;
             min-width: 200px;
           }
+          // &:first-child+div {
+          //   flex-grow:2;
+          //   min-width: 200px;
+          // }
           &:last-child {
             flex-grow: 1;
             overflow: hidden;
@@ -277,6 +284,18 @@ Table of Content:
     }
     &--location {
       margin-bottom: 0;
+      .twitter-typeahead {
+        flex-grow: 1;
+        width: 100%;
+      }
+      input[type="text"] {
+        border-radius: 0;
+        border-left: 0;
+        color: $silver-AA;
+        line-height: 3rem;
+        padding: .375rem 2rem;
+        width: 100%;
+      }
       .dropdown-toggle {
         line-height: 3rem;
         color: $orange-AA!important;
@@ -1578,6 +1597,11 @@ Table of Content:
             }
             .market-add {
               background-color: $gray-100;
+              .typehead-control {
+                input[type="text"] {
+                  border-bottom: 2px solid mix($secondary, white, 40%);
+                }
+              }
             }
             h6 {
               color: $gray-500;
@@ -1607,7 +1631,11 @@ Table of Content:
           .market-add {
             padding: 2rem;
             background-color: mix($secondary, white, 10%);
-
+            .typehead-control {
+              .twitter-typeahead {
+                display: block!important; 
+              }
+            }
           }
           .market-cost {
             padding: 2rem;
@@ -2703,6 +2731,11 @@ Table of Content:
           color: white;
         }
       }
+    }
+  }
+  .typehead-control {
+    .twitter-typeahead {
+      display: block!important;
     }
   }
 }

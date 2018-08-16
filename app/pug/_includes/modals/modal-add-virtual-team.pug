@@ -14,14 +14,16 @@
 								input#virtualTeamName.form-control(type="text", placeholder="Enter a name for your virtual team", value="", required)
 					.form-row
 						.col-md
-							.form-group
-								label(for="#virtualTeamCity") Virtual Team City
-								select#virtualTeamCity.form-control.selectpicker(title="Choose City...", data-live-search="true", required)
-									option
-									option(value='TOR') Toronto, ON, CANADA
-									option(value='MON') Montreal, ON, CANADA
-									option(value='OTA') Ottawa, ON, CANADA
-									option(value='VAN') Vancouver, ON, CANADA
+							.form-group.typehead-control
+								label(for='virtualTeamCity') Virtual Team City
+								input#virtualTeamCity.form-control(type='text', placeholder="Choose City...", aria-label="Choose City...", aria-describedby='virtualTeamCity', data-js="findServiceTypeahead", required)
+								//- label(for="#virtualTeamCity") Virtual Team City
+								//- select#virtualTeamCity.form-control.selectpicker(title="Choose City...", data-live-search="true", required)
+								//- 	option
+								//- 	option(value='TOR') Toronto, ON, CANADA
+								//- 	option(value='MON') Montreal, ON, CANADA
+								//- 	option(value='OTA') Ottawa, ON, CANADA
+								//- 	option(value='VAN') Vancouver, ON, CANADA
 				.modal-footer
 					button.btn.btn-light(type="button" data-dismiss="modal") Cancel
 					button.btn.btn-primary(type="submit") Add
