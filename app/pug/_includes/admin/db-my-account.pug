@@ -9,9 +9,13 @@
 				h1.page-title(style="background-image:url(images/my_account_background.jpg);")
 					i.fas.fa-address-card.mr-2
 					| My Account
+				.alert.alert-danger.alert-dismissible.fade.show(role="alert" style="margin:2rem;")
+					|  Hmmm...for some reason we cannot find subscription information for this account.
+					button.close(type='button' data-dismiss='alert' aria-label='Close')
+						span(aria-hidden='true') &times;
 				// General Information
 				section#generalInformation.admin-blocks
-					form(action="")
+					form(role="form" action="" class="needs-validation" novalidate)
 						header.d-flex
 							h2 General Information
 							.admin-blocks-btns
@@ -33,30 +37,38 @@
 							.form-row
 								.col-md
 									.form-group
-										label(for="#acctUserFirstName") First Name
+										label(for="#acctUserFirstName") First Name *
 										input#acctUserFirstName.form-control(type="text", placeholder="Enter your First Name", value="Prasanna", required)
+										.invalid-feedback
+											| &times; First Name is required.
 								.col-md
 									.form-group
-										label(for="#acctUserLastName") Last Name
+										label(for="#acctUserLastName") Last Name *
 										input#acctUserLastName.form-control(type="text", placeholder="Enter your Last Name", value="Kugananthan", required)
+										.invalid-feedback
+											| &times; Last Name is required.
 							.form-row
 								.col-md
 									.form-group
-										label(for="#acctUserEmail") Email Address
+										label(for="#acctUserEmail") Email Address *
 										input#acctUserFirstName.form-control(type="email", placeholder="Enter your Email Address", value="prasanna@baustein.ca", required)
+										.invalid-feedback
+											| &times; A valid emaill address is required.
 								.col-md
 									.form-group
 										label(for="#acctUserLastName") Phone Number (optional)
 										input#acctUserLastName.form-control(type="tel" placeholder="Enter your Phone Number", value="647 430 5262")
+							.alert.alert-danger.alert-dismissible.fade.show(role="alert")
+								|  Please ensure all recommended fields have been filled in. Thanks.
 							.form-row.form-action-btns
 								.col-md
-									a.update.btn.btn-secondary(href="#") Update
+									button.update.btn.btn-secondary(type="submit") Update
 									a.cancel.btn.btn-light(href="#") Cancel
 
 				hr
 				// Billing Address ***Only For Business Users***
 				section#billingAddress.admin-blocks
-					form(action="")
+					form(role="form" action="" class="needs-validation" novalidate)
 						header.d-flex
 							h2 Billing Address
 							.admin-blocks-btns
@@ -82,32 +94,39 @@
 									.form-group
 										label(for="#acctBillingStreet") Address Line #1
 										input#acctBillingStreet.form-control(type="text", placeholder="Enter an Address", value="222 Islington Avenue", required)
+										.invalid-feedback
+											| &times; A street no and street name is required.
 								.col-md
 									.form-group
 										label(for="#acctBillingLine02") Address Line #2 (optional)
-										input#acctBillingLine02.form-control(type="text", placeholder="Enter a Suite or Apt. #", value="", required)
+										input#acctBillingLine02.form-control(type="text", placeholder="Enter a Suite or Apt. #", value="")
 							.form-row
 								.col-lg-6
 									.form-group
 										label(for="#acctBillingCity") City
 										input#acctBillingCity.form-control(type="text", placeholder="Enter a City", value="Toronto", required)
+										.invalid-feedback
+											| &times; A city is required.
 								.col-lg-4.col-md-6
 									.form-group
 										label(for="#acctBillingProvince") Province/State
-										select#acctBillingProvince.form-control.selectpicker(title="Select a Province or State", regquired)
+										select#acctBillingProvince.form-control.selectpicker(title="Select a Province or State", required)
+											option
 											option(value='AB') Alberta
 											option(value='BC') British Columbia
 											option(value='MB') Manitoba
 											option(value='NB') New Brunswick
 											option(value='NL') Newfoundland and Labrador
 											option(value='NS') Nova Scotia
-											option(value='ON', selected) Ontario
+											option(value='ON') Ontario
 											option(value='PE') Prince Edward Island
 											option(value='QC') Quebec
 											option(value='SK') Saskatchewan
 											option(value='NT') Northwest Territories
 											option(value='NU') Nunavut
 											option(value='YT') Yukon
+										.invalid-feedback
+											| &times; A province is required.
 								.col-lg-2.col-md-6
 									.form-group
 										label(for="#acctBillingPostCoSde") Postal Code/Zip
@@ -116,14 +135,19 @@
 								.col-md-6
 									.form-group
 										label(for="#acctBillingCountry") Country
-										select#acctBillingProvince.form-control.selectpicker(title="Select a Country", regquired)
+										select#acctBillingProvince.form-control.selectpicker(title="Select a Country", required)
+											option
 											option(value='AU') Australia
-											option(value='CA', selected) Canada
+											option(value='CA') Canada
 											option(value='GB') United Kingdom
 											option(value='US') United States
+										.invalid-feedback
+											| &times; A country is required.
+							.alert.alert-danger.alert-dismissible.fade.show(role="alert")
+								|  Please ensure all recommended fields have been filled in. Thanks.
 							.form-row.form-action-btns
 								.col-md
-									a.update.btn.btn-secondary(href="#") Update
+									button.update.btn.btn-secondary(type="submit") Update
 									a.cancel.btn.btn-light(href="#") Cancel
 
 				hr

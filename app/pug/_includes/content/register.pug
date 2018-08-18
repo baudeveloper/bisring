@@ -29,14 +29,12 @@
 							| Email
 						input#inputEmail.form-control(type="email", value="", required, tabindex="3")
 						.invalid-feedback
-							| &times; A proper emaill address is required.
+							| &times; A valid emaill address is required.
 				.col-md-6
 					.form-group
 						label(for="inputPhone")
 							| Phone (Optional)
 						input#inputPhone.form-control(type="tel", value="", tabindex="4")
-						.invalid-feedback
-							| &times; Enter a proper phone number.
 			.form-row
 				.col-md-6
 					.form-group
@@ -53,7 +51,7 @@
 							| Repeat Password
 						input#inputRepeatPassword.form-control(type="password", required, value="", tabindex="6")
 						.invalid-feedback
-							| &times; Matching password is required.
+							| &times; A matching password is required.
 			.form-row
 				.col-md
 					.form-group
@@ -62,11 +60,17 @@
 							p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lacinia sem convallis, vestibulum odio vel, porttitor dolor. Vivamus non libero libero. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam a aliquam urna, non sodales quam. Aliquam at lorem sodales metus faucibus aliquam. Ut porta, leo eget efficitur sagittis, purus lacus lobortis turpis, in euismod mauris enim vel ante. Fusce eget pellentesque enim, ac maximus massa. Nam dui tellus, pretium feugiat elit eu, cursus luctus nisl. Donec quis nulla mauris. Interdum et malesuada fames ac ante ipsum primis in faucibus. Morbi convallis accumsan bibendum. Aenean pellentesque augue eget nisi ultricies volutpat. Nullam quis justo justo. Vestibulum arcu turpis, ultricies quis ullamcorper a, commodo a turpis. Integer euismod vel nisi id consectetur. Nam condimentum odio quis pellentesque dapibus.
 							p Aliquam rutrum quam dolor, a sagittis quam condimentum vitae. In sed mollis magna, non hendrerit diam. Sed lacus massa, scelerisque eget congue sit amet, viverra efficitur ipsum. Praesent lacinia accumsan nunc, at fermentum est vulputate nec. Praesent elit risus, pellentesque nec ultrices et, consequat sed libero. Curabitur a porta nunc. Donec tincidunt mattis dui. Nullam at sodales odio. Vestibulum porta risus non urna pulvinar sollicitudin. Maecenas mi urna, iaculis id metus vitae, sagittis venenatis ex. Aenean posuere odio vel ipsum aliquet gravida. Pellentesque pharetra ac ligula quis consequat.
 							p Nam ac metus vulputate, sagittis dui a, posuere ex. Donec cursus placerat elit, a convallis enim maximus in. Donec vitae leo at orci pretium hendrerit in ac ante. Morbi elementum, massa vitae hendrerit ullamcorper, eros libero vehicula ante, sed lobortis tellus est id ante. Praesent aliquet erat at ante varius ornare. Aenean auctor orci lacus, sed finibus tortor finibus in. Suspendisse id odio est. Maecenas vulputate mi sit amet nisi ultrices venenatis. Proin ut erat eget felis dictum posuere. Sed sodales, velit vel aliquet volutpat, neque orci varius neque, id tincidunt ipsum leo quis ante. Vestibulum nec eleifend neque. Praesent dignissim neque ante, ac pulvinar ipsum convallis sit amet. Fusce velit magna, euismod nec lobortis quis, fermentum et ante.
+			.alert.alert-danger.alert-dismissible.fade.show(role="alert")
+				|  Please ensure all recommended fields have been filled in. Thanks.
+				// button.close(type='button' data-dismiss='alert' aria-label='Close')
+				// 	span(aria-hidden='true') &times;
 			.form-row
 				.col-md
 					.custom-control.custom-checkbox
 						input#acceptTerms.custom-control-input(type="checkbox", required, tabindex="7")
 						label.custom-control-label(for="acceptTerms") I Accept the Terms &amp; Conditions
+						.invalid-feedback
+							| &times; You must accept Terms &amp; Conditions to continue.
 				.col-md.text-right
 					button.btn.btn-primary(type="submit", tabindex="8") Register
 .site-callout.site-callout--minimal

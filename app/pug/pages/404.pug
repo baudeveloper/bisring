@@ -1,0 +1,13 @@
+extends ../_layouts/default
+
+block title
+	title 404 Not Found - BisRing
+
+block vars
+	- var pageId = '404', pageClass = 'site page page-standard', pageTitle = '404 Page Not Found';
+
+block content
+	include ../_includes/blocks/header-minimal
+	include ../_includes/content/404
+	include ../_includes/blocks/footer
+	include ../_includes/modals/modal-quick-list
