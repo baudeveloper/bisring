@@ -391,14 +391,14 @@ Table of Content:
         margin-bottom: 2rem;
         input[type="text"] {
           line-height: 3rem;
-          border-top-left-radius: .25rem;
-          border-bottom-left-radius: .25rem;
+          // border-top-left-radius: .25rem;
+          // border-bottom-left-radius: .25rem;
           padding: .375rem 2rem .375rem 1rem;
         }
         button {
           padding: .5rem 1rem;
-          border-top-right-radius: .25rem;
-          border-bottom-right-radius: .25rem;
+          border-top-right-radius: 0rem;
+          border-bottom-right-radius: 0rem;
           @include font-size(20);
           // border-top: 1px solid #ced4da;
           // border-bottom: 1px solid #ced4da;
@@ -415,8 +415,8 @@ Table of Content:
           line-height: 2.5rem;
           border-top-right-radius: 0;
           border-top-left-radius: 0;
-          border-bottom-right-radius: 0.25rem;
-          border-bottom-left-radius: 0.25rem;
+          border-bottom-right-radius: 0rem;
+          border-bottom-left-radius: 0rem;
           // background: transparent!important;
           border-color: $orange-AB!important;
           padding: .375rem 2rem .375rem 1rem;
