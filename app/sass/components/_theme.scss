@@ -535,6 +535,14 @@ Table of Content:
     p {
       margin-bottom:1rem;
     }
+    .bisring-advantages {
+      th:nth-of-type(2),
+      th:last-child,
+      td:nth-of-type(2),
+      td:last-child {
+        text-align: center;
+      }
+    }
     #faqlist {
       .card {
         border:0;
@@ -1133,15 +1141,15 @@ Table of Content:
             }
           }
           &#subscriptionInformation {
+            padding-bottom: 0rem;
             table.table {
+              margin-bottom: 0;
               td {
                 border:0;
               }
             }
           }
           &#premiumInformation {
-            padding-top: 0rem;
-            margin-top: -2rem;
             table.table {
               td {
                 border: 0;
