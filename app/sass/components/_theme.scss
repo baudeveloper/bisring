@@ -1168,6 +1168,9 @@ Table of Content:
               margin-bottom: 0;
               td {
                 border:0;
+                &:first-child {
+                  padding-left:0;
+                }
               }
             }
           }
@@ -1175,6 +1178,9 @@ Table of Content:
             table.table {
               td {
                 border: 0;
+                &:first-child {
+                  padding-left: 0;
+                }
               }
             }
           }
@@ -1382,12 +1388,12 @@ Table of Content:
             background-color: $gray-100;
             box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
             .feature-check-icon {
-              font-size: 3rem;
-              color: $primary;
+              font-size: 2rem;
+              color: $secondary;
               margin-right:2rem;
             }
             .feature-text {
-              color: $secondary;
+              color: #333;
               p {
                 margin-bottom: 0;
               }
@@ -1736,6 +1742,13 @@ Table of Content:
           h2 {
             color: $primary;
           }
+          #deletePromotion {
+            cursor: pointer;
+            display: block;
+            float:right;
+            color:$secondary;
+            margin-top:0.65rem;
+          }
         }
         #businessImages,
         #businessVideos,
@@ -1853,6 +1866,7 @@ Table of Content:
                 padding: 0;
                 .service-group {
                   padding: 1rem 1.25rem;
+                  padding-top:0;
                 }
                 .rent-group {
                   padding: 1rem 1.25rem;
@@ -1861,6 +1875,11 @@ Table of Content:
                 .sale-group {
                   padding: 1rem 1.25rem;
                   // border-top: 1px solid mix($secondary, white, 40%);
+                }
+                h2 {
+                  font-size: 1.5rem;
+                  line-height: 1.5;
+                  color: $secondary;
                 }
 
                 h6 {
@@ -1980,6 +1999,7 @@ Table of Content:
         #reviews {
           .nav-item {
             color: $gray-700;
+            font-size: 1.5rem;
             &.active {
               color: $secondary;
               background-color: mix($secondary, white, 10%);
@@ -2081,12 +2101,12 @@ Table of Content:
             border-top: 1px solid $gray-300;
             &:first-child {
               border-top:0;
+              padding-top:0;
               &:hover,
               &:focus {
                 z-index: 0;
-                border-top: 1px solid $gray-300;
+                border-top:0;
               }
-
             }
             &:hover,
             &:focus {
@@ -2166,6 +2186,7 @@ Table of Content:
         #recommendedBusinessList,
         #followingBusinessList {
           .search-business {
+            margin-bottom:1rem;
             .bootstrap-select {
               width: 200px;
               @include media-breakpoint-down(sm) {
@@ -2231,12 +2252,18 @@ Table of Content:
             padding: 0;
             .service-group {
               padding: 1rem 1.25rem;
+              padding-top:0;
             }
             .rent-group {
               padding: 1rem 1.25rem; // border-top: 1px solid mix($secondary, white, 40%);
             }
             .sale-group {
               padding: 1rem 1.25rem; // border-top: 1px solid mix($secondary, white, 40%);
+            }
+            h2 {
+              font-size: 1.5rem;
+              line-height: 1.5;
+              color: $secondary;
             }
             h6 {
               font-size: 1rem;
@@ -2313,6 +2340,11 @@ Table of Content:
           }
         }
         #referBisring {
+          h2 {
+            font-size: 1.5rem;
+            line-height: 1.15;
+            color:$secondary;
+          }
           @include media-breakpoint-down(sm) {
             .refer-via-socialmedia {
               margin-top: 2rem;
