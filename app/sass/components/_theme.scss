@@ -83,7 +83,7 @@ Table of Content:
       padding-bottom: 4.375rem;
     }
     &--title {
-      color: $white;
+      color: $white!important;
       margin-bottom: 1.875rem;
       @include font-size(32);
     }
@@ -265,6 +265,16 @@ Table of Content:
       }
       .twitter-typeahead {
         flex-grow: 5;
+        .tt-menu {
+          max-height: 400px;
+          overflow: auto;
+          padding-top:1rem;
+          h3 {
+            font-size: 1.23rem;
+            margin-top:1rem;
+            margin-bottom:0;
+          }
+        }
       }
       .awesomplete {
         flex-grow:1;
@@ -541,6 +551,10 @@ Table of Content:
       td:nth-of-type(2),
       td:last-child {
         text-align: center;
+      }
+      td:nth-of-type(2),
+      td:last-child {
+        color: $secondary;
       }
     }
     #faqlist {
@@ -892,6 +906,10 @@ Table of Content:
       }
     }
     .site-header {
+      &--wrap {
+        padding-left:1rem;
+        padding-right:1rem;
+      }
       // &.services {
       //   background-image: url("../images/bg-header-home.png");
       // }
@@ -928,8 +946,12 @@ Table of Content:
     .site-header {
       background-color: $dark;
       background-size: cover;
+      &--wrap {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
       &--form {
-        padding-top: 2rem;
+        padding-top: 1rem;
       }
     }
   }
@@ -2427,8 +2449,8 @@ Table of Content:
           transition: .5s all ease;
         }
         .site-header--form {
-          padding-top: 3rem;
-          padding-bottom: 3rem;
+          padding-top: 1rem;
+          padding-bottom: 1rem;
           transition: .5s all ease;
         }
       }

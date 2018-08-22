@@ -1,58 +1,75 @@
 header.site-header.site-header--fixed(role="header", data-js="site-header")
 	img.site-header--img.hidden(src="images/bg-header-home.png", alt="Background for site header section", role="img")
 	include ../menus/navigation
-	.container
-		include ../menus/sidenav-standard
-		.site-header--wrap
-			div.site-header--form
-				.form-group.site-header--service
-					label.sr-only(for='selectService') Please select a Service
-					select#selectService.selectpicker(data-js="selectService" data-none-selected-text="Select Category")
-						option(value="default")
-						option(value="services") Services
-						option(value="for-rents") For Rent
-						option(value="for-sales") For Sales
-				.form-group.site-header--location
-					label.sr-only(for='selectLocation') Select a Location
-					input#selectLocation.form-control(type='text', placeholder="Select a Location", aria-label="Select a Location", aria-describedby='selectLocation', data-js="findServiceTypeahead")
-					//- #locationSelector.dropdown.dropdown-lg
-					//- 	button.btn.btn-default.dropdown-toggle(type='button' data-toggle='dropdown' aria-haspopup="true" aria-expanded='false')
-					//- 		| Select Location
-					//- 	.dropdown-menu.dropdown-menu-right(role='menu')
-					//- 		form.form-horizontal(role='form')
-					//- 			.form-group
-					//- 				label(for='countrySelector') Country
-					//- 				select#countrySelector.form-control
-					//- 					option(value='canada' selected='selected') Canada
-					//- 					option(value='unitedstates') United States
-					//- 			.form-group
-					//- 				label(for='provinceStateSelector') Province/State
-					//- 				select#provinceStateSelector.form-control
-					//- 					option
-					//- 					option(value='ontario') Ontario
-					//- 					option(value='quebec') Quebec
-					//- 			.form-group
-					//- 				label(for='citySelector') City
-					//- 				select#citySelector.form-control
-					//- 					option
-					//- 					option(value='toronto') Toronto
-					//- 					option(value='montreal') Montreal
-					//- 					option(value='ottawa') Ottawa
-					//- 			.form-group
-					//- 				label(for='townSelector') Town
-					//- 				select#townSelector.form-control
-					//- 					option
-					//- 					option(value='downtwon') Downtown
-					//- 					option(value='scarborough') Scarborough
-					//- 					option(value='northyork') North York
-					//- 					option(value='etobicoke') Etobicoke
-				.form-group.site-header--search
-					.input-group
-						label.sr-only(for='inputFindService') Find a Business
-						input#inputFindService.form-control(type='text', placeholder="Find a Business", aria-label="Find a Business", aria-describedby='inputFindService', data-js="findServiceTypeahead")
-						.input-group-append
-							button.btn(type='button')
-								span.fas.fa-search
+	include ../menus/sidenav-standard
+	.site-header--wrap
+		div.site-header--form
+			.form-group.site-header--service
+				label.sr-only(for='selectService') Please select a Service
+				select#selectService.selectpicker(data-js="selectService" data-none-selected-text="Select Category")
+					option(value="default")
+					option(value="services") Services
+					option(value="for-rents") For Rent
+					option(value="for-sales") For Sales
+			//- .form-group.site-header--location
+			//- 	label.sr-only(for='selectLocation') Select a Location
+			//- 	input#selectLocation.form-control.awesomplete(type='text', placeholder="Select a Location", aria-label="Select a Location", aria-describedby='selectLocation' data-list="#mylist")
+			//- 	ul#mylist.hidden
+			//- 		option Ada
+			//- 		option Java
+			//- 		option JavaScript
+			//- 		option Brainfuck
+			//- 		option LOLCODE
+			//- 		option Node.js
+			//- 		option Ruby on Rails
+
+				//- #locationSelector.dropdown.dropdown-lg
+				//- 	button.btn.btn-default.dropdown-toggle(type='button' data-toggle='dropdown' aria-haspopup="true" aria-expanded='false')
+				//- 		| Select Location
+				//- 	.dropdown-menu.dropdown-menu-right(role='menu')
+				//- 		form.form-horizontal(role='form')
+				//- 			.form-group
+				//- 				label(for='countrySelector') Country
+				//- 				select#countrySelector.form-control
+				//- 					option(value='canada' selected='selected') Canada
+				//- 					option(value='unitedstates') United States
+				//- 			.form-group
+				//- 				label(for='provinceStateSelector') Province/State
+				//- 				select#provinceStateSelector.form-control
+				//- 					option
+				//- 					option(value='ontario') Ontario
+				//- 					option(value='quebec') Quebec
+				//- 			.form-group
+				//- 				label(for='citySelector') City
+				//- 				select#citySelector.form-control
+				//- 					option
+				//- 					option(value='toronto') Toronto
+				//- 					option(value='montreal') Montreal
+				//- 					option(value='ottawa') Ottawa
+				//- 			.form-group
+				//- 				label(for='townSelector') Town
+				//- 				select#townSelector.form-control
+				//- 					option
+				//- 					option(value='downtwon') Downtown
+				//- 					option(value='scarborough') Scarborough
+				//- 					option(value='northyork') North York
+				//- 					option(value='etobicoke') Etobicoke
+			.form-group.site-header--search
+				.input-group
+					label.sr-only(for='inputFindService') Find a Business
+					input#inputFindService.form-control(type='text', placeholder="Find a Business", aria-label="Find a Business", aria-describedby='inputFindService', data-js="findServiceTypeahead")
+					input#selectLocation.form-control.awesomplete(type='text', placeholder="Select a Location", aria-label="Select a Location", aria-describedby='selectLocation' data-list="#mylist")
+					ul#mylist.hidden
+						option Ada
+						option Java
+						option JavaScript
+						option Brainfuck
+						option LOLCODE
+						option Node.js
+						option Ruby on Rails
+					.input-group-append
+						button.btn(type='button')
+							span.fas.fa-search
 		footer.site-header--sticky(role="footer")
 			a.btn.site-header--sticky-link.disabled(href="#", role="link", data-toggle="modal", data-target="#modalQuickList")
 				span.site-header--sticky-icon.fas.fa-thumbtack
