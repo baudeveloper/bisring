@@ -2,22 +2,23 @@
 	.container
 		.row
 			.business-map.col-lg-4.col-md-4.order-md-1
-				#map
-					script.
-						function initMap() {
-							var uluru = {
-								lat: 43.6598963, lng: -79.4233386
-							};
-							var map = new google.maps.Map(document.getElementById('map'), {
-								zoom: 10,
-								center: uluru
-							});
-							var marker = new google.maps.Marker({
-								position: uluru,
-								map: map
-							});
-						}
-					script(async='', defer='', src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDENXPvX7G8399dcrtSTVCd7MdhWz0EXjU&callback=initMap')
+				footer.search--tab-map-footer
+					#map
+						script.
+							function initMap() {
+								var uluru = {
+									lat: 43.6598963, lng: -79.4233386
+								};
+								var map = new google.maps.Map(document.getElementById('map'), {
+									zoom: 10,
+									center: uluru
+								});
+								var marker = new google.maps.Marker({
+									position: uluru,
+									map: map
+								});
+							}
+						script(async='', defer='', src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDENXPvX7G8399dcrtSTVCd7MdhWz0EXjU&callback=initMap')
 
 			.business-details.col-lg-4.col-md-8.order-md-0
 				h1.business--name Joe the Plumber
@@ -38,7 +39,7 @@
 					i.fas.fa-star-half
 				a.business--leave-review(href="#", role="link", data-toggle='modal', data-target='#modalLeaveReview') Leave a Review
 				.business--decription
-					p Some description of the business.Curabitur diam mi, elementum sit amet diam eu, ornare luctus magna. Donec rutrum congue mi eu dignissim. Cras felis tortor, vehicula et feugiat eget, pellentesque nec massa. Sed suscipit egestas maximus. Cras mollis dignissim libero vel semper. Proin id volutpat enim. Morbi sagittis enim id urna suscipit venenatis. Nam vel erat lacinia, aliquet magna dictum, mollis felis. Praesent quis facilisis neque. Duis at lobortis leo.
+					p Test
 			.business-assets.col-lg-4.col-md-12.d-flex.order-md-2.flex-column
 				ul#assets-tab.nav.nav-pills.nav-justified.mb-3.flex-sm-row(role='tablist')
 					li.nav-item

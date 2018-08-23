@@ -43,7 +43,7 @@
     "pages": "run-s f-inject l-html b-html",
     "styles": "run-s l-scss scss a-scss",
     "scripts": "run-s js l-js u-js",
-    "all": "run-s clean copy f-make f-update html styles scripts svgs ssg images watch",
+    "all": "run-s clean copy html styles scripts svgs ssg images watch",
     "watch:css": "onchange \"app/sass\" -- run-s styles",
     "watch:js": "onchange \"app/js\" -- run-s scripts",
     "watch:html": "onchange \"app/pug/_includes\" \"app/pug/_layouts\" \"app/pug/_partials\" \"app/pug/pages\" -- run-s html pages",

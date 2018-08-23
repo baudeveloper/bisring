@@ -676,16 +676,11 @@ Table of Content:
           &-sort {
             &-name,
             &-rating {
-              color: $green-AA;
               font-family: "Barlow-SemiBold", sans-serif;
               @include font-size(14);
+              color:white !important;
               &:link {
                 text-decoration: none;
-              }
-              &:hover,
-              &:active,
-              &:focus {
-                color: darken($green-AA, 10%);
               }
             }
             &-icon {
@@ -1783,6 +1778,10 @@ Table of Content:
             padding: 1rem;
             max-height: 250px;
             overflow-y: auto;
+            background-color: mix($secondary, white, 10%);
+            h2 {
+              color:$secondary;
+            }
           }
         }
         #businessFinalSubmit{
@@ -2509,8 +2508,11 @@ Table of Content:
 
 .business{
   &-map {
-    height: 580px;
+    min-height: 350px;
     #map {
+      height: 100%;
+    }
+    .search--tab-map-footer {
       height: 100%;
     }
     @include media-breakpoint-down(md) {
@@ -2518,6 +2520,7 @@ Table of Content:
     }
     @include media-breakpoint-down(sm) {
       padding:0;
+      min-height: 100px;
       #map {
         height: 200px;
       }
@@ -3377,5 +3380,13 @@ textarea {
       .awesomplete li[aria-selected="true"] mark {
         background: hsl(86, 100%, 21%);
         color: inherit;
+      }
+
+      .tooltip-inner {
+        background-color:$secondary;
+      }
+      .tooltip.bs-tooltip-auto[x-placement^=top] .arrow::before,
+      .tooltip.bs-tooltip-top .arrow::before {
+        border-top-color: $secondary;
       }
   /*# sourceMappingURL=awesomplete.css.map */
