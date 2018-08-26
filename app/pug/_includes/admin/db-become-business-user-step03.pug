@@ -20,7 +20,13 @@
 									tbody
 										tr.categories
 											td 4 Categories
-											td $72.00 / month
+											td $54.00
+										tr.discount
+											td 
+												| Your 
+												span.discound-value 5%
+												| Discount
+											td -$2.70
 										tr.redeem-points
 											td
 												.custom-control.custom-checkbox
@@ -29,30 +35,26 @@
 														| Redeem BisRing Points (You have
 														span.points-available 100
 														|  pts)
-											td
-												span.is-credit-true
-													| CR
-													span.credit-added $10
-													| /
-													span.period month
-												span.is-credit-false.hidden -
+											td $0.00
 										tr.coupon-code
 											td
 												.form-group.row
 													label.col-lg-3.col-md-4.col-sm-3.col-form-label(for="couponCode") Coupon Code:
 													.col-lg-4.col-md-6.col-sm-5
 														input#couponCode.form-control(type="text" placeholder="Enter Code")
-											td
-												span.is-coupon-ture.hidden
-													| CR
-													span.coupon-added $0.00
-													| /
-													span.period month
-												span.is-coupon-false -
+											td $0.00
+										tr.subtotal
+											td(colspan="2")
+												| Sub total: 
+												span.subtotal-calculated $51.30
+										tr.tax
+											td(colspan="2")
+												| Tax HST 13%:
+												span.tax-calculated +$6.67
 										tr.total
 											td(colspan="2")
 												| Total:
-												span.total-calculated $62.00
+												span.total-calculated $57.97
 												|  /
 												span.period month
 							.pay-method.card.card-block

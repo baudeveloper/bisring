@@ -236,20 +236,19 @@ $(document).ready(function () {
 	window.addEventListener("load", function() {
     // Fetch all the forms we want to apply custom Bootstrap validation styles to
 		var forms = document.getElementsByClassName("needs-validation");
-		var selectpick = $(".selectpicker").parent().next(".invalid-feedback");
     // Loop over them and prevent submission
 		var validation = Array.prototype.filter.call(forms, function(form) {
 			form.addEventListener("submit", function(event) {
 				if (form.checkValidity() === false) {
 					event.preventDefault();
 					event.stopPropagation();
-					$(this).find("select:invalid").parent().next(".invalid-feedback").css("display", "block");
+					// $(this).find("select:invalid").parent().next(".invalid-feedback").css("display", "block");
 				}
-				$(this)
-          .find("select:valid")
-          .parent()
-          .next(".invalid-feedback")
-          .css("display", "none");
+				$(this);
+          // .find("select:valid")
+          // .parent()
+          // .next(".invalid-feedback")
+          // .css("display", "none");
 				form.classList.add("was-validated");
 			}, false);
 		});

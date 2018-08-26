@@ -269,6 +269,7 @@ Table of Content:
           max-height: 400px;
           overflow: auto;
           padding-top:1rem;
+          right:0px;
           h3 {
             font-size: 1.23rem;
             margin-top:1rem;
@@ -284,7 +285,8 @@ Table of Content:
         border-left:0;
         color: $silver-AA;
         line-height: 3rem;
-        padding: .375rem 2rem;
+        height: 62px;
+
       }
       button {
         color: $orange-AA;
@@ -1553,10 +1555,22 @@ Table of Content:
                     text-align: right;
                   }
                 }
+                &.subtotal,
+                &.tax {
+                  td {
+                    font-weight: bold;
+                    background-color: white;
+                    border:0;
+                  }
+                }
+                &.subtotal td {
+                  padding-bottom: 0rem;
+                }
                 &.total {
                   td {
                     font-size: 1.5rem;
                     font-weight: bold;
+                    background-color: white;
                   }
                 }
               }
@@ -2459,6 +2473,24 @@ Table of Content:
   @media #{$medium__up} {
     // STANDARD PAGE
     &-standard {
+      .site-header--form {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        transition: .5s all ease;
+        .site-header--search {
+          input[type="text"] {
+            height: 40px;
+          }
+          .input-group-append .btn {
+            height: 40px;
+            line-height: 1.5rem;
+          }
+        }
+        .site-header--service .dropdown-toggle {
+          height: 40px;
+          line-height: 1.5rem;
+        }
+      }
       .site-content {
         margin-top: 12rem;
       }
@@ -2488,17 +2520,30 @@ Table of Content:
           padding-top: 1rem;
           padding-bottom: 1rem;
           transition: .5s all ease;
+          .site-header--search {
+            input[type="text"] {
+              height: 40px;
+            }
+            .input-group-append .btn {
+              height: 40px;
+              line-height: 1.5rem;
+            }
+          }
+          .site-header--service .dropdown-toggle {
+            height: 40px;
+            line-height: 1.5rem;
+          }
         }
       }
       .scrolled + .site-feature {
-        margin-top: 14.75rem;
+        margin-top: 11.75rem;
       }
     }
     // SEARCH PAGE
     &-search {
       .site {
         &-search-results {
-          margin-top: 13.75rem;
+          margin-top: 11.75rem;
         }
       }
     }
@@ -2508,7 +2553,7 @@ Table of Content:
 
 .business{
   &-map {
-    min-height: 350px;
+    height: 435px;
     #map {
       height: 100%;
     }
@@ -2520,7 +2565,7 @@ Table of Content:
     }
     @include media-breakpoint-down(sm) {
       padding:0;
-      min-height: 100px;
+      height: 200px;
       #map {
         height: 200px;
       }
@@ -3062,6 +3107,77 @@ Table of Content:
   }
 }
 
+#contactForm {
+  .form-group {
+    label {
+      font-size: 0.85rem;
+      margin-bottom: 0;
+      color: $gray-600;
+    }
+    input,
+    textarea {
+      border: 0;
+      border-bottom: 2px solid $secondary;
+      padding-left: 0;
+      border-radius: 0;
+      color: $secondary;
+      background-color: transparent;
+      &:focus {
+        outline: none;
+        box-shadow: none !important;
+        border-bottom: 2px solid $primary;
+      }
+      &[value=""] {
+        border-bottom: 2px solid $gray-400;
+        &:focus {
+          border-bottom: 2px solid $primary;
+        }
+      }
+    }
+    .bootstrap-select {
+      background-color: transparent;
+      .btn {
+        border: 0;
+        border-bottom: 2px solid $gray-400;
+        padding: .375rem .75rem;
+        padding-left: 0;
+        border-radius: 0;
+        color: $secondary;
+        background-color: transparent;
+        font-family: $font-family-sans-serif;
+        &:focus,
+        &:hover,
+        &:active {
+          outline: none !important;
+          box-shadow: none !important;
+          border-bottom: 2px solid $primary !important;
+          background-color: transparent !important;
+        }
+        &[title^="Select"] {
+          color: $gray-600;
+          border-bottom: 2px solid $gray-400;
+        }
+        &.bs-invalid {
+          border-color:$danger;
+        }
+      }
+      .dropdown-menu {
+        .form-control {
+          border: 1px solid $gray-300;
+          background-color: $gray-100;
+          border-radius: 3px;
+          padding-left: .75rem;
+          &:focus {
+            outline: none;
+            box-shadow: none !important;
+            border: 1px solid $gray-300;
+          }
+        }
+      }
+    }
+  }
+}
+
 //Forgot Password and Password Reovery Form
 #forgotPasswordEmailForm,
 #forgotPasswordPhoneForm,
@@ -3388,5 +3504,19 @@ textarea {
       .tooltip.bs-tooltip-auto[x-placement^=top] .arrow::before,
       .tooltip.bs-tooltip-top .arrow::before {
         border-top-color: $secondary;
+      }
+
+      //Braintree Customization
+      .braintree-show-methods [data-braintree-id=methods-label],
+      .braintree-show-options [data-braintree-id=choose-a-way-to-pay] {
+        color:white;
+      }
+      .dropin-container {
+        width: 100%;
+        padding-right:1rem;
+        padding-left:1rem;
+      }
+      .braintree-toggle {
+        margin-bottom:1rem;
       }
   /*# sourceMappingURL=awesomplete.css.map */

@@ -1,12 +1,84 @@
 .site-content
 	.container
-		h1(role="heading")
-			| #{pageTitle}
-		p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque aut nulla earum! Accusamus ducimus sequi repellendus? Error, illo inventore, consequatur iure laudantium veritatis quisquam a perspiciatis eligendi ipsum impedit omnis.
-		p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque aut nulla earum! Accusamus ducimus sequi repellendus? Error, illo inventore, consequatur iure laudantium veritatis quisquam a perspiciatis eligendi ipsum impedit omnis.
-		p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque aut nulla earum! Accusamus ducimus sequi repellendus? Error, illo inventore, consequatur iure laudantium veritatis quisquam a perspiciatis eligendi ipsum impedit omnis.
-		p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque aut nulla earum! Accusamus ducimus sequi repellendus? Error, illo inventore, consequatur iure laudantium veritatis quisquam a perspiciatis eligendi ipsum impedit omnis.
-		p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque aut nulla earum! Accusamus ducimus sequi repellendus? Error, illo inventore, consequatur iure laudantium veritatis quisquam a perspiciatis eligendi ipsum impedit omnis.
+		.row
+			.offset-sm-1.col-sm-10.text-center
+				h1(role="heading")
+					| #{pageTitle}
+				p.lead 
+					| How can we help you?
+					br
+					| If you have any questions about how to use BisRing, please refer to our BisRing 
+					a(href="faqs.html") FAQ!
+					br
+				hr
+				address
+					strong Address:
+					br
+					a(href="https://goo.gl/maps/pKaSvdwKtYF2" target="_blank") 9225 Leslie Street Suite 201 Richmond Hill, Ontario, Canada, L4B 3H6
+				p 
+					strong General Inquiries: 
+					a(href="mailto:info@bisring.com?subject=General%20Inquiries&body=") info@bisring.com
+					br 
+					strong Sales Inquiries: 
+					a(href="mailto:sales@bisring.com?subject=Sales%20Inquiries&body=") sales@bisring.com
+					br
+					strong Technical Inquiries: 
+					a(href="mailto:help@bisring.com?subject=Technical%20Inquiries&body=") help@bisring.com
+				hr
+		.row.justify-content-sm-center
+			.col-md-8.col-sm-10
+				br
+				form#contactForm(action="" class="needs-validation" novalidate)
+					.form-row
+						.col-sm
+							.form-group
+								label(for="#contactFormName") Name *
+								input#contactFormName.form-control(type="text", placeholder="Enter Name", value="", required)
+								.invalid-feedback
+									| &times; Your name is required.
+						.col-sm
+							.form-group
+								label(for="#contactFormCompanyName") Company Name
+								input#contactFormCompanyName.form-control(type="text", placeholder="Enter Company Name", value="")
+					.form-row
+						.col-sm
+							.form-group
+								label(for="#contactFormPhoneNumber") Phone Number
+								input#contactFormPhoneNumber.form-control(type="tel", placeholder="Enter Phone Number", value="")
+						.col-sm
+							.form-group
+								label(for="#contactFormEmail") Email *
+								input#contactFormEmail.form-control(type="email", placeholder="Enter Email Address", value="", required)
+								.invalid-feedback
+									| &times; An email address is required.
+					.form-row
+						.col-sm
+							.form-group
+								label(for="#contactFormReason") Reason *
+								select#contactFormReason.form-control.selectpicker(title="Select a Reason", required)
+									option(value='general') General Inquiries
+									option(value='feedback') Feedback
+									option(value='technical') Technical Issues
+									option(value='sales') Sales Inquiries
+								.invalid-feedback
+									| &times; A reason is required.
+					.form-row
+						.col-sm
+							.form-group
+								label(for="#contactFormSubject") Subject
+								input#contactFormSubject.form-control(type="text", placeholder="Enter Subject", value="")
+					.form-row
+						.col-sm
+							.form-group
+								label(for="#contactFormMessage") Message *
+								textarea#contactFormMessage.form-control(placeholder="Enter a Messeage", value="", rows="1", required)
+								.invalid-feedback
+									| &times; A message is required.
+					.form-row
+						.col-sm.text-center
+							br
+							button.btn.btn-primary(type="submit") Submit
+
 .site-callout.site-callout--minimal
 	.container
 		a.btn.btn-primary.btn--fixed(href="#", role="link", data-toggle='modal', data-target='#modalQuickList')
