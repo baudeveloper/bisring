@@ -226,8 +226,15 @@ $(document).ready(function () {
 	  }
 	});
 
+	
 
 
+
+});
+
+$(document).on("click", "[data-toggle=\"lightbox\"]", function (event) {
+	event.preventDefault();
+	$(this).ekkoLightbox();
 });
 
 // Example starter JavaScript for disabling form submissions if there are invalid fields

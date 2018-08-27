@@ -65,15 +65,16 @@ header.site-header(role="header", data-js="site-header")
 					.input-group
 						label.sr-only(for='inputFindService') Find a Business
 						input#inputFindService.form-control(type='text', placeholder="Find a Business", aria-label="Find a Business", aria-describedby='inputFindService', data-js="findServiceTypeahead")
-						input#selectLocation.form-control.awesomplete(type='text', placeholder="Select a Location", aria-label="Select a Location", aria-describedby='selectLocation' data-list="#mylist")
-						ul#mylist.hidden
-							option Ada
-							option Java
-							option JavaScript
-							option Brainfuck
-							option LOLCODE
-							option Node.js
-							option Ruby on Rails
+						.awesomplete
+							input#selectLocation.form-control(type='text', placeholder="Select a Location", aria-label="Select a Location", aria-describedby='selectLocation' data-list="#mylist")
+							ul#mylist.hidden
+								option Ada
+								option Java
+								option JavaScript
+								option Brainfuck
+								option LOLCODE
+								option Node.js
+								option Ruby on Rails
 						.input-group-append
 							button.btn(type='button')
 								span.fas.fa-search

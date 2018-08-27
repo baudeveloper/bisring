@@ -53,7 +53,20 @@
 							i.fas.fa-volume-up
 				#pills-tabContent.tab-content
 					#assets-image.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='assets-image-tab')
-						#myCarousel.carousel.slide(data-ride="carousel")
+						//- .row.justify-content-center
+						//- 	a.col-lg-6.col-md-3.col-4(href='https://unsplash.it/1200/768.jpg?image=251' data-toggle='lightbox' data-gallery='business-gallery')
+						//- 		img.img-fluid(src='https://unsplash.it/1200/768.jpg?image=251')
+						//- 	a.col-lg-6.col-md-3.col-4(href='https://unsplash.it/1200/768.jpg?image=252' data-toggle='lightbox' data-gallery='business-gallery')
+						//- 		img.img-fluid(src='https://unsplash.it/1200/768.jpg?image=252')
+						//- 	a.col-lg-6.col-md-3.col-4(href='https://unsplash.it/1200/768.jpg?image=253' data-toggle='lightbox' data-gallery='business-gallery')
+						//- 		img.img-fluid(src='https://unsplash.it/1200/768.jpg?image=253')
+						//- 	a.col-lg-6.col-md-3.col-4(href='https://unsplash.it/900/500.jpg?image=251' data-toggle='lightbox' data-gallery='business-gallery')
+						//- 		img.img-fluid(src='https://unsplash.it/900/500.jpg?image=251')
+						//- 	a.col-lg-6.col-md-3.col-4(href='https://unsplash.it/1200/768.jpg?image=252' data-toggle='lightbox' data-gallery='business-gallery')
+						//- 		img.img-fluid(src='https://unsplash.it/1200/768.jpg?image=252')
+						//- 	a.col-lg-6.col-md-3.col-4(href='https://unsplash.it/1200/768.jpg?image=253' data-toggle='lightbox' data-gallery='business-gallery')
+						//- 		img.img-fluid(src='https://unsplash.it/1200/768.jpg?image=253')
+						#businessCarousel.carousel.slide(data-ride="carousel")
 							.carousel-inner
 								.carousel-item.active
 									img.img-fluid(src="http://placehold.it/580x580&text=one", alt="First slide")
@@ -69,30 +82,30 @@
 									img.img-fluid(src="http://placehold.it/580x580&text=six", alt="Sixth slide")
 								.carousel-item
 									img.img-fluid(src="http://placehold.it/580x580&text=seven", alt="Sevent slide")
-							a.carousel-control-prev(href="#myCarousel", role="button", data-slide="prev")
+							a.carousel-control-prev(href="#businessCarousel", role="button", data-slide="prev")
 								span.carousel-control-prev-icon(aria-hidden="true")
 								span.sr-only Previous
-							a.carousel-control-next(href="#myCarousel", role="button", data-slide="next")
+							a.carousel-control-next(href="#businessCarousel", role="button", data-slide="next")
 								span.carousel-control-next-icon(aria-hidden="true")
 								span.sr-only Next
 							ul.carousel-indicators.list-inline
 								li.list-inline-item.active
-									a.selected(data-slide-to="0", data-target="#myCarousel")
+									a.selected(data-slide-to="0", data-target="#businessCarousel")
 										img.img-fluid(src="http://placehold.it/80x60&text=one")
 								li.list-inline-item
-									a(data-slide-to="1", data-target="#myCarousel")
+									a(data-slide-to="1", data-target="#businessCarousel")
 										img.img-fluid(src="http://placehold.it/80x60&text=two")
 								li.list-inline-item
-									a(data-slide-to="2", data-target="#myCarousel")
+									a(data-slide-to="2", data-target="#businessCarousel")
 										img.img-fluid(src="http://placehold.it/80x60&text=three")
 								li.list-inline-item
-									a(data-slide-to="3", data-target="#myCarousel")
+									a(data-slide-to="3", data-target="#businessCarousel")
 										img.img-fluid(src="http://placehold.it/80x60&text=four")
 								li.list-inline-item
-									a(data-slide-to="4", data-target="#myCarousel")
+									a(data-slide-to="4", data-target="#businessCarousel")
 										img.img-fluid(src="http://placehold.it/80x60&text=five")
 								li.list-inline-item
-									a(data-slide-to="5", data-target="#myCarousel")
+									a(data-slide-to="5", data-target="#businessCarousel")
 										img.img-fluid(src="http://placehold.it/80x60&text=six")
 					#assets-video.tab-pane.fade(role='tabpanel' aria-labelledby='assets-video-tab')
 						ul.list-group
