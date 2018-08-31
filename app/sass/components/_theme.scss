@@ -3465,3 +3465,8 @@ textarea {
         margin-bottom:1rem;
       }
   /*# sourceMappingURL=awesomplete.css.map */
+
+input.ng-invalid.ng-touched {
+   background:#F84072;
+   border: 2px red solid !important;
+}
