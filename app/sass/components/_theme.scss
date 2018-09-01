@@ -2570,6 +2570,9 @@ Table of Content:
   }
   &--decription {
     margin-top:1rem;
+    p {
+      color: $secondary;
+    }
   }
   &-assets {
     @include media-breakpoint-down(sm) {
@@ -2605,7 +2608,7 @@ Table of Content:
         }
       }
       #assets-image {
-        
+
         // a {
         //   margin-bottom:1rem;
         // }
@@ -2621,15 +2624,17 @@ Table of Content:
       .carousel-inner {
         border: 1px solid $gray-300;
         background-color: $gray-200;
+        height: 353px;
         .carousel-item {
-          height: 353px;
-          @include media-breakpoint-down(md) {
+
+          align-items: center!important;
+
+        }
+        @include media-breakpoint-down(md) {
+          .carousel-item {
             text-align: center;
-            height: 323px;
-            img {
-              // height: 100%;
-            }
           }
+          height: 323px;
         }
       }
       .carousel-control-prev,
@@ -2689,6 +2694,9 @@ Table of Content:
       .promotion-link {
         color: $secondary;
         text-decoration: underline;
+      }
+      h2 {
+        margin-top:0;
       }
     }
   }
@@ -3467,6 +3475,5 @@ textarea {
   /*# sourceMappingURL=awesomplete.css.map */
 
 input.ng-invalid.ng-touched {
-   background:#F84072;
    border: 2px red solid !important;
 }
