@@ -249,6 +249,7 @@ Table of Content:
           overflow: auto;
           padding-top:1rem;
           right:0px;
+          cursor: default;
           h3 {
             font-size: 1.23rem;
             margin-top:1rem;
@@ -2013,6 +2014,19 @@ Table of Content:
           .my-review {
             border-bottom: 1px solid mix($secondary, white, 40%);
             margin-bottom:2rem;
+            .business-logo {
+              margin-right:1rem;
+              min-width: 200px;
+              @include media-breakpoint-down(lg) {
+                min-width: 160px;
+              }
+              @include media-breakpoint-down(md) {
+                min-width: 100px;
+              }
+              @include media-breakpoint-down(sm) {
+                display: none;
+              }
+            }
             &:last-child {
               border-bottom: 0;
             }
@@ -2105,7 +2119,28 @@ Table of Content:
               z-index: 0;
               border-top: 1px solid $gray-300;
             }
+            .business-logo {
+              margin-right:1rem;
+              min-width: 200px;
+              @include media-breakpoint-down(lg) {
+                min-width: 160px;
+              }
+              @include media-breakpoint-down(md) {
+                min-width: 100px;
+              }
+              @include media-breakpoint-down(sm) {
+                display: none;
+              }
+            }
             &.inactive {
+              .business-logo {
+                img {
+                  opacity: 0.25;
+                }
+              }
+              h2 {
+                color: $gray-400;
+              }
               h5 {
                 color: $gray-400;
               }

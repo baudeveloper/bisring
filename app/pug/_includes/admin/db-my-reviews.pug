@@ -114,30 +114,33 @@
 						#my-reviews.tab-pane.fade(role="tabpanel" aria-labelledby="#my-reviews-tab")
 							.my-review
 								ul.list-unstyled
-									li
-										button.close.delete-review(type="button" aria-label="Delete" title="Delete Review")
-											i.fas.fa-trash-alt(aria-hidden="true")
-										button.close.edit-review(type="button" aria-label="Edit" title="Edit Review", data-toggle='modal', data-target='#modalEditReivew')
-											i.fas.fa-pencil-alt(aria-hidden="true")
-										span.my-reviewed-star-rating
-											i.fas.fa-star
-											i.fas.fa-star
-											i.fas.fa-star
-											i.fas.fa-star-half
-										h3.my-reviewed-title
-											| Highly recommended, would use their services again
-											span.badge.badge-pill.badge-success
-												i.far.fa-check-circle(aria-hidden="true")
-												|  Approved
-										.my-reviewed-meta
-											| For:
-											a.busines-reviewed-name(href="#")
-												| Public Plubming
-											| , Reviewd on:
-											span.business-reviewed-date
-												| September 3, 2017
-										.my-reviewed-message
-											p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus viverra venenatis arcu. Ut purus ipsum, rhoncus non nisi at, pharetra cursus lorem. Aliquam vel vehicula erat, quis convallis leo. Nam vitae fringilla mauris. Ut dignissim, purus a pretium eleifend, felis quam pretium urna, ac ultricies eros ipsum non elit. Nunc rhoncus nulla et arcu dictum eleifend. Aenean sit amet mi vel metus luctus fermentum. Donec ac nulla non diam tincidunt elementum placerat vitae erat.
+									li.d-flex
+										.business-logo
+											img.img-fluid(src="/images/default-business-thumb.jpg", alt="business logo")
+										.given-review
+											button.close.delete-review(type="button" aria-label="Delete" title="Delete Review")
+												i.fas.fa-trash-alt(aria-hidden="true")
+											button.close.edit-review(type="button" aria-label="Edit" title="Edit Review", data-toggle='modal', data-target='#modalEditReivew')
+												i.fas.fa-pencil-alt(aria-hidden="true")
+											span.my-reviewed-star-rating
+												i.fas.fa-star
+												i.fas.fa-star
+												i.fas.fa-star
+												i.fas.fa-star-half
+											h3.my-reviewed-title
+												| Highly recommended, would use their services again
+												span.badge.badge-pill.badge-success
+													i.far.fa-check-circle(aria-hidden="true")
+													|  Approved
+											.my-reviewed-meta
+												| For:
+												a.busines-reviewed-name(href="#")
+													| Public Plubming
+													| , Reviewd on:
+												span.business-reviewed-date
+													| September 3, 2017
+											.my-reviewed-message
+												p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus viverra venenatis arcu. Ut purus ipsum, rhoncus non nisi at, pharetra cursus lorem. Aliquam vel vehicula erat, quis convallis leo. Nam vitae fringilla mauris. Ut dignissim, purus a pretium eleifend, felis quam pretium urna, ac ultricies eros ipsum non elit. Nunc rhoncus nulla et arcu dictum eleifend. Aenean sit amet mi vel metus luctus fermentum. Donec ac nulla non diam tincidunt elementum placerat vitae erat.
 									li
 										button.close.delete-review(type="button" aria-label="Delete" title="Delete Review")
 											i.fas.fa-trash-alt(aria-hidden="true")

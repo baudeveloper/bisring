@@ -12,23 +12,26 @@
 				// My Business List
 				section#businessList.admin-blocks
 					.list-group
-						.list-group-item.flex-column.align-items-start
-							.d-flex.w-100.justify-content-between
-								h2.mb-1 Joe the Plumber
-									span.status-text
-								.actions
-									a.edit-business(href="db-edit-business.html" aria-label="EdEdit Businessit" title="Edit Business")
-										i.fas.fa-pencil-alt(aria-hidden="true")
-									button.toggle-activation.btn.btn-primary.active(type="button" data-toggle="button" aria-pressed="true" autocomplete="off" aria-label="Toggle Activation" title="Toggle Activation")
-										i
-									button.delete(type="button" aria-label="Delete Business" title="Delete Business")
-										| Delete
-							.telephone.mb-1
-								i.fas.fa-phone
-								span (416) 555-5555
-							.address.mb-1
-								i.fas.fa-map-marker-alt
-								| 222 Islington Ave. Etobicoke ON M8V 3W7
+						.list-group-item.d-flex
+							.business-logo
+								img.img-fluid(src="/images/default-business-thumb.jpg", alt="business logo")
+							.business-details.flex-grow-1.w-100
+								.d-flex.justify-content-between
+									h2.mb-1 Joe the Plumber
+										span.status-text
+									.actions
+										a.edit-business(href="db-edit-business.html" aria-label="EdEdit Businessit" title="Edit Business")
+											i.fas.fa-pencil-alt(aria-hidden="true")
+										button.toggle-activation.btn.btn-primary.active(type="button" data-toggle="button" aria-pressed="true" autocomplete="off" aria-label="Toggle Activation" title="Toggle Activation")
+											i
+										button.delete(type="button" aria-label="Delete Business" title="Delete Business")
+											| Delete
+								.telephone.mb-1
+									i.fas.fa-phone
+									span (416) 555-5555
+								.address.mb-1
+									i.fas.fa-map-marker-alt
+									| 222 Islington Ave. Etobicoke ON M8V 3W7
 						.list-group-item.flex-column.align-items-start
 							.d-flex.w-100.justify-content-between
 								h2.mb-1 Public Plumbing
