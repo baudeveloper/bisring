@@ -21,6 +21,8 @@
 						script(async='', defer='', src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDENXPvX7G8399dcrtSTVCd7MdhWz0EXjU&callback=initMap')
 
 			.business-details.col-lg-4.col-md-8.order-md-0
+				.business--logo.mb-3
+					img.img-fluid(src="/images/default-business-thumb.jpg", alt="business logo")
 				h1.business--name Joe the Plumber
 				a.business--website(href="http://www.joetheplumber.com") www.joetheplumber.com
 				address.business--address
@@ -38,8 +40,6 @@
 					i.fas.fa-star
 					i.fas.fa-star-half
 				a.business--leave-review(href="#", role="link", data-toggle='modal', data-target='#modalLeaveReview') Leave a Review
-				.business--logo
-					img.img-fluid(src="/images/default-business-thumb.jpg", alt="business logo")
 			.business-assets.col-lg-4.col-md-12.d-flex.order-md-2.flex-column
 				ul#assets-tab.nav.nav-pills.nav-justified.mb-3.flex-sm-row(role='tablist')
 					li.nav-item
@@ -164,7 +164,10 @@
 				h2 Recommended Businesses
 				ul
 					li
-						a(href="#") Joe the Carpenter
+						a.d-flex.align-items-center(href="#")
+							.business--logo.mr-3.mt-0
+								img.img-fluid(src="/images/default-business-thumb.jpg", alt="business logo" width="75")
+							span Joe the Carpenter Joe the Tiler
 					li
 						a(href="#") Joe the Tiler
 					li

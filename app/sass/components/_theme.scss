@@ -244,6 +244,9 @@ Table of Content:
       }
       .twitter-typeahead {
         flex-grow: 1;
+        .form-control {
+          border-right: 1px solid $secondary;
+        }
         .tt-menu {
           max-height: 400px;
           overflow: auto;
@@ -282,6 +285,7 @@ Table of Content:
       .twitter-typeahead {
         flex-grow: 1;
         width: 100%;
+        
       }
       input[type="text"] {
         border-radius: 0;
@@ -1896,6 +1900,7 @@ Table of Content:
                   }
                   tbody {
                     td {
+                      vertical-align: middle;
                       a {
                         color: $secondary;
                       }
@@ -1906,16 +1911,14 @@ Table of Content:
                       &.vbusiness-rank {
                         color: $secondary;
                         span {
-                          display: block;
+                          display: inline-block;
                           width: 100%;
                           position: relative;
-                          &:after {
-                            position: absolute;
-                            top:0;
-                            left:0;
-                            bottom: 0;
-                            right: 0;
-                          }
+                          // &:after {
+                          //   position: absolute;
+                          //   left:0;
+                          //   right: 0;
+                          // }
                         }
                       }
                     }
