@@ -3528,3 +3528,75 @@ textarea {
 input.ng-invalid.ng-touched {
    border: 2px red solid !important;
 }
+
+//Loading
+//colors
+$color_curious_blue_approx: $primary;
+body #loading {
+  background-color: $color_curious_blue_approx;
+  height: 100vh;
+  position: relative;
+}
+#loader-container {
+  width: 200px;
+  height: 200px;
+  color: $white;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+  transform: translate(-50%, -50%);
+  border: 5px solid $color_curious_blue_approx;
+  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+  border-radius: 50%;
+  animation: borderScale 1s infinite ease-in-out;
+}
+
+#loadingText {
+  font-weight: bold;
+  font-size: 1.5rem;
+  position: absolute;
+  bottom:15%;
+  left: 50%;
+  margin-right: -50%;
+  color: $white;
+  //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+  transform: translate(-50%, -50%);
+}
+#loadingImage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -49%;
+  transform: translate(-50%, -50%);
+}
+
+@-webkit-keyframes borderScale {
+  0% {
+    border: 5px solid $white;
+  }
+
+  50% {
+    border: 25px solid $color_curious_blue_approx;
+  }
+
+  100% {
+    border: 5px solid $white;
+  }
+}
+
+@keyframes borderScale {
+  0% {
+    border: 5px solid $white;
+  }
+
+  50% {
+    border: 25px solid $color_curious_blue_approx;
+  }
+
+  100% {
+    border: 5px solid $white;
+  }
+}
