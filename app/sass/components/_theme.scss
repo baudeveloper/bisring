@@ -1329,57 +1329,62 @@ Table of Content:
                 }
               }
               @include media-breakpoint-down(sm) {
-                &.table-striped tbody tr:nth-of-type(2n+1) {
-                  background-color: transparent;
-                }
-                display: block;
-                thead,
-                tbody,
-                tfoot,
-                th,
-                td,
-                tr {
-                  display:block;
-                }
-                thead tr {
-                  position: absolute;
-                  top: -9999px;
-                  left: -9999px;
-                }
-                tr {
-                }
-
-                td {
-                  /* Behave  like a "row" */
-                  border: none;
-                  position: relative;
-                  padding-left: 50%;
-                  white-space: normal;
-                  text-align:right!important;
-                  padding:0.25rem 0.5rem;
-                  &:before {
-                    /* Now like a table header */
-                    position: absolute;
-                    /* Top/left values mimic padding */
-                    color: $secondary;
-                    top: 6px;
-                    left: 0.5rem;
-                    width: 45%;
-                    padding-right: 10px;
-                    white-space: nowrap;
-                    text-align:left;
-                    font-size: 0.85rem;
-                    font-weight: bold;
-                    content: attr(data-title);
-                  }
-                  &:first-child {
-                    border-top: 2px solid $secondary;
-                  }
-                  &:nth-of-type(2n+1) {
-                    background-color: mix($secondary,white, 5%);
-                  }
+                td,th {
+                  font-size: 0.85rem;
                 }
               }
+              // @include media-breakpoint-down(sm) {
+              //   &.table-striped tbody tr:nth-of-type(2n+1) {
+              //     background-color: transparent;
+              //   }
+              //   display: block;
+              //   thead,
+              //   tbody,
+              //   tfoot,
+              //   th,
+              //   td,
+              //   tr {
+              //     display:block;
+              //   }
+              //   thead tr {
+              //     position: absolute;
+              //     top: -9999px;
+              //     left: -9999px;
+              //   }
+              //   tr {
+              //   }
+
+              //   td {
+              //     /* Behave  like a "row" */
+              //     border: none;
+              //     position: relative;
+              //     padding-left: 50%;
+              //     white-space: normal;
+              //     text-align:right!important;
+              //     padding:0.25rem 0.5rem;
+              //     &:before {
+              //       /* Now like a table header */
+              //       position: absolute;
+              //       /* Top/left values mimic padding */
+              //       color: $secondary;
+              //       top: 6px;
+              //       left: 0.5rem;
+              //       width: 45%;
+              //       padding-right: 10px;
+              //       white-space: nowrap;
+              //       text-align:left;
+              //       font-size: 0.85rem;
+              //       font-weight: bold;
+              //       content: attr(data-title);
+              //     }
+              //     &:first-child {
+              //       border-top: 2px solid $secondary;
+              //     }
+              //     &:nth-of-type(2n+1) {
+              //       background-color: mix($secondary,white, 5%);
+              //     }
+              //   }
+              // }
             }
           }
         }
