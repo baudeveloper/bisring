@@ -285,7 +285,7 @@ Table of Content:
       .twitter-typeahead {
         flex-grow: 1;
         width: 100%;
-        
+
       }
       input[type="text"] {
         border-radius: 0;
@@ -2914,7 +2914,7 @@ Table of Content:
       @include font-size(16);
     }
     .list-group {
-      color: $secondary;        
+      color: $secondary;
       span.business-name {
         font-size: 1.25rem;
         font-weight: bold;
@@ -2942,6 +2942,12 @@ Table of Content:
     .twitter-typeahead {
       display: block!important;
     }
+  }
+}
+
+.modal-backdrop {
+  @include media-breakpoint-down(sm) {
+    z-index: 0;
   }
 }
 
