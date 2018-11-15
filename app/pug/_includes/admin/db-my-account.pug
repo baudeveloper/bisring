@@ -48,16 +48,17 @@
 										.invalid-feedback
 											| &times; Last Name is required.
 							.form-row
-								.col-md
-									.form-group
-										label(for="#acctUserEmail") Email Address *
-										input#acctUserFirstName.form-control(type="email", placeholder="Enter your Email Address", value="prasanna@baustein.ca", required)
-										.invalid-feedback
-											| &times; A valid emaill address is required.
+								
 								.col-md
 									.form-group
 										label(for="#acctUserLastName") Phone Number (optional)
 										input#acctUserLastName.form-control(type="tel" placeholder="Enter your Phone Number", value="647 430 5262")
+								.col-md
+									.form-group
+										label(for="#acctUserEmail") Email Address *
+										input#acctUserFirstName.form-control(type="email", placeholder="Enter your Email Address", value="prasanna@baustein.ca", required disabled)
+										.invalid-feedback
+											| &times; A valid emaill address is required.
 							.alert.alert-danger.alert-dismissible.fade.show(role="alert")
 								|  Please ensure all recommended fields have been filled in. Thanks.
 							.form-row.form-action-btns
