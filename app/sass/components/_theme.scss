@@ -2948,6 +2948,7 @@ Table of Content:
 .modal-backdrop {
   @include media-breakpoint-down(sm) {
     z-index: 0;
+    display:none;
   }
 }
 
