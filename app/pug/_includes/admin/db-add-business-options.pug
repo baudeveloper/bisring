@@ -70,17 +70,23 @@
 										textarea#businessWebsite.form-control(placeholder="Promotion Details", value="", rows="1")
 					// Upload Images
 					section#businessImages.admin-blocks
-						header.d-flex
+						header.d-flex.flex-sm-row.flex-column
 							h2.mr-auto Upload Images
-							.admin-blocks-btns
-								a.edit.btn.btn-secondary(href="#") Add
+							div.d-flex.flex-row
+								label.btn.btn.btn-secondary.btn-file
+									| Upload 
+									input(type="file" style="disply:none;")
+								.uploading-experience
+									img.loading.img-fluid(src="images/uploading-annimation.svg", alt="Uploading", role="img" width="42")
+									a.cancel.btn.btn-secondary(href="#") Cancel
+								
 						section
 							.card.card-block.listview
 								ul.list-unstyled
 
 					// Upload Videos
 					section#businessVideos.admin-blocks
-						header.d-flex
+						header.d-flex.flex-sm-row.flex-column
 							h2.mr-auto Upload Videos
 							.admin-blocks-btns
 								a.edit.btn.btn-secondary(href="#") Add

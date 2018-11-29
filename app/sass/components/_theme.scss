@@ -1405,6 +1405,12 @@ Table of Content:
             }
           }
         }
+        .special-offer {
+          h3, h4 {
+            color:$orange-AA;
+            font-weight: bold;
+          }
+        }
         #step01 {
           .edit-info {
             padding-left:15px;
@@ -2524,6 +2530,7 @@ Table of Content:
         .site-header--search {
           input[type="text"] {
             height: 40px;
+            line-height: 1.5rem;
           }
           .input-group-append .btn {
             height: 40px;
@@ -2567,6 +2574,7 @@ Table of Content:
           .site-header--search {
             input[type="text"] {
               height: 40px;
+              line-height: 1.5rem;
             }
             .input-group-append .btn {
               height: 40px;
@@ -3427,6 +3435,35 @@ Table of Content:
 .was-validated .custom-select:invalid,
 .custom-select.is-invalid {
   border-color: $danger!important;
+}
+
+.form-control:disabled,
+.form-control[readonly] {
+  border-color: $gray-400!important;
+  color: $gray-600 !important;
+}
+
+.btn-file {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 0 !important;
+}
+
+.btn-file input[type=file] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  font-size: 100px;
+  text-align: right;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  outline: none;
+  background: white;
+  cursor: inherit;
+  display: block;
+  
 }
 
 textarea {
